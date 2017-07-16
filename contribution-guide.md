@@ -8,6 +8,8 @@ Add the feature label if you have a new feature to add in your mind.
 
 ### Submitting a pull request
 
+Go through [the todo list][I]. Take up any topic of interest and discuss your plan to work on that idea (try using the issue tracker for this purpose). Develop a basic prototype. Make a pull request.
+
 For beginners:
 1. Install git.
 2. Fork the project to your account.
@@ -34,3 +36,6 @@ git commit -a -m "My fixes"
 Take a look at : 
 * https://guides.github.com/introduction/flow/
 * https://akrabat.com/the-beginners-guide-to-contributing-to-a-github-project/
+
+[I]: /contribution-guide.md
+
