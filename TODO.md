@@ -20,7 +20,6 @@ http://prabhanshugupta.me/infoxpression/
 
 ### Some sources for inspiration:
 
-
 * https://yiwenl.github.io/
 * http://hotdot.pro
 * https://suhailsinghbains.github.io/WebVr/
