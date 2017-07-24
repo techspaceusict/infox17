@@ -36,15 +36,21 @@
         <li><a href="/schedule">Schedule</a></li>
         <li><a href="/events">Events</a></li>
         <li><a href="/team">Team</a></li>
-        <li><a href="/contact">Contact Us</a></li>
+        <li><a href="/Contact">Contact Us</a></li>
       </ul>
 
       <ul class="nav navbar-nav pull-right">
+      <% if !user_signed_in? %>
         <li><a href="#">Fb Login</a></li>
+        <%else%>
+           <li><%= link_to 'logout', destroy_user_session_path, method: :delete , data: {confirm: 'Are you Sure?'}%></li>
+        <%end%>
       </ul>
     </div><!--/.nav-collapse -->
   </div>
 </nav>
+ <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
 
     <%= yield %>
   </body>

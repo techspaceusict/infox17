@@ -15,22 +15,12 @@ To contribute check out the [Contributor's Guide][COGG].
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-Things you may want to cover:
+How Run Infox17 on your System:
 
-* Ruby version
+1.clone the repository
+2.open the repository in terminal
+3. bundle install
+4. rake db:migrate
+5. rails server
+6. Now open localhost:3000 in browser and you are done.....
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
