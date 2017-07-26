@@ -27,6 +27,6 @@ $ rake db:migrate
 $ rails server
 ```
 
-4. Now open localhost:3000 in browser and you are done.
+5. Now open localhost:3000 in browser and you are done.
 
 
