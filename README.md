@@ -15,12 +15,18 @@ To contribute check out the [Contributor's Guide][COGG].
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-How Run Infox17 on your System:
+Running infox17 on your system:
 
-1.clone the repository
-2.open the repository in terminal
-3. bundle install
-4. rake db:migrate
-5. rails server
-6. Now open localhost:3000 in browser and you are done.....
+1. Install ruby on rails. Help : https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rvm-on-ubuntu-16-04
+1. clone the repository
+2. open the repository in terminal
+3. cd into project ```cd infox17``` and run:
+``` 
+$ bundle install
+$ rake db:migrate
+$ rails server
+```
+
+5. Now open localhost:3000 in browser and you are done.
+
 
