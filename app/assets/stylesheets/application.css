@@ -16,7 +16,9 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-
+*{
+    font-family: 'Ubuntu', sans-serif;
+}
 body {
 	padding-top: 60px;
 }
