@@ -1,0 +1,65 @@
+I"(function() {
+  ActiveAdmin.PerPage = (function() {
+    function PerPage(options, element) {
+      this.options = options;
+      this.element = element;
+      this.$element = $(this.element);
+      this._init();
+      this._bind();
+    }
+
+    PerPage.prototype._init = function() {
+      return this.$params = this._queryParams();
+    };
+
+    PerPage.prototype._bind = function() {
+      return this.$element.change((function(_this) {
+        return function() {
+          _this.$params['per_page'] = _this.$element.val();
+          delete _this.$params['page'];
+          if (typeof Turbolinks !== 'undefined') {
+            return Turbolinks.visit(window.location.href.split('?')[0] + '?' + $.param(_this.$params));
+          } else {
+            return location.search = $.param(_this.$params);
+          }
+        };
+      })(this));
+    };
+
+    PerPage.prototype._queryParams = function() {
+      var m, params, query, re;
+      query = window.location.search.substring(1);
+      params = {};
+      re = /([^&=]+)=([^&]*)/g;
+      while (m = re.exec(query)) {
+        params[this._decode(m[1])] = this._decode(m[2]);
+      }
+      return params;
+    };
+
+    PerPage.prototype._decode = function(value) {
+      return decodeURIComponent(value.replace(/\+/g, '%20'));
+    };
+
+    PerPage.prototype.option = function(key, value) {
+      if ($.isPlainObject(key)) {
+        return this.options = $.extend(true, this.options, key);
+      } else if (key != null) {
+        return this.options[key];
+      } else {
+        return this.options[key] = value;
+      }
+    };
+
+    return PerPage;
+
+  })();
+
+  $.widget.bridge('perPage', ActiveAdmin.PerPage);
+
+  $(document).on('ready page:load turbolinks:load', function() {
+    return $('.pagination_per_page select').perPage();
+  });
+
+}).call(this);
+:ET
