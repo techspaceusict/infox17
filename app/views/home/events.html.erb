@@ -1,1 +1,29 @@
-# Welcome to Events page
+<ul>
+  <% if  !current_user.events.find_by_event_id("1")%>
+  <li>1st event <%= link_to "Register Here", url_for(controller: :event, action: :event,:event_id=>"1",:event_name=>"ist event"), method: :post%></li>
+  <%else%>
+  <li>1st event   you have already registered</li>
+  <%end%>
+
+<% if  !current_user.events.find_by_event_id("2")%>
+  <li>2nd event <%= link_to "Register Here", url_for(controller: :event, action: :event,:event_id=>"2",:event_name=>"2nd event"), method: :post%></li>
+  <%else%>
+  <li>2nd event   you have already registered</li>
+  <%end%>
+
+
+
+<% if  !current_user.events.find_by_event_id("3")%>
+  <li>3rd event <%= link_to "Register Here", url_for(controller: :event, action: :event,:event_id=>"2",:event_name=>"3rd event"), method: :post%></li>
+  <%else%>
+  <li>3rd event   you have already registered</li>
+  <%end%>
+
+
+<% if  !current_user.events.find_by_event_id("4")%>
+  <li>4th event <%= link_to "Register Here", url_for(controller: :event, action: :event,:event_id=>"4",:event_name=>"4th event"), method: :post%></li>
+  <%else%>
+  <li>4th event   you have already registered</li>
+  <%end%>
+
+</ul>

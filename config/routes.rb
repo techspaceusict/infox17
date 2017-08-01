@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   
   
+  get 'event/event'
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   
@@ -27,5 +29,9 @@ Rails.application.routes.draw do
   get '/team'=>'home#team'
 
   get '/Contact'=>'home#Contact'
+
+  post '/event/event'=>'event#event'
+
+  post '/myevents'=>'event#myevents'
  
 end
