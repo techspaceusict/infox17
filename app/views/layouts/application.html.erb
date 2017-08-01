@@ -43,7 +43,8 @@
 
       <ul class="nav navbar-nav pull-right">
       <% if !user_signed_in? %>
-        <li><a href="#">Fb Login</a></li>
+      <li><a href="/users/auth/facebook"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+
         <%else%>
            <li><%= link_to 'logout', destroy_user_session_path, method: :delete , data: {confirm: 'Are you Sure?'}%></li>
         <%end%>
@@ -57,3 +58,14 @@
     <%= yield %>
   </body>
 </html>
+
+
+
+<style type="text/css">
+  
+  .fa-facebook{
+     color: white;
+     font-size: 2em;
+
+  }
+</style>
