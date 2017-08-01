@@ -24,7 +24,7 @@ Running infox17 on your system:
 ``` 
 $ bundle install
 $ rake db:migrate
-$ rails server
+$ bundle exec rails server
 ```
 
 5. Now open localhost:3000 in browser and you are done.
