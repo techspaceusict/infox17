@@ -46,7 +46,11 @@
       <li><a href="/users/auth/facebook"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
 
         <%else%>
-           <li><%= link_to 'logout', destroy_user_session_path, method: :delete , data: {confirm: 'Are you Sure?'}%></li>
+
+          <li><a href="/profile">Profile</a></li>
+                 <li><%= link_to "My Events", url_for(controller: :event, action: :myevents), method: :post%></li>
+                 <li><%= link_to 'logout', destroy_user_session_path, method: :delete , data: {confirm: 'Are you Sure?'}%></li>
+
         <%end%>
       </ul>
     </div><!--/.nav-collapse -->

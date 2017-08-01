@@ -21,6 +21,9 @@ gem 'coffee-rails', '~> 4.2'
 gem 'data-confirm-modal'
 gem 'omniauth-facebook'
 
+
+gem "figaro"
+
 gem 'devise'
 gem 'activeadmin'
 gem "font-awesome-rails"
