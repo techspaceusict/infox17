@@ -1,5 +1,10 @@
 
-
+<% if @event%>
 <% @event.each do |event|%>
 <li><%= event.event_name%></li>
 <%end%>
+
+<%else%>
+<li>You have not registered yet to any Event .....</li>
+<%end%>
+
