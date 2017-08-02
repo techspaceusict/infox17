@@ -1,3 +1,5 @@
+<%if current_user%>
+
 <ul>
   <% if  !current_user.events.find_by_event_id("1")%>
   <li>1st event <%= link_to "Register Here", url_for(controller: :event, action: :event,:event_id=>"1",:event_name=>"ist event"), method: :post%></li>
@@ -27,3 +29,14 @@
   <%end%>
 
 </ul>
+
+<%else%>
+<ul>
+  <li>1st event </li>
+  <li>2nd event</li>
+  <li>3rd event</li>
+  <li>4th event</li>
+</ul>
+
+
+<%end%>
