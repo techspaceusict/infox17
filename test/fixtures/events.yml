@@ -1,11 +1,25 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  user: one
-  event_id: MyString
-  string: MyString
+  Event_id: MyString
+  Name: MyString
+  image: MyString
+  about: MyString
+  facebook_link: MyString
+  event_time: MyString
+  organizer1_name: MyString
+  organizer1_phone: MyString
+  organizer2_name: MyString
+  organizer2_phone: MyString
 
 two:
-  user: two
-  event_id: MyString
-  string: MyString
+  Event_id: MyString
+  Name: MyString
+  image: MyString
+  about: MyString
+  facebook_link: MyString
+  event_time: MyString
+  organizer1_name: MyString
+  organizer1_phone: MyString
+  organizer2_name: MyString
+  organizer2_phone: MyString

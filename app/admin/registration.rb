@@ -1,4 +1,4 @@
-ActiveAdmin.register Event do
+ActiveAdmin.register Registration do
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
@@ -11,9 +11,5 @@ ActiveAdmin.register Event do
 #   permitted << :other if params[:action] == 'create' && current_user.admin?
 #   permitted
 # end
-
-ActiveAdmin.register Event do
-  permit_params :Event_id, :Name, :image, :about, :facebook_link,:organizer2_phone,:organizer2_name,:organizer1_phone,:organizer2_name,:date,:time
-end
 
 end

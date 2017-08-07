@@ -1,51 +1,10 @@
-<%if current_user%>
-
-<ul>
-  <% if  !current_user.events.find_by_event_id("1")%>
-  <li>1st event <%= link_to "Register Here", url_for(controller: :event, action: :event,:event_id=>"1",:event_name=>"ist event"), method: :post%></li>
-  <%else%>
-  <li>1st event   you have already registered</li>
-  <%end%>
-
-<% if  !current_user.events.find_by_event_id("2")%>
-  <li>2nd event <%= link_to "Register Here", url_for(controller: :event, action: :event,:event_id=>"2",:event_name=>"2nd event"), method: :post%></li>
-  <%else%>
-  <li>2nd event   you have already registered</li>
-  <%end%>
-
-
-
-<% if  !current_user.events.find_by_event_id("3")%>
-  <li>3rd event <%= link_to "Register Here", url_for(controller: :event, action: :event,:event_id=>"2",:event_name=>"3rd event"), method: :post%></li>
-  <%else%>
-  <li>3rd event   you have already registered</li>
-  <%end%>
-
-
-<% if  !current_user.events.find_by_event_id("4")%>
-  <li>4th event <%= link_to "Register Here", url_for(controller: :event, action: :event,:event_id=>"4",:event_name=>"4th event"), method: :post%></li>
-  <%else%>
-  <li>4th event   you have already registered</li>
-  <%end%>
-
-</ul>
-
-<%else%><!-- 
-<ul>
-  <li>1st event </li>
-  <li>2nd event</li>
-  <li>3rd event</li>
-  <li>4th event</li>
-</ul> -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- 
-    <link rel="shortcut icon" href="../favicon.ico"> 
-    <link rel="stylesheet" type="text/css" href="css/default.css" />
-    <link rel="stylesheet" type="text/css" href="css/component.css" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <style type="text/css">
       /*component.css*/
       /*#og-grid li{
@@ -450,8 +409,8 @@
       <div class="main">
         <ul id="og-grid" class="og-grid">
           <li id="1">
-            <a href="#" data-largesrc="http://awdf.org/wp-content/themes/africa_womens_dev_fund159/images/Default-Event-2x.png" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
-              <img src="http://awdf.org/wp-content/themes/africa_womens_dev_fund159/images/Default-Event-2x.png" alt="img01"/>
+            <a href="/algoholics" data-largesrc="http://awdf.org/wp-content/themes/africa_womens_dev_fund159/images/Default-Event-2x.png" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
+              <img src="/uploads/Algoholics.png" alt="img01"/>
             <p>algoholics</p>
             </a>
           </li>
@@ -1179,4 +1138,3 @@
   </script>
 </html>
 
-<%end%>

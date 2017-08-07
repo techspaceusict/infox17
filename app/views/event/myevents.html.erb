@@ -1,10 +1,18 @@
 
-<% if @event%>
-<% @event.each do |event|%>
-<li><%= event.event_name%></li>
-<%end%>
 
-<%else%>
-<li>You have not registered yet to any Event .....</li>
-<%end%>
+<% @event.each do |v|%>
 
+<% event=Event.find_by_id(v.id)%>
+
+<img src="/uploads/<%= event.image%>"><br>
+<%= event.Event_id%><br>
+<%= event.Name%><br>
+<%= event.about%><br>
+<%= event.facebook_link%><br>
+<%= event.organizer1_name%><br>
+<%= event.organizer1_phone%><br>
+<%= event.organizer2_name%><br>
+<%= event.organizer2_phone%><br>
+<%= event.date%>
+<%= event.time%>
+<%end%>

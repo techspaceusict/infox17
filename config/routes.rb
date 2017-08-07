@@ -34,4 +34,12 @@ Rails.application.routes.draw do
 
   post '/myevents'=>'event#myevents'
  
+   get '/addinfoxevent'=>'event#addinfoxevent'
+
+   post '/addevents'=>'event#addevents'
+
+   get '/algoholics'=>'event#algoholics'
+
+   post '/eventregister'=>'event#eventregister'
+
 end
