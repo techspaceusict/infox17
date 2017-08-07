@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170801190011) do
+ActiveRecord::Schema.define(version: 20170807143006) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -44,13 +44,28 @@ ActiveRecord::Schema.define(version: 20170801190011) do
   end
 
   create_table "events", force: :cascade do |t|
+    t.string   "Event_id"
+    t.string   "Name"
+    t.string   "image"
+    t.string   "about"
+    t.string   "facebook_link"
+    t.string   "organizer1_name"
+    t.string   "organizer1_phone"
+    t.string   "organizer2_name"
+    t.string   "organizer2_phone"
+    t.string   "date"
+    t.string   "time"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  create_table "registrations", force: :cascade do |t|
     t.integer  "user_id"
-    t.string   "event_id"
+    t.integer  "event_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string   "event_name"
-    t.string   "string"
-    t.index ["user_id"], name: "index_events_on_user_id"
+    t.index ["event_id"], name: "index_registrations_on_event_id"
+    t.index ["user_id"], name: "index_registrations_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
