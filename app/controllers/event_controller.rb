@@ -66,7 +66,7 @@ class EventController < ApplicationController
  name=params["name"]
  email=params["email"]
  query=params["query"]
-byebug;
+
 
 Query.create(:name=>name,:email=>email,:message=>query);
 return redirect_to '/Contact';
