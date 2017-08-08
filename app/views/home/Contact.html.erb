@@ -1,0 +1,24 @@
+<form action="/eventquery" method="post">
+
+<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input type="text" class="form-control" id="name">
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email address:</label>
+    <input type="email" class="form-control" id="email">
+  </div>
+  <div class="form-group">
+    <label for="query">Query:</label>
+    <input type="text-area" class="form-control" id="query">
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+
+
+
+
+<iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ5fdrrq8aDTkRe3wa7eZKNBM&key=AIzaSyDI79b8PUt_ZvWjkOsQfk9nEtQzoJLzVHg" allowfullscreen></iframe>

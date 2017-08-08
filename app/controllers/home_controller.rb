@@ -13,6 +13,9 @@ class HomeController < ApplicationController
 	end
 
 	def events
+		@event=Event.all();
+		#byebug;
+
 	end
 
 	def team
