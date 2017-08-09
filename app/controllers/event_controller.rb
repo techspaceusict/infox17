@@ -1,15 +1,15 @@
 class EventController < ApplicationController
   
-  
-
   def event
   	id=params[:id]
     @event=Event.find_by_Event_id(id);
+    
 
     if current_user
-      @user=Registration.where(:user_id=>current_user.id,:event_id=>id).first;
+      @user=Registration.where(:user_id=>current_user.id,:event_id=>@event.id).first;
     end
     
+    #byebug;
   end
 
 
@@ -53,7 +53,6 @@ class EventController < ApplicationController
 
     id=params[:Event_id]
     event=Event.find_by_Event_id(id);
-    puts id;
    # byebug;
     Registration.create(:user_id=>current_user.id,:event_id=>event.id);
     return redirect_to '/events'
