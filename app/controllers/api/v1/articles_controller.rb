@@ -1,14 +1,24 @@
 module API
 	module V1
-		class ArticlesController < ApplicationController
+		class ArticlesController < ::ApiController
 
-			def index
-				event=Event.all().first;
+			def allevent
+				event=Event.all();
 				puts event
-				render json: {status: 'SUCCESS',message: 'Events Loaded', data: event},status: 'ok'
+                return response_data(event, "Signed In", 200)
                 
-				puts "hello"
 			end
+
+
+			def eventbyid
+
+				id=params[:id]
+				event=Event.find_by_Event_id(id);
+				puts event
+                return response_data(event, "Signed In", 200)
+				
+			end
+
 		end 
 	end
 end
