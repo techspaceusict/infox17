@@ -24,7 +24,7 @@ production:
   <<: *default
   database: infox
   username: infox
-  password: infox
+  password: <%= ENV['infox'] %>
 
 
 

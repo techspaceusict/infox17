@@ -6,33 +6,15 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
     <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<!-- Font from google fonts -->
-<link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700,700i" rel="stylesheet">
   </head>
 
   <body>
 
-  <!-- USING BOOTSTRAP 3.0.3 -->
-<nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="/"><img style="height: 30px;" src="http://prabhanshugupta.me/infoxpression/img/logo-infox%20trans-bg.jpg"></a>
-    </div>
-    <div class="collapse navbar-collapse">
-      <ul class="nav navbar-nav pull">
+  <nav class="nav-inverse">
+    <div class="nav-wrapper">
+    <a class="brand-logo" href="/"><img style="height: 40px;" src="http://prabhanshugupta.me/infoxpression/img/logo-infox%20trans-bg.jpg"></a>      <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li class="active"><a href="/">Home</a></li>
         <li><a href="/about">About</a></li>
         <li><a href="/schedule">Schedule</a></li>
@@ -40,44 +22,22 @@
         <li><a href="/team">Team</a></li>
         <li><a href="/Contact">Contact Us</a></li>
       </ul>
+    </div>
+  </nav>
 
-      <ul class="nav navbar-nav pull-right">
-      <% if !user_signed_in? %>
-      <li><a href="/users/auth/facebook"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
 
-        <%else%>
-
-          <li><a href="/profile">Profile</a></li>
-                 <li><%= link_to "My Events", url_for(controller: :event, action: :myevents), method: :post%></li>
-                 <li><%= link_to 'logout', destroy_user_session_path, method: :delete , data: {confirm: 'Are you Sure?'}%></li>
-
-        <%end%>
-      </ul>
-    </div><!--/.nav-collapse -->
-  </div>
-</nav>
  <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
-
+<main>
     <%= yield %>
-<hr>
-    <footer>
-      <p>GGSIPU,Dwarka</p>
-    </footer>
+</main>
+
   </body>
 </html>
 
 
-
 <style type="text/css">
-  footer p{
-    font-size: 15px;
-    text-align: center;
-  }
-  
-  .fa-facebook{
-     color: white;
-     font-size: 2em;
-
-  }
+  .nav-wrapper {
+   background-color: black;
+}
 </style>

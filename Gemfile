@@ -27,8 +27,8 @@ gem "figaro"
 gem 'devise'
 gem 'activeadmin'
 gem "font-awesome-rails"
+gem 'materialize-sass'
 
-gem 'bootstrap-sass', '~> 3.3.6'
   gem 'sass-rails', '~> 5.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
