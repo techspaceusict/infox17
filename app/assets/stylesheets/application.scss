@@ -14,40 +14,11 @@
   *= require font-awesome
 
  */
-@import "bootstrap-sprockets";
-@import "bootstrap";
+ @import "https://fonts.googleapis.com/icon?family=Material+Icons";
+
+
+@import "materialize";
 
 *{
     font-family: 'Ubuntu', sans-serif;
-}
-body {
-	padding-top: 60px;
-}
-nav {
-  .navbar-brand {font-size: 30px;}
-	.navbar-toggle {margin: 13px 15px 13px 0;}
-	a {
-		font-size: 18px;
-		padding-bottom: 20px !important;
-		padding-top: 20px !important;
-    transition: all 0.3s ease;
-	}
-}
-
-
-
-nav.navbar.shrink {
-	min-height: 35px;
-  .navbar-brand {font-size: 25px;}
-  a {
-    font-size: 15px;
-    padding-bottom: 10px !important;
-    padding-top: 10px !important;
-  }
-  .navbar-toggle {
-    margin: 8px 15px 8px 0;
-    padding: 4px 5px;
-        text-align: center;
-
-  }
 }
