@@ -6,15 +6,27 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    
-    <!-- Latest compiled and minified CSS -->
-  </head>
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+
+    </head>
 
   <body>
-
-  <nav class="nav-inverse">
+<div class="navbar-fixed">
+  <nav>
     <div class="nav-wrapper">
-    <a class="brand-logo" href="/"><img style="height: 40px;" src="http://prabhanshugupta.me/infoxpression/img/logo-infox%20trans-bg.jpg"></a>      <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <a href="#" class="brand-logo center"><img style="height: 50px; padding-top: 10px; " src="http://prabhanshugupta.me/infoxpression/img/logo-infox%20trans-bg.jpg"></a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="left hide-on-med-and-down">
+        <li class="active" style="margin-right: 50px; margin-left: 50px;"><a href="/">Home</a></li>
+        <li style="margin-right: 50px; margin-left: 50px;"><a href="/about">About</a></li>
+        <li style="margin-right: 50px; margin-left: 50px;"><a href="/schedule">Schedule</a></li>
+      </ul>
+      <ul class="right hide-on-med-and-down">
+        <li style="margin-right: 50px; margin-left: -450px;"><a href="/events">Events</a></li>
+        <li style="margin-right: 50px; margin-left: -250px;"><a href="/team">Team</a></li>
+        <li style="margin-right: 50px; margin-left: -100px;"><a href="/Contact">Contact Us</a></li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
         <li class="active"><a href="/">Home</a></li>
         <li><a href="/about">About</a></li>
         <li><a href="/schedule">Schedule</a></li>
@@ -24,20 +36,127 @@
       </ul>
     </div>
   </nav>
-
-
- <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
+            
+</div>
+<div id="body">
+   <p class="notice"><%= notice %></p>
+         <p class="alert"><%= alert %></p>
+    <%if !user_signed_in? %>
+    <div id="social_links">
+       <ul>
+        <li><a target='_blank' target="_blank" href="http://www.facebook.com"><img src="http://www.old.ittf.com/media/16wttc/subscription/images/facebook.png" style="width: 50px;"></a></li>
+  </div>
+    <%else%>
+  <div id="social_links">
+       <ul>
+        <li><a target='_blank' target="_blank" href="http://www.facebook.com"><img src="http://www.old.ittf.com/media/16wttc/subscription/images/facebook.png" style="width: 50px;"></a></li>
+        <br>
+        <li><a target='_blank'  target="_blank" href="#"><img src="https://equipmentfinanceservices.com/wp-content/uploads/2016/04/equipment-finance-testimonials-11.png" style="width: 50px;"></a></li>
+        <br>
+        <li><a target='_blank'  target="_blank" href="#"><img src="http://www.bates.edu/oie/files/2015/09/Icon_Calendar.png" style="width: 50px;"></a></li>
+        <br>
+        <li><a target='_blank'  target="_blank" href="#"><img src="https://cdn0.iconfinder.com/data/icons/large-glossy-icons/512/User_logout.png" style="width: 50px;"></a></li>
+       </ul>
+  </div>
+    <%end%>
 <main>
-    <%= yield %>
-</main>
+      <%= yield %>
 
+</main>
+  
+</div>
+<div id="footer" class="bg-one">
+<div class="container">
+      <div class="row">
+        <div class="col m2 pull-m1">
+            <br>
+            <a href="index.html"><img width="80px" src="http://prabhanshugupta.me/infoxpression/img/logo-infox%20trans-bg.jpg"></a>
+            <br />
+            <h5><a href="#">Techspace</a></h5>
+            <h5><a href="#">E-Cell</a></h5>
+            <h5><a href="#">IEEE</a></h5>
+            <h5><a href="#">IETE</a></h5>
+            <h5><a href="#">SAINT</a></h5>       
+        </div>
+        <div class="col m6 push-m1">
+          <div class="social-icon">
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="https://play.google.com/store/apps/details?id=in.infoxpression.infoxpression"><i class="fa fa-android"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="https://www.facebook.com/infoxpression?_rdr" target="_blank"><i class="fa fa-facebook"></i></a><br><br>
+                <h5 style="font-family:ubuntu"> Guru Gobind Singh Indraprastha University <br>Sector 16C, Dwarka
+                <br> InfoXpression 2017
+                  <br>infoxpression.usict@gmail.com
+                  <br>infox@ipu.ac.in
+                  <br>www.ipu.ac.in/infox17/
+                </h5>
+          </div>   
+        </div>
+        
+        <div class="col m4 push-m2">
+            <br>
+            <br>
+            <h4>Contact</h4>
+            <br/>
+            <a href="mailto:infox@ipu.ac.in"><h5><i class="fa fa-envelope" aria-hidden="true"></i> &nbsp;           infox@ipu.ac.in</a></h5>
+            <h5><i class="fa fa-phone" aria-hidden="true"></i> &nbsp; &nbsp;+91-9871381106</h5>
+            <h5><a href="http://www.techspace.club" >www.techspace.club</a></h5>
+        </div>
+      </div>
+      <div class="copyright" style="text-align: center;">
+        <p>Infox Copyright &copy; 2016. All Rights Reserved.</p>
+      </div>
+    </div>
+</div>  
   </body>
 </html>
+<script type="text/javascript">
+  
+  window.sr = ScrollReveal();
+  sr.reveal('#footer',{
+      duration: 2000,
+      origin :'bottom'
+  });
+  // sr.reveal('#footer .col-md-3',{
+  //     duration: 2000,
+  //     origin :'right'
+  // });
+  // sr.reveal('#footer .col-md-6',{
+  //     duration: 2000,
+  //     origin :'bottom'
+  // });
+</script>
 
 
-<style type="text/css">
-  .nav-wrapper {
-   background-color: black;
+<style type="text/css">  
+  .fa-facebook{
+     color: white;
+     font-size: 2em;
+  }
+  #social_links {
+    position: fixed;
+    z-index: 10000;
+    right: 20px;
+    top: 100px;
+    display: flex;
+    height: 100%;
 }
+  #social_links li{
+    list-style: none;
+  }
+  #body{
+    background-color: #2b2c30;
+    min-height: 700px;
+    padding-top: 30px;
+  }
+  #footer{
+    padding-top: 20px;
+    background-color: #7f7fff;
+  }
+  .nav-wrapper {
+   backgroundround-color: black;
+  }
+  a{
+    color: #db5726;
+  }
+
 </style>
