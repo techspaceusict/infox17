@@ -41,20 +41,18 @@
        <p class="notice"><%= notice %></p>
              <p class="alert"><%= alert %></p>
         <%if !user_signed_in? %>
-        <div id="social_links">
+        <div id="social_links"> 
            <ul>
-            <li><a target='_blank' target="_blank" href="http://www.facebook.com"><img src="http://www.old.ittf.com/media/16wttc/subscription/images/facebook.png" style="width: 50px;"></a></li>
+            <li><a target='_blank' target="_blank" href="/users/auth/facebook"><img src="http://www.old.ittf.com/media/16wttc/subscription/images/facebook.png" style="width: 50px;"></a></li>
       </div>
         <%else%>
       <div id="social_links">
            <ul>
-            <li><a target='_blank' target="_blank" href="http://www.facebook.com"><img src="http://www.old.ittf.com/media/16wttc/subscription/images/facebook.png" style="width: 50px;"></a></li>
+            <li><a href="/profile"><img src="https://equipmentfinanceservices.com/wp-content/uploads/2016/04/equipment-finance-testimonials-11.png" style="width: 50px;"><br>Profile</a></li>
             <br>
-            <li><a target='_blank'  target="_blank" href="#"><img src="https://equipmentfinanceservices.com/wp-content/uploads/2016/04/equipment-finance-testimonials-11.png" style="width: 50px;"></a></li>
+            <li><img src="http://www.bates.edu/oie/files/2015/09/Icon_Calendar.png" style="width: 50px;"><br><%= link_to "My Events", url_for(controller: :event, action: :myevents), method: :post%></li>
             <br>
-            <li><a target='_blank'  target="_blank" href="#"><img src="http://www.bates.edu/oie/files/2015/09/Icon_Calendar.png" style="width: 50px;"></a></li>
-            <br>
-            <li><a target='_blank'  target="_blank" href="#"><img src="https://cdn0.iconfinder.com/data/icons/large-glossy-icons/512/User_logout.png" style="width: 50px;"></a></li>
+            <li><img src="https://cdn0.iconfinder.com/data/icons/large-glossy-icons/512/User_logout.png" style="width: 50px;"><br><%= link_to 'logout', destroy_user_session_path, method: :delete , data: {confirm: 'Are you Sure?'}%></li>
            </ul>
       </div>
         <%end%>
@@ -132,10 +130,13 @@
   #social_links {
     position: fixed;
     z-index: 10000;
-    right: 20px;
-    top: 100px;
+    right: 0px;
+    top: 65px;
     display: flex;
     height: 100%;
+    background-color:rgba(0,0,0,0.2);
+    padding: 20px;
+    padding-right: 10px;
 }
   #social_links li{
     list-style: none;
@@ -143,6 +144,7 @@
   #body{
     min-height: 700px;
     padding-top: 30px;
+    padding-bottom: 30px; 
   }
   #footer{
     padding-top: 20px;
@@ -157,3 +159,13 @@
   }
 
 </style>
+<script>
+
+$( document ).ready(function(){
+
+
+$(".button-collapse").sideNav();
+
+})
+
+</script>
