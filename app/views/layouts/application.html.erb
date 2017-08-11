@@ -59,6 +59,60 @@
     <main>
           <%= yield %>
 
+
+    </head>
+
+<body>
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo center"><img style="height: 50px; padding-top: 10px; " src="http://prabhanshugupta.me/infoxpression/img/logo-infox%20trans-bg.jpg"></a>
+          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+          <ul class="left hide-on-med-and-down">
+            <li class="active" style="margin-right: 50px; margin-left: 50px;"><a href="/">Home</a></li>
+            <li style="margin-right: 50px; margin-left: 50px;"><a href="/about">About</a></li>
+            <li style="margin-right: 50px; margin-left: 50px;"><a href="/schedule">Schedule</a></li>
+          </ul>
+          <ul class="right hide-on-med-and-down">
+            <li style="margin-right: 50px; margin-left: -450px;"><a href="/events">Events</a></li>
+            <li style="margin-right: 50px; margin-left: -250px;"><a href="/team">Team</a></li>
+            <li style="margin-right: 50px; margin-left: -100px;"><a href="/Contact">Contact Us</a></li>
+          </ul>
+          <ul class="side-nav" id="mobile-demo">
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/schedule">Schedule</a></li>
+            <li><a href="/events">Events</a></li>
+            <li><a href="/team">Team</a></li>
+            <li><a href="/Contact">Contact Us</a></li>
+          </ul>
+        </div>
+      </nav>            
+    </div>
+    <div id="body">
+       <p class="notice"><%= notice %></p>
+             <p class="alert"><%= alert %></p>
+        <%if !user_signed_in? %>
+        <div id="social_links">
+           <ul>
+            <li><a target='_blank' target="_blank" href="http://www.facebook.com"><img src="http://www.old.ittf.com/media/16wttc/subscription/images/facebook.png" style="width: 50px;"></a></li>
+      </div>
+        <%else%>
+      <div id="social_links">
+           <ul>
+            <li><a target='_blank' target="_blank" href="http://www.facebook.com"><img src="http://www.old.ittf.com/media/16wttc/subscription/images/facebook.png" style="width: 50px;"></a></li>
+            <br>
+            <li><a target='_blank'  target="_blank" href="#"><img src="https://equipmentfinanceservices.com/wp-content/uploads/2016/04/equipment-finance-testimonials-11.png" style="width: 50px;"></a></li>
+            <br>
+            <li><a target='_blank'  target="_blank" href="#"><img src="http://www.bates.edu/oie/files/2015/09/Icon_Calendar.png" style="width: 50px;"></a></li>
+            <br>
+            <li><a target='_blank'  target="_blank" href="#"><img src="https://cdn0.iconfinder.com/data/icons/large-glossy-icons/512/User_logout.png" style="width: 50px;"></a></li>
+           </ul>
+      </div>
+        <%end%>
+    <main>
+          <%= yield %>
+
     </main>
       
     </div>
@@ -137,6 +191,10 @@
     background-color:rgba(0,0,0,0.2);
     padding: 20px;
     padding-right: 10px;
+    right: 20px;
+    top: 100px;
+    display: flex;
+    height: 100%;
 }
   #social_links li{
     list-style: none;
@@ -169,3 +227,4 @@ $(".button-collapse").sideNav();
 })
 
 </script>
+</style>
