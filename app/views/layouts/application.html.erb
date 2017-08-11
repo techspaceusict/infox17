@@ -45,25 +45,24 @@
         <%if !user_signed_in? %>
         <div id="social_links"> 
            <ul>
-            <li><a target='_blank' target="_blank" href="/users/auth/facebook"><img src="http://www.old.ittf.com/media/16wttc/subscription/images/facebook.png" style="width: 50px;"></a></li>
+            <li><a href="/users/auth/facebook"><img src="http://www.old.ittf.com/media/16wttc/subscription/images/facebook.png" style="width: 50px;"></a></li>
       </div>
         <%else%>
       <div id="social_links">
            <ul>
-            <li><img src="<%= current_user.profile%>" style="width: 50px;"></li>
+            <li><img src="<%= current_user.profile%>" style="width: 50px"></li>
             <br>
             <li><img src="http://www.bates.edu/oie/files/2015/09/Icon_Calendar.png" style="width: 50px;"><br><%= link_to "My Events", url_for(controller: :event, action: :myevents), method: :post%></li>
             <br>
-            <li><img src="https://cdn0.iconfinder.com/data/icons/large-glossy-icons/512/User_logout.png" style="width: 50px;"><br><%= link_to 'logout', destroy_user_session_path, method: :delete , data: {confirm: 'Are you Sure?'}%></li>
+            <li><img src="https://cdn0.iconfinder.com/data/icons/large-glossy-icons/512/User_logout.png" style="width: 50px;"><br><%= link_to "Log out", destroy_user_session_path, :method => :delete%></li>
+
            </ul>
       </div>
         <%end%>
+
     <main>
           <%= yield %>
-
-
-    </head>
-
+    </main>
       
     </div>
     <div id="footer" class="bg-one">
