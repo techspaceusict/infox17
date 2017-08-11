@@ -1,26 +1,81 @@
-<form action="/eventquery" method="post">
-
-<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
-
-  <div class="form-group">
-    <label for="name">Name:</label>
-    <input type="text" class="form-control" id="name" name="name">
-  </div>
-
-  <div class="form-group">
-    <label for="email">Email address:</label>
-    <input type="email" class="form-control" id="email" name="email">
-  </div>
-
-  <div class="form-group">
-    <label for="query">Query:</label>
-    <input type="text-area" class="form-control" id="query" name="query">
-  </div>
-
-  <button type="submit" class="btn btn-default">Submit</button>
-</form>
-
-
-
-
-<iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ5fdrrq8aDTkRe3wa7eZKNBM&key=AIzaSyDI79b8PUt_ZvWjkOsQfk9nEtQzoJLzVHg" allowfullscreen></iframe>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+    <div class="container"style="background:white;margin-top:12vh">
+        <div class="col s12"style="border-bottom:0.5px solid #DCDCDC;padding-top:10px;padding-bottom:10px;background:black">
+            <center>
+                <font color="white">Contact Us
+                </font>
+            </center>
+        </div>
+        <div class="row"style="margin:10px">
+            <form action="/eventquery" method="post"class="col s12 m4"id="my_custom_form">
+                <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input id="first_name icon_prefix" type="text" class="validate" required>
+                        <label for="first_name">First Name</label>
+                    </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                      <i class="material-icons prefix">account_circle</i>
+                      <input id="last_name icon_prefix" type="text" class="validate" required>
+                      <label for="last_name">Last Name</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                      <i class="material-icons prefix">mail</i>
+                      <input id="email icon_prefix" type="email" class="validate"required>
+                      <label for="email">Email</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                      <i class="material-icons prefix">message</i>
+                      <textarea id="textarea1 icon_prefix" class="materialize-textarea validate"required></textarea>
+                        <label for="textarea1">Query/Feedback</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col s12">
+                    <button class="btn waves-effect waves-light" type="submit" name="action">Submit</button>
+                  </div>
+                </div>
+            </form>
+            <iframe class="col s12 m8"id="custom_id_form" frameborder="0" style="border:0;height:500px" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ5fdrrq8aDTkRe3wa7eZKNBM&key=AIzaSyDI79b8PUt_ZvWjkOsQfk9nEtQzoJLzVHg" allowfullscreen></iframe>
+        </div>
+        <div class="col s12"style="padding-top:10px;padding-bottom:10px;background:black">
+            <font color="white">
+                <center>
+                    <a href="#"><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-google-plus-square fa-2x" aria-hidden="true"style="margin-left:15px"></i></a>
+                    <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"style="margin-left:15px"></i></a>
+                </center>
+            </font>
+        </div>
+    </div>
+</body>
+<style>
+    body
+    {
+        background: url('/uploads/contactbg.jpg');
+        background-size: cover;
+    }
+    @media screen and (max-width:1460px)
+    {
+        #custom_id_form
+        {
+            width:100%;
+        }
+        #my_custom_form
+        {
+            width:100%;
+        }
+    }
+    a:visited,a:active
+    {
+        color:white;
+    }
+</style>
