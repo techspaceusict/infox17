@@ -1,7 +1,15 @@
 class EventController < ApplicationController
   
   def event
-  	
+  	id=params[:id]
+    @event=Event.find_by_Event_id(id);
+    
+
+    if current_user
+      @user=Registration.where(:user_id=>current_user.id,:event_id=>@event.id).first;
+    end
+    
+    #byebug;
   end
 
 
@@ -42,17 +50,27 @@ class EventController < ApplicationController
   end
 
   def eventregister
+
     id=params[:Event_id]
-    Registration.create(:user_id=>current_user.id,:event_id=>id);
+    event=Event.find_by_Event_id(id);
+   # byebug;
+    Registration.create(:user_id=>current_user.id,:event_id=>event.id);
     return redirect_to '/events'
+
+    #byebug;
   end
 
+ def eventquery
 
-  def algoholics
-    @event=Event.find_by_id("1");
-    if current_user
-      @user=Registration.where(:user_id=>current_user.id,:event_id=>"1").first;
-    end
-  end
+ name=params["name"]
+ email=params["email"]
+ query=params["query"]
+
+
+Query.create(:name=>name,:email=>email,:message=>query);
+return redirect_to '/Contact';
+
+
+ end
 
 end

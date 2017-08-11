@@ -1,0 +1,65 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ * require_self
+  *= require font-awesome
+
+ */
+ @import "https://fonts.googleapis.com/icon?family=Material+Icons";
+
+
+@import "materialize";
+
+*{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.fa-android{
+  font-size: 2em;
+  color: white;
+  background-color: grey;
+  padding: 15px 17px 15px 17px;
+  -webkit-transition: width 1s, height 1s, -webkit-transform 1s; /* Safari */
+  transition: width 1s, height 1s, transform 1s;
+}
+
+.fa-android:hover {
+  font-size: 2em;
+  color: white;
+  background-color: #db5726;
+  padding: 15px 17px 15px 17px;
+    -webkit-transform: rotate(360deg); /* Safari */
+    transform: rotate(360deg);  
+}
+
+.social-icon .fa-facebook{
+  font-size: 2em;
+  position: relative;
+  background-color: grey;
+  padding: 15px 20px 15px 20px;
+  -webkit-transition: width 1s, height 1s, -webkit-transform 1s; /* Safari */
+  transition: width 1s, height 1s, transform 1s;
+}
+.social-icon .fa-facebook:hover{
+  font-size: 2em;
+  position: relative;
+  background-color: #db5726;
+  padding: 15px 20px 15px 20px;
+    -webkit-transform: rotate(360deg); /* Safari */
+    transform: rotate(360deg);
+}
+*{
+    font-family: 'Ubuntu', sans-serif;
+}
+footer li{
+  font-family: ubuntu;
+}

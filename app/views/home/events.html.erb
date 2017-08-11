@@ -1,1140 +1,206 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <style type="text/css">
-      /*component.css*/
-      /*#og-grid li{
-        border-bottom: 20px;
-      }*/
-      .og-grid {
-        list-style: none;
-        padding: 20px 0;
-        margin: 0 auto;
-        text-align: center;
-        width: 100%;
-      }
+<div class="col s12 m6">
+<div class="card-container">
 
-      .og-grid li {
-        display: inline-block;
-        margin: 10px 5px 80px 5px;
-        vertical-align: top;
-        height: 250px;
-      }
-      .og-grid p{
-        width: 100%;
-        border: 1px solid black;
-        background-color: #f1f1f1;
-        padding: 5px;
-        font-size: 20px;
-        text-decoration: none;
-        text-transform: uppercase;
-        font-family: ubuntu;
-      }
-      .og-grid p:hover{
-        width: 100%;
-        border: 1px solid black;
-        background-color: #f1f1f1;
-        color: #f06423;
-        padding: 5px;
-        font-size: 20px;
-        text-decoration: none;
-        text-transform: uppercase;
-        font-family: ubuntu;
-        font-weight: 700;
-      }
+  <div class="card">
+    <div class="card-image"></div>
+    <div class="card-info">
+      <div class="card-title">Hie</div>
+      <div class="card-detail">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis beatae nisi soluta ex animi aperiam iste voluptatem, voluptatibus impedit rem natus doloribus sed ullam provident sunt odit eaque excepturi modi.</div>
+    </div>
+    <div class="card-social">
+    <ul>
+      <li><i class="fa fa-comment-o" aria-hidden="true"></i>
+</li>
+      <li><i class="fa fa-heart-o" aria-hidden="true"></i></li>
+      <li><i class="fa fa-share-alt" aria-hidden="true"></i>
+</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card">
+      <div class="card-image"></div>
+    <div class="card-info">
+      <div class="card-title">Hello</div>
+      <div class="card-detail">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis beatae nisi soluta ex animi aperiam iste voluptatem, voluptatibus impedit rem natus doloribus sed ullam provident sunt odit eaque excepturi modi.</div>
+    </div>
+      <div class="card-social">
+    <ul>
+        <li><i class="fa fa-comment-o" aria-hidden="true"></i>
+</li>
+        <li><i class="fa fa-heart-o" aria-hidden="true"></i>
+</li>
+        <li><i class="fa fa-share-alt" aria-hidden="true"></i>
+</li>
+        </ul>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-image"></div>
+    <div class="card-info">
+      <div class="card-title">How are you ?</div>
+      <div class="card-detail">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis beatae nisi soluta ex animi aperiam iste voluptatem, voluptatibus impedit rem natus doloribus sed ullam provident sunt odit eaque excepturi modi.</div>
+    </div>
+    <div class="card-social">
+    <ul>
+      <li><i class="fa fa-comment-o" aria-hidden="true"></i>
+</li>
+      <li><i class="fa fa-heart-o" aria-hidden="true"></i>
+</li>
+      <li><i class="fa fa-share-alt" aria-hidden="true"></i>
+</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-image"></div>
+    <div class="card-info">
+      <div class="card-title">What's Up ?</div>
+      <div class="card-detail">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis beatae nisi soluta ex animi aperiam iste voluptatem, voluptatibus impedit rem natus doloribus sed ullam provident sunt odit eaque excepturi modi.</div>
+    </div>
+    <div class="card-social">
+    <ul>
+      <li><i class="fa fa-comment-o" aria-hidden="true"></i></li>
+      <li><i class="fa fa-heart-o" aria-hidden="true"></i>
+</li>
+      <li><i class="fa fa-share-alt" aria-hidden="true"></i>
+</li>
+      </ul>
+    </div>
+  </div>
+</div>
 
-      .og-grid li > a,
-      .og-grid li > a img {
-        border: none;
-        outline: none;
-        display: block;
-        position: relative;
-      }
-
-      .og-grid li.og-expanded > a::after {
-        top: auto;
-        border: solid transparent;
-        content: " ";
-        height: 0;
-        width: 0;
-        position: absolute;
-        pointer-events: none;
-        border-bottom-color: #ddd;
-        border-width: 15px;
-        left: 50%;
-        margin: -20px 0 0 -15px;
-      }
-
-      .og-expander {
-        position: absolute;
-        background: #ddd;
-        top: auto;
-        left: 0;
-        width: 100%;
-        margin-top: 10px;
-        text-align: left;
-        height: 0;
-        overflow: hidden;
-      }
-
-      .og-expander-inner {
-        padding: 50px 30px;
-        height: 100%;
-      }
-
-      .og-close {
-        position: absolute;
-        width: 40px;
-        height: 40px;
-        top: 20px;
-        right: 20px;
-        cursor: pointer;
-      }
-
-      .og-close::before,
-      .og-close::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        top: 50%;
-        height: 1px;
-        background: #888;
-        -webkit-transform: rotate(45deg);
-        -moz-transform: rotate(45deg);
-        transform: rotate(45deg);
-      }
-
-      .og-close::after {
-        -webkit-transform: rotate(-45deg);
-        -moz-transform: rotate(-45deg);
-        transform: rotate(-45deg);
-      }
-
-      .og-close:hover::before,
-      .og-close:hover::after {
-        background: #333;
-      }
-
-      .og-fullimg,
-      .og-details {
-        width: 50%;
-        float: left;
-        height: 100%;
-        overflow: hidden;
-        position: relative;
-      }
-
-      .og-details {
-        padding: 0 40px 0 20px;
-      }
-
-      .og-fullimg {
-        text-align: center;
-      }
-
-      .og-fullimg img {
-        display: inline-block;
-        max-height: 100%;
-        max-width: 100%;
-      }
-
-      .og-details h3 {
-        font-weight: 300;
-        font-size: 52px;
-        padding: 40px 0 10px;
-        margin-bottom: 10px;
-      }
-
-      .og-details p {
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 22px;
-        color: #999;
-      }
-
-      .og-details a {
-        font-weight: 700;
-        font-size: 16px;
-        color: #333;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        padding: 10px 20px;
-        border: 3px solid #333;
-        display: inline-block;
-        margin: 30px 0 0;
-        outline: none;
-      }
-
-      .og-details a::before {
-        content: '\2192';
-        display: inline-block;
-        margin-right: 10px;
-      }
-
-      .og-details a:hover {
-        border-color: #999;
-        color: #999;
-      }
-
-      .og-loading {
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        background: #ddd;
-        box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ccc;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin: -25px 0 0 -25px;
-        -webkit-animation: loader 0.5s infinite ease-in-out both;
-        -moz-animation: loader 0.5s infinite ease-in-out both;
-        animation: loader 0.5s infinite ease-in-out both;
-      }
-
-      @-webkit-keyframes loader {
-        0% { background: #ddd; }
-        33% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ddd; }
-        66% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ddd, -15px 30px 1px #ccc; }
-      }
-
-      @-moz-keyframes loader {
-        0% { background: #ddd; }
-        33% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ddd; }
-        66% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ddd, -15px 30px 1px #ccc; }
-      }
-
-      @keyframes loader {
-        0% { background: #ddd; }
-        33% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ddd; }
-        66% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ddd, -15px 30px 1px #ccc; }
-      }
-
-      @media screen and (max-width: 830px) {
-
-        .og-expander h3 { font-size: 32px; }
-        .og-expander p { font-size: 13px; }
-        .og-expander a { font-size: 12px; }
-
-      }
-
-      @media screen and (max-width: 650px) {
-
-        .og-fullimg { display: none; }
-        .og-details { float: none; width: 100%; }
-        
-      }
-
-      default.css
-
-      /* General Demo Style */
-      @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
-
-      html { height: 100%; }
-
-      *,
-      *:after,
-      *:before {
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        padding: 0;
-        margin: 0;
-      }
-
-      /* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
-      .clearfix:before,
-      .clearfix:after {
-          content: " ";
-          display: table;
-      }
-
-      .clearfix:after {
-          clear: both;
-      }
-
-      .clearfix {
-          *zoom: 1;
-      }
-
-      body {
-          font-family: 'Lato', Calibri, Arial, sans-serif;
-          background: #f9f9f9;
-          font-weight: 300;
-          font-size: 15px;
-          color: #333;
-          overflow: scroll;
-          overflow-x: hidden;
-      }
-
-      a {
-        color: #555;
-        text-decoration: none;
-      }
-
-      .container {
-        width: 100%;
-        position: relative;
-      }
-
-      .container > header {
-        width: 90%;
-        max-width: 1240px;
-        margin: 0 auto;
-        position: relative;
-        padding: 0 30px 50px 30px;
-      }
-
-      .container > header {
-        padding: 60px 30px 50px;
-        text-align: center;
-      }
-
-      .container > header h1 {
-        font-size: 34px;
-        line-height: 38px;
-        margin: 0 auto;
-        font-weight: 700;
-        color: #333;
-      }
-
-      .container > header h1 span {
-        display: block;
-        font-size: 20px;
-        font-weight: 300;
-      }
-
-      .main > p {
-        text-align: center;
-        padding: 50px 20px;
-      }
-
-      /* Header Style */
-      .codrops-top {
-        line-height: 24px;
-        font-size: 11px;
-        background: #fff;
-        background: rgba(255, 255, 255, 0.5);
-        text-transform: uppercase;
-        z-index: 9999;
-        position: relative;
-        box-shadow: 1px 0px 2px rgba(0,0,0,0.2);
-      }
-
-      .codrops-top a {
-        padding: 0px 10px;
-        letter-spacing: 1px;
-        color: #333;
-        display: inline-block;
-      }
-
-      .codrops-top a:hover {
-        background: rgba(255,255,255,0.8);
-        color: #000;
-      }
-
-      .codrops-top span.right {
-        float: right;
-      }
-
-      .codrops-top span.right a {
-        float: left;
-        display: block;
-      }
-
-      #myInput {
-    background-image: url('/css/searchicon.png'); /* Add a search icon to input */
-    background-position: 10px 12px; /* Position the search icon */
-    background-repeat: no-repeat; /* Do not repeat the icon image */
-    width: 100%; /* Full-width */
-    font-size: 16px; /* Increase font-size */
-    padding: 12px 20px 12px 40px; /* Add some padding */
-    border: 1px solid #ddd; /* Add a grey border */
-    margin-bottom: 12px; /* Add some space below the input */
-    }
+</div>
 
 
-    .clearfix p{
-      font-size: 16px;
-      font-weight: 700;
-      border: 2px solid black;
-      padding: 10px;
-    }
-    .clearfix p:hover{
-      font-size: 18px;
-      border: 2px solid black;
-      padding: 10px;
-      background-color: #f1f1f1;
-    }
+
+<style media="screen">
+
+
+body {
+background: rgba(0, 0, 255, 0.5);
 }
 
-    </style><!-- 
-    <script src="js/modernizr.custom.js"></script> -->
-    <script>
-      /* Modernizr 2.6.2 (Custom Build) | MIT & BSD
-       * Build: http://modernizr.com/download/#-csstransitions-shiv-cssclasses-prefixed-testprop-testallprops-domprefixes-load
-       */
-      ;window.Modernizr=function(a,b,c){function x(a){j.cssText=a}function y(a,b){return x(prefixes.join(a+";")+(b||""))}function z(a,b){return typeof a===b}function A(a,b){return!!~(""+a).indexOf(b)}function B(a,b){for(var d in a){var e=a[d];if(!A(e,"-")&&j[e]!==c)return b=="pfx"?e:!0}return!1}function C(a,b,d){for(var e in a){var f=b[a[e]];if(f!==c)return d===!1?a[e]:z(f,"function")?f.bind(d||b):f}return!1}function D(a,b,c){var d=a.charAt(0).toUpperCase()+a.slice(1),e=(a+" "+n.join(d+" ")+d).split(" ");return z(b,"string")||z(b,"undefined")?B(e,b):(e=(a+" "+o.join(d+" ")+d).split(" "),C(e,b,c))}var d="2.6.2",e={},f=!0,g=b.documentElement,h="modernizr",i=b.createElement(h),j=i.style,k,l={}.toString,m="Webkit Moz O ms",n=m.split(" "),o=m.toLowerCase().split(" "),p={},q={},r={},s=[],t=s.slice,u,v={}.hasOwnProperty,w;!z(v,"undefined")&&!z(v.call,"undefined")?w=function(a,b){return v.call(a,b)}:w=function(a,b){return b in a&&z(a.constructor.prototype[b],"undefined")},Function.prototype.bind||(Function.prototype.bind=function(b){var c=this;if(typeof c!="function")throw new TypeError;var d=t.call(arguments,1),e=function(){if(this instanceof e){var a=function(){};a.prototype=c.prototype;var f=new a,g=c.apply(f,d.concat(t.call(arguments)));return Object(g)===g?g:f}return c.apply(b,d.concat(t.call(arguments)))};return e}),p.csstransitions=function(){return D("transition")};for(var E in p)w(p,E)&&(u=E.toLowerCase(),e[u]=p[E](),s.push((e[u]?"":"no-")+u));return e.addTest=function(a,b){if(typeof a=="object")for(var d in a)w(a,d)&&e.addTest(d,a[d]);else{a=a.toLowerCase();if(e[a]!==c)return e;b=typeof b=="function"?b():b,typeof f!="undefined"&&f&&(g.className+=" "+(b?"":"no-")+a),e[a]=b}return e},x(""),i=k=null,function(a,b){function k(a,b){var c=a.createElement("p"),d=a.getElementsByTagName("head")[0]||a.documentElement;return c.innerHTML="x<style>"+b+"</style>",d.insertBefore(c.lastChild,d.firstChild)}function l(){var a=r.elements;return typeof a=="string"?a.split(" "):a}function m(a){var b=i[a[g]];return b||(b={},h++,a[g]=h,i[h]=b),b}function n(a,c,f){c||(c=b);if(j)return c.createElement(a);f||(f=m(c));var g;return f.cache[a]?g=f.cache[a].cloneNode():e.test(a)?g=(f.cache[a]=f.createElem(a)).cloneNode():g=f.createElem(a),g.canHaveChildren&&!d.test(a)?f.frag.appendChild(g):g}function o(a,c){a||(a=b);if(j)return a.createDocumentFragment();c=c||m(a);var d=c.frag.cloneNode(),e=0,f=l(),g=f.length;for(;e<g;e++)d.createElement(f[e]);return d}function p(a,b){b.cache||(b.cache={},b.createElem=a.createElement,b.createFrag=a.createDocumentFragment,b.frag=b.createFrag()),a.createElement=function(c){return r.shivMethods?n(c,a,b):b.createElem(c)},a.createDocumentFragment=Function("h,f","return function(){var n=f.cloneNode(),c=n.createElement;h.shivMethods&&("+l().join().replace(/\w+/g,function(a){return b.createElem(a),b.frag.createElement(a),'c("'+a+'")'})+");return n}")(r,b.frag)}function q(a){a||(a=b);var c=m(a);return r.shivCSS&&!f&&!c.hasCSS&&(c.hasCSS=!!k(a,"article,aside,figcaption,figure,footer,header,hgroup,nav,section{display:block}mark{background:#FF0;color:#000}")),j||p(a,c),a}var c=a.html5||{},d=/^<|^(?:button|map|select|textarea|object|iframe|option|optgroup)$/i,e=/^(?:a|b|code|div|fieldset|h1|h2|h3|h4|h5|h6|i|label|li|ol|p|q|span|strong|style|table|tbody|td|th|tr|ul)$/i,f,g="_html5shiv",h=0,i={},j;(function(){try{var a=b.createElement("a");a.innerHTML="<xyz></xyz>",f="hidden"in a,j=a.childNodes.length==1||function(){b.createElement("a");var a=b.createDocumentFragment();return typeof a.cloneNode=="undefined"||typeof a.createDocumentFragment=="undefined"||typeof a.createElement=="undefined"}()}catch(c){f=!0,j=!0}})();var r={elements:c.elements||"abbr article aside audio bdi canvas data datalist details figcaption figure footer header hgroup mark meter nav output progress section summary time video",shivCSS:c.shivCSS!==!1,supportsUnknownElements:j,shivMethods:c.shivMethods!==!1,type:"default",shivDocument:q,createElement:n,createDocumentFragment:o};a.html5=r,q(b)}(this,b),e._version=d,e._domPrefixes=o,e._cssomPrefixes=n,e.testProp=function(a){return B([a])},e.testAllProps=D,e.prefixed=function(a,b,c){return b?D(a,b,c):D(a,"pfx")},g.className=g.className.replace(/(^|\s)no-js(\s|$)/,"$1$2")+(f?" js "+s.join(" "):""),e}(this,this.document),function(a,b,c){function d(a){return"[object Function]"==o.call(a)}function e(a){return"string"==typeof a}function f(){}function g(a){return!a||"loaded"==a||"complete"==a||"uninitialized"==a}function h(){var a=p.shift();q=1,a?a.t?m(function(){("c"==a.t?B.injectCss:B.injectJs)(a.s,0,a.a,a.x,a.e,1)},0):(a(),h()):q=0}function i(a,c,d,e,f,i,j){function k(b){if(!o&&g(l.readyState)&&(u.r=o=1,!q&&h(),l.onload=l.onreadystatechange=null,b)){"img"!=a&&m(function(){t.removeChild(l)},50);for(var d in y[c])y[c].hasOwnProperty(d)&&y[c][d].onload()}}var j=j||B.errorTimeout,l=b.createElement(a),o=0,r=0,u={t:d,s:c,e:f,a:i,x:j};1===y[c]&&(r=1,y[c]=[]),"object"==a?l.data=c:(l.src=c,l.type=a),l.width=l.height="0",l.onerror=l.onload=l.onreadystatechange=function(){k.call(this,r)},p.splice(e,0,u),"img"!=a&&(r||2===y[c]?(t.insertBefore(l,s?null:n),m(k,j)):y[c].push(l))}function j(a,b,c,d,f){return q=0,b=b||"j",e(a)?i("c"==b?v:u,a,b,this.i++,c,d,f):(p.splice(this.i++,0,a),1==p.length&&h()),this}function k(){var a=B;return a.loader={load:j,i:0},a}var l=b.documentElement,m=a.setTimeout,n=b.getElementsByTagName("script")[0],o={}.toString,p=[],q=0,r="MozAppearance"in l.style,s=r&&!!b.createRange().compareNode,t=s?l:n.parentNode,l=a.opera&&"[object Opera]"==o.call(a.opera),l=!!b.attachEvent&&!l,u=r?"object":l?"script":"img",v=l?"script":u,w=Array.isArray||function(a){return"[object Array]"==o.call(a)},x=[],y={},z={timeout:function(a,b){return b.length&&(a.timeout=b[0]),a}},A,B;B=function(a){function b(a){var a=a.split("!"),b=x.length,c=a.pop(),d=a.length,c={url:c,origUrl:c,prefixes:a},e,f,g;for(f=0;f<d;f++)g=a[f].split("="),(e=z[g.shift()])&&(c=e(c,g));for(f=0;f<b;f++)c=x[f](c);return c}function g(a,e,f,g,h){var i=b(a),j=i.autoCallback;i.url.split(".").pop().split("?").shift(),i.bypass||(e&&(e=d(e)?e:e[a]||e[g]||e[a.split("/").pop().split("?")[0]]),i.instead?i.instead(a,e,f,g,h):(y[i.url]?i.noexec=!0:y[i.url]=1,f.load(i.url,i.forceCSS||!i.forceJS&&"css"==i.url.split(".").pop().split("?").shift()?"c":c,i.noexec,i.attrs,i.timeout),(d(e)||d(j))&&f.load(function(){k(),e&&e(i.origUrl,h,g),j&&j(i.origUrl,h,g),y[i.url]=2})))}function h(a,b){function c(a,c){if(a){if(e(a))c||(j=function(){var a=[].slice.call(arguments);k.apply(this,a),l()}),g(a,j,b,0,h);else if(Object(a)===a)for(n in m=function(){var b=0,c;for(c in a)a.hasOwnProperty(c)&&b++;return b}(),a)a.hasOwnProperty(n)&&(!c&&!--m&&(d(j)?j=function(){var a=[].slice.call(arguments);k.apply(this,a),l()}:j[n]=function(a){return function(){var b=[].slice.call(arguments);a&&a.apply(this,b),l()}}(k[n])),g(a[n],j,b,n,h))}else!c&&l()}var h=!!a.test,i=a.load||a.both,j=a.callback||f,k=j,l=a.complete||f,m,n;c(h?a.yep:a.nope,!!i),i&&c(i)}var i,j,l=this.yepnope.loader;if(e(a))g(a,0,l,0);else if(w(a))for(i=0;i<a.length;i++)j=a[i],e(j)?g(j,0,l,0):w(j)?B(j):Object(j)===j&&h(j,l);else Object(a)===a&&h(a,l)},B.addPrefix=function(a,b){z[a]=b},B.addFilter=function(a){x.push(a)},B.errorTimeout=1e4,null==b.readyState&&b.addEventListener&&(b.readyState="loading",b.addEventListener("DOMContentLoaded",A=function(){b.removeEventListener("DOMContentLoaded",A,0),b.readyState="complete"},0)),a.yepnope=k(),a.yepnope.executeStack=h,a.yepnope.injectJs=function(a,c,d,e,i,j){var k=b.createElement("script"),l,o,e=e||B.errorTimeout;k.src=a;for(o in d)k.setAttribute(o,d[o]);c=j?h:c||f,k.onreadystatechange=k.onload=function(){!l&&g(k.readyState)&&(l=1,c(),k.onload=k.onreadystatechange=null)},m(function(){l||(l=1,c(1))},e),i?k.onload():n.parentNode.insertBefore(k,n)},a.yepnope.injectCss=function(a,c,d,e,g,i){var e=b.createElement("link"),j,c=i?h:c||f;e.href=a,e.rel="stylesheet",e.type="text/css";for(j in d)e.setAttribute(j,d[j]);g||(n.parentNode.insertBefore(e,n),m(c,0))}}(this,document),Modernizr.load=function(){yepnope.apply(window,[].slice.call(arguments,0))};
-    </script>
-  </head>
-  <body>
-    <div class="container">
-    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Events..">
-      <header class="clearfix">
-        <div class="row">
-          <div class="col-md-2 col-sm-4">
-            <p onclick ="f()">All Events</p>
-          </div>
-          <div class="col-md-2 col-sm-4">
-            <p onclick ="f1()">Programming</p>
-          </div>
-          <div class="col-md-2 col-sm-4">
-            <p onclick ="f2()">Electronics</p>
-          </div>
-          <div class="col-md-2 col-sm-4">
-            <p onclick ="f3()">Enterpreneurial</p>
-          </div>
-          <div class="col-md-2 col-sm-4">
-            <p onclick ="f4()">Workshops</p>
-          </div>
-          <div class="col-md-2 col-sm-4">
-            <p onclick ="f5()">Non-tech</p>
-          </div>
-        </div>  
-      </header>
-    </div>
-      <div class="main">
-        <ul id="og-grid" class="og-grid">
-          <li id="1">
-            <a href="/algoholics" data-largesrc="http://awdf.org/wp-content/themes/africa_womens_dev_fund159/images/Default-Event-2x.png" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
-              <img src="/uploads/Algoholics.png" alt="img01"/>
-            <p>algoholics</p>
-            </a>
-          </li>
-          <li id="2">
-            <a href="#" data-largesrc="http://awdf.org/wp-content/themes/africa_womens_dev_fund159/images/Default-Event-2x.png" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
-              <img src="http://awdf.org/wp-content/themes/africa_womens_dev_fund159/images/Default-Event-2x.png" alt="img01"/>
-            <p>know it all</p>
-            </a>
-          </li>
-          <li id="3">
-            <a href="#" data-largesrc="http://awdf.org/wp-content/themes/africa_womens_dev_fund159/images/Default-Event-2x.png" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
-              <img src="http://awdf.org/wp-content/themes/africa_womens_dev_fund159/images/Default-Event-2x.png" alt="img01"/>
-            <p>samadhan</p>
-            </a>
-          </li>
-          <li id="4">
-            <a href="#" data-largesrc="http://awdf.org/wp-content/themes/africa_womens_dev_fund159/images/Default-Event-2x.png" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
-              <img src="http://awdf.org/wp-content/themes/africa_womens_dev_fund159/images/Default-Event-2x.png" alt="img01"/>
-            <p>start smart</p>
-            </a>
-          </li>
-          <li id="5">
-            <a href="#" data-largesrc="http://awdf.org/wp-content/themes/africa_womens_dev_fund159/images/Default-Event-2x.png" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
-              <img src="http://awdf.org/wp-content/themes/africa_womens_dev_fund159/images/Default-Event-2x.png" alt="img01"/>
-            <p>random event</p>
-            </a>
-          </li>
-          <li id="6">
-            <a href="#" data-largesrc="http://awdf.org/wp-content/themes/africa_womens_dev_fund159/images/Default-Event-2x.png" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
-              <img src="http://awdf.org/wp-content/themes/africa_womens_dev_fund159/images/Default-Event-2x.png" alt="img01"/>
-            <p>hmmmmm</p>
-            </a>
-          </li>
-          <li id="7">
-            <a href="#" data-largesrc="http://awdf.org/wp-content/themes/africa_womens_dev_fund159/images/Default-Event-2x.png" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
-              <img src="http://awdf.org/wp-content/themes/africa_womens_dev_fund159/images/Default-Event-2x.png" alt="img01"/>
-            <p>xyz</p>
-            </a>
-          </li>
-          <li id="8">
-            <a href="#" data-largesrc="http://awdf.org/wp-content/themes/africa_womens_dev_fund159/images/Default-Event-2x.png" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
-              <img src="http://awdf.org/wp-content/themes/africa_womens_dev_fund159/images/Default-Event-2x.png" alt="img01"/>
-            <p>Event Name</p>
-            </a>
-          </li>
-          <li id="9">
-            <a href="#" data-largesrc="http://awdf.org/wp-content/themes/africa_womens_dev_fund159/images/Default-Event-2x.png" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
-              <img src="http://awdf.org/wp-content/themes/africa_womens_dev_fund159/images/Default-Event-2x.png" alt="img01"/>
-            <p>Event Name</p>
-            </a>
-          </li>
-          <li id="10">
-            <a href="#" data-largesrc="http://awdf.org/wp-content/themes/africa_womens_dev_fund159/images/Default-Event-2x.png" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
-              <img src="http://awdf.org/wp-content/themes/africa_womens_dev_fund159/images/Default-Event-2x.png" alt="img01"/>
-            <p>Event Name</p>
-            </a>
-          </li>
-          <li id="11">
-            <a href="#" data-largesrc="http://awdf.org/wp-content/themes/africa_womens_dev_fund159/images/Default-Event-2x.png" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
-              <img src="http://awdf.org/wp-content/themes/africa_womens_dev_fund159/images/Default-Event-2x.png" alt="img01"/>
-            <p>Event Name</p>
-            </a>
-          </li>
-          <li id="12">
-            <a href="#" data-largesrc="http://awdf.org/wp-content/themes/africa_womens_dev_fund159/images/Default-Event-2x.png" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
-              <img src="http://awdf.org/wp-content/themes/africa_womens_dev_fund159/images/Default-Event-2x.png" alt="img01"/>
-            <p>Event Name</p>
-            </a>
-          </li>
-          <li id="13">
-            <a href="#" data-largesrc="http://awdf.org/wp-content/themes/africa_womens_dev_fund159/images/Default-Event-2x.png" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
-              <img src="http://awdf.org/wp-content/themes/africa_womens_dev_fund159/images/Default-Event-2x.png" alt="img01"/>
-            <p>Event Name</p>
-            </a>
-          </li>
-          <li id="14">
-            <a href="#" data-largesrc="http://awdf.org/wp-content/themes/africa_womens_dev_fund159/images/Default-Event-2x.png" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
-              <img src="http://awdf.org/wp-content/themes/africa_womens_dev_fund159/images/Default-Event-2x.png" alt="img01"/>
-            <p>Event Name</p>
-            </a>
-          </li>
-          <li id="15">
-            <a href="#" data-largesrc="http://awdf.org/wp-content/themes/africa_womens_dev_fund159/images/Default-Event-2x.png" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
-              <img src="http://awdf.org/wp-content/themes/africa_womens_dev_fund159/images/Default-Event-2x.png" alt="img01"/>
-            <p>Event Name</p>
-            </a>
-          </li>
-          <li id="16">
-            <a href="#" data-largesrc="http://awdf.org/wp-content/themes/africa_womens_dev_fund159/images/Default-Event-2x.png" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
-              <img src="http://awdf.org/wp-content/themes/africa_womens_dev_fund159/images/Default-Event-2x.png" alt="img01"/>
-            <p>Event Name</p>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div><!-- /container -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script><!-- 
-    <script src="js/grid.js"></script> -->
-    <script>
-      function myFunction() {
-        // Declare variables 
-        var input, filter, table, li,p, i;
-        input = document.getElementById("myInput");
-        filter = input.value.toUpperCase();
-        table = document.getElementById("og-grid");
-        li = table.getElementsByTagName("li");
-
-        // Loop through all table rows, and hide those who don't match the search query
-        for (i = 0; i < li.length; i++) {
-          p = li[i].getElementsByTagName("p")[0];
-          if (p) {
-            if (p.innerHTML.toUpperCase().indexOf(filter) > -1) {
-              li[i].style.display = "";
-            } else {
-              li[i].style.display = "none";
-            }
-          } 
-        }
-      }
-      function f(){
-        var i,li,table;
-        table = document.getElementById("og-grid");
-        li = table.getElementsByTagName("li");
-        for(i=0;i<li.length;++i)
-              li[i].style.display = "";
-      }
-      function f1(){
-        var i,li,table;
-        table = document.getElementById("og-grid");
-        li = table.getElementsByTagName("li");
-        for(i=0;i<li.length;++i){
-          if(li[i].id == 1 ||li[i].id == 2 ||li[i].id == 3 ||li[i].id == 4){
-              li[i].style.display = "";
-            } else {
-              li[i].style.display = "none";
-            }
-        }
-      }function f2(){
-        var i,li,table;
-        table = document.getElementById("og-grid");
-        li = table.getElementsByTagName("li");
-        for(i=0;i<li.length;++i){
-          if(li[i].id == 3 ||li[i].id == 5 ||li[i].id == 6 ||li[i].id == 7){
-              li[i].style.display = "";
-            } else {
-              li[i].style.display = "none";
-            }
-        }
-      }function f3(){
-        var i,li,table;
-        table = document.getElementById("og-grid");
-        li = table.getElementsByTagName("li");
-        for(i=0;i<li.length;++i){
-          if(li[i].id == 8 ||li[i].id == 9 ||li[i].id == 10 ||li[i].id == 11){
-              li[i].style.display = "";
-            } else {
-              li[i].style.display = "none";
-            }
-        }
-      }function f4(){
-        var i,li,table;
-        table = document.getElementById("og-grid");
-        li = table.getElementsByTagName("li");
-        for(i=0;i<li.length;++i){
-          if(li[i].id == 12 ||li[i].id == 13){
-              li[i].style.display = "";
-            } else {
-              li[i].style.display = "none";
-            }
-        }
-      }function f5(){
-        var i,li,table;
-        table = document.getElementById("og-grid");
-        li = table.getElementsByTagName("li");
-        for(i=0;i<li.length;++i){
-          if(li[i].id == 14 ||li[i].id == 15 ||li[i].id == 16){
-              li[i].style.display = "";
-            } else {
-              li[i].style.display = "none";
-            }
-        }
-      }
-    </script>
-    <script>
-            /*
-      * debouncedresize: special jQuery event that happens once after a window resize
-      *
-      * latest version and complete README available on Github:
-      * https://github.com/louisremi/jquery-smartresize/blob/master/jquery.debouncedresize.js
-      *
-      * Copyright 2011 @louis_remi
-      * Licensed under the MIT license.
-      */
-      var $event = $.event,
-      $special,
-      resizeTimeout;
-
-      $special = $event.special.debouncedresize = {
-        setup: function() {
-          $( this ).on( "resize", $special.handler );
-        },
-        teardown: function() {
-          $( this ).off( "resize", $special.handler );
-        },
-        handler: function( event, execAsap ) {
-          // Save the context
-          var context = this,
-            args = arguments,
-            dispatch = function() {
-              // set correct event type
-              event.type = "debouncedresize";
-              $event.dispatch.apply( context, args );
-            };
-
-          if ( resizeTimeout ) {
-            clearTimeout( resizeTimeout );
-          }
-
-          execAsap ?
-            dispatch() :
-            resizeTimeout = setTimeout( dispatch, $special.threshold );
-        },
-        threshold: 250
-      };
-
-      // ======================= imagesLoaded Plugin ===============================
-      // https://github.com/desandro/imagesloaded
-
-      // $('#my-container').imagesLoaded(myFunction)
-      // execute a callback when all images have loaded.
-      // needed because .load() doesn't work on cached images
-
-      // callback function gets image collection as argument
-      //  this is the container
-
-      // original: MIT license. Paul Irish. 2010.
-      // contributors: Oren Solomianik, David DeSandro, Yiannis Chatzikonstantinou
-
-      // blank image data-uri bypasses webkit log warning (thx doug jones)
-      var BLANK = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==';
-
-      $.fn.imagesLoaded = function( callback ) {
-        var $this = this,
-          deferred = $.isFunction($.Deferred) ? $.Deferred() : 0,
-          hasNotify = $.isFunction(deferred.notify),
-          $images = $this.find('img').add( $this.filter('img') ),
-          loaded = [],
-          proper = [],
-          broken = [];
-
-        // Register deferred callbacks
-        if ($.isPlainObject(callback)) {
-          $.each(callback, function (key, value) {
-            if (key === 'callback') {
-              callback = value;
-            } else if (deferred) {
-              deferred[key](value);
-            }
-          });
-        }
-
-        function doneLoading() {
-          var $proper = $(proper),
-            $broken = $(broken);
-
-          if ( deferred ) {
-            if ( broken.length ) {
-              deferred.reject( $images, $proper, $broken );
-            } else {
-              deferred.resolve( $images );
-            }
-          }
-
-          if ( $.isFunction( callback ) ) {
-            callback.call( $this, $images, $proper, $broken );
-          }
-        }
-
-        function imgLoaded( img, isBroken ) {
-          // don't proceed if BLANK image, or image is already loaded
-          if ( img.src === BLANK || $.inArray( img, loaded ) !== -1 ) {
-            return;
-          }
-
-          // store element in loaded images array
-          loaded.push( img );
-
-          // keep track of broken and properly loaded images
-          if ( isBroken ) {
-            broken.push( img );
-          } else {
-            proper.push( img );
-          }
-
-          // cache image and its state for future calls
-          $.data( img, 'imagesLoaded', { isBroken: isBroken, src: img.src } );
-
-          // trigger deferred progress method if present
-          if ( hasNotify ) {
-            deferred.notifyWith( $(img), [ isBroken, $images, $(proper), $(broken) ] );
-          }
-
-          // call doneLoading and clean listeners if all images are loaded
-          if ( $images.length === loaded.length ){
-            setTimeout( doneLoading );
-            $images.unbind( '.imagesLoaded' );
-          }
-        }
-
-        // if no images, trigger immediately
-        if ( !$images.length ) {
-          doneLoading();
-        } else {
-          $images.bind( 'load.imagesLoaded error.imagesLoaded', function( event ){
-            // trigger imgLoaded
-            imgLoaded( event.target, event.type === 'error' );
-          }).each( function( i, el ) {
-            var src = el.src;
-
-            // find out if this image has been already checked for status
-            // if it was, and src has not changed, call imgLoaded on it
-            var cached = $.data( el, 'imagesLoaded' );
-            if ( cached && cached.src === src ) {
-              imgLoaded( el, cached.isBroken );
-              return;
-            }
-
-            // if complete is true and browser supports natural sizes, try
-            // to check for image status manually
-            if ( el.complete && el.naturalWidth !== undefined ) {
-              imgLoaded( el, el.naturalWidth === 0 || el.naturalHeight === 0 );
-              return;
-            }
-
-            // cached images don't fire load sometimes, so we reset src, but only when
-            // dealing with IE, or image is complete (loaded) and failed manual check
-            // webkit hack from http://groups.google.com/group/jquery-dev/browse_thread/thread/eee6ab7b2da50e1f
-            if ( el.readyState || el.complete ) {
-              el.src = BLANK;
-              el.src = src;
-            }
-          });
-        }
-
-        return deferred ? deferred.promise( $this ) : $this;
-      };
-
-      var Grid = (function() {
-
-          // list of items
-        var $grid = $( '#og-grid' ),
-          // the items
-          $items = $grid.children( 'li' ),
-          // current expanded item's index
-          current = -1,
-          // position (top) of the expanded item
-          // used to know if the preview will expand in a different row
-          previewPos = -1,
-          // extra amount of pixels to scroll the window
-          scrollExtra = 0,
-          // extra margin when expanded (between preview overlay and the next items)
-          marginExpanded = 10,
-          $window = $( window ), winsize,
-          $body = $( 'html, body' ),
-          // transitionend events
-          transEndEventNames = {
-            'WebkitTransition' : 'webkitTransitionEnd',
-            'MozTransition' : 'transitionend',
-            'OTransition' : 'oTransitionEnd',
-            'msTransition' : 'MSTransitionEnd',
-            'transition' : 'transitionend'
-          },
-          transEndEventName = transEndEventNames[ Modernizr.prefixed( 'transition' ) ],
-          // support for csstransitions
-          support = Modernizr.csstransitions,
-          // default settings
-          settings = {
-            minHeight : 500,
-            speed : 350,
-            easing : 'ease'
-          };
-
-        function init( config ) {
-          
-          // the settings..
-          settings = $.extend( true, {}, settings, config );
-
-          // preload all images
-          $grid.imagesLoaded( function() {
-
-            // save item´s size and offset
-            saveItemInfo( true );
-            // get window´s size
-            getWinSize();
-            // initialize some events
-            initEvents();
-
-          } );
-
-        }
-
-        // add more items to the grid.
-        // the new items need to appended to the grid.
-        // after that call Grid.addItems(theItems);
-        function addItems( $newitems ) {
-
-          $items = $items.add( $newitems );
-
-          $newitems.each( function() {
-            var $item = $( this );
-            $item.data( {
-              offsetTop : $item.offset().top,
-              height : $item.height()
-            } );
-          } );
-
-          initItemsEvents( $newitems );
-
-        }
-
-        // saves the item´s offset top and height (if saveheight is true)
-        function saveItemInfo( saveheight ) {
-          $items.each( function() {
-            var $item = $( this );
-            $item.data( 'offsetTop', $item.offset().top );
-            if( saveheight ) {
-              $item.data( 'height', $item.height() );
-            }
-          } );
-        }
-
-        function initEvents() {
-          
-          // when clicking an item, show the preview with the item´s info and large image.
-          // close the item if already expanded.
-          // also close if clicking on the item´s cross
-          initItemsEvents( $items );
-          
-          // on window resize get the window´s size again
-          // reset some values..
-          $window.on( 'debouncedresize', function() {
-            
-            scrollExtra = 0;
-            previewPos = -1;
-            // save item´s offset
-            saveItemInfo();
-            getWinSize();
-            var preview = $.data( this, 'preview' );
-            if( typeof preview != 'undefined' ) {
-              hidePreview();
-            }
-
-          } );
-
-        }
-
-        function initItemsEvents( $items ) {
-          $items.on( 'click', 'span.og-close', function() {
-            hidePreview();
-            return false;
-          } ).children( 'a' ).on( 'click', function(e) {
-
-            var $item = $( this ).parent();
-            // check if item already opened
-            current === $item.index() ? hidePreview() : showPreview( $item );
-            return false;
-
-          } );
-        }
-
-        function getWinSize() {
-          winsize = { width : $window.width(), height : $window.height() };
-        }
-
-        function showPreview( $item ) {
-
-          var preview = $.data( this, 'preview' ),
-            // item´s offset top
-            position = $item.data( 'offsetTop' );
-
-          scrollExtra = 0;
-
-          // if a preview exists and previewPos is different (different row) from item´s top then close it
-          if( typeof preview != 'undefined' ) {
-
-            // not in the same row
-            if( previewPos !== position ) {
-              // if position > previewPos then we need to take te current preview´s height in consideration when scrolling the window
-              if( position > previewPos ) {
-                scrollExtra = preview.height;
-              }
-              hidePreview();
-            }
-            // same row
-            else {
-              preview.update( $item );
-              return false;
-            }
-            
-          }
-
-          // update previewPos
-          previewPos = position;
-          // initialize new preview for the clicked item
-          preview = $.data( this, 'preview', new Preview( $item ) );
-          // expand preview overlay
-          preview.open();
-
-        }
-
-        function hidePreview() {
-          current = -1;
-          var preview = $.data( this, 'preview' );
-          preview.close();
-          $.removeData( this, 'preview' );
-        }
-
-        // the preview obj / overlay
-        function Preview( $item ) {
-          this.$item = $item;
-          this.expandedIdx = this.$item.index();
-          this.create();
-          this.update();
-        }
-
-        Preview.prototype = {
-          create : function() {
-            // create Preview structure:
-            this.$title = $( '<h3></h3>' );
-            this.$description = $( '<p></p>' );
-            this.$href = $( '<a href="#">Visit website</a>' );
-            this.$details = $( '<div class="og-details"></div>' ).append( this.$title, this.$description, this.$href );
-            this.$loading = $( '<div class="og-loading"></div>' );
-            this.$fullimage = $( '<div class="og-fullimg"></div>' ).append( this.$loading );
-            this.$closePreview = $( '<span class="og-close"></span>' );
-            this.$previewInner = $( '<div class="og-expander-inner"></div>' ).append( this.$closePreview, this.$fullimage, this.$details );
-            this.$previewEl = $( '<div class="og-expander"></div>' ).append( this.$previewInner );
-            // append preview element to the item
-            this.$item.append( this.getEl() );
-            // set the transitions for the preview and the item
-            if( support ) {
-              this.setTransition();
-            }
-          },
-          update : function( $item ) {
-
-            if( $item ) {
-              this.$item = $item;
-            }
-            
-            // if already expanded remove class "og-expanded" from current item and add it to new item
-            if( current !== -1 ) {
-              var $currentItem = $items.eq( current );
-              $currentItem.removeClass( 'og-expanded' );
-              this.$item.addClass( 'og-expanded' );
-              // position the preview correctly
-              this.positionPreview();
-            }
-
-            // update current value
-            current = this.$item.index();
-
-            // update preview´s content
-            var $itemEl = this.$item.children( 'a' ),
-              eldata = {
-                href : $itemEl.attr( 'href' ),
-                largesrc : $itemEl.data( 'largesrc' ),
-                title : $itemEl.data( 'title' ),
-                description : $itemEl.data( 'description' )
-              };
-
-            this.$title.html( eldata.title );
-            this.$description.html( eldata.description );
-            this.$href.attr( 'href', eldata.href );
-
-            var self = this;
-            
-            // remove the current image in the preview
-            if( typeof self.$largeImg != 'undefined' ) {
-              self.$largeImg.remove();
-            }
-
-            // preload large image and add it to the preview
-            // for smaller screens we don´t display the large image (the media query will hide the fullimage wrapper)
-            if( self.$fullimage.is( ':visible' ) ) {
-              this.$loading.show();
-              $( '<img/>' ).load( function() {
-                var $img = $( this );
-                if( $img.attr( 'src' ) === self.$item.children('a').data( 'largesrc' ) ) {
-                  self.$loading.hide();
-                  self.$fullimage.find( 'img' ).remove();
-                  self.$largeImg = $img.fadeIn( 350 );
-                  self.$fullimage.append( self.$largeImg );
-                }
-              } ).attr( 'src', eldata.largesrc ); 
-            }
-
-          },
-          open : function() {
-
-            setTimeout( $.proxy( function() { 
-              // set the height for the preview and the item
-              this.setHeights();
-              // scroll to position the preview in the right place
-              this.positionPreview();
-            }, this ), 25 );
-
-          },
-          close : function() {
-
-            var self = this,
-              onEndFn = function() {
-                if( support ) {
-                  $( this ).off( transEndEventName );
-                }
-                self.$item.removeClass( 'og-expanded' );
-                self.$previewEl.remove();
-              };
-
-            setTimeout( $.proxy( function() {
-
-              if( typeof this.$largeImg !== 'undefined' ) {
-                this.$largeImg.fadeOut( 'fast' );
-              }
-              this.$previewEl.css( 'height', 0 );
-              // the current expanded item (might be different from this.$item)
-              var $expandedItem = $items.eq( this.expandedIdx );
-              $expandedItem.css( 'height', $expandedItem.data( 'height' ) ).on( transEndEventName, onEndFn );
-
-              if( !support ) {
-                onEndFn.call();
-              }
-
-            }, this ), 25 );
-            
-            return false;
-
-          },
-          calcHeight : function() {
-
-            var heightPreview = winsize.height - this.$item.data( 'height' ) - marginExpanded,
-              itemHeight = winsize.height;
-
-            if( heightPreview < settings.minHeight ) {
-              heightPreview = settings.minHeight;
-              itemHeight = settings.minHeight + this.$item.data( 'height' ) + marginExpanded;
-            }
-
-            this.height = heightPreview;
-            this.itemHeight = itemHeight;
-
-          },
-          setHeights : function() {
-
-            var self = this,
-              onEndFn = function() {
-                if( support ) {
-                  self.$item.off( transEndEventName );
-                }
-                self.$item.addClass( 'og-expanded' );
-              };
-
-            this.calcHeight();
-            this.$previewEl.css( 'height', this.height );
-            this.$item.css( 'height', this.itemHeight ).on( transEndEventName, onEndFn );
-
-            if( !support ) {
-              onEndFn.call();
-            }
-
-          },
-          positionPreview : function() {
-
-            // scroll page
-            // case 1 : preview height + item height fits in window´s height
-            // case 2 : preview height + item height does not fit in window´s height and preview height is smaller than window´s height
-            // case 3 : preview height + item height does not fit in window´s height and preview height is bigger than window´s height
-            var position = this.$item.data( 'offsetTop' ),
-              previewOffsetT = this.$previewEl.offset().top - scrollExtra,
-              scrollVal = this.height + this.$item.data( 'height' ) + marginExpanded <= winsize.height ? position : this.height < winsize.height ? previewOffsetT - ( winsize.height - this.height ) : previewOffsetT;
-            
-            $body.animate( { scrollTop : scrollVal }, settings.speed );
-
-          },
-          setTransition  : function() {
-            this.$previewEl.css( 'transition', 'height ' + settings.speed + 'ms ' + settings.easing );
-            this.$item.css( 'transition', 'height ' + settings.speed + 'ms ' + settings.easing );
-          },
-          getEl : function() {
-            return this.$previewEl;
-          }
-        }
-
-        return { 
-          init : init,
-          addItems : addItems
-        };
-
-      })();
-    </script>
-    <script>
-      $(function() {
-        Grid.init();
-      });
-    </script>
-  </body>
-  <script>
-    
-<script>
-  function searchitem(){
-      
-    var searchtext = $('#search').val().toLowerCase();
-    $('.mix').each(function( index ) {
-    { var text = $(this).find('.backtext').html().toLowerCase();
-      
-      if( text.search(searchtext) != -1)
-          $(this).show();
-      else
-          $(this).hide("100");
-    }
-    });
-    
-    
-  }
-  </script>
-</html>
-
+.card-container {
+position: relative;
+flex-wrap: wrap;
+overflow: hidden;
+padding-top: 15px;
+padding-bottom: 15px;
+display: flex;
+justify-content: space-around;
+align-items: auto;
+}
+
+.card {
+min-width: 275px;
+width: 275px;
+position: relative;
+margin: 15px 15px;
+height: 350px;
+border-radius: 7px;
+background-size: cover;
+background: rgba(0, 0, 0, 0.2);
+box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.3);
+transition: 0.2s all linear;
+border: 1px solid rgba(128, 128, 128, 0.15);
+box-sizing: border-box;
+}
+.card .card-social {
+position: absolute;
+height: 75px;
+width: 100%;
+background: red;
+border-bottom-right-radius: 5px;
+border-bottom-left-radius: 5px;
+background: rgba(0, 0, 0, 0.6);
+box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.5);
+top: 275px;
+}
+.card .card-social ul {
+padding: 0;
+margin: 0;
+list-style: none;
+width: 100%;
+height: 100%;
+display: flex;
+justify-content: space-around;
+}
+.card .card-social ul li {
+height: 100%;
+text-align: center;
+line-height: 75px;
+font-size: 1.5em;
+color: rgba(255, 255, 255, 0.85);
+text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+.card .card-social ul li:hover {
+text-shadow: 7px 7px 5px rgba(0, 0, 0, 0.7);
+transition: all 0.1s linear;
+}
+.card .card-image {
+width: 100%;
+height: 275px;
+position: relative;
+background-image: url("https://d13yacurqjgara.cloudfront.net/users/150724/screenshots/2211976/365_the_end_1x.png");
+border-top-right-radius: 5px;
+border-top-left-radius: 5px;
+}
+.card .card-info {
+position: relative;
+width: 100%;
+height: 35px;
+line-height: 35px;
+top: -265px;
+border-top-right-radius: 5px;
+border-top-left-radius: 5px;
+font-family: "Open Sans";
+color: rgba(255, 255, 255, 0.85);
+}
+.card .card-info .card-title {
+line-height: 35px;
+height: 35px;
+position: relative;
+top: 0px;
+font-size: 25px;
+text-align: center;
+background: rgba(0, 0, 0, 0.6);
+box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.3);
+}
+.card .card-info .card-detail {
+line-height: 1.5em;
+font-size: 1em;
+height: 220px;
+background: rgba(0, 0, 0, 0.6);
+position: relative;
+top: 5px;
+padding: 5px 20px 0px 20px;
+opacity: 0;
+transform: scaleY(0);
+transform-origin: center top;
+box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.3);
+}
+.card:hover {
+box-shadow: 10px 10px 10px 1px rgba(0, 0, 0, 0.3);
+}
+.card:hover .card-info .card-title {
+box-shadow: 10px 10px 10px 1px rgba(0, 0, 0, 0.3);
+transition: 0.3s all linear;
+}
+.card:hover .card-info .card-detail {
+opacity: 1;
+box-shadow: 10px 10px 10px 1px rgba(0, 0, 0, 0.3);
+transition: 0.35s all linear;
+transition-delay: 0.1s;
+transform: scaleY(1);
+}
+.card:nth-of-type(2) .card-image {
+background-image: url("https://d13yacurqjgara.cloudfront.net/users/150724/screenshots/2164720/337_writing_blog_post_1x.png");
+}
+.card:nth-of-type(3) .card-image {
+background-image: url("https://d13yacurqjgara.cloudfront.net/users/150724/screenshots/2377046/kaylo_ren_lighsaber_800x600_1x.png");
+}
+.card:nth-of-type(4) .card-image {
+background-image: url("https://d13yacurqjgara.cloudfront.net/users/150724/screenshots/2203790/362_chasing_dreams_1x.png");
+}
+
+</style>

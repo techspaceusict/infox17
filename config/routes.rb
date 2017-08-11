@@ -38,8 +38,19 @@ Rails.application.routes.draw do
 
    post '/addevents'=>'event#addevents'
 
-   get '/algoholics'=>'event#algoholics'
+   get '/event'=>'event#event'
 
    post '/eventregister'=>'event#eventregister'
+
+   post '/eventquery'=>'event#eventquery'
+
+   
+   namespace 'api' do
+
+    namespace 'v1' do
+      get '/allevent' =>'articles#allevent'
+      get '/eventbyid'=>'articles#eventbyid'
+    end
+   end
 
 end

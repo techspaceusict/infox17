@@ -1,193 +1,187 @@
-<style type="text/css">
-	body{
-		background-color: #263238;
-	}
-	h3,h4{
-		font-family: 'Ubuntu', sans-serif;
-		font-weight: 700;
-		color: #f06423;
-	}
-	.jumbotron .h1, .jumbotron h1,p,b, strong {
-		font-family: 'Ubuntu', sans-serif;
-		font-weight: 700;
-		color: black;
-	}
-	.jumbotron{
-		font-family: 'Ubuntu', sans-serif;
-		font-weight: 700;	
-		background-color:#f4c413;
-	}
-	h2, strong{
-		color:#f06423;
-	}
-	hr{
-		height: 10px;
-		border: 0;
-		box-shadow: 0 10px 10px -10px #8c8b8b inset;
-	}
-	.btn{
-		background-color: orange;
-		font-family: 'Ubuntu', sans-serif;
-		/*font-weight: 700;*/
-		color: black;
-	}
+	<!--Preloader-->
+	<div class="preload">
+    	<center>
+        	<img src="/uploads/preloader.gif">
+    	</center>
+	</div>
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<!--WebGL-->
+		<script>
+			var container, stats;
+			var camera, scene, renderer;
+			var geometry, group;
+			var mouseX = 0, mouseY = 0;
+			var windowHalfX = window.innerWidth / 2;
+			var windowHalfY = window.innerHeight / 2;
+			document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+			init();
+			animate();
+			function init() {
+				container = document.createElement( 'div' );
+				document.body.appendChild( container );
+				camera = new THREE.PerspectiveCamera( 60, window.innerWidth / window.innerHeight, 1, 10000 );
+				camera.position.z = 500;
+				scene = new THREE.Scene();
+				scene.fog = new THREE.Fog( 0xffffff, 1, 10000 );
+				var geometry = new THREE.BoxGeometry( 100, 100, 100 );
+				var material = new THREE.MeshNormalMaterial();
+				group = new THREE.Group();
+				for ( var i = 0; i < 1000; i ++ ) {
+					var mesh = new THREE.Mesh( geometry, material );
+					mesh.position.x = Math.random() * 2000 - 1000;
+					mesh.position.y = Math.random() * 2000 - 1000;
+					mesh.position.z = Math.random() * 2000 - 1000;
+					mesh.rotation.x = Math.random() * 2 * Math.PI;
+					mesh.rotation.y = Math.random() * 2 * Math.PI;
+					mesh.matrixAutoUpdate = false;
+					mesh.updateMatrix();
+					group.add( mesh );
+				}
+				scene.add( group );
+				//renderer = new THREE.WebGLRenderer();
+				renderer = new THREE.WebGLRenderer( { alpha: true } );
+				renderer.setClearColor( 0xffffff,0 );
+				renderer.setPixelRatio( window.devicePixelRatio );
+				renderer.setSize( window.innerWidth, window.innerHeight );
+				renderer.sortObjects = false;
+				container.id="webglcontainer";
+				container.appendChild( renderer.domElement );
+				//stats = new Stats();
+				//container.appendChild( stats.dom );
+			//
+			window.addEventListener( 'resize', onWindowResize, false );
+			}
+			function onWindowResize() {
+				windowHalfX = window.innerWidth / 2;
+				windowHalfY = window.innerHeight / 2;
+				camera.aspect = window.innerWidth / window.innerHeight;
+				camera.updateProjectionMatrix();
+				renderer.setSize( window.innerWidth, window.innerHeight );
+			}
+			function onDocumentMouseMove(event) {
+				mouseX = ( event.clientX - windowHalfX ) * 10;
+				mouseY = ( event.clientY - windowHalfY ) * 10;
+			}
+
+			function animate() {
+				requestAnimationFrame( animate );
+				render();
+				//stats.update();
+			}
+			function render() {
+				var time = Date.now() * 0.001;
+				var rx = Math.sin( time * 0.7 ) * 0.5,
+					ry = Math.sin( time * 0.3 ) * 0.5,
+					rz = Math.sin( time * 0.2 ) * 0.5;
+				camera.position.x += ( mouseX - camera.position.x ) * .05;
+				camera.position.y += ( - mouseY - camera.position.y ) * .05;
+				camera.lookAt( scene.position );
+				group.rotation.x = rx;
+				group.rotation.y = ry;
+				group.rotation.z = rz;
+				renderer.render( scene, camera );
+			}
+		</script>
+		<!--Main Div-->
+		<div class="col s12 "id="maindiv"style="z-index:1;padding:0px;overflow:auto;height:100vh">
+			<div class="row "id="logoCarrier"style="background:rgba(0,0,0,0.8);padding-top:35px;padding-bottom:35px">
+				<div class="col s12 m6">
+					<font color="white">
+						<center>
+							<h4>USICT<br>
+							</h4>
+							presents<br><br>
+							<img src="/uploads/logo.jpg"height="100px"width="100px">
+							<h4>InfoXpression
+							</h4>
+							<h3>
+								2017
+							</h3>
+                            Where Innovation is a Religion
+						</center>
+					</font>
+				</div>
+				<div class="col s12 m6"id="lineOnLeft">
+					<font color="white">
+						<center>
+							<br><br><br><br>
+							Powered By:
+							<br><br>
+							<img src="/uploads/CNLOGO.svg"height="70px" width="130px">
+							<br><br><br><br><br><br><br><br>
+						</center>
+					</font>
+				</div>
+			</div>
+			<div class="col s12">
+			</div>
+		</div><!--Main Div Closure-->
+	<script>
+    	$(function() {
+    	    $(".preload").fadeOut(2000, function() {
+    	        $("#maindiv").fadeIn(000);
+    	    });
+    	});
+	</script>
+	<style>
+    	#lineOnLeft
+    	{
+    		border-left:0.5px solid white;
+    	}
+    	#logoCarrier
+    	{
+    		margin-top:25vh;
+    	}
+    	@media screen and (max-width:500px)
+    	{
+    		#lineOnLeft
+    		{
+    			border:0px;
+    		}
+    	}
+    	@media screen and (max-width:600px)
+    	{
+    		#logoCarrier
+    		{
+    			margin-top:0px;
+    		}
+    	}
+        #webglcontainer
+        {
+          width: 100vw;
+          height: 100vh;
+          display: block;
+          position: fixed;
+          top: 0;
+          left: 0;
+          z-index: -9999;
+      }
+      body
+      {
+    	background:url('/uploads/bg.jpg');
+    	padding:0;
+    	margin:0;
+    	font-weight: bold;
+    	overflow:hidden;
+        }
+        iframe
+        {
+            z-index : -9999;
+            position: absolute;
+            top : 0;
+            left    : 0;
+            width   : 100%;
+            height  : 100%;
+            margin  : 0;
+            padding : 0;
+        }
+        .preload
+        {
+            width:100px;
+            height: 100%;
+            width:100%;
+            background:white;
+            position: fixed;
+            padding-top:40vh;
+        }
 	</style>
-<body>
-<div class="container">
-	<div class="row">
-		<div class="col-lg-6">
-			  <div class="jumbotron">
-			    <h1><strong>Infox17</strong></h1> 
-			    <p>Infoxpression is back bigger and better!!</p>
-				<p>18th Oct - 22nd October</p> 
-			    <p>At USICT, dwarka</p>  
-			  </div>
-		</div>
-		<div class="col-lg-6">
-			<h2><strong>Sponsored By:</strong></h2>
-			<img style="height: 200px" src="https://www.codingninjas.in/assets/images/CNLOGO.svg">
-		</div>
-	</div>
-	<hr>
-	<h3>Confused about your Tech knowledge?</h3>
-	<h4>Try out our Tech quiz!!</h4>
-	<button class="btn btn-default btn-lg" data-toggle="modal" data-target="#quiz">Tech Quiz!</button>
-
-	<!-- Modal -->
-	<div class="modal fade" id="quiz" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-	  <div class="modal-dialog" role="document">
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <h4 class="modal-title" id="myModalLabel">Techspace tech quiz!</h4>
-	      </div>
-	      <div class="modal-body">
-			<p>
-				Welcome!
-		        <br />
-		        Asking question <span id="NumberAsked">1</span> of 10 with <span id="NumberCorrect">0</span> answers correct</p>
-		    <p>
-		        <span id="TriviaQuestion">???</span>
-		    </p>
-		    <p>
-		        &nbsp;
-		        <input id="RadioTrue" type="radio" value="true" name="answer" checked="checked" /> True
-		        &nbsp;&nbsp;&nbsp;
-		        <input id="RadioFalse" type="radio" value="false" name="answer" /> False
-		    </p>
-		    <p>
-		        <input id="ButtonContinue" onclick="checkAnswer();" type="button" value="continue" />
-		    </p>
-	      </div>
-	      <div class="modal-footer">
-	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-	      </div>
-	    </div>
-	  </div>
-	</div>
-</div>
-    <script language="javascript" type="text/javascript">
-        // Array of trivia data
-        var TriviaData = new Array(10)
-        createTwoDimensionalArray(3);
- 
-        // Variables to track state of the game
-        // i.e. number questions asked, current correct total and current question
-        var questionsAsked = 0;
-        var totalCorrect = 0;
-        var currentQuestion = 0;
-        var selectionValid = false;
- 
-        // Questions
-        TriviaData[0][0] = "Some Random tech related ques to test the users knowledge";
-        TriviaData[1][0] = "Some Random tech related ques to test the users knowledge";
-        TriviaData[2][0] = "Some Random tech related ques to test the users knowledge";
-        TriviaData[3][0] = "Some Random tech related ques to test the users knowledge";
-        TriviaData[4][0] = "Some Random tech related ques to test the users knowledge";
-        TriviaData[5][0] = "Some Random tech related ques to test the users knowledge";
-        TriviaData[6][0] = "Some Random tech related ques to test the users knowledge";
-        TriviaData[7][0] = "Some Random tech related ques to test the users knowledge";
-        TriviaData[8][0] = "Some Random tech related ques to test the users knowledge";
-        TriviaData[9][0] = "Some Random tech related ques to test the users knowledge";
-   
-        // Answers
-        TriviaData[0][1] = "true";
-        TriviaData[1][1] = "false";
-        TriviaData[2][1] = "true";
-        TriviaData[3][1] = "false";
-        TriviaData[4][1] = "false";
-        TriviaData[5][1] = "true";
-        TriviaData[6][1] = "true";
-        TriviaData[7][1] = "false";
-        TriviaData[8][1] = "true";
-        TriviaData[9][1] = "false";
- 
-        // Has question been asked
-        // -- necessary because we are asking in random order
-        TriviaData[0][2] = "no";
-        TriviaData[1][2] = "no";
-        TriviaData[2][2] = "no";
-        TriviaData[3][2] = "no";
-        TriviaData[4][2] = "no";
-        TriviaData[5][2] = "no";
-        TriviaData[6][2] = "no";
-        TriviaData[7][2] = "no";
-        TriviaData[8][2] = "no";
-        TriviaData[9][2] = "no";
- 
-        // Load up first question
-        setQuestion();
- 
-        // Sets question text and indicator so that we know the question has been displayed
-        function setQuestion() {
-            selectionValid = false; // Flag to make sure question has not been asked yet
-            while (selectionValid == false) {
-                currentQuestion = Math.floor(Math.random() * 10); // randomly select starting question
-                if (TriviaData[currentQuestion][2] == "no") {
-                    selectionValid = true;
-                }
-            }
-            document.getElementById("TriviaQuestion").innerHTML = TriviaData[currentQuestion][0];
-            TriviaData[currentQuestion][2] = "yes";
-            questionsAsked = questionsAsked + 1;
-        }
- 
-        function processAnswer(myAnswer) {
-            if (TriviaData[currentQuestion][1] == myAnswer) {
-                // answer correct
-                totalCorrect = totalCorrect + 1;
-            }
-        }
- 
-        // This function creates our two dimensional array
-        function createTwoDimensionalArray(arraySize) {
-            for (i = 0; i < TriviaData.length; ++i)
-                TriviaData[i] = new Array(arraySize);
-        }
- 
-        // This function checks the answer, updates correct total
-        // and randomly selects the next question
-        function checkAnswer() {
-            if (document.getElementById("RadioTrue").checked) {
-                processAnswer("true");
-            }
-            else {
-                processAnswer("false");
-            }
-            // get next question if not asked all yet
-            if (questionsAsked < 10) {
-                setQuestion();
-            }
-            // final question asked - disable button and show final results
-            else {
-                alert("Quiz complete! You got " + totalCorrect + " correct out of 10.");
-                document.getElementById("ButtonContinue").disabled = true;
-            }
-            // update totals
-            document.getElementById("NumberAsked").innerHTML = questionsAsked;
-            document.getElementById("NumberCorrect").innerHTML = totalCorrect;
-        }
- 
-    </script>
-</body>
-
-
