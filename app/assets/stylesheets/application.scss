@@ -22,3 +22,44 @@
 *{
     font-family: 'Ubuntu', sans-serif;
 }
+
+.fa-android{
+  font-size: 2em;
+  color: white;
+  background-color: grey;
+  padding: 15px 17px 15px 17px;
+  -webkit-transition: width 1s, height 1s, -webkit-transform 1s; /* Safari */
+  transition: width 1s, height 1s, transform 1s;
+}
+
+.fa-android:hover {
+  font-size: 2em;
+  color: white;
+  background-color: #db5726;
+  padding: 15px 17px 15px 17px;
+    -webkit-transform: rotate(360deg); /* Safari */
+    transform: rotate(360deg);  
+}
+
+.social-icon .fa-facebook{
+  font-size: 2em;
+  position: relative;
+  background-color: grey;
+  padding: 15px 20px 15px 20px;
+  -webkit-transition: width 1s, height 1s, -webkit-transform 1s; /* Safari */
+  transition: width 1s, height 1s, transform 1s;
+}
+.social-icon .fa-facebook:hover{
+  font-size: 2em;
+  position: relative;
+  background-color: #db5726;
+  padding: 15px 20px 15px 20px;
+    -webkit-transform: rotate(360deg); /* Safari */
+    transform: rotate(360deg);
+}
+*{
+    font-family: 'Ubuntu', sans-serif;
+}
+footer li{
+  font-family: ubuntu;
+}
