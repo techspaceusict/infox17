@@ -1,0 +1,189 @@
+	<!--Preloader-->
+	<div class="preload">
+    	<center>
+        	<img src="/uploads/preloader.gif">
+    	</center>
+	</div>
+	<body>
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<!--WebGL--->
+		<script>
+			var container, stats;
+			var camera, scene, renderer;
+			var geometry, group;
+			var mouseX = 0, mouseY = 0;
+			var windowHalfX = window.innerWidth / 2;
+			var windowHalfY = window.innerHeight / 2;
+			document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+			init();
+			animate();
+			function init() {
+				container = document.createElement( 'div' );
+				document.body.appendChild( container );
+				camera = new THREE.PerspectiveCamera( 60, window.innerWidth / window.innerHeight, 1, 10000 );
+				camera.position.z = 500;
+				scene = new THREE.Scene();
+				scene.fog = new THREE.Fog( 0xffffff, 1, 10000 );
+				var geometry = new THREE.BoxGeometry( 100, 100, 100 );
+				var material = new THREE.MeshNormalMaterial();
+				group = new THREE.Group();
+				for ( var i = 0; i < 1000; i ++ ) {
+					var mesh = new THREE.Mesh( geometry, material );
+					mesh.position.x = Math.random() * 2000 - 1000;
+					mesh.position.y = Math.random() * 2000 - 1000;
+					mesh.position.z = Math.random() * 2000 - 1000;
+					mesh.rotation.x = Math.random() * 2 * Math.PI;
+					mesh.rotation.y = Math.random() * 2 * Math.PI;
+					mesh.matrixAutoUpdate = false;
+					mesh.updateMatrix();
+					group.add( mesh );
+				}
+				scene.add( group );
+				//renderer = new THREE.WebGLRenderer();
+				renderer = new THREE.WebGLRenderer( { alpha: true } );
+				renderer.setClearColor( 0xffffff,0 );
+				renderer.setPixelRatio( window.devicePixelRatio );
+				renderer.setSize( window.innerWidth, window.innerHeight );
+				renderer.sortObjects = false;
+				container.id="webglcontainer";
+				container.appendChild( renderer.domElement );
+				//stats = new Stats();
+				//container.appendChild( stats.dom );
+			//
+			window.addEventListener( 'resize', onWindowResize, false );
+			}
+			function onWindowResize() {
+				windowHalfX = window.innerWidth / 2;
+				windowHalfY = window.innerHeight / 2;
+				camera.aspect = window.innerWidth / window.innerHeight;
+				camera.updateProjectionMatrix();
+				renderer.setSize( window.innerWidth, window.innerHeight );
+			}
+			function onDocumentMouseMove(event) {
+				mouseX = ( event.clientX - windowHalfX ) * 10;
+				mouseY = ( event.clientY - windowHalfY ) * 10;
+			}
+
+			function animate() {
+				requestAnimationFrame( animate );
+				render();
+				//stats.update();
+			}
+			function render() {
+				var time = Date.now() * 0.001;
+				var rx = Math.sin( time * 0.7 ) * 0.5,
+					ry = Math.sin( time * 0.3 ) * 0.5,
+					rz = Math.sin( time * 0.2 ) * 0.5;
+				camera.position.x += ( mouseX - camera.position.x ) * .05;
+				camera.position.y += ( - mouseY - camera.position.y ) * .05;
+				camera.lookAt( scene.position );
+				group.rotation.x = rx;
+				group.rotation.y = ry;
+				group.rotation.z = rz;
+				renderer.render( scene, camera );
+			}
+		</script>
+		<!--Main Div-->
+		<div class="col s12 "id="maindiv"style="z-index:1;padding:0px;overflow:auto;height:100vh">
+			<div class="row "id="logoCarrier"style="background:rgba(0,0,0,0.8);padding-top:35px;padding-bottom:35px">
+				<div class="col s12 m6">
+					<font color="white">
+						<center>
+							<h4>USICT<br>
+							</h4>
+							presents<br><br>
+							<img src="/uploads/logo.jpg"height="100px"width="100px">
+							<h4>InfoXpression
+							</h4>
+							<h3>
+								2017
+							</h3>
+                            Where Innovation is a Religion
+						</center>
+					</font>
+				</div>
+				<div class="col s12 m6"id="lineOnLeft">
+					<font color="white">
+						<center>
+							<br><br><br><br>
+							Powered By:
+							<br><br>
+							<img src="/uploads/CNLOGO.svg"height="70px" width="130px">
+							<br><br><br><br><br><br><br><br>
+						</center>
+					</font>
+				</div>
+			</div>
+			<div class="col s12">
+			</div>
+		</div><!--Main Div Closure-->
+	</body>
+	<script>
+    	$(function() {
+    	    $(".preload").fadeOut(2000, function() {
+    	        $("#maindiv").fadeIn(000);
+    	    });
+    	});
+	</script>
+	<style>
+    	#lineOnLeft
+    	{
+    		border-left:0.5px solid white;
+    	}
+    	#logoCarrier
+    	{
+    		margin-top:25vh;
+    	}
+    	@media screen and (max-width:500px)
+    	{
+    		#lineOnLeft
+    		{
+    			border:0px;
+    		}
+    	}
+    	@media screen and (max-width:600px)
+    	{
+    		#logoCarrier
+    		{
+    			margin-top:0px;
+    		}
+    	}
+        #webglcontainer
+        {
+          width: 100vw;
+          height: 100vh;
+          display: block;
+          position: fixed;
+          top: 0;
+          left: 0;
+          z-index: -9999;
+      }
+      body
+      {
+    	background:url('/uploads/bg.jpg');
+    	padding:0;
+    	margin:0;
+    	font-weight: bold;
+    	overflow:hidden;
+        }
+        iframe
+        {
+            z-index : -9999;
+            position: absolute;
+            top : 0;
+            left    : 0;
+            width   : 100%;
+            height  : 100%;
+            margin  : 0;
+            padding : 0;
+        }
+        .preload
+        {
+            width:100px;
+            height: 100%;
+            width:100%;
+            background:white;
+            position: fixed;
+            padding-top:40vh;
+        }
+	</style>
