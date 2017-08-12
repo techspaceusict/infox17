@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
     <title>Infoxpression2017</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.js">
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 
     </head>
@@ -14,18 +16,21 @@
     <div class="navbar-fixed">
       <nav>
         <div class="nav-wrapper">
-          <a href="#" class="brand-logo center"><img style="height: 50px; padding-top: 10px; " src="http://prabhanshugupta.me/infoxpression/img/logo-infox%20trans-bg.jpg"></a>
+          <a href="/" class="brand-logo center"><img style="height: 50px; padding-top: 10px; " src="http://prabhanshugupta.me/infoxpression/img/logo-infox%20trans-bg.jpg"></a>
           <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
           <ul class="left hide-on-med-and-down">
-            <li class="active" style="margin-right: 50px; margin-left: 50px;"><a href="/">Home</a></li>
-            <li style="margin-right: 50px; margin-left: 50px;"><a href="/about">About</a></li>
-            <li style="margin-right: 50px; margin-left: 50px;"><a href="/schedule">Schedule</a></li>
+            <li style="margin-left: 50px;"><a style="padding-right: 50px; padding-left: 50px;" href="/">Home</a></li>
+            <li><a style="padding-right: 50px; padding-left: 50px;" href="/about">About</a></li>
+            <li><a style="padding-right: 50px; padding-left: 50px;" href="/schedule">Schedule</a></li>
           </ul>
           <ul class="right hide-on-med-and-down">
-            <li style="margin-right: 50px; margin-left: -450px;"><a href="/events">Events</a></li>
-            <li style="margin-right: 50px; margin-left: -250px;"><a href="/team">Team</a></li>
-            <li style="margin-right: 50px; margin-left: -100px;"><a href="/Contact">Contact Us</a></li>
+            <li style="margin-right: 300px; margin-left: -450px;"><a style="padding-left: 50px; padding-right: 50px;" href="/events">Events</a></li>
+            <li style="margin-right: 50px; margin-left: -300px;"><a style="padding-left: 50px; padding-right: 50px;" href="/team">Team</a></li>
+            <li style="margin-right: 50px; margin-left: -150px;"><a style="padding-left: 50px; padding-right: 50px;" href="/Contact">Contact Us</a></li>
           </ul>
+        </div>
+      </nav>           
+    </div>
           <ul class="side-nav" id="mobile-demo">
             <li class="active"><a href="/">Home</a></li>
             <li><a href="/about">About</a></li>
@@ -33,10 +38,7 @@
             <li><a href="/events">Events</a></li>
             <li><a href="/team">Team</a></li>
             <li><a href="/Contact">Contact Us</a></li>
-          </ul>
-        </div>
-      </nav>            
-    </div>
+          </ul> 
 
 
     <div id="body">
@@ -46,20 +48,25 @@
         <div id="social_links"> 
            <ul>
             <li><a href="/users/auth/facebook"><img src="http://www.old.ittf.com/media/16wttc/subscription/images/facebook.png" style="width: 50px;"></a></li>
-      </div>
+        </div>
         <%else%>
+          <ul id="slide-out" class="side-nav">
+            <li><div class="user-view" style="background-image: url(https://wallpaperbrowse.com/media/images/html-color-codes-color-tutorials-hero-00e10b1f.jpg);">
+              <a href="#!user"><img class="circle" src="<%= current_user.profile%>"></a><br>  
+              <a href="#!name"><span class="white-text name">User name</span></a><br>
+              <a href="#!email"><span class="white-text email">Registered id</span></a>
+            </div></li> 
+            <li><i class="material-icons">event_note</i><%= link_to "My Events", url_for(controller: :event, action: :myevents), method: :post%></li>
+            <li><div class="divider"></div></li>
+            <li><i class="material-icons">arrow_forward</i><%= link_to "Log out", destroy_user_session_path, :method => :delete%></li>
+            <li><div class="divider"></div></li>
+          </ul>
       <div id="social_links">
-           <ul>
-            <li><img src="<%= current_user.profile%>" style="width: 50px"></li>
-            <br>
-            <li><img src="http://www.bates.edu/oie/files/2015/09/Icon_Calendar.png" style="width: 50px;"><br><%= link_to "My Events", url_for(controller: :event, action: :myevents), method: :post%></li>
-            <br>
-            <li><img src="https://cdn0.iconfinder.com/data/icons/large-glossy-icons/512/User_logout.png" style="width: 50px;"><br><%= link_to "Log out", destroy_user_session_path, :method => :delete%></li>
-
-           </ul>
+      <a style="background-color: rgba(0,0,0,0.5); color: white; padding: 10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" href="#" data-activates="slide-out" class="button-collapse" style="color: black;"><img style="height: 50px; padding-top: 10px; " src="http://prabhanshugupta.me/infoxpression/img/logo-infox%20trans-bg.jpg"><br>My Infox</a>
       </div>
-        <%end%>
 
+        <%end%>
+ 
     <main>
           <%= yield %>
     </main>
@@ -71,11 +78,11 @@
                 <br>
                 <a href="index.html"><img width="80px" src="http://prabhanshugupta.me/infoxpression/img/logo-infox%20trans-bg.jpg"></a>
                 <br />
-                <h5><a href="#">Techspace</a></h5>
-                <h5><a href="#">E-Cell</a></h5>
-                <h5><a href="#">IEEE</a></h5>
-                <h5><a href="#">IETE</a></h5>
-                <h5><a href="#">SAINT</a></h5>       
+                <h5><a style="color:#db5726" href="#">Techspace</a></h5>
+                <h5><a style="color:#db5726" href="#">E-Cell</a></h5>
+                <h5><a style="color:#db5726" href="#">IEEE</a></h5>
+                <h5><a style="color:#db5726" href="#">IETE</a></h5>
+                <h5><a style="color:#db5726" href="#">SAINT</a></h5>       
             </div>
             <div class="col m4 s12">
               <div class="social-icon" style="text-align: center;">
@@ -102,7 +109,7 @@
             </div>
           </div>
           <div class="copyright" style="text-align: center;">
-            <p>Infox Copyright &copy; 2016. All Rights Reserved.</p>
+            <p style="color: black;">Infox Copyright &copy; 2016. All Rights Reserved.</p>
           </div>
     </div> 
 </body>
@@ -136,14 +143,8 @@
     right: 0px;
     top: 65px;
     display: flex;
-    height: 100%;
-    background-color:rgba(0,0,0,0.2);
     padding: 20px;
     padding-right: 10px;
-    right: 20px;
-    top: 100px;
-    display: flex;
-    height: 100%;
 }
   #social_links li{
     list-style: none;
@@ -157,9 +158,22 @@
     padding-top: 20px;
     padding-bottom: 20px;
     background-color:#d0d0d0;
+    bottom: 0px;
+    border-top: 2px solid grey;
   }
-  .nav-wrapper {
-   backgroundround-color: black;
+  nav .nav-wrapper{
+    background-color: rgba(0,0,0,0.4);
+   z-index: 20000;
+  }
+  nav{
+    background-color: rgba(0,0,0,0.4);
+   z-index: 20000;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  .side-nav{
+    z-index: 20000;
   }
   a{
     color: #db5726;
