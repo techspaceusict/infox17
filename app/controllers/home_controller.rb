@@ -18,7 +18,7 @@ class HomeController < ApplicationController
 
 	end
 
-	def team
+	def Sponsers
 	end
 
 	def Contact

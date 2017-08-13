@@ -1,17 +1,20 @@
-<link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
     <div class="container" style="padding-right: 60px;">
-    <h1 style="text-align: center;font-family: 'Patua One', cursive;color: white;text-shadow: 1px 1px 2px #000000; ">EVENTS</h1>
+    <h1 style="text-align: center;font-family: 'Righteous', cursive;color:#db5726;text-shadow: 2px 2px 2px black; ">EVENTS</h1>
 <!--     <div class="border"></div> -->
     <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Events..">
     </div>
+    <hr>
+    <div class="container" style="padding-top: 50px;">
       <div class="row">
-        <a class="col m2 s6" id="category" onclick="f()">All Events</a>
-        <a class="col m2 s6" id="category" onclick="f1()">Programming</a>
-        <a class="col m2 s6" id="category" onclick="f2()">Electronics</a>
-        <a class="col m2 s6" id="category" onclick="f3()">Enterpreneurial</a>
-        <a class="col m2 s6" id="category" onclick="f4()">Work Shops</a>
-        <a class="col m2 s6" id="category" onclick="f5()">Non-Tech</a>
+        <div class="col m2 s12" onclick="f()" ><a class="category">All Events</a></div>
+        <div class="col m2 s12" onclick="f1()"><a class="category">Programming</a></div>
+        <div class="col m2 s12" onclick="f2()"><a class="category">Electronics</a></div>
+        <div class="col m2 s12" onclick="f3()"><a class="category" style="text-align: left; padding-left: 10px; padding-right: 10px;">Enterpreneurial</a></div>
+        <div class="col m2 s12" onclick="f4()"><a class="category" style="text-align: right; padding-left: 10px; padding-right: 20px;">Work Shops</a></div>
+        <div class="col m2 s12" onclick="f5()"><a class="category">Non-Tech</a></div>
       </div>  
+    </div>
 <div class="col s12 m6">
 <div class="card-container" id="card-container">
 
@@ -20,8 +23,8 @@
     <div class="card-image"><img src="/uploads/<%= event.image%>" style="size: "></div>
     <div class="card-info">
 
-      <div class="card-title" id="name"><%= event.Name%></div>
-      <div class="card-detail"><%= event.about%></div>
+      <div class="card-title"><%=raw event.Name%></div>
+      <div class="card-detail"><%=raw event.about%></div>
     </div>
     <div class="card-social">
       <ul>
@@ -32,40 +35,57 @@
       </ul>
     </div>
   </div>
-
 <%end%>
 </div>
-
+ 
+<hr>
+<h6 style="text-align: center; font-weight: 700">No more events to display!</h6>
+<hr>
 </div>
 
 <style media="screen">
 
+hr {
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
+
 #myInput {
-    background-color: rgba(0,0,0,0.5);
+    color: white;
+    background-color: rgba(0,0,0,0.1);
     width: 100%; /* Full-width */
     font-size: 16px; /* Increase font-size */
     margin-top: 20px;
     padding: 12px 20px 12px 40px; /* Add some padding */
     border: 1px solid #ddd; /* Add a grey border */
     margin-bottom: 30px; /* Add some space below the input */
+    background-color: rgba(0,0,0,0.5);
     box-shadow: 0 0 0.2em black;
 }
-#category{
-  font-size: 20px;
-  padding: 30px;
+.category{
+  box-shadow: 0 0 0.2em black;
+  text-align: center;
+  font-size: 15px;
+  padding: 20px;
   color: white;
   font-weight: 700;
+  border-top: 2px solid black;
+  -webkit-transition: background-color 2s ease-out;
+  display: flex;
   background-color: rgba(0,0,0,0.2);
-  border-top: 2px solid black;  
 }
 
-#category:hover{
-  font-size: 20px;
-  padding: 30px;
+.category:hover{
+  display: flex;
+  text-align: center;
+  font-size: 16px;
+  padding: 20px;
   color: #ff5e00;
   font-weight: 700;
-  background-color: rgba(0,0,0,0.2);
-  border-top: 4px solid black;  
+  border-top: 4px solid black;
+  background-color: rgba(0,0,0,0.5);
 }
 .row li a{
   text-decoration: none;
@@ -73,8 +93,7 @@
   list-style: none;
 }
 body {
-        background: url('/uploads/contactbg.jpg');
-        background-size: cover;
+  background-color: #2b2c30;
 }
 .card-container {
 position: relative;
@@ -95,7 +114,6 @@ height: 400px;
 border-radius: 7px;
 background-size: cover;
 background: rgba(0, 0, 0, 0.2);
-box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.3);
 transition: 0.2s all linear;
 border: 1px solid rgba(128, 128, 128, 0.15);
 box-sizing: border-box;
@@ -159,7 +177,7 @@ top: 0px;
 font-size: 25px;
 text-align: center;
 background: rgba(0, 0, 0, 0.6);
-box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.3);
+box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.3);
 }
 .card .card-info .card-detail {
 line-height: 1.5em;
@@ -173,31 +191,22 @@ opacity: 0;
 transform: scaleY(0);
 transform-origin: center top;
 box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.3);
+
 }
 .card:hover {
-box-shadow: 10px 10px 10px 1px rgba(0, 0, 0, 0.3);
+box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
 }
 .card:hover .card-info .card-title {
-box-shadow: 10px 10px 10px 1px rgba(0, 0, 0, 0.3);
+box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
 transition: 0.3s all linear;
 }
 .card:hover .card-info .card-detail {
 opacity: 1;
-box-shadow: 10px 10px 10px 1px rgba(0, 0, 0, 0.3);
+box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
 transition: 0.35s all linear;
 transition-delay: 0.1s;
 transform: scaleY(1);
 }
-/*.card:nth-of-type(2) .card-image {
-background-image: url("https://d13yacurqjgara.cloudfront.net/users/150724/screenshots/2164720/337_writing_blog_post_1x.png");
-}
-.card:nth-of-type(3) .card-image {
-background-image: url("https://d13yacurqjgara.cloudfront.net/users/150724/screenshots/2377046/kaylo_ren_lighsaber_800x600_1x.png");
-}
-.card:nth-of-type(4) .card-image {
-background-image: url("https://d13yacurqjgara.cloudfront.net/users/150724/screenshots/2203790/362_chasing_dreams_1x.png");
-}
-*/
 </style>
 
 <script>

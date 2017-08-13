@@ -108,7 +108,7 @@
                                     <i class="material-icons">close</i>
                                 </span><br>
                                 <font color="white">
-                                    <center><%= event.Name%><hr>
+                                    <center><%=raw event.Name%><hr>
                                             <a class="modal-trigger" href="#<%= event.Event_id%>mainmodal"style="color:white">
                                                 <div class="waves-effect waves-light btn">More...
                                                 </div>
@@ -128,11 +128,11 @@
                         <div class="col s12 m7">
                                 <font color="black">
                                     <div class="row"style="background:rgba(0,0,0,1);color:white;padding-top:10px;padding-bottom:10px">
-                                        <center><%= event.Name%>
+                                        <center><%=raw event.Name%>
                                         </center>
                                     </div>
                                     <div class="row">
-                                        <%= event.about%>
+                                        <%=raw event.about%>
                                     </div>
                                     <hr>
                                     <table class="striped">

@@ -25,7 +25,7 @@
           </ul>
           <ul class="right hide-on-med-and-down">
             <li style="margin-right: 300px; margin-left: -450px;"><a style="padding-left: 50px; padding-right: 50px;" href="/events">Events</a></li>
-            <li style="margin-right: 50px; margin-left: -300px;"><a style="padding-left: 50px; padding-right: 50px;" href="/team">Team</a></li>
+            <li style="margin-right: 50px; margin-left: -300px;"><a style="padding-left: 50px; padding-right: 50px;" href="/Sponsers">Sponsers</a></li>
             <li style="margin-right: 50px; margin-left: -150px;"><a style="padding-left: 50px; padding-right: 50px;" href="/Contact">Contact Us</a></li>
           </ul>
         </div>
@@ -51,7 +51,7 @@
         </div>
         <%else%>
           <ul id="slide-out" class="side-nav">
-            <p><div class="user-view" style="background-image: url(https://wallpaperbrowse.com/media/images/html-color-codes-color-tutorials-hero-00e10b1f.jpg);"><br>
+            <p><div class="user-view" style="background-image: url(http://365psd.com/images/thumbs/8d8/shiny-orange-vector-background-59776.jpg);"><br>
               <img style="padding: 10px;" class="circle" src="<%= current_user.profile%>"><br> 
               <span style="padding-left: 10px; font-size: 16px; font-weight: 700" class="white-text name"><%= current_user.name%></span><br>
               <span style="padding-left: 10px;" class="white-text email">ID : <%= current_user.id%></span>
@@ -119,22 +119,22 @@
 <script type="text/javascript">
 
   window.sr = ScrollReveal();
-  sr.reveal('#body .card-container',{
+  sr.reveal('#body .card-container .card',{
       duration: 1000,
       origin :'bottom',
-      distance: '300px',
-      viewFactor: 0
+      viewFactor: 0,
+      reset :true,
    }); 
   sr.reveal('#footer .col',{
       duration: 2000,
-      origin :'bottom',
+      origin :'left',
    }); 
   
 </script>
 
 <style type="text/css">  
 .side-nav{
-  background-color: orange;
+  background-color: #ffcc00;
   width: 200px;
 }
   .fa-facebook{
