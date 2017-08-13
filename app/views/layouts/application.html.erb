@@ -29,7 +29,7 @@
             <li style="margin-right: 50px; margin-left: -150px;"><a style="padding-left: 50px; padding-right: 50px;" href="/Contact">Contact Us</a></li>
           </ul>
         </div>
-      </nav>           
+      </nav>
     </div>
           <ul class="side-nav" id="mobile-demo">
             <li class="active"><a href="/">Home</a></li>
@@ -38,24 +38,24 @@
             <li><a href="/events">Events</a></li>
             <li><a href="/team">Team</a></li>
             <li><a href="/Contact">Contact Us</a></li>
-          </ul> 
+          </ul>
 
 
     <div id="body">
        <p class="notice"><%= notice %></p>
              <p class="alert"><%= alert %></p>
         <%if !user_signed_in? %>
-        <div id="social_links"> 
+        <div id="social_links">
            <ul>
             <li><a href="/users/auth/facebook"><img src="http://www.old.ittf.com/media/16wttc/subscription/images/facebook.png" style="width: 50px;"></a></li>
         </div>
         <%else%>
           <ul id="slide-out" class="side-nav">
             <li><div class="user-view" style="background-image: url(https://wallpaperbrowse.com/media/images/html-color-codes-color-tutorials-hero-00e10b1f.jpg);">
-              <a href="#!user"><img class="circle" src="<%= current_user.profile%>"></a><br>  
+              <a href="#!user"><img class="circle" src="<%= current_user.profile%>"></a><br>
               <a href="#!name"><span class="white-text name"><%= current_user.name%></span></a><br>
               <a href="#!email"><span class="white-text email">ID : <%= current_user.id%></span></a>
-            </div></li> 
+            </div></li>
             <li><i class="material-icons">event_note</i><%= link_to "My Events", url_for(controller: :event, action: :myevents), method: :post%></li>
             <li><div class="divider"></div></li>
             <li><i class="material-icons">arrow_forward</i><%= link_to "Log out", destroy_user_session_path, :method => :delete%></li>
@@ -66,11 +66,11 @@
       </div>
 
         <%end%>
- 
+
     <main>
           <%= yield %>
     </main>
-      
+
     </div>
     <div id="footer" class="bg-one">
           <div class="row">
@@ -82,7 +82,7 @@
                 <h5><a style="color:#db5726" href="#">E-Cell</a></h5>
                 <h5><a style="color:#db5726" href="#">IEEE</a></h5>
                 <h5><a style="color:#db5726" href="#">IETE</a></h5>
-                <h5><a style="color:#db5726" href="#">SAINT</a></h5>       
+                <h5><a style="color:#db5726" href="#">SAINT</a></h5>
             </div>
             <div class="col m4 s12">
               <div class="social-icon" style="text-align: center;">
@@ -95,9 +95,9 @@
                       <br>infox@ipu.ac.in
                       <br>www.ipu.ac.in/infox17/
                     </h5>
-              </div>   
+              </div>
             </div>
-            
+
             <div class="col m4 s12" style="text-align: center;">
                 <br>
                 <br>
@@ -111,11 +111,11 @@
           <div class="copyright" style="text-align: center;">
             <p style="color: black;">Infox Copyright &copy; 2016. All Rights Reserved.</p>
           </div>
-    </div> 
+    </div>
 </body>
 </html>
 <script type="text/javascript">
-  
+
   window.sr = ScrollReveal();
   sr.reveal('#footer .col',{
       duration: 2000,
@@ -132,7 +132,7 @@
 </script>
 
 
-<style type="text/css">  
+<style type="text/css">
   .fa-facebook{
      color: white;
      font-size: 2em;
@@ -152,7 +152,7 @@
   #body{
     min-height: 700px;
     padding-top: 30px;
-    padding-bottom: 30px; 
+    padding-bottom: 30px;
   }
   #footer{
     padding-top: 20px;
