@@ -26,7 +26,7 @@ Rails.application.routes.draw do
 
   get '/events'=>'home#events'
 
-  get '/team'=>'home#team'
+  get '/Sponsers'=>'home#Sponsers'
 
   get '/Contact'=>'home#Contact'
 
