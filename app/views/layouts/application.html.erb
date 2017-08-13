@@ -51,14 +51,16 @@
         </div>
         <%else%>
           <ul id="slide-out" class="side-nav">
-            <li><div class="user-view" style="background-image: url(https://wallpaperbrowse.com/media/images/html-color-codes-color-tutorials-hero-00e10b1f.jpg);">
-              <a href="#!user"><img class="circle" src="<%= current_user.profile%>"></a><br>
-              <a href="#!name"><span class="white-text name"><%= current_user.name%></span></a><br>
-              <a href="#!email"><span class="white-text email">ID : <%= current_user.id%></span></a>
-            </div></li>
-            <li><i class="material-icons">event_note</i><%= link_to "My Events", url_for(controller: :event, action: :myevents), method: :post%></li>
+            <p><div class="user-view" style="background-image: url(http://365psd.com/images/thumbs/8d8/shiny-orange-vector-background-59776.jpg);"><br>
+              <img style="padding: 10px;" class="circle" src="<%= current_user.profile%>"><br> 
+              <span style="padding-left: 10px; font-size: 16px; font-weight: 700" class="white-text name"><%= current_user.name%></span><br>
+              <span style="padding-left: 10px;" class="white-text email">ID : <%= current_user.id%></span>
+              <br>
+              <br>
+            </div></p> 
+            <p><i style="font-size: 30px; padding-right: 10px;" class="material-icons">event_note</i><%= link_to "My Events", url_for(controller: :event, action: :myevents), method: :post%></p>
             <li><div class="divider"></div></li>
-            <li><i class="material-icons">arrow_forward</i><%= link_to "Log out", destroy_user_session_path, :method => :delete%></li>
+            <p><i style="font-size: 30px; padding-right: 10px;" class="material-icons">arrow_forward</i><%= link_to "Log out", destroy_user_session_path, :method => :delete%></p>
             <li><div class="divider"></div></li>
           </ul>
       <div id="social_links">
@@ -117,22 +119,24 @@
 <script type="text/javascript">
 
   window.sr = ScrollReveal();
+  sr.reveal('#body .card-container .card',{
+      duration: 1000,
+      origin :'bottom',
+      viewFactor: 0,
+      reset :true,
+   }); 
   sr.reveal('#footer .col',{
       duration: 2000,
-      origin :'bottom'
-   });
-  // sr.reveal('.col .m6',{
-  //     duration: 2000,
-  //     origin :'left'
-  // });
-  // sr.reveal('.col m4 push-m2',{
-  //     duration: 2000,
-  //     origin :'right'
-  // });
+      origin :'left',
+   }); 
+  
 </script>
 
-
-<style type="text/css">
+<style type="text/css">  
+.side-nav{
+  background-color: #ffcc00;
+  width: 200px;
+}
   .fa-facebook{
      color: white;
      font-size: 2em;
@@ -144,7 +148,7 @@
     top: 65px;
     display: flex;
     padding: 20px;
-    padding-right: 10px;
+    padding-right: 10px;  
 }
   #social_links li{
     list-style: none;
