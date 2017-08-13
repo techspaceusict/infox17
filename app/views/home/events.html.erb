@@ -1,19 +1,33 @@
+<link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
+    <div class="container" style="padding-right: 60px;">
+    <h1 style="text-align: center;font-family: 'Patua One', cursive;color: white;text-shadow: 1px 1px 2px #000000; ">EVENTS</h1>
+<!--     <div class="border"></div> -->
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Events..">
+    </div>
+      <div class="row">
+        <a class="col m2 s6" id="category" onclick="f()">All Events</a>
+        <a class="col m2 s6" id="category" onclick="f1()">Programming</a>
+        <a class="col m2 s6" id="category" onclick="f2()">Electronics</a>
+        <a class="col m2 s6" id="category" onclick="f3()">Enterpreneurial</a>
+        <a class="col m2 s6" id="category" onclick="f4()">Work Shops</a>
+        <a class="col m2 s6" id="category" onclick="f5()">Non-Tech</a>
+      </div>  
 <div class="col s12 m6">
-<div class="card-container">
+<div class="card-container" id="card-container">
 
 <%@event.each do |event|%>
-  <div class="card">
+  <div class="card" id="<%= event.Event_id%>">
     <div class="card-image"><img src="/uploads/<%= event.image%>" style="size: "></div>
     <div class="card-info">
 
-      <div class="card-title"><%= event.Name%></div>
+      <div class="card-title" id="name"><%= event.Name%></div>
       <div class="card-detail"><%= event.about%></div>
     </div>
     <div class="card-social">
-    <ul>
+      <ul>
 
-      <li><a href="/event?id=<%= event.Event_id%>">Register </a></li>
-      <li><a href="#">Share</a></i></li>
+        <li><a href="/event?id=<%= event.Event_id%>">Register </a></li>
+        <li><a href="#">Share</a></i></li>
 
       </ul>
     </div>
@@ -24,15 +38,44 @@
 
 </div>
 
-
-
 <style media="screen">
 
-
-body {
-background: rgba(0, 0, 255, 0.5);
+#myInput {
+    background-color: rgba(0,0,0,0.5);
+    width: 100%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    margin-top: 20px;
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 30px; /* Add some space below the input */
+    box-shadow: 0 0 0.2em black;
+}
+#category{
+  font-size: 20px;
+  padding: 30px;
+  color: white;
+  font-weight: 700;
+  background-color: rgba(0,0,0,0.2);
+  border-top: 2px solid black;  
 }
 
+#category:hover{
+  font-size: 20px;
+  padding: 30px;
+  color: #ff5e00;
+  font-weight: 700;
+  background-color: rgba(0,0,0,0.2);
+  border-top: 4px solid black;  
+}
+.row li a{
+  text-decoration: none;
+  font-size: 16px;
+  list-style: none;
+}
+body {
+        background: url('/uploads/contactbg.jpg');
+        background-size: cover;
+}
 .card-container {
 position: relative;
 flex-wrap: wrap;
@@ -43,7 +86,6 @@ display: flex;
 justify-content: space-around;
 align-items: auto;
 }
-
 .card {
 min-width: 275px;
 width: 275px;
@@ -157,3 +199,92 @@ background-image: url("https://d13yacurqjgara.cloudfront.net/users/150724/screen
 }
 */
 </style>
+
+<script>
+      function f(){
+        var i,li,table;
+        table = document.getElementById("card-container");
+        li = table.getElementsByClassName("card");
+        for(i=0;i<li.length;++i)
+              li[i].style.display = "";
+      }
+      function f1(){
+        var i,li,table;
+        table = document.getElementById("card-container");
+        li = table.getElementsByClassName("card");
+        for(i=0;i<li.length;++i){
+          if(li[i].id == 1 ||li[i].id == 2 ||li[i].id == 3 ||li[i].id == 4){
+              li[i].style.display = "";
+            } else {
+              li[i].style.display = "none";
+            }
+        }
+      }
+      function f2(){
+        var i,li,table;
+        table = document.getElementById("card-container");
+        li = table.getElementsByClassName("card");
+        for(i=0;i<li.length;++i){
+          if(li[i].id == 5 ||li[i].id == 6 ||li[i].id == 7 ||li[i].id == 8){
+              li[i].style.display = "";
+            } else {
+              li[i].style.display = "none";
+            }
+        }
+      }
+      function f3(){
+        var i,li,table;
+        table = document.getElementById("card-container");
+        li = table.getElementsByClassName("card");
+        for(i=0;i<li.length;++i){
+          if(li[i].id == 9 ||li[i].id == 10 ||li[i].id == 11 ||li[i].id == 12){
+              li[i].style.display = "";
+            } else {
+              li[i].style.display = "none";
+            }
+        }
+      }
+      function f4(){
+        var i,li,table;
+        table = document.getElementById("card-container");
+        li = table.getElementsByClassName("card");
+        for(i=0;i<li.length;++i){
+          if(li[i].id == 13 ||li[i].id == 14 ||li[i].id == 15 ||li[i].id == 16){
+              li[i].style.display = "";
+            } else {
+              li[i].style.display = "none";
+            }
+        }
+      }
+      function f5(){
+        var i,li,table;
+        table = document.getElementById("card-container");
+        li = table.getElementsByClassName("card");
+        for(i=0;i<li.length;++i){
+          if(li[i].id == 1 ||li[i].id == 2 ||li[i].id == 3 ||li[i].id == 4){
+              li[i].style.display = "";
+            } else {
+              li[i].style.display = "none";
+            }
+        }
+      }
+      function myFunction() {
+        // Declare variables 
+        var input, filter, table, li,p, i;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("card-container");
+        li = table.getElementsByClassName("card");
+        // Loop through all table rows, and hide those who don't match the search query
+        for (i = 0; i < li.length; i++) {
+          p = li[i].getElementsByClassName("card-title")[0];
+          if (p) {
+            if (p.innerHTML.toUpperCase().indexOf(filter) > -1) {
+              li[i].style.display = "";
+            } else {
+              li[i].style.display = "none";
+            }
+          } 
+        }
+      }
+</script>
