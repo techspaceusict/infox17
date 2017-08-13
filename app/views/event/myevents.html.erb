@@ -1,18 +1,282 @@
-
-
+<div id="container"></div>
+<script src="/uploads/threedata/three.js"></script>
+<script src="/uploads/threedata/FirstPersonControls.js"></script>
+<script src="/uploads/threedata/Detector.js"></script>
+<script>
+	if ( ! Detector.webgl ) {
+		Detector.addGetWebGLMessage();
+		document.getElementById( 'container' ).innerHTML = "";
+	}
+	var container, stats;
+	var camera, controls, scene, renderer;
+	var mesh, texture, geometry, material;
+	var worldWidth = 128, worldDepth = 128,
+	worldHalfWidth = worldWidth / 2, worldHalfDepth = worldDepth / 2;
+	var clock = new THREE.Clock();
+	init();
+	animate();
+	function init() {
+		container = document.getElementById( 'container' );
+		camera = new THREE.PerspectiveCamera( 60, window.innerWidth / window.innerHeight, 1, 20000 );
+		camera.position.y = 200;
+	    controls = new THREE.FirstPersonControls( camera );
+		controls.movementSpeed = 500;
+		controls.lookSpeed = 0.1;
+		scene = new THREE.Scene();
+		scene.fog = new THREE.FogExp2( 0xaaccff, 0.0007 );
+		geometry = new THREE.PlaneGeometry( 20000, 20000, worldWidth - 1, worldDepth - 1 );
+		geometry.rotateX( - Math.PI / 2 );
+		for ( var i = 0, l = geometry.vertices.length; i < l; i ++ ) {
+			geometry.vertices[ i ].y = 35 * Math.sin( i / 2 );
+		}
+		var texture = new THREE.TextureLoader().load( "/uploads/threedata/water.jpg" );
+		texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
+		texture.repeat.set( 5, 5 );
+		material = new THREE.MeshBasicMaterial( { color: 0x0044ff, map: texture } );
+		mesh = new THREE.Mesh( geometry, material );
+		scene.add( mesh );
+		renderer = new THREE.WebGLRenderer();
+		renderer.setClearColor( 0xaaccff );
+		renderer.setPixelRatio( window.devicePixelRatio );
+		renderer.setSize( window.innerWidth, window.innerHeight );
+		container.innerHTML = "";
+        container.id="webglcontainer";
+		container.appendChild( renderer.domElement );
+		//stats = new Stats();
+		//container.appendChild( stats.dom );
+		window.addEventListener( 'resize', onWindowResize, false );
+	}
+	function onWindowResize() {
+		camera.aspect = window.innerWidth / window.innerHeight;
+		camera.updateProjectionMatrix();
+		renderer.setSize( window.innerWidth, window.innerHeight );
+		controls.handleResize();
+	}
+	function animate() {
+		requestAnimationFrame( animate );
+		render();
+		//stats.update();
+	}
+	function render() {
+		var delta = clock.getDelta(),
+		      time = clock.getElapsedTime() * 10;
+		for ( var i = 0, l = geometry.vertices.length; i < l; i ++ ) {
+			geometry.vertices[ i ].y = 35 * Math.sin( i / 5 + ( time + i ) / 7 );
+		}
+		mesh.geometry.verticesNeedUpdate = true;
+		controls.update( delta );
+		renderer.render( scene, camera );
+	}
+</script>
+<!--Injected javascript for getting count-->
+<script>
+    object={count:0};
+</script>
+<!--Incremental Loop-->
 <%@event.each do |v|%>
-
-<% event=Event.find_by_id(v.id)%>
-
-<img src="/uploads/<%= event.image%>"><br>
-<%= event.Event_id%><br>
-<%= event.Name%><br>
-<%= event.about%><br>
-<%= event.facebook_link%><br>
-<%= event.organizer1_name%><br>
-<%= event.organizer1_phone%><br>
-<%= event.organizer2_name%><br>
-<%= event.organizer2_phone%><br>
-<%= event.date%>
-<%= event.time%>
+    <script>
+        object.count+=1;
+    </script>
 <%end%>
+<div class="col s12"style="background:rgba(0,0,0,0.8);margin-top:10vh;display:none;margin-bottom:20vh;color:white"id="noevent">
+    <center><br><br><br><h4>Oops..No events to show!!</h4><br>
+    <h5>Register and try again</h5><br></center>
+</div>
+<div class="container"id="eventhead"style="margin-bottom:50px;color:white;padding-top:15vh">
+    <div class="col s12"style="background:rgba(0,0,0,0.8);">
+        <center>
+            <h5>
+                My Events
+            </h5>
+        </center>
+    </div>
+    <div class="row"style="padding-bottom:20vh;overflow-x:hidden;">
+        <%@event.each do |v|%>
+            <% event=Event.find_by_id(v.id)%>
+                    <div class="col s12 m4">
+                        <div class="card responsiveness"style="width:100%">
+                            <div class="card-image waves-effect waves-block waves-light"style="height:80%">
+                                <img class="activator" src="/uploads/<%= event.image%>">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">
+                                    <i class="material-icons right">more_vert</i>
+                                </span>
+                            </div>
+                            <div class="card-reveal"style="overflow:hidden;background:rgba(0,0,0,0.8);">
+                                <span class="card-title">
+                                    <i class="material-icons">close</i>
+                                </span><br>
+                                <font color="white">
+                                    <center><%= event.Name%><hr>
+                                            <a class="modal-trigger" href="#<%= event.Event_id%>mainmodal"style="color:white">
+                                                <div class="waves-effect waves-light btn">More...
+                                                </div>
+                                            </a>
+                                    </center>
+                                </font>
+                            </div>
+                        </div>
+                    </div>
+            <!-- Modal Structure -->
+            <div id="<%= event.Event_id%>mainmodal" class="modal modal-fixed-footer">
+                <div class="modal-content">
+                    <div class="row">
+                        <div class="col s12 m5">
+                            <img src="/uploads/<%= event.image%>"width="100%">
+                        </div>
+                        <div class="col s12 m7">
+                                <font color="black">
+                                    <div class="row"style="background:rgba(0,0,0,1);color:white;padding-top:10px;padding-bottom:10px">
+                                        <center><%= event.Name%>
+                                        </center>
+                                    </div>
+                                    <div class="row">
+                                        <%= event.about%>
+                                    </div>
+                                    <hr>
+                                    <table class="striped">
+                                       <tbody>
+                                         <tr>
+                                           <td>Date</td>
+                                           <td><%= event.date%></td>
+                                         </tr>
+                                         <tr>
+                                           <td>Time</td>
+                                           <td>IST <%= event.time%></td>
+                                         </tr>
+                                       </tbody>
+                                     </table>
+                                     <hr>
+                                     <a href="<%= event.facebook_link%>"style="color:black">Like and Follow us on Facebook for updates:
+                                         <br>
+                                         <i class="fa fa-facebook-square fa-3x" aria-hidden="true">
+                                         </i>
+                                     </a>
+                                     <hr>
+                                     Co-ordinators:
+                                     <table class="striped">
+                                        <tbody>
+                                          <tr>
+                                            <td><%= event.organizer1_name%></td>
+                                            <td><%= event.organizer1_phone%></td>
+                                          </tr>
+                                          <tr>
+                                            <td><%= event.organizer2_name%></td>
+                                            <td><%= event.organizer2_phone%></td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                </font>
+                        </div>
+                    </div>
+                </div>
+                 <div class="modal-footer">
+                     <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Close</a>
+                 </div>
+            </div>
+            <script>
+                $(document).ready(function(){
+                  // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+                    $('#<%= event.Event_id%>mainmodal').modal();
+                });
+             </script>
+        <%end%>
+    </div>
+    <!--Had to define this here since materialize js gem is absent-->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+ </div>
+<style>
+    body {
+        color: #61443e;
+        font-family:Monospace;
+        font-size:13px;
+        text-align:center;
+        background-color: #aaccff;
+        margin: 0px;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+    #oldie {
+        background:rgb(0,0,50) !important;
+        color:#fff !important;
+    }
+    #webglcontainer
+    {
+      width: 100vw;
+      height: 100vh;
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -9999;
+    }
+    .responsiveness
+    {
+        height:450px;
+    }
+    @media screen and (max-width:1441px)
+    {
+        .responsiveness
+        {
+            height:360px;
+        }
+    }
+    @media screen and (max-width:1258px)
+    {
+        .responsiveness
+        {
+            height:320px;
+        }
+    }
+    @media screen and (max-width:1153px)
+    {
+        .responsiveness
+        {
+            height:285px;
+        }
+    }
+    @media screen and (max-width:1004px)
+    {
+        .responsiveness
+        {
+            height:265px;
+        }
+    }
+    @media screen and (max-width:795px)
+    {
+        .responsiveness
+        {
+            height:250px;
+        }
+    }
+    @media screen and (max-width:600px)
+    {
+        .responsiveness
+        {
+            height:auto;
+        }
+    }
+</style>
+<script>
+    if(object.count==0)
+    {
+        document.getElementById('eventhead').style.display="none";
+        document.getElementById('noevent').style.display="block";
+    }
+    function displayEventName(id)
+    {
+        var imgName=id+"img";
+        var boxName=id+"div";
+        document.getElementById(imgName).style.display="none";
+        document.getElementById(boxName).style.display="block";
+    }
+    function hideEventName(id)
+    {
+        var imgName=id+"img";
+        var boxName=id+"div";
+        document.getElementById(boxName).style.display="none";
+        document.getElementById(imgName).style.display="block";
+
+    }
+</script>
