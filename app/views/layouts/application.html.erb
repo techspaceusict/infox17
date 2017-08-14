@@ -3,15 +3,13 @@
   <head>
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
     <title>Infoxpression2017</title>
+    <link rel="icon" href="/uploads/logo.jpg" type="image/ico">
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.js">
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-
     </head>
-
 <body>
     <div class="navbar-fixed">
       <nav>
@@ -31,48 +29,82 @@
         </div>
       </nav>
     </div>
-          <ul class="side-nav" id="mobile-demo">
-            <li class="active"><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/schedule">Schedule</a></li>
-            <li><a href="/events">Events</a></li>
-            <li><a href="/team">Team</a></li>
-            <li><a href="/Contact">Contact Us</a></li>
-          </ul>
-
-
+    <ul class="side-nav" id="mobile-demo">
+        <li class="active"><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/schedule">Schedule</a></li>
+        <li><a href="/events">Events</a></li>
+        <li><a href="/team">Team</a></li>
+        <li><a href="/Contact">Contact Us</a></li>
+     </ul>
     <div id="body">
-       <p class="notice"><%= notice %></p>
-             <p class="alert"><%= alert %></p>
-        <%if !user_signed_in? %>
-        <div id="social_links">
-           <ul>
-            <li><a href="/users/auth/facebook"><img src="http://www.old.ittf.com/media/16wttc/subscription/images/facebook.png" style="width: 50px;"></a></li>
+        <script>
+            $(document).ready(function(){
+                    $('.modal').modal();
+                    var notice='<%= notice %>';
+                    var loggedOut='Signed out successfully.';
+                    var loggedIn='Successfully authenticated from Facebook account.';
+                    if(notice==loggedIn||notice==loggedOut)
+                    {
+                        $('#modal1').modal('open');
+                    }
+              });
+        </script>
+        <div id="modal1" class="modal"style="z-index:9999">
+            <div class="modal-content">
+                <p><%= notice %></p>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+            </div>
         </div>
+        <%if !user_signed_in? %>
+            <div id="social_links">
+                <ul>
+                    <li>
+                        <a href="/users/auth/facebook">
+                            <img src="/uploads/fblogo.png" style="width: 50px;">
+                        </a>
+                    </li>
+                </ul>
+            </div>
         <%else%>
-          <ul id="slide-out" class="side-nav">
-            <p><div class="user-view" style="background-image: url(http://365psd.com/images/thumbs/8d8/shiny-orange-vector-background-59776.jpg);"><br>
-              <img style="padding: 10px;" class="circle" src="<%= current_user.profile%>"><br> 
-              <span style="padding-left: 10px; font-size: 16px; font-weight: 700" class="white-text name"><%= current_user.name%></span><br>
-              <span style="padding-left: 10px;" class="white-text email">ID : <%= current_user.id%></span>
-              <br>
-              <br>
-            </div></p> 
-            <p><i style="font-size: 30px; padding-right: 10px;" class="material-icons">event_note</i><%= link_to "My Events", url_for(controller: :event, action: :myevents), method: :post%></p>
-            <li><div class="divider"></div></li>
-            <p><i style="font-size: 30px; padding-right: 10px;" class="material-icons">arrow_forward</i><%= link_to "Log out", destroy_user_session_path, :method => :delete%></p>
-            <li><div class="divider"></div></li>
+            <ul id="slide-out" class="side-nav">
+                <p>
+                    <div class="user-view" style="background-image: url(/uploads/sidenavbg.jpg);"><br>
+                        <img style="padding: 10px;" class="circle" src="<%= current_user.profile%>"><br>
+                        <span style="padding-left: 10px; font-size: 16px; font-weight: 700" class="white-text name"><%= current_user.name%></span><br>
+                        <br>
+                        <br>
+                    </div>
+                </p>
+                <p>
+                    <i style="font-size: 30px; padding-right: 10px;" class="material-icons">event_note</i>
+                    <%= link_to "My Events", url_for(controller: :event, action: :myevents), method: :post%>
+                </p>
+                <li>
+                    <div class="divider"></div>
+                </li>
+                <p>
+                    <i style="font-size: 30px; padding-right: 10px;" class="material-icons">arrow_forward</i>
+                    <%= link_to "Log out", destroy_user_session_path, :method => :delete%>
+                </p>
+                <li>
+                    <div class="divider"></div>
+                </li>
           </ul>
-      <div id="social_links">
-      <a style="background-color: rgba(0,0,0,0.5); color: white; padding: 10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" href="#" data-activates="slide-out" class="button-collapse" style="color: black;"><img style="height: 50px; padding-top: 10px; " src="http://prabhanshugupta.me/infoxpression/img/logo-infox%20trans-bg.jpg"><br>My Infox</a>
-      </div>
-
-        <%end%>
-
-    <main>
-          <%= yield %>
-    </main>
-
+          <div id="social_links">
+              <a style="background: rgba(0,0,0,0.5); color:white;padding:5px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" href="#" data-activates="slide-out" class="button-collapse" style="color: black;">
+                  <center>
+                      <i class="material-icons"style="font-size:40px">account_circle</i>
+                      <br>My InfoX
+                  </center>
+              </a>
+          </div>
+       <%end%>
+        <main>
+            <%= yield %>
+        </main>
     </div>
     <div id="footer" class="bg-one">
           <div class="row">
@@ -124,17 +156,21 @@
       origin :'bottom',
       viewFactor: 0,
       reset :true,
-   }); 
+   });
   sr.reveal('#footer .col',{
       duration: 2000,
       origin :'left',
-   }); 
-  
+   });
+
 </script>
 
-<style type="text/css">  
+<style type="text/css">
+.stylize:hover
+{
+    background:rgba(0,0,0,0.1);
+}
 .side-nav{
-  background-color: #ffcc00;
+  background-color: white;
   width: 200px;
 }
   .fa-facebook{
@@ -148,7 +184,7 @@
     top: 65px;
     display: flex;
     padding: 20px;
-    padding-right: 10px;  
+    padding-right: 10px;
 }
   #social_links li{
     list-style: none;
@@ -194,4 +230,3 @@ $(".button-collapse").sideNav();
 })
 
 </script>
-</style>
