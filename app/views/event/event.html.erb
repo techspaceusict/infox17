@@ -1,25 +1,55 @@
-
-
-<img src="/uploads/<%= @event.image%>"><br>
-
-<%= @event.Event_id%><br>
-<%=raw @event.Name%><br>
-<%=raw @event.about%><br>
-<%= @event.facebook_link%><br>
-<%=raw @event.organizer1_name%><br>
-<%= @event.organizer1_phone%><br>
-<%=raw @event.organizer2_name%><br>
-<%= @event.organizer2_phone%><br>
-
-
-<% if current_user%>
-  <%if @user%>
-    <a href="#">You have Already Registered</a>
-  <%else%>
-  <%= link_to "Register for Event ", url_for(controller: :event, action: :eventregister,:Event_id=>@event.Event_id), method: :post%>
-
-  	<%end%>
-
-  	<%else%>
-   <a href="/users/auth/facebook">Sign in to register</a>
-<%end%>
+<div class="container"style="margin-top:15vh;margin-bottom:15vh;background:white;">
+    <div class="row"style="background:black;color:white;padding-top:7px;padding-bottom:7px;margin:0px">
+        <center>
+            Event Details
+        </center>
+    </div>
+    <div class="row"style="margin:0px">
+        <div class="col s12 m4"style="padding:0px;">
+            <img src="/uploads/<%= @event.image%>"style="width:100%">
+        </div>
+        <div class="col s12 m8"style="padding:10px;">
+            <u>
+                <h5>
+                    <center>
+                        <%=raw @event.Name%>
+                    </center>
+                </h5>
+            </u><br>
+            <%=raw @event.about%>
+            <hr>
+            Like and follow us on facebook to updates:<br>
+            <a href="<%= @event.facebook_link%>"style="color:black"><i class="fa fa-facebook-square fa-3x"aria-hidden="true"></i></a>
+            <hr>
+            Contributors:<br>
+            <table class="striped">
+                <tbody>
+                    <tr>
+                       <td><%=raw @event.organizer1_name%></td>
+                       <td><%= @event.organizer1_phone%></td>
+                   </tr>
+                   <tr>
+                      <td><%=raw @event.organizer2_name%></td>
+                      <td><%= @event.organizer2_phone%></td>
+                  </tr>
+               </tbody>
+            </table>
+            <hr>
+            <% if current_user%>
+                <%if @user%>
+                    <a href="#">You have already Registered!!</a>
+                <%else%>
+                    <%= link_to "Register for Event ", url_for(controller: :event, action: :eventregister,:Event_id=>@event.Event_id), method: :post%>
+              	<%end%>
+            <%else%>
+               <a href="/users/auth/facebook">Sign in to register</a>
+            <%end%>
+       </div>
+    </div>
+</div>
+<style>
+body
+{
+    background: url('/uploads/contactbg.jpg');
+}
+</style>
