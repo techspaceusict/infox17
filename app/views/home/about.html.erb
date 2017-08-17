@@ -1,24 +1,108 @@
-<style type="text/css">
-	h1{
-		color: #f06423;
-		font-family: 'Ubuntu', sans-serif;
-		font-weight: 700;
-	}
-	p{
-		color: white;
-		font-family: 'Ubuntu', sans-serif;
-		font-weight: 700;
-	}
-	body{
-		background-color: #263238;
+<div class="container"style="margin-top:10vh;background:url('/uploads/patternrepeat.jpg');color:black;padding:0px;border:0.5px solid black;margin-bottom:30vh">
+    <div class="row"style="background:rgba(255,255,255,0.5);padding-top:40px;padding-bottom:40px;padding-left:20px;margin:0px"id="varHt1">
+        <h3>About Us
+        </h3>
+    </div>
+    <div class="col s12"style="background:white;padding:30px"id="varHt2">
+        <p style="font-size:20px">
+		          InfoXpression is the annual technical fest of Guru Gobind Singh Indraprastha University organized by University School of Information and Communication Technology. It is the biggest technical extravaganza held at Guru Gobind Singh Indraprastha University, and involves an active participation of students from over 250 colleges of north India. An exhilarating voyage of technical know-how, InfoXpression focuses on the promotion of technology and innovation. It gives you a chance to stop, culminate new ideas and showcase your technical expertise. The fest is a three day grandeur which is result of a month long affair of prelims and stage levels. It involves a series of competitions, workshops and guest lectures by some eminent personalities. InfoXpression is an amalgamation of creativity and imagination. It will be a perfect blend of entertainment and technology with the aim of transformation and empowerment of the society.
+        </p>
+    </div>
+    <div class="row"style="background:white;border-top:0.5px;margin:0px;"id="content">
+        <div class="col s4"style="padding-top:60px;padding-bottom:60px;background:pink;border:0.5px solid white">
+            <center><h5 id="count1">3</h5></center>
+        </div>
+        <div class="col s4"style="padding-top:60px;padding-bottom:60px;background:pink;border:0.5px solid white">
+            <center><h5 id="count2">18</h5></center>
+        </div>
+        <div class="col s4"style="padding-top:60px;padding-bottom:60px;background:pink;border:0.5px solid white">
+            <center><h5 id="count3">2000</h5></center>
+        </div>
+    </div>
+    <div class="row"style="background:rgba(0,0,0,0.5);border-top:0.5px;margin:0px;color:white"id="content2">
+        <div class="col s4"style="border:0.5px solid white;padding-top:25px;padding-bottom:25px">
+            <center>Days</center>
+        </div>
+        <div class="col s4"style="border:0.5px solid white;padding-top:25px;padding-bottom:25px">
+            <center>Events</center>
+        </div>
+        <div class="col s4"style="border:0.5px solid white;padding-top:25px;padding-bottom:25px">
+            <center>Brains</center>
+        </div>
+    </div>
+</div>
+<script>
+        positioning={reached:false};
+        var initialScrollPosition= $(window).scrollTop(),
+        elementOffset = $('#content').offset().top+$('#content').height()/3,
+        distance = (elementOffset - initialScrollPosition)-$(window).height();
+        if(distance<=0)
+        {
+            if(positioning.reached==false)
+            {
+                positioning.reached=true;
+                doAnimation();
+            }
+            console.log("We have reached");
+        }
+        $(window).scroll(function ()
+        {
+            var scrollExtent=$(window).scrollTop();
+            distance = (elementOffset - scrollExtent)-$(window).height();
+            if(distance<=0)
+            {
+                if(positioning.reached==false)
+                {
+                    positioning.reached=true;
+                    doAnimation();
+                    console.log("We've reached");
+                }
+            }
+        });
+        function doAnimation()
+        {
+                $('#count1').each(function () {
+                    $(this).prop('Counter',0).animate({
+                    Counter: $(this).text()
+                    }, {
+                    duration: 4000,
+                    easing: 'swing',
+                    step: function (now) {
+                        $(this).text(Math.ceil(now));
+                    }
+                    });
+                });
+
+
+                $('#count2').each(function () {
+                $(this).prop('Counter',0).animate({
+                Counter: $(this).text()
+                }, {
+                duration: 4000,
+                easing: 'swing',
+                step: function (now) {
+                    $(this).text(Math.ceil(now));
+                }
+                });
+                });
+
+
+                $('#count3').each(function () {
+                $(this).prop('Counter',0).animate({
+                Counter: $(this).text()
+                }, {
+                duration: 4000,
+                easing: 'swing',
+                step: function (now) {
+                    $(this).text(Math.ceil(now));
+                }
+                });
+            });
+        }
+</script>
+<style>
+	body
+	{
+		background:url('/uploads/regular.jpg');
 	}
 </style>
-
-<div class="container">
-	<h1>About Infoxpression</h1>
-	<p>
-		InfoXpression is the annual technical fest of Guru Gobind singh Indraprastha University organized by University school of Information and Communication Technology. It is the biggest technical extravaganza held at Guru Gobind Singh Indraprastha University, and involves an active participation of students from over 250 colleges of north India. An exhilarating voyage of technical know-how, InfoXpression focuses on the promotion of technology and innovation. It gives you a chance to stop, culminate new ideas and showcase your technical expertise. The fest is a three day grandeur which is result of a month long affair of prelims and stage levels. It involves a series of competitions, workshops and guest lectures by some eminent personalities. InfoXpression is an amalgamation of creativity and imagination. It will be a perfect blend of entertainment and technology with the aim of transformation and empowerment of the society.
-	</p>
-</div>
-
-
