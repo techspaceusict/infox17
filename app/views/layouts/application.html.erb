@@ -13,7 +13,7 @@
     </head>
 <body>
     <div class="navbar-fixed">
-      <nav class="transparent">
+      <nav>
         <div class="nav-wrapper">
           <a href="/" class="brand-logo center"><img style="height: 50px; padding-top: 10px; " src="http://prabhanshugupta.me/infoxpression/img/logo-infox%20trans-bg.jpg"></a>
           <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
@@ -165,9 +165,7 @@
 </script>
 
 <style type="text/css">
-nav {
-  @extend .white;
-}
+
 .stylize:hover
 {
     background:rgba(0,0,0,0.1);
@@ -205,7 +203,11 @@ nav {
     border-top: 2px solid grey;
   }
   nav .nav-wrapper{
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0,0,0,0.4);
+   z-index: 20000;
+  }
+  nav{
+    background-color: rgba(0,0,0,0.4);
    z-index: 20000;
   }
   nav ul li a{
