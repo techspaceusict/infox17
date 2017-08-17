@@ -38,7 +38,7 @@
   background-color: #db5726;
   padding: 15px 17px 15px 17px;
     -webkit-transform: rotate(360deg); /* Safari */
-    transform: rotate(360deg);  
+    transform: rotate(360deg);
 }
 
 .social-icon .fa-facebook{
@@ -60,6 +60,12 @@
 *{
     font-family: 'Ubuntu', sans-serif;
 }
+nav {
+
+  background-color: rgba(0,0,0,0.4);
+    
+}
+
 footer li{
   font-family: ubuntu;
 }
