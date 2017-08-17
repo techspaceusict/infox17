@@ -1,3 +1,4 @@
+<div class="canvas">
 <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
     <div class="container" style="padding-right: 60px;">
     <h1 style="text-align: center;font-family: 'Righteous', cursive;color:#db5726;text-shadow: 2px 2px 2px black; ">EVENTS</h1>
@@ -19,7 +20,7 @@
 <div class="card-container" id="card-container">
 
 <%@event.each do |event|%>
-  <div class="card" id="<%= event.Event_id%>">
+  <div class="card" id = "<%= event.Event_id%>">
     <div class="card-image"><img src="/uploads/<%= event.image%>" style="size: "></div>
     <div class="card-info">
 
@@ -42,9 +43,20 @@
 <h6 style="text-align: center; font-weight: 700">No more events to display!</h6>
 <hr>
 </div>
+  
+</div>
 
 <style media="screen">
 
+.canvas{
+  background-color: rgba(0,0,0,0.5);
+}
+
+body
+{
+    background: url('/uploads/contactbg.jpg');
+    background-size: cover;
+}
 hr {
     border: 0;
     height: 1px;
@@ -91,9 +103,6 @@ hr {
   text-decoration: none;
   font-size: 16px;
   list-style: none;
-}
-body {
-  background-color: #2b2c30;
 }
 .card-container {
 position: relative;
@@ -222,7 +231,7 @@ transform: scaleY(1);
         table = document.getElementById("card-container");
         li = table.getElementsByClassName("card");
         for(i=0;i<li.length;++i){
-          if(li[i].id == 1 ||li[i].id == 2 ||li[i].id == 3 ||li[i].id == 4){
+          if(li[i].id == '1' ||li[i].id == '2' ||li[i].id == '3' ||li[i].id == '4'){
               li[i].style.display = "";
             } else {
               li[i].style.display = "none";
@@ -234,7 +243,7 @@ transform: scaleY(1);
         table = document.getElementById("card-container");
         li = table.getElementsByClassName("card");
         for(i=0;i<li.length;++i){
-          if(li[i].id == 5 ||li[i].id == 6 ||li[i].id == 7 ||li[i].id == 8){
+          if(li[i].id == '5' ||li[i].id == '6' ||li[i].id == '7' ||li[i].id == '8'){
               li[i].style.display = "";
             } else {
               li[i].style.display = "none";
@@ -246,7 +255,7 @@ transform: scaleY(1);
         table = document.getElementById("card-container");
         li = table.getElementsByClassName("card");
         for(i=0;i<li.length;++i){
-          if(li[i].id == 9 ||li[i].id == 10 ||li[i].id == 11 ||li[i].id == 12){
+          if(li[i].id == '9' ||li[i].id == '10' ||li[i].id == '11' ||li[i].id == '12'){
               li[i].style.display = "";
             } else {
               li[i].style.display = "none";
@@ -258,7 +267,7 @@ transform: scaleY(1);
         table = document.getElementById("card-container");
         li = table.getElementsByClassName("card");
         for(i=0;i<li.length;++i){
-          if(li[i].id == 13 ||li[i].id == 14 ||li[i].id == 15 ||li[i].id == 16){
+          if(li[i].id == '13' ||li[i].id == '14' ||li[i].id == '15' ||li[i].id == '16'){
               li[i].style.display = "";
             } else {
               li[i].style.display = "none";

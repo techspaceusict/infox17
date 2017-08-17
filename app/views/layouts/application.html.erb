@@ -12,7 +12,7 @@
     </head>
 <body>
     <div class="navbar-fixed">
-      <nav>
+      <nav class="transparent">
         <div class="nav-wrapper">
           <a href="/" class="brand-logo center"><img style="height: 50px; padding-top: 10px; " src="http://prabhanshugupta.me/infoxpression/img/logo-infox%20trans-bg.jpg"></a>
           <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
@@ -23,24 +23,12 @@
           </ul>
           <ul class="right hide-on-med-and-down">
             <li style="margin-right: 300px; margin-left: -450px;"><a style="padding-left: 50px; padding-right: 50px;" href="/events">Events</a></li>
-            <li style="margin-right: 50px; margin-left: -300px;"><a style="padding-left: 50px; padding-right: 50px;" href="/Sponsers">Sponsors</a></li>
+            <li style="margin-right: 50px; margin-left: -300px;"><a style="padding-left: 50px; padding-right: 50px;" href="/Sponsers">Sponsers</a></li>
             <li style="margin-right: 50px; margin-left: -150px;"><a style="padding-left: 50px; padding-right: 50px;" href="/Contact">Contact Us</a></li>
           </ul>
         </div>
       </nav>
     </div>
-<<<<<<< HEAD
-          <ul class="side-nav" id="mobile-demo">
-            <li class="active"><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/schedule">Schedule</a></li>
-            <li><a href="/events">Events</a></li>
-            <li><a href="/Sponsers">Sponsors</a></li>
-            <li><a href="/Contact">Contact Us</a></li>
-          </ul>
-
-
-=======
     <ul class="side-nav" id="mobile-demo">
         <li class="active"><a href="/">Home</a></li>
         <li><a href="/about">About</a></li>
@@ -49,7 +37,6 @@
         <li><a href="/team">Team</a></li>
         <li><a href="/Contact">Contact Us</a></li>
      </ul>
->>>>>>> upstream/master
     <div id="body">
         <script>
             $(document).ready(function(){
@@ -168,20 +155,18 @@
       duration: 1000,
       origin :'bottom',
       viewFactor: 0,
-<<<<<<< HEAD
-   }); 
-=======
-      reset :true,
    });
->>>>>>> upstream/master
   sr.reveal('#footer .col',{
       duration: 2000,
-      origin :'left',
+      origin :'top',
    });
 
 </script>
 
 <style type="text/css">
+nav {
+  @extend .white;
+}
 .stylize:hover
 {
     background:rgba(0,0,0,0.1);
@@ -219,11 +204,7 @@
     border-top: 2px solid grey;
   }
   nav .nav-wrapper{
-    background-color: rgba(0,0,0,0.4);
-   z-index: 20000;
-  }
-  nav{
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0,0,0,0.8);
    z-index: 20000;
   }
   nav ul li a{
