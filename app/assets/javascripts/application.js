@@ -16,6 +16,7 @@
 // require turbolinks
 //= require data-confirm-modal
 //= require_tree .
+//= about
 
 
 $(window).scroll(function() {
