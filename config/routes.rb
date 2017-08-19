@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   root to: "home#index"
 
   get '/'=> 'home#index'
+  get '/team'=>'home#team'
   
   get '/about'=>'home#about'
 
