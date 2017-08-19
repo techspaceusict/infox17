@@ -24,5 +24,7 @@ class HomeController < ApplicationController
 	def Contact
 	end
 
+    def team
+    end    	
 	
 end
