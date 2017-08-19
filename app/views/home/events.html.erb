@@ -1,61 +1,69 @@
-<div class="canvas">
-<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
-    <div class="container" style="padding-right: 60px;">
-    <h1 style="text-shadow: 0 0 5px black;text-align: center;font-family: 'Righteous', cursive;color:#d0d0d0; ">EVENTS</h1>
-<!--     <div class="border"></div> -->
-    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Events..">
+<div class="canvas"style="padding:0px">
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+    <div class="row"style="margin-right:20px">
+        <h1 style="text-align: center;font-family: 'Righteous', cursive;color:orange;">EVENTS</h1>
+        <h5>
+            <center>
+                <a href="" class="typewrite" data-period="2000" data-type='[ "Participate.", "Explore.", "Learn.", "Develop.","Nourish.",":D" ]'>
+                    <span class="wrap"></span>
+                </a>
+            </center>
+        </h5>
+        <div class="container"id="mycontainer" style="padding-top: 50px;">
+                  <div class="col m4 s12 hoverable" onclick="f()"style="cursor:pointer;margin-bottom:10px" ><a class="category">All Events</a></div>
+                  <div class="col m4 s12 hoverable" onclick="f1()"style="cursor:pointer;margin-bottom:10px"><a class="category">Programming</a></div>
+                  <div class="col m4 s12 hoverable" onclick="f2()"style="cursor:pointer;margin-bottom:10px"><a class="category">Electronics</a></div>
+                  <div class="col m4 s12 hoverable" onclick="f3()"style="cursor:pointer;margin-bottom:10px"><a class="category">Enterpreneurial</a></div>
+                  <div class="col m4 s12 hoverable" onclick="f4()"style="cursor:pointer;margin-bottom:10px"><a class="category">Workshops</a></div>
+                  <div class="col m4 s12 hoverable" onclick="f5()"style="cursor:pointer;margin-bottom:10px"><a class="category">Non-Tech</a></div>
+         </div>
+         <div class="container">
+            <center>
+                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Events..."onmousedown="showDisplay()">
+            </center>
+        </div>
     </div>
-    <hr>
-    <div class="container" style="padding-top: 50px;">
-      <div class="row">
-        <div class="col m2 s12" onclick="f()" ><a class="category">All Events</a></div>
-        <div class="col m2 s12" onclick="f1()"><a class="category">Programming</a></div>
-        <div class="col m2 s12" onclick="f2()"><a class="category">Electronics</a></div>
-        <div class="col m2 s12" onclick="f3()"><a class="category" style="text-align: left; padding-left: 10px; padding-right: 10px;">Enterpreneurial</a></div>
-        <div class="col m2 s12" onclick="f4()"><a class="category" style="text-align: right; padding-left: 10px; padding-right: 20px;">Work Shops</a></div>
-        <div class="col m2 s12" onclick="f5()"><a class="category">Non-Tech</a></div>
-      </div>  
+    <div class="col s12 m6">
+        <div class="card-container" id="card-container">
+            <%@event.each do |event|%>
+                <div class="card" id = "<%= event.Event_id%>">
+                    <div class="card-image"><img src="/uploads/<%= event.image%>" style="size: "></div>
+                    <div class="card-info">
+                        <div class="card-title"><%=raw event.Name%></div>
+                        <div class="card-detail"><%=raw event.about%></div>
+                    </div>
+                    <div class="card-social">
+                        <ul>
+                            <li><a href="/event?id=<%= event.Event_id%>"style="color:white">Register </a></li>
+                            <li><a href="#"style="color:white">Share</a></i></li>
+                        </ul>
+                    </div>
+                </div>
+            <%end%>
+        </div>
     </div>
-<div class="col s12 m6">
-<div class="card-container" id="card-container">
-
-<%@event.each do |event|%>
-  <div class="card" id = "<%= event.Event_id%>">
-    <div class="card-image"><img src="/uploads/<%= event.image%>" style="size: "></div>
-    <div class="card-info">
-
-      <div class="card-title"><%=raw event.Name%></div>
-      <div class="card-detail"><%=raw event.about%></div>
-    </div>
-    <div class="card-social">
-      <ul>
-
-        <li><a href="/event?id=<%= event.Event_id%>">Register </a></li>
-        <li><a href="#">Share</a></i></li>
-
-      </ul>
-    </div>
-  </div>
-<%end%>
 </div>
- 
-<hr>
-<h6 style="text-align: center; font-weight: 700">No more events to display!</h6>
-<hr>
-</div>
-  
-</div>
-
 <style media="screen">
-
+.hoverable:hover
+{
+    background-color: rgba(0,0,0,0.7);
+}
+#mycontainer
+{
+    margin-top:15vh;
+}
+.typewrite
+    { color:white; text-decoration: none;}
 .canvas{
-  background-color: rgba(0,0,0,0.2);
+
+  background-color: rgba(0,0,0,0.5);
 }
 
 body
 {
     background: url('/uploads/contactbg.jpg');
     background-size: cover;
+    overflow-x: hidden;
 }
 hr {
     border: 0;
@@ -65,16 +73,16 @@ hr {
 }
 
 #myInput {
-    color: white;
-    background-color: rgba(0,0,0,0.1);
-    width: 100%; /* Full-width */
-    font-size: 16px; /* Increase font-size */
-    margin-top: 20px;
-    padding: 12px 20px 12px 40px; /* Add some padding */
-    border: 1px solid #ddd; /* Add a grey border */
-    margin-bottom: 30px; /* Add some space below the input */
-    background-color: rgba(0,0,0,0.1);
-    box-shadow: 0 0 0.2em black;
+    color: black;
+    background-color: white;
+    width: 100%;
+    font-size: 16px;
+    margin-top: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 2px solid black;
+    margin-bottom: 50px;
+    border-radius:5px;
 }
 .category{
   box-shadow: 0 0 0.2em black;
@@ -92,11 +100,8 @@ hr {
 .category:hover{
   display: flex;
   text-align: center;
-  font-size: 16px;
   padding: 20px;
   color: #ff5e00;
-  font-weight: 700;
-  border-top: 4px solid black;
   background-color: rgba(0,0,0,0.2);
   -webkit-transition: 0.5s;
 }
@@ -164,7 +169,7 @@ transition: all 0.1s linear;
 width: 100%;
 height: 275px;
 position: relative;
-background-image: url("https://d13yacurqjgara.cloudfront.net/users/150724/screenshots/2211976/365_the_end_1x.png");
+background-image: url("http://images.all-free-download.com/images/graphicthumb/chinese_traditional_culture_bamboo_background_template_layered_177185.jpg");
 border-top-right-radius: 5px;
 border-top-left-radius: 5px;
 }
@@ -220,6 +225,66 @@ transform: scaleY(1);
 </style>
 
 <script>
+    var TxtType = function(el, toRotate, period) {
+            this.toRotate = toRotate;
+            this.el = el;
+            this.loopNum = 0;
+            this.period = parseInt(period, 10) || 2000;
+            this.txt = '';
+            this.tick();
+            this.isDeleting = false;
+        };
+
+        TxtType.prototype.tick = function() {
+            var i = this.loopNum % this.toRotate.length;
+            var fullTxt = this.toRotate[i];
+
+            if (this.isDeleting) {
+            this.txt = fullTxt.substring(0, this.txt.length - 1);
+            } else {
+            this.txt = fullTxt.substring(0, this.txt.length + 1);
+            }
+
+            this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+            var that = this;
+            var delta = 200 - Math.random() * 100;
+
+            if (this.isDeleting) { delta /= 2; }
+
+            if (!this.isDeleting && this.txt === fullTxt) {
+            delta = this.period;
+            this.isDeleting = true;
+            } else if (this.isDeleting && this.txt === '') {
+            this.isDeleting = false;
+            this.loopNum++;
+            delta = 500;
+            }
+
+            setTimeout(function() {
+            that.tick();
+            }, delta);
+        };
+
+        window.onload = function() {
+            var elements = document.getElementsByClassName('typewrite');
+            for (var i=0; i<elements.length; i++) {
+                var toRotate = elements[i].getAttribute('data-type');
+                var period = elements[i].getAttribute('data-period');
+                if (toRotate) {
+                  new TxtType(elements[i], JSON.parse(toRotate), period);
+                }
+            }
+            // INJECT CSS
+            var css = document.createElement("style");
+            css.type = "text/css";
+            css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid white}";
+            document.body.appendChild(css);
+        };
+    function showDisplay()
+    {
+        document.getElementById('myInput').style.borderColor="cyan";
+    }
       function f(){
         var i,li,table;
         table = document.getElementById("card-container");
@@ -288,7 +353,7 @@ transform: scaleY(1);
         }
       }
       function myFunction() {
-        // Declare variables 
+        // Declare variables
         var input, filter, table, li,p, i;
         input = document.getElementById("myInput");
         filter = input.value.toUpperCase();
@@ -303,7 +368,7 @@ transform: scaleY(1);
             } else {
               li[i].style.display = "none";
             }
-          } 
+          }
         }
       }
 </script>
