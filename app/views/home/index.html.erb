@@ -1,7 +1,9 @@
 	<!--Preloader-->
 	<div class="preload">
     	<center>
-        	<img src="/uploads/preloader.gif">
+			<div class="row"style="width:100vw;height:100vh;background:white;">
+        		<img src="/uploads/preloader.gif">
+			</div>
     	</center>
 	</div>
         <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
@@ -113,7 +115,16 @@
 					</font>
 				</div>
 			</div>
-			<div class="col s12">
+			<!-- Element Showed -->
+			<a id="menu" class="waves-effect waves-light btn btn-floating pulse" onclick="show()"style="position:fixed;bottom:0;right:0;z-index:99999;margin-right:10px;margin-bottom:10px"><i class="material-icons">menu</i></a>
+
+			<!-- Tap Target Structure -->
+			<div class="tap-target" data-activates="menu"style="background:orange;">
+			  <div class="tap-target-content">
+				<h5>Tap/Hover on the page to see the magic...</h5>
+				<br>
+
+			  </div>
 			</div>
 		</div><!--Main Div Closure-->
 	<script>
@@ -122,6 +133,18 @@
     	        $("#maindiv").fadeIn(000);
     	    });
     	});
+	</script>
+	<script>
+	    $(document).ready(
+	        function(){
+	            document.getElementById('menu').click();
+	        }
+	    );
+	    function show()
+	    {
+	    $('.tap-target').tapTarget('open');}
+
+
 	</script>
 	<style>
     	#lineOnLeft
@@ -167,11 +190,10 @@
         }
         .preload
         {
-            width:100px;
             height: 100%;
             width:100%;
             background:white;
             position: fixed;
-            padding-top:15vh;
+            /*padding-top:15vh;*/
         }
 	</style>
