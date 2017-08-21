@@ -23,7 +23,7 @@
     body
     {
         background:url('/uploads/contactbg.jpg');
-        background-size:100%;
+        background-size:cover;
     }
   #loader-wrapper {
     top: 0;
