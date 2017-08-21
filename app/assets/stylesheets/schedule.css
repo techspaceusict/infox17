@@ -204,7 +204,7 @@ section h2 {
 
 .box svg line.top,
 .box svg line.bottom {
-    stroke-dasharray: 330 240; 
+    stroke-dasharray: 330 240;
 }
 
 .box svg line.left,
@@ -282,7 +282,7 @@ section h2 {
         text-transform: uppercase;
     }
     .event-list > li:nth-child(even) > time {
-        background-color: rgb(165, 82, 167);
+        background-color: #4B0082;
     }
     .event-list > li > time > span {
         display: none;
@@ -336,13 +336,13 @@ section h2 {
         width: 100%;
         color: rgb(30, 30, 30);
         text-decoration: none;
-    } 
-    .event-list > li > .social > ul > li {    
+    }
+    .event-list > li > .social > ul > li {
         padding: 0px;
     }
     .event-list > li > .social > ul > li > a {
         padding: 3px 0px;
-    } 
+    }
     .event-list > li > .info > ul > li:hover,
     .event-list > li > .social > ul > li:hover {
         color: rgb(30, 30, 30);
@@ -381,8 +381,8 @@ section h2 {
             height: 120px;
             text-align: left;
             padding-right: 40px;
-        }   
-        .event-list > li > .info > .title, 
+        }
+        .event-list > li > .info > .title,
         .event-list > li > .info > .desc {
             padding: 0px 10px;
         }
@@ -401,7 +401,7 @@ section h2 {
         .event-list > li > .social > ul {
             border-left: 1px solid rgb(230, 230, 230);
         }
-        .event-list > li > .social > ul > li {          
+        .event-list > li > .social > ul > li {
             display: block;
             padding: 0px;
         }
