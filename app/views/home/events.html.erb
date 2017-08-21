@@ -9,7 +9,12 @@
                 </a>
             </center>
         </h5>
-        <div class="container" id="mycontainer" style="padding-top: 50px;">
+         <div class="container">
+            <center>
+                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Events..."onmousedown="showDisplay()">
+            </center>
+        </div>
+        <div class="container" id="mycontainer">
                   <div class="col m4 s12 hoverable" onclick="f()"style="cursor:pointer;margin-bottom:10px" ><a class="category">All Events</a></div>
                   <div class="col m4 s12 hoverable" onclick="f1()"style="cursor:pointer;margin-bottom:10px"><a class="category">Programming</a></div>
                   <div class="col m4 s12 hoverable" onclick="f2()"style="cursor:pointer;margin-bottom:10px"><a class="category">Electronics</a></div>
@@ -17,11 +22,6 @@
                   <div class="col m4 s12 hoverable" onclick="f4()"style="cursor:pointer;margin-bottom:10px"><a class="category">Workshops</a></div>
                   <div class="col m4 s12 hoverable" onclick="f5()"style="cursor:pointer;margin-bottom:10px"><a class="category">Non-Tech</a></div>
          </div>
-         <div class="container">
-            <center>
-                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Events..."onmousedown="showDisplay()">
-            </center>
-        </div>
     </div>
     <div class="col s12 m6">
         <div class="card-container" id="card-container">
@@ -44,13 +44,9 @@
     </div>
 </div>
 <style media="screen">
-.hoverable:hover
-{
-    background-color: rgba(0,0,0,0.7);
-}
 #mycontainer
 {
-    margin-top:15vh;
+    margin-top:5vh;
 }
 .typewrite
     { color:white; text-decoration: none;}
@@ -74,13 +70,12 @@ hr {
 
 #myInput {
     color: black;
-    background-color: white;
+    background-color: #f1f1f1;
     width: 100%;
     font-size: 16px;
-    margin-top: 30px;
+    margin-top: 15vh;
     padding:5px;
     border: 2px solid black;
-    margin-bottom: 50px;
     border-radius:5px;
 }
 .category{
@@ -101,7 +96,7 @@ hr {
   text-align: center;
   padding: 20px;
   color: #ff5e00;
-  background-color: rgba(0,0,0,0.2);
+  background-color: rgba(0,0,0,0.7);
   -webkit-transition: 0.5s;
 }
 .row li a{
