@@ -1,9 +1,7 @@
 	<!--Preloader-->
 	<div class="preload">
     	<center>
-			<div class="row"style="width:100vw;height:100vh;background:white;">
         		<img src="/uploads/preloader.gif">
-			</div>
     	</center>
 	</div>
         <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
@@ -161,11 +159,11 @@
 		</div><!--Main Div Closure-->
 	<script>
     	$(function() {
-    	    $(".preload").fadeOut(2000, function() {
-    	        $("#maindiv").fadeIn(000);
+    	    $(".preload").fadeOut(3000, function() {
+    	        $("#maindiv").fadeIn(2000);
     	    });
     	});
-        
+
 	    $(document).ready(
 	        function(){
 	            document.getElementById('menu').click();
@@ -224,7 +222,10 @@
             height: 100%;
             width:100%;
             background:white;
+			opacity:0.7;
             position: fixed;
-            /*padding-top:15vh;*/
+            top:0;
+			padding-top:40vh;
+			z-index:111111;
         }
 	</style>
