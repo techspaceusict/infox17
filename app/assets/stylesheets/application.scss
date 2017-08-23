@@ -23,6 +23,65 @@
 *{
     font-family: 'Ubuntu', sans-serif;
 }
+.totalrow
+{
+    color:white;
+    width:100vw;
+    padding-top:30px;
+    float:left;
+}
+.mycontainer
+{
+    width:100vw;
+    background: rgba(0,0,0,0.7);
+    float:left;
+}
+.part1
+{
+    display: block;
+    width:25vw;
+    overflow:hidden;
+    float:left;
+}
+.partsmall1
+{
+    display: none;
+    width:35vw;
+    overflow:hidden;
+    float:left;
+}
+.partsmall2
+{
+    display: none;
+    width:65vw;
+    overflow:hidden;
+    float:left;
+}
+
+.part2
+{
+    width:50vw;
+    overflow:hidden;
+    float:left;
+}
+@media screen and (max-width:772px)
+{
+    .part2
+    {
+        width:100vw;
+    }
+    .part1{
+        display:none;
+    }
+    .partsmall1
+    {
+        display: block;
+    }
+    .partsmall2
+    {
+        display: block;
+    }
+}
 nav a {margin:0;padding:10px;position: relative;
 }
 
@@ -90,7 +149,7 @@ nav a:focus:before {
 nav {
 
   background-color: rgba(0,0,0,0.4);
-    
+
 }
 
 footer li{
@@ -157,7 +216,7 @@ footer li{
       color:#ee7436;
   }
 
- 
+
 /*EVENT PAGE CSS STARTS*/
 
 .category{
