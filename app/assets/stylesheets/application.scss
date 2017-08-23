@@ -50,6 +50,13 @@
     overflow:hidden;
     float:left;
 }
+.partsmall3
+{
+    display: none;
+    width:100vw;
+    overflow:hidden;
+    float:left;
+}
 .partsmall2
 {
     display: none;
@@ -64,8 +71,23 @@
     overflow:hidden;
     float:left;
 }
+@media screen and (max-width:383px)
+{
+    .partsmall3
+    {
+        display: block;
+    }
+    .part2
+    {
+        display: none;
+    }
+}
 @media screen and (max-width:772px)
 {
+    .partsmall3
+    {
+        display: block;
+    }
     .part2
     {
         width:100vw;
