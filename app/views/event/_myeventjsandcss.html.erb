@@ -2,6 +2,7 @@
 <script src="/uploads/threedata/Detector.js"></script>
 <script src="/uploads/threedata/GPUComputationRenderer.js"></script>
 		<!-- shader for bird's position -->
+
 		<script id="fragmentShaderPosition" type="x-shader/x-fragment">
 			uniform float time;
 			uniform float delta;
@@ -444,107 +445,93 @@
 				renderer.render( scene, camera );
 			}
 		</script>
+        <script>
+            if(object.count==0)
+            {
+                document.getElementById('eventhead').style.display="none";
+                document.getElementById('noevent').style.display="block";
+            }
+            function displayEventName(id)
+            {
+                var imgName=id+"img";
+                var boxName=id+"div";
+                document.getElementById(imgName).style.display="none";
+                document.getElementById(boxName).style.display="block";
+            }
+            function hideEventName(id)
+            {
+                var imgName=id+"img";
+                var boxName=id+"div";
+                document.getElementById(boxName).style.display="none";
+                document.getElementById(imgName).style.display="block";
 
+            }
+        </script>
+        <style>
+        	.mycard
+        	{
+        		width:30%;
+        		height:450px;
+        		float:left;
+        		margin:1.66%;
+        		background: white;
+        		color:black;
+        	}
+        	.mycard:hover
+        	{
+        		color:white;
+        		background: #483D8B;
+        	}
+        	@media screen and (max-width:1036px)
+        	{
+        		.mycard
+        		{
+        			width:48%;
+        			margin:1%;
+        		}
+        	}
+        	@media screen and (max-width:626px)
+        	{
+        		.mycard
+        		{
+        			height:670px;
+        			width:100%;
+        			margin-left:0px;
+        			margin-right: 0px;
+        			margin-bottom: 25px;
+        		}
+        	}
+        	@media screen and (max-width:487px)
+        	{
+        		.mycard
+        		{
+        			height:500px;
+        		}
+        	}
 
-<script>
-    if(object.count==0)
-    {
-        document.getElementById('eventhead').style.display="none";
-        document.getElementById('noevent').style.display="block";
-    }
-    function displayEventName(id)
-    {
-        var imgName=id+"img";
-        var boxName=id+"div";
-        document.getElementById(imgName).style.display="none";
-        document.getElementById(boxName).style.display="block";
-    }
-    function hideEventName(id)
-    {
-        var imgName=id+"img";
-        var boxName=id+"div";
-        document.getElementById(boxName).style.display="none";
-        document.getElementById(imgName).style.display="block";
-
-    }
-</script>
-
-<!--Injected javascript for getting count-->
-<script>
-    object={count:0};
-</script>
-<!--Incremental Loop-->
-
-
-<style>
-    body {
-        color: #61443e;
-        font-family:Monospace;
-        font-size:13px;
-        background-color: #aaccff;
-        margin: 0px;
-        overflow-x: hidden;
-        overflow-y: auto;
-    }
-    #oldie {
-        background:rgb(0,0,50) !important;
-        color:#fff !important;
-    }
-    #webglcontainer
-    {
-      width: 100vw;
-      height: 100vh;
-      display: block;
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: -9999;
-    }
-    .responsiveness
-    {
-        height:450px;
-    }
-    @media screen and (max-width:1441px)
-    {
-        .responsiveness
-        {
-            height:360px;
-        }
-    }
-    @media screen and (max-width:1258px)
-    {
-        .responsiveness
-        {
-            height:320px;
-        }
-    }
-    @media screen and (max-width:1153px)
-    {
-        .responsiveness
-        {
-            height:285px;
-        }
-    }
-    @media screen and (max-width:1004px)
-    {
-        .responsiveness
-        {
-            height:265px;
-        }
-    }
-    @media screen and (max-width:795px)
-    {
-        .responsiveness
-        {
-            height:250px;
-        }
-    }
-    @media screen and (max-width:600px)
-    {
-        .responsiveness
-        {
-            height:auto;
-        }
-    }
-</style>
-
+        	@media screen and (max-width:371px)
+        	{
+        		.mycard
+        		{
+        			height:430px;
+        		}
+        	}
+            body {
+                color: #61443e;
+                font-family:Monospace;
+                font-size:13px;
+                background-color: #aaccff;
+                margin: 0px;
+                overflow-x: hidden;
+            }
+            #webglcontainer
+            {
+              width: 100vw;
+              height: 100vh;
+              display: block;
+              position: fixed;
+              top: 0;
+              left: 0;
+              z-index: -9999;
+            }
+        </style>
