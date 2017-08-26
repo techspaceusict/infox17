@@ -1,31 +1,22 @@
-      body {
-        font-family:Arial;
-        font-size:12px;
-        background:#ededed;
-      }
-      .example-desc {
-        margin:3px 0;
-        padding:5px;
-      }
-
-      #carousel {
-        width:100%;
-        height:300px;
-        position:center;
-        clear:both;
-        overflow:hidden;
-      }
-      #carousel img {
-        box-shadow: 2px 2px 2px black;
-        visibility:hidden; /* hide images until carousel can handle them */
-        cursor:pointer; /* otherwise it's not as obvious items can be clicked */
-      }
-    body
-    {
-        background:url('/uploads/contactbg.jpg');
-        background-size:cover;
-    }
-  #loader-wrapper {
+body {
+    font-family:Arial;
+    font-size:12px;
+    background:url('/uploads/contactbg.jpg');
+    background-size:cover;
+}
+#carousel {
+    width:100%;
+    height:35vh;
+    position:center;
+    clear:both;
+    overflow:hidden;
+}
+#carousel img {
+    box-shadow: 2px 2px 2px black;
+    visibility:hidden; /* hide images until carousel can handle them */
+    cursor:pointer; /* otherwise it's not as obvious items can be clicked */
+}
+#loader-wrapper {
     top: 0;
     left: 0;
     width: 100%;
