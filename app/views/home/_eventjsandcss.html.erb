@@ -8,7 +8,7 @@
     { color:white; text-decoration: none;}
 .canvas{
 
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0,0,0,0.2);
 }
 
 body
@@ -31,6 +31,11 @@ body
 
 </style>
 <script>
+window.addEventListener('resize', function () { 
+    "use strict";
+    window.location.reload(); 
+});
+
     var TxtType = function(el, toRotate, period) {
             this.toRotate = toRotate;
             this.el = el;
@@ -177,4 +182,6 @@ body
           }
         }
       }
+
+
 </script>
