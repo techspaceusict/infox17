@@ -1,5 +1,4 @@
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<%= render 'aboutjsandcss'%>
 <div class="container" style= "margin-top:10vh;background-color:rgba(0,0,0,0.8);color:black;padding:0px;border:0.5px solid black;margin-bottom:10em">
     <div class="row" style="color:white;padding-top:5px;padding-bottom:5px;padding-left:20px;margin:0px"id="varHt1">
         <h3><span style="color: #db5726;">About</span> Us</h3>
@@ -32,7 +31,8 @@
         </div>
     </div>
 </div>
-      <script id="img-wrapper-tmpl" type="text/x-jquery-tmpl">  
+<%= render 'aboutjsandcss'%>
+      <script id="img-wrapper-tmpl" type="text/x-jquery-tmpl">
       <div class="rg-image-wrapper">
         {{if itemsCount > 1}}
           <div class="rg-image-nav">
