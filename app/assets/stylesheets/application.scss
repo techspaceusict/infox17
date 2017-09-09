@@ -111,9 +111,7 @@ nav a:focus:before {
     -webkit-transform: rotate(360deg); /* Safari */
     transform: rotate(360deg);
 }
-*{
-    font-family: 'Ubuntu', sans-serif;
-}
+
 nav {
 
   background-color: rgba(0,0,0,0.4);
@@ -121,7 +119,7 @@ nav {
 }
 
 footer li{
-  font-family: ubuntu;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 
@@ -285,7 +283,6 @@ line-height: 35px;
 top: -265px;
 border-top-right-radius: 5px;
 border-top-left-radius: 5px;
-font-family: "Open Sans";
 color: rgba(255, 255, 255, 0.85);
 }
 .card .card-info .card-title {
