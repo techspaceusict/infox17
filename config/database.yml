@@ -22,9 +22,9 @@ test:
 
 production:
   <<: *default
-  database: infox
-  username: infox
-  password: <%= ENV['infox'] %>
+  database: infox17
+  username: infox17
+  password: infox17
 
 
 
