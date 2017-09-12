@@ -1,0 +1,74 @@
+I, [2017-09-11T18:38:30.852983 #6845]  INFO -- : Refreshing Gem list
+/var/lib/gems/2.3.0/gems/bundler-1.15.4/lib/bundler/runtime.rb:85:in `rescue in block (2 levels) in require': There was an error while trying to load the gem 'activeadmin'. (Bundler::GemRequireError)
+Gem Load Error is: uninitialized constant Rack::Session::Abstract::Persisted::RACK_SESSION
+Backtrace for gem load error is:
+/var/lib/gems/2.3.0/gems/rack-2.0.3/lib/rack/session/abstract/id.rb:202:in `<class:Persisted>'
+/var/lib/gems/2.3.0/gems/rack-2.0.3/lib/rack/session/abstract/id.rb:200:in `<module:Abstract>'
+/var/lib/gems/2.3.0/gems/rack-2.0.3/lib/rack/session/abstract/id.rb:14:in `<module:Session>'
+/var/lib/gems/2.3.0/gems/rack-2.0.3/lib/rack/session/abstract/id.rb:12:in `<module:Rack>'
+/var/lib/gems/2.3.0/gems/rack-2.0.3/lib/rack/session/abstract/id.rb:10:in `<top (required)>'
+/var/lib/gems/2.3.0/gems/actionpack-5.0.6/lib/action_controller/metal/request_forgery_protection.rb:1:in `<top (required)>'
+/var/lib/gems/2.3.0/gems/actionpack-5.0.6/lib/action_controller/base.rb:224:in `<class:Base>'
+/var/lib/gems/2.3.0/gems/actionpack-5.0.6/lib/action_controller/base.rb:164:in `<module:ActionController>'
+/var/lib/gems/2.3.0/gems/actionpack-5.0.6/lib/action_controller/base.rb:5:in `<top (required)>'
+/var/lib/gems/2.3.0/gems/ransack-1.8.3/lib/ransack.rb:29:in `<top (required)>'
+/var/lib/gems/2.3.0/gems/activeadmin-1.1.0/lib/active_admin.rb:4:in `<top (required)>'
+/var/lib/gems/2.3.0/gems/activeadmin-1.1.0/lib/activeadmin.rb:1:in `<top (required)>'
+/var/lib/gems/2.3.0/gems/bundler-1.15.4/lib/bundler/runtime.rb:82:in `require'
+/var/lib/gems/2.3.0/gems/bundler-1.15.4/lib/bundler/runtime.rb:82:in `block (2 levels) in require'
+/var/lib/gems/2.3.0/gems/bundler-1.15.4/lib/bundler/runtime.rb:77:in `each'
+/var/lib/gems/2.3.0/gems/bundler-1.15.4/lib/bundler/runtime.rb:77:in `block in require'
+/var/lib/gems/2.3.0/gems/bundler-1.15.4/lib/bundler/runtime.rb:66:in `each'
+/var/lib/gems/2.3.0/gems/bundler-1.15.4/lib/bundler/runtime.rb:66:in `require'
+/var/lib/gems/2.3.0/gems/bundler-1.15.4/lib/bundler.rb:108:in `require'
+/root/infox17/config/application.rb:8:in `<top (required)>'
+/root/infox17/config/environment.rb:2:in `require_relative'
+/root/infox17/config/environment.rb:2:in `<top (required)>'
+config.ru:4:in `require_relative'
+config.ru:4:in `block in <main>'
+/usr/lib/ruby/vendor_ruby/rack/builder.rb:55:in `instance_eval'
+/usr/lib/ruby/vendor_ruby/rack/builder.rb:55:in `initialize'
+config.ru:1:in `new'
+config.ru:1:in `<main>'
+/var/lib/gems/2.3.0/gems/unicorn-5.3.0/lib/unicorn.rb:56:in `eval'
+/var/lib/gems/2.3.0/gems/unicorn-5.3.0/lib/unicorn.rb:56:in `block in builder'
+/var/lib/gems/2.3.0/gems/unicorn-5.3.0/lib/unicorn/http_server.rb:796:in `build_app!'
+/var/lib/gems/2.3.0/gems/unicorn-5.3.0/lib/unicorn/http_server.rb:139:in `start'
+/var/lib/gems/2.3.0/gems/unicorn-5.3.0/bin/unicorn:126:in `<top (required)>'
+/usr/local/bin/unicorn:23:in `load'
+/usr/local/bin/unicorn:23:in `<main>'
+Bundler Error Backtrace:
+	from /var/lib/gems/2.3.0/gems/bundler-1.15.4/lib/bundler/runtime.rb:81:in `block (2 levels) in require'
+	from /var/lib/gems/2.3.0/gems/bundler-1.15.4/lib/bundler/runtime.rb:77:in `each'
+	from /var/lib/gems/2.3.0/gems/bundler-1.15.4/lib/bundler/runtime.rb:77:in `block in require'
+	from /var/lib/gems/2.3.0/gems/bundler-1.15.4/lib/bundler/runtime.rb:66:in `each'
+	from /var/lib/gems/2.3.0/gems/bundler-1.15.4/lib/bundler/runtime.rb:66:in `require'
+	from /var/lib/gems/2.3.0/gems/bundler-1.15.4/lib/bundler.rb:108:in `require'
+	from /root/infox17/config/application.rb:8:in `<top (required)>'
+	from /root/infox17/config/environment.rb:2:in `require_relative'
+	from /root/infox17/config/environment.rb:2:in `<top (required)>'
+	from config.ru:4:in `require_relative'
+	from config.ru:4:in `block in <main>'
+	from /usr/lib/ruby/vendor_ruby/rack/builder.rb:55:in `instance_eval'
+	from /usr/lib/ruby/vendor_ruby/rack/builder.rb:55:in `initialize'
+	from config.ru:1:in `new'
+	from config.ru:1:in `<main>'
+	from /var/lib/gems/2.3.0/gems/unicorn-5.3.0/lib/unicorn.rb:56:in `eval'
+	from /var/lib/gems/2.3.0/gems/unicorn-5.3.0/lib/unicorn.rb:56:in `block in builder'
+	from /var/lib/gems/2.3.0/gems/unicorn-5.3.0/lib/unicorn/http_server.rb:796:in `build_app!'
+	from /var/lib/gems/2.3.0/gems/unicorn-5.3.0/lib/unicorn/http_server.rb:139:in `start'
+	from /var/lib/gems/2.3.0/gems/unicorn-5.3.0/bin/unicorn:126:in `<top (required)>'
+	from /usr/local/bin/unicorn:23:in `load'
+	from /usr/local/bin/unicorn:23:in `<main>'
+I, [2017-09-11T19:47:06.498189 #18841]  INFO -- : Refreshing Gem list
+I, [2017-09-11T19:47:09.681326 #18841]  INFO -- : listening on addr=/root/infox17/shared/sockets/unicorn.sock fd=12
+I, [2017-09-11T19:47:09.681505 #18841]  INFO -- : worker=0 spawning...
+I, [2017-09-11T19:47:09.683963 #18841]  INFO -- : worker=1 spawning...
+I, [2017-09-11T19:47:09.685037 #18844]  INFO -- : worker=0 spawned pid=18844
+I, [2017-09-11T19:47:09.685277 #18844]  INFO -- : worker=0 ready
+I, [2017-09-11T19:47:09.687788 #18841]  INFO -- : master process ready
+I, [2017-09-11T19:47:09.695617 #18847]  INFO -- : worker=1 spawned pid=18847
+I, [2017-09-11T19:47:09.695865 #18847]  INFO -- : worker=1 ready
+I, [2017-09-11T19:50:42.564724 #18841]  INFO -- : reaped #<Process::Status: pid 18844 exit 0> worker=0
+I, [2017-09-11T19:50:42.566258 #18841]  INFO -- : reaped #<Process::Status: pid 18847 exit 0> worker=1
+I, [2017-09-11T19:50:42.566456 #18841]  INFO -- : master complete

@@ -3,8 +3,9 @@
 
 <div class="canvas" style="padding:0px">
     <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
-    <div class="row"style="margin-right:20px">
+    <div class="row" style="margin-right:20px">
         <h1 style="text-align: center; cursive;color:white;text-shadow: 2px 2px 2px black;">EVENTS</h1>
+
         <h5>
             <center>
                 <a style="color: #ee7436;text-shadow: 1px 1px 1px black;" class="typewrite" data-period="2000" data-type='[ "Participate.", "Explore.", "Learn.", "Develop.","Nourish.",":D" ]'>
@@ -12,11 +13,14 @@
                 </a>
             </center>
         </h5>
+
          <div class="container">
             <center>
                 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Events..."onmousedown="showDisplay()">
             </center>
         </div>
+
+
         <div class="container" id="mycontainer">
                   <div class="col m4 s12 hoverable" onclick="f()"style="cursor:pointer;margin-bottom:10px" ><a class="category">All Events</a></div>
                   <div class="col m4 s12 hoverable" onclick="f1()"style="cursor:pointer;margin-bottom:10px"><a class="category">Programming</a></div>
@@ -25,7 +29,11 @@
                   <div class="col m4 s12 hoverable" onclick="f4()"style="cursor:pointer;margin-bottom:10px"><a class="category">Workshops</a></div>
                   <div class="col m4 s12 hoverable" onclick="f5()"style="cursor:pointer;margin-bottom:10px"><a class="category">Non-Tech</a></div>
          </div>
+
+
     </div>
+</div>
+
     <div class="col s12 m6">
         <div class="card-container" id="card-container">
             <%@event.each do |event|%>
