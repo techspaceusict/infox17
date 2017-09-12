@@ -1,8 +1,9 @@
 #section2 {
-  background-image: url(/images/background.jpg);
-	background-size: 100% 100%;
+  background-image: url('/images/background.jpg');
   background-repeat: no-repeat;
-  opacity: 0.8;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 a{
@@ -133,7 +134,8 @@ nav a:focus:before {
 }
 
 .side-nav {
-  background-color:rgba(3,3,3, 0.7);
+  background-color:rgba(3,3,3, 0.9);
+  z-index: 20000;
 }
 
 .side-nav-menus {

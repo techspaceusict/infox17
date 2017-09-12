@@ -163,11 +163,6 @@ function loaderInit() {
 
     window.addEventListener('resize', onWindowResize, false);
 
-    var map = new THREE.TextureLoader().load("cloud10.png");
-    var material = new THREE.SpriteMaterial({ map: map, color: 0xffffff, fog: true });
-    var sprite = new THREE.Sprite(material);
-    loaderScene.add(sprite);
-
 }
 
 function loaderUpdate() {
