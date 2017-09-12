@@ -1,0 +1,109 @@
+﻿body,
+html {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: white;
+}
+
+
+/*========== CANVAS ========================*/
+.mainCanvas {
+    width: 868px;
+    height: 654px;
+    position: fixed;
+    z-index: -1;
+}
+/*============ END CANVAS ===================*/
+
+
+/*============ CANVAS CONTENT ===============*/
+.main {
+    height: 100%;
+}
+
+.full-section {
+    min-height: 100%;
+}
+
+
+#scrollDownButton {
+    position: absolute;
+    float: left;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 30px;
+}
+
+
+.downarrow {
+    height: 40px;
+    width: 40px;
+    animation: arrow 0.8s infinite alternate cubic-bezier(0.4, 0, 1, 1);
+}
+
+.registerbtn {
+
+    border-radius: 11px;
+    color: #fd5732;
+    background: white;
+    padding: 10px 20px 10px 20px;
+    border: solid #fd5732 2px;
+    transition: background-color 0.5s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+
+    position: relative;
+    float: right;
+    margin: 20px;
+}
+
+.registerbtn:hover {
+    color: white;
+    background: #fd5732;
+}
+
+.registerbtn:focus {
+    outline: 0px;
+    color: white;
+    background: #fd5732;
+}
+
+@keyframes arrow {
+
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    100% {
+        transform: translate(0px, 15px);
+    }
+}
+
+/*=========== END CANVAS CONTENT =============*/
+
+
+
+/*=========== SVG Animation css ==============
+
+.path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 5s linear alternate infinite;
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+==============================================*/

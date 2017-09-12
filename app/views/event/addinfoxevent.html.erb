@@ -1,0 +1,59 @@
+
+
+<br>
+<br>
+<div class="add">
+<%= form_tag('/addevents', method: "post",multipart: true)  do%>
+
+  <%= label_tag(:Event_id, "Event Id") %>
+  <%= text_field_tag(:Event_id) %><br><br>
+
+
+  <%= label_tag(:Event_name, "Event Name:") %>
+  <%= text_field_tag(:Event_name) %><br><br>
+
+  <%= label_tag(:Event_detail, "Event Details") %>
+  <%= text_field_tag(:Event_detail) %><br><br>
+
+  <%= label_tag(:facebook_link, "Facebook Link") %>
+  <%= text_field_tag(:facebook_link) %><br><br>
+
+  <%= label_tag(:organizer1_name, "Organizer1 Name") %>
+  <%= text_field_tag(:organizer1_name) %><br><br>
+
+  <%= label_tag(:organizer1_phone, "Organizer1 phone") %>
+  <%= text_field_tag(:organizer1_phone) %><br><br>
+
+  <%= label_tag(:organizer2_name, "Organizer2 Name") %>
+  <%= text_field_tag(:organizer2_name) %><br><br>
+
+
+  <%= label_tag(:organizer2_phone, "Organizer2 Phone") %>
+  <%= text_field_tag(:organizer2_phone) %><br><br>
+
+
+  <%= label_tag(:venue, "Venue") %>
+  <%= text_field_tag(:venue) %><br><br>
+
+ <%= label_tag(:Event_date, "Event Date") %>
+ <%= date_field(:user, :Event_date) %><br><br>
+
+
+ <%= label_tag(:Event_time, "Event Time") %>
+ <%= time_field(:user, :Event_time) %><br><br>
+
+
+ <%= label_tag(:image, "Image") %>
+ <%= file_field_tag(:image) %><br><br>
+
+
+<%= submit_tag 'Register'%>
+
+<%end%>
+</div>
+
+<style type="text/css">
+	.add{
+		margin-left: 10%;
+	}
+</style>

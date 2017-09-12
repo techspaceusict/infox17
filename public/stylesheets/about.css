@@ -1,0 +1,17 @@
+.about-header {
+  color:#FFFFFF;
+  padding-top:5px;
+  padding-bottom:5px;
+  padding-left:20px;
+  margin:0px
+}
+
+.about-content {
+  background: rgba(255,255,255,0.6);
+  padding: 50px 100px;
+  border-top-right-radius: 50px;
+}
+
+.about-content p {
+  text-align: justify;
+}

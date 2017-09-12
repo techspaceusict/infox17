@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>InfoX 2017 | USICT GGSIPU</title>
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Julius+Sans+One" rel="stylesheet">
+
+    <%= stylesheet_link_tag "techspace" %>
+    <%= stylesheet_link_tag "style" %>
+    <%= yield :pgstyles %>
+  </head>
+
+  <body>
+    <canvas class="mainCanvas"></canvas>
+
+    <div class="main">
+      <section class="full-section" id="canvasContent">
+      <!--Insert Canvas content here -->
+
+
+        <a href="#section2" id="scrollDownButton">
+            <img src="/images/downarrow.png" class="downarrow">
+        </a>
+        <button class="registerbtn">Register</button>
+
+
+      <!--End Canvas Content-->
+      </section>
+    </div>
+
+
+    <div class="main" id="section2">
+      <section class="full-section">
+        <!--Insert content below canvas here -->
+
+        <div class="navbar">
+          <nav>
+            <div class="nav-wrapper">
+              <a href="/" class="brand-logo center"><img src="http://prabhanshugupta.me/infoxpression/img/logo-infox%20trans-bg.jpg"></a>
+              <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+              <ul class="left hide-on-med-and-down">
+                <li><a class="<% if action_name == "ts_about" %> active <% end %> ts-lmenu" href="/about/">About</a></li>
+                <li><a class="<% if action_name == "ts_contact" %> active <% end %> ts-lmenu" href="/contact/">Contact Us</a></li>
+                  <li><a class="<% if action_name == "ts_sponsors" %> active <% end %> ts-lmenu" href="/sponsors/">Sponsors</a></li>
+              </ul>
+              <ul class="right hide-on-med-and-down">
+                <li><a class="<% if action_name == "ts_events" %> active <% end %> ts-lmenu" href="/events/">Events</a></li>
+                <li><a class="<% if action_name == "ts_schedule" %> active <% end %> ts-lmenu" href="/schedule/">Schedule</a></li>
+                <li><a class="<% if action_name == "ts_login" %> active <% end %> ts-lmenu" href="/login/">Login</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+
+        <!-- side navigaion -->
+        <ul id="slide-out" class="side-nav">
+
+          <a href="#" data-activates="mobile-demo" class="button-collapse-inview"><i class="material-icons">arrow_back</i></a>
+
+          <%if user_signed_in? %>
+            <li>
+              <div class="user-view">
+                <div class="background">
+                  <img src="images/office.jpg">
+                </div>
+                <a href="#!user"><img class="circle" src="images/yuna.jpg"></a>
+                <a href="#!name"><span class="white-text name">John Doe</span></a>
+                <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+              </div>
+            </li>
+          <%else%>
+          <p style="color:#FFFFFF; text-align:center;">User Not Logged!!!</p>
+          <p style="text-align:center;"><a class="waves-effect waves-light btn social facebook" style="background-color:#3B5998"><i class="fa fa-facebook"></i> Sign in with facebook</a></p>
+          <p style="text-align:center;"><a class="waves-effect waves-light btn social google" style="background-color:#DD4B39"><i class="fa fa-google"></i> Sign in with google</a></p>
+            <li>
+
+            </li>
+          <%end%>
+            <li><div class="divider"></div></li>
+            <div class="side-nav-menus">
+            <li><a class="waves-effect" href="/">Home</a></li>
+            <li><a class="waves-effect" href="/about">About</a></li>
+            <li><a class="waves-effect" href="/schedule">Schedule</a></li>
+            <li><a class="waves-effect" href="/events">Events</a></li>
+            <li><a class="waves-effect" href="/Sponsors">Sponsors</a></li>
+            <li><a class="waves-effect" href="/Contact">Contact Us</a></li>
+          </ul>
+
+          <div class="container">
+            <%= yield :pgcontent %>
+          </div>
+
+        <div id="footer" class="bg-one">
+          <div class="row">
+            <div class="col m3 s12 techspace-set">
+                <br>
+                <a href="/"><img width="70px" src="http://prabhanshugupta.me/infoxpression/img/logo-infox%20trans-bg.jpg"></a>
+                <br />
+                <h5><a href="#">Techspace</a></h5>
+                <h5><a href="#">E-Cell</a></h5>
+                <h5><a href="#">IEEE</a></h5>
+                <h5><a href="#">IETE</a></h5>
+            </div>
+            <div class="col m6 s12 info-set">
+              <br>
+              <a class="info-set-social-android" href="https://play.google.com/store/apps/details?id=in.infoxpression.infoxpression"><i class="fa fa-android"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a class="info-set-social-facebook" href="https://www.facebook.com/infoxpression?_rdr" target="_blank"><i class="fa fa-facebook"></i></a><br><br>
+              <h5 class="footer-info"> InfoXpression 2017 </h5>
+              <h5 class="footer-info"> University School of Informaiton, Communication and Technology </h5>
+              <h5 class="footer-info"> Guru Gobind Singh Indraprastha University </h5>
+              <h5 class="footer-info"> Sector 16C, Dwarka </h5>
+            </div>
+
+            <div class="col m3 s12 contact-set">
+                <h5>Contact</h5>
+                <br/>
+                <a href="mailto:infox@ipu.ac.in"><h5 class ="contact-info"><i class="fa fa-envelope" aria-hidden="true"></i> infox@ipu.ac.in</a></h5>
+                <h5  class ="contact-info"><i class="fa fa-phone" aria-hidden="true"></i> &nbsp; &nbsp;+91-9871381106</h5>
+                <h5 class ="contact-info"><a href="http://www.techspace.club">TECHSPACE</a></h5>
+                <br>
+                <a class="waves-effect waves-light btn pulse event-blinker" href="/team">&lt;Events/&gt;</a>
+            </div>
+          </div>
+          <div class="copyright">
+            <p>Infox Copyright &copy; 2017 All Rights Reserved.</p>
+          </div>
+        </div>
+
+        <!--End page below-->
+      </section>
+    </div>
+
+    <!-- <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     width="340px" height="333px" viewBox="0 0 340 333" enable-background="new 0 0 340 333" xml:space="preserve">
+
+    <path class="path" fill="#FFFFFF" stroke="#000000" stroke-width="4" stroke-miterlimit="10" d="M66.039,133.545c0,0-21-57,18-67s49-4,65,8
+      s30,41,53,27s66,4,58,32s-5,44,18,57s22,46,0,45s-54-40-68-16s-40,88-83,48s11-61-11-80s-79-7-70-41
+      C46.039,146.545,53.039,128.545,66.039,133.545z"/>
+    </svg> -->
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <%= javascript_include_tag 'techspace' %>
+    <%= javascript_include_tag 'packaged' %>
+  </body>
+</html>

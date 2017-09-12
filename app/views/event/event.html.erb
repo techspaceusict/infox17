@@ -1,0 +1,66 @@
+<div class="container"style="margin-top:15vh;margin-bottom:15vh;background:white;">
+    <div class="row" style="font-size: 20px; background:black;color:white;padding-top:7px;padding-bottom:7px;margin:0px">
+        <center>
+            Event Details
+        </center>
+    </div>
+    <div class="row"style="margin:0px">
+        <div class="col s12 m4"style="padding:0px;">
+            <img src="/uploads/<%= @event.image%>"style="width:100%">
+        </div>
+        <div class="col s12 m8"style="padding:10px;">
+            <u>
+                <h5>
+                    <center>
+                        <%=raw @event.Name%>
+                    </center>
+                </h5>
+            </u><br>
+            <%=raw @event.about%>
+            <hr>
+            <u>Venue:</u>&nbsp;&nbsp;&nbsp;<%=raw @event.venue%>
+            <hr>
+            Like and follow us on facebook to updates:<br>
+            <a href="<%= @event.facebook_link%>"style="color:black"><i class="fa fa-facebook-square fa-3x"aria-hidden="true"></i></a>
+            <hr>
+            Contributors:<br>
+            <table class="striped">
+                <tbody>
+                    <tr>
+                       <td><%=raw @event.organizer1_name%></td>
+                       <td><%= @event.organizer1_phone%></td>
+                   </tr>
+                   <tr>
+                      <td><%=raw @event.organizer2_name%></td>
+                      <td><%= @event.organizer2_phone%></td>
+                  </tr>
+               </tbody>
+            </table>
+            <hr>
+            <% if current_user%>
+                <%if @user%>
+                    <a href="#">
+                        <div class="col s12"style="padding-top:5px;padding-bottom:5px;background:#F44336;color:white;font-size:16px;margin-top:20px"><center>You have already registered!</center></div>
+                    </a>
+                <%else%>
+                    <div class="col s12"style="padding-top:5px;padding-bottom:5px;background:#000000;color:white;font-size:16px;margin-top:20px"><center><%= link_to "Register for Event ", url_for(controller: :event, action: :eventregister,:Event_id=>@event.Event_id), method: :post,class:"fontcolor"%></center></div>
+              	<%end%>
+            <%else%>
+               <a href="/users/auth/facebook">
+                   <div class="col s12"style="padding-top:5px;padding-bottom:5px;background:#F44336;color:white;font-size:16px;margin-top:20px"><center>Sign in to register</center></div></a>
+            <%end%>
+       </div>
+    </div>
+</div>
+<style>
+body
+{
+    background: url('/uploads/contactbg.jpg');
+    background-size: cover;
+    overflow-x: hidden;
+}
+.fontcolor
+{
+        color:white;
+}
+</style>
