@@ -13,32 +13,69 @@
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
     <script src="//cdn.rawgit.com/mrdoob/three.js/master/build/three.min.js"></script>
     </head>
-<body>
+<body onclick="$('.button-collapse').sideNav('hide');">
+    <%if !user_signed_in? %>
+    <%else%>
+    <ul id="slide-out" class="side-nav">
+        <p>
+            <div class="user-view" style="background-image: url(/uploads/sidenavbg.jpg);"><br>
+                <img style="padding: 10px;" class="circle" src="<%= current_user.profile%>"><br>
+                <span style="padding-left: 10px; font-size: 16px; font-weight: 700" class="white-text name"><%= current_user.name%></span><br>
+                <br>
+                <br>
+            </div>
+        </p>
+        <p>
+            <i style="font-size: 30px; padding-right: 10px;" class="material-icons">event_note</i>
+            <%= link_to "My Events", url_for(controller: :event, action: :myevents), method: :post%>
+        </p>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <p>
+            <i style="font-size: 30px; padding-right: 10px;" class="material-icons">arrow_forward</i>
+            <%= link_to "Log out", destroy_user_session_path, :method => :delete%>
+        </p>
+        <li>
+            <div class="divider"></div>
+        </li>
+            <center><button class="btn waves-effect waves-green btn-flat"style="background:none;color:black;margin-top:20px"onclick="$('.button-collapse').sideNav('hide');">Close</button></center>
+    </ul>
+    <%end%>
     <div class="navbar-fixed">
       <nav>
         <div class="nav-wrapper">
           <a href="/" class="brand-logo center"><img style="height: 50px; padding-top: 10px;" src="http://prabhanshugupta.me/infoxpression/img/logo-infox%20trans-bg.jpg"></a>
           <a href="#" data-activates="mobile-demo" class="button-collapse"style="color:white"><i class="material-icons">menu</i></a>
           <ul class="left hide-on-med-and-down">
-            <li style="margin-left: 2.5em;"><a style="padding-right: 2.5em; padding-left: 2.5em;" href="/">Home</a></li>
             <li><a style="padding-right: 2.5em; padding-left: 2.5em;" href="/about">About</a></li>
-            <li><a style="padding-right: 2.5em; padding-left: 2.5em;" href="/schedule">Schedule</a></li>
+            <li><a style="padding-right: 1.5em; padding-left: 1.5em;" href="/schedule">Schedule</a></li>
+            <li><a style="padding-right: 1.5em; padding-left: 1.5em;" href="/events">Events</a></li>
           </ul>
           <ul class="right hide-on-med-and-down">
-            <li style="margin-right: 15em; margin-left: -35em;"><a style="padding-left: 2.5em; padding-right: 2.5em;" href="/events">Events</a></li>
-            <li style="margin-right: 2.5em; margin-left: -21.5em;"><a style="padding-left: 2em; padding-right: 2em;" href="/Sponsors">Sponsors</a></li>
-            <li style="margin-right: 2.5em; margin-left: -7.5em;"><a style="padding-left: 1.5em; padding-right: 1.5em;" href="/Contact">Contact Us</a></li>
+            <li style="margin-right: 1.5em; margin-left: -30.5em;"><a style="padding-left: 1.6em; padding-right: 1.3em;" href="/Sponsors">Sponsors</a></li>
+            <li style="margin-right: 1em; margin-left: -19.5em;"><a style="padding-left: 1em; padding-right: 1.5em;" href="/Contact">Contact Us</a></li>
+            <%if !user_signed_in? %>
+                <li style=" margin-left: -9.5em;"><a style="padding-left: 1.5em; padding-right: 1.5em;" href="/users/auth/facebook">Sign In/Up</a></li>
+            <%else%>
+                <li style=" margin-left: -9.5em;"><a style="padding-left: 1.5em; padding-right: 1.5em;color:white"href="#" data-activates="slide-out"class="show-on-large button-collapse">My InfoX</a></li>
+            <%end%>
           </ul>
         </div>
       </nav>
     </div>
     <ul style="background-color: orange;" class="side-nav" id="mobile-demo">
         <li style="background-color: rgba(255,153,0,0.8); text-align: center;margin-bottom: 10px; margin-top: 20px;"><a href="/">Home</a></li>
-        <li style="background-color: rgba(255,153,0,0.8); text-align: center;margin-bottom: 10px;"><a href="/about">About</a></li>
+        <li style="background-color: rgba(255,153,0,0.8); text-align: center;margin-bottom: 10px; margin-top: 20px;"><a href="/about">About</a></li>
         <li style="background-color: rgba(255,153,0,0.8); text-align: center;margin-bottom: 10px;"><a href="/schedule">Schedule</a></li>
         <li style="background-color: rgba(255,153,0,0.8); text-align: center;margin-bottom: 10px;"><a href="/events">Events</a></li>
         <li style="background-color: rgba(255,153,0,0.8); text-align: center;margin-bottom: 10px;"><a href="/Sponsors">Sponsors</a></li>
         <li style="background-color: rgba(255,153,0,0.8); text-align: center;margin-bottom: 10px;"><a href="/Contact">Contact Us</a></li>
+        <%if !user_signed_in? %>
+            <li style="background-color: rgba(255,153,0,0.8); text-align: center;margin-bottom: 10px;"><a href="/users/auth/facebook">Sign In/Up</a></li>
+        <%else%>
+            <li style="background-color: rgba(255,153,0,0.8); text-align: center;margin-bottom: 10px;"><a href="#"data-activates="slide-out"class="button-collapse"onclick="$('#mobile-demo').sideNav('hide');">My InfoX</a></li>
+        <%end%>
     </ul>
     <div id="body">
         <script>
@@ -61,50 +98,15 @@
                 <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
             </div>
         </div>
-        <%if !user_signed_in? %>
             <div id="social_links">
                 <ul>
                     <li>
-                        <a href="/users/auth/facebook">
+                        <a href="https://www.facebook.com/infoxpression/">
                             <img src="/uploads/fblogo.png" style="width: 50px;">
                         </a>
                     </li>
                 </ul>
             </div>
-        <%else%>
-            <ul id="slide-out" class="side-nav">
-                <p>
-                    <div class="user-view" style="background-image: url(/uploads/sidenavbg.jpg);"><br>
-                        <img style="padding: 10px;" class="circle" src="<%= current_user.profile%>"><br>
-                        <span style="padding-left: 10px; font-size: 16px; font-weight: 700" class="white-text name"><%= current_user.name%></span><br>
-                        <br>
-                        <br>
-                    </div>
-                </p>
-                <p>
-                    <i style="font-size: 30px; padding-right: 10px;" class="material-icons">event_note</i>
-                    <%= link_to "My Events", url_for(controller: :event, action: :myevents), method: :post%>
-                </p>
-                <li>
-                    <div class="divider"></div>
-                </li>
-                <p>
-                    <i style="font-size: 30px; padding-right: 10px;" class="material-icons">arrow_forward</i>
-                    <%= link_to "Log out", destroy_user_session_path, :method => :delete%>
-                </p>
-                <li>
-                    <div class="divider"></div>
-                </li>
-          </ul>
-          <div id="social_links">
-              <a style="background: rgba(0,0,0,0.5); color:white;padding:5px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" href="#" data-activates="slide-out" class="button-collapse" style="color: black;">
-                  <center>
-                      <i class="material-icons"style="font-size:40px">account_circle</i>
-                      <br>My InfoX
-                  </center>
-              </a>
-          </div>
-       <%end%>
         <main>
             <%= yield %>
         </main>
@@ -168,9 +170,9 @@
   sr.reveal('#sponsors img',{
     duration: 1000,
     origin: 'bottom',
-  })
+});
 //for navbar collapsing
 $( document ).ready(function(){
 $(".button-collapse").sideNav();
-})
+});
 </script>

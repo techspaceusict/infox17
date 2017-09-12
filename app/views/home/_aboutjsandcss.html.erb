@@ -1,31 +1,5 @@
 <script type="text/javascript">
-positioning={reached:false};
-        var initialScrollPosition= $(window).scrollTop(),
-        elementOffset = $('#content').offset().top+$('#content').height()/3,
-        distance = (elementOffset - initialScrollPosition)-$(window).height();
-        if(distance<=0)
-        {
-            if(positioning.reached==false)
-            {
-                positioning.reached=true;
-                doAnimation();
-            }
-            console.log("We have reached");
-        }
-        $(window).scroll(function ()
-        {
-            var scrollExtent=$(window).scrollTop();
-            distance = (elementOffset - scrollExtent)-$(window).height();
-            if(distance<=0)
-            {
-                if(positioning.reached==false)
-                {
-                    positioning.reached=true;
-                    doAnimation();
-                    console.log("We've reached");
-                }
-            }
-        });
+
 
 
         function doAnimation()
@@ -66,3 +40,12 @@ positioning={reached:false};
         }
 
 </script>
+<style>
+@media screen and (max-width:345px)
+{
+    #myframe
+    {
+        display: none;
+    }
+}
+</style>

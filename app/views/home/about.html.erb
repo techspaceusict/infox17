@@ -1,30 +1,18 @@
 <%= render 'backgroundimage'%>
 
 <%= render 'aboutjsandcss'%>
-<div class="container">
-  <br>
-  <div class="carousel">
-  <a class="carousel-item responsive-img" href="#one!"><img src="http://www.ipu.ac.in/data0/images/1.jpg"></a>
-  <a class="carousel-item responsive-img" href="#two!"><img src="http://www.ipu.ac.in/data0/images/4.jpg"></a>
-  <a class="carousel-item responsive-img" href="#three!"><img src="http://www.ipu.ac.in/data0/images/2.jpg"></a>
-  <a class="carousel-item responsive-img" href="#four!"><img src="http://www.ipu.ac.in/data0/images/3.jpg"></a>
-  <a class="carousel-item responsive-img" href="#five!"><img src="http://www.ipu.ac.in/data0/images/1.jpg"></a>
-  <a class="carousel-item responsive-img" href="#five!"><img src="http://www.ipu.ac.in/data0/images/5.jpg"></a>
-  </div>
-</div>
 
 <div class="container" style= "margin-top:10vh;background-color:rgba(0,0,0,0.8);color:black;padding:0px;border:0.5px solid black;margin-bottom:10em">
-
-
 <div class="row" style="color:white;padding-top:5px;padding-bottom:5px;padding-left:20px;margin:0px"id="varHt1">
     <h3><span style="color: #db5726;">About</span> Us</h3>
 </div>
+<br>
     <div class="col s12" style="background:white;padding:30px"id="varHt2">
         <p style="font-size:20px">
+            <iframe src="/uploads/carousel/slide.html"style="width:100%;height:70vh;max-width:100%;"id="myframe"></iframe>
               <span style="color: #db5726; font-weight: 700">InfoXpression</span> is the annual technical fest of Guru Gobind Singh Indraprastha University organized by University School of Information and Communication Technology. It is the biggest technical extravaganza held at Guru Gobind Singh Indraprastha University, and involves an active participation of students from over 250 colleges of north India. An exhilarating voyage of technical know-how, InfoXpression focuses on the promotion of technology and innovation. It gives you a chance to stop, culminate new ideas and showcase your technical expertise. The fest is a three day grandeur which is result of a month long affair of prelims and stage levels. It involves a series of competitions, workshops and guest lectures by some eminent personalities. InfoXpression is an amalgamation of creativity and imagination. It will be a perfect blend of entertainment and technology with the aim of transformation and empowerment of the society.
         </p>
     </div>
-
     <div class="row" style="background:white;border-top:0.5px;margin:0px;"id="content">
         <div class="col s4" style="padding-top:60px;padding-bottom:60px;background:#81409c;color:white;border:0.5px solid white">
             <center><h5 id="count1">3</h5></center>
@@ -51,7 +39,36 @@
     </div>
 
 </div>
-
+<script>
+//WARNING:do not remove this script for your sake of organizing the code otherwise the counter shall not work
+positioning={reached:false};
+        var initialScrollPosition= $(window).scrollTop(),
+        elementOffset = $('#content').offset().top+$('#content').height()/3,
+        distance = (elementOffset - initialScrollPosition)-$(window).height();
+        if(distance<=0)
+        {
+            if(positioning.reached==false)
+            {
+                positioning.reached=true;
+                doAnimation();
+            }
+            console.log("We have reached");
+        }
+        $(window).scroll(function ()
+        {
+            var scrollExtent=$(window).scrollTop();
+            distance = (elementOffset - scrollExtent)-$(window).height();
+            if(distance<=0)
+            {
+                if(positioning.reached==false)
+                {
+                    positioning.reached=true;
+                    doAnimation();
+                    console.log("We've reached");
+                }
+            }
+        });
+</script>
 <style media="screen">
 .carousel .carousel-item {
 width:600px !important;
