@@ -22,11 +22,11 @@
     <%= yield :pgstyles %>
   </head>
 
-  <body>
+  <body style="background-image: url('/images/1.jpg'); ">
 
     <% if action_name == "ts_index" %>
     <canvas class="mainCanvas"></canvas>
-
+    
     <div class="main">
       <section class="full-section" id="canvasContent">
       <!--Insert Canvas content here -->
@@ -36,8 +36,9 @@
             <img src="/images/downarrow.png" class="downarrow">
         </a>
         <div class="headercard">
-            <img src="/images/logo-good.png" class="logoCanvas" width="150px"><br>
-            Infoxpression 2017
+            <img src="/images/logo-good.png" class="logoCanvas" width="150px"><br><br>
+            <img src="/images/logo-text.png" width="350px"><br>
+            <!-- Infoxpression 2017 -->
         </div>
         
 
@@ -114,7 +115,7 @@
           <div class="row">
             <div class="col m3 s12 techspace-set">
                 <br>
-                <a href="/"><img width="70px" src="http://prabhanshugupta.me/infoxpression/img/logo-infox%20trans-bg.jpg"></a>
+                <a href="/"><img width="70px" src="/images/logo-good.png"></a>
                 <br />
                 <h5><a href="#">Techspace</a></h5>
                 <h5><a href="#">E-Cell</a></h5>

@@ -432,7 +432,7 @@ function loaderInit() {
         shading: THREE.AdditiveBlending,
         // transparent: 1,
         // opacity: 0.8,
-        map : texture
+        // map : texture
     });
     loaderMesh = new THREE.Mesh(e, loaderMeteria);
     loaderMesh.position.y = -10;
@@ -461,7 +461,7 @@ function loaderInit() {
     for (var a = i.attributes.position.array, t = 0, o = 0, n = a.length; n > t; t++, o += 3) a[o + 1] = 3 * dataLoader[t];
     i.computeFaceNormals();
     loaderWireMeteria = new THREE.MeshBasicMaterial({
-        color: new THREE.Color("rgb(170,170,170)"),
+        color: new THREE.Color("rgb(255,176,151)"),
         wireframe: !0,
         fog: !0,
         flatShading: !0,
@@ -477,7 +477,7 @@ function loaderInit() {
     for (var a = i.attributes.position.array, t = 0, o = 0, n = a.length; n > t; t++, o += 3) a[o + 1] = 3 * dataLoader[t];
     i.computeFaceNormals();
     loaderWireMeteria = new THREE.MeshBasicMaterial({
-        color: new THREE.Color("rgb(170,170,170)"),
+        color: new THREE.Color("rgb(255,176,151)"),
         wireframe: !0,
         fog: !0,
         flatShading: !0,
@@ -495,13 +495,13 @@ function loaderInit() {
          s = new THREE.BufferGeometry,
         l = new Float32Array(3 * r.length),
         d = new Float32Array(3 * r.length);
-    changeColor = new Float32Array(3 * r.length);
-    for (var h = 1e3, p = (new THREE.Color, [{ ux: 0, uy: 0, uz: 0 }]), t = 0; t < r.length; t += 3) {
-        var c = r[t],
-            u = r[t + 1],
-            m = r[t + 2];
-        l[t] = c, l[t + 1] = u, l[t + 2] = m, d[t] = 0, d[t + 1] = 0, d[t + 2] = 0, p.push({ ux: c, uy: u, uz: m })
-    }
+    // changeColor = new Float32Array(3 * r.length);
+    // for (var h = 1e3, p = (new THREE.Color, [{ ux: 0, uy: 0, uz: 0 }]), t = 0; t < r.length; t += 3) {
+    //     var c = r[t],
+    //         u = r[t + 1],
+    //         m = r[t + 2];
+    //     l[t] = c, l[t + 1] = u, l[t + 2] = m, d[t] = 0, d[t + 1] = 0, d[t + 2] = 0, p.push({ ux: c, uy: u, uz: m })
+    // }
 
     s.addAttribute("position", new THREE.BufferAttribute(l, 3));
     s.addAttribute("color", new THREE.BufferAttribute(d, 3));
@@ -614,7 +614,7 @@ function generateTexture() {
 	gradient.addColorStop(0, '#ef5d2a'); // light yellow 
 	gradient.addColorStop(0.2, 'pink'); // dark yellow
 	gradient.addColorStop(0.5, '#ef5d2a'); // dark yellow
-	gradient.addColorStop(1, 'yellow'); // dark blue
+	gradient.addColorStop(1, '#ef5d2a'); // dark blue
 
 	context.fillStyle = gradient;
 	context.fill();

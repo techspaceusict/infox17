@@ -65,7 +65,7 @@ body {
 
 .registerbtn:hover {
     color: white;
-    background: rgb(54,67,70);
+    background: #fd5e3a;
 }
 
 .registerbtn:focus {
@@ -93,7 +93,6 @@ body {
     text-align: center;
     margin-top: 200px;
     transition: all 1s ease;
-    cursor: pointer;
 }
 
 .headercard:hover {
