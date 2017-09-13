@@ -427,7 +427,7 @@ function loaderInit() {
     for (var a = e.attributes.position.array, t = 0, o = 0, n = a.length; n > t; t++, o += 3) a[o + 1] = 3 * dataLoader[t];
     e.computeFaceNormals();
     loaderMeteria = new THREE.MeshBasicMaterial({
-        // color: new THREE.Color("rgb(100,100,100)"),
+        color: new THREE.Color("rgb(255,255,255)"),
         fog: !0,
         shading: THREE.AdditiveBlending,
         // transparent: 1,
@@ -443,12 +443,12 @@ function loaderInit() {
     for (var a = e.attributes.position.array, t = 0, o = 0, n = a.length; n > t; t++, o += 3) a[o + 1] = 3 * dataLoader[t];
     e.computeFaceNormals();
     loaderMeteria = new THREE.MeshBasicMaterial({
-        // color: new THREE.Color("rgb(100,100,100)"),
+        color: new THREE.Color("rgb(255,255,255)"),
         fog: !0,
         shading: THREE.AdditiveBlending,
         // transparent: 1,
         // opacity: 0.8,
-        map : texture
+        // map : texture
     });
     loaderMesh1 = new THREE.Mesh(e, loaderMeteria);
     loaderMesh1.position.y = -10;

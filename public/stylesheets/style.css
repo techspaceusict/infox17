@@ -100,6 +100,19 @@ body {
     /*background-color : rgba(241,101,36,0.2);*/
 }
 
+.logoCanvas {
+    animation: logo 3s infinite alternate;
+}
+
+
+@keyframes logo {
+    0% {
+    transform: scale(1);
+}
+100% {
+    transform: scale(1.1);
+}
+}
 
 /*=========== END CANVAS CONTENT =============*/
 
