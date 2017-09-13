@@ -51,7 +51,7 @@ body {
     border-radius: 11px;
     color: #fd5732;
     background: white;
-    padding: 10px 20px 10px 20px;
+    padding: 7px 20px 7px 20px;
     border: solid #fd5732 2px;
     transition: background-color 0.5s ease;
     text-transform: uppercase;
@@ -65,7 +65,7 @@ body {
 
 .registerbtn:hover {
     color: white;
-    background: #fd5732;
+    background: rgb(54,67,70);
 }
 
 .registerbtn:focus {
@@ -84,6 +84,22 @@ body {
         transform: translate(0px, 15px);
     }
 }
+
+.headercard {
+    position: absolute;
+    padding-bottom: 100px;
+    /*background-color: rgba(0,0,0,0.4);*/
+    width: 100%;
+    text-align: center;
+    margin-top: 200px;
+    transition: all 1s ease;
+    cursor: pointer;
+}
+
+.headercard:hover {
+    /*background-color : rgba(241,101,36,0.2);*/
+}
+
 
 /*=========== END CANVAS CONTENT =============*/
 

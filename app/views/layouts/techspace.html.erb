@@ -16,29 +16,37 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 
     <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Julius+Sans+One" rel="stylesheet">
-
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <%= stylesheet_link_tag "techspace" %>
     <%= stylesheet_link_tag "style" %>
     <%= yield :pgstyles %>
   </head>
 
   <body>
+
+    <% if action_name == "ts_index" %>
     <canvas class="mainCanvas"></canvas>
 
     <div class="main">
       <section class="full-section" id="canvasContent">
       <!--Insert Canvas content here -->
-
+        <button class="registerbtn">Register</button>
 
         <a href="#section2" id="scrollDownButton">
             <img src="/images/downarrow.png" class="downarrow">
         </a>
-        <button class="registerbtn">Register</button>
+        <div class="headercard">
+            <img src="/images/logo-trans.png" width="180px"><br>
+            Infoxpression 2017
+        </div>
+        
 
 
       <!--End Canvas Content-->
       </section>
     </div>
+
+    <% end %>
 
 
     <div id="section2">
@@ -98,7 +106,7 @@
             <li><a class="waves-effect" href="/Contact">Contact Us</a></li>
           </ul>
 
-          <div class="container">
+          <div class="container-fluid">
             <%= yield :pgcontent %>
           </div>
 
@@ -118,7 +126,7 @@
               <a class="info-set-social-android" href="https://play.google.com/store/apps/details?id=in.infoxpression.infoxpression"><i class="fa fa-android"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <a class="info-set-social-facebook" href="https://www.facebook.com/infoxpression?_rdr" target="_blank"><i class="fa fa-facebook"></i></a><br><br>
               <h5 class="footer-info"> InfoXpression 2017 </h5>
-              <h5 class="footer-info"> University School of Informaiton, Communication and Technology </h5>
+              <h5 class="footer-info"> University School of Information, Communication and Technology </h5>
               <h5 class="footer-info"> Guru Gobind Singh Indraprastha University </h5>
               <h5 class="footer-info"> Sector 16C, Dwarka </h5>
             </div>
@@ -127,7 +135,7 @@
                 <h5>Contact</h5>
                 <br/>
                 <a href="mailto:infox@ipu.ac.in"><h5 class ="contact-info"><i class="fa fa-envelope" aria-hidden="true"></i> infox@ipu.ac.in</a></h5>
-                <h5  class ="contact-info"><i class="fa fa-phone" aria-hidden="true"></i> &nbsp; &nbsp;+91-9871381106</h5>
+                <h5  class ="contact-info"><i class="fa fa-phone" aria-hidden="true"></i> &nbsp;+91-9968465876</h5>
                 <h5 class ="contact-info"><a href="http://www.techspace.club">TECHSPACE</a></h5>
                 <br>
                 <a class="waves-effect waves-light btn pulse event-blinker" href="/team">&lt;Events/&gt;</a>
@@ -151,9 +159,14 @@
     </svg> -->
 
     <!--Import jQuery before materialize.js-->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <%= javascript_include_tag 'techspace' %>
+    <% if action_name == "ts_index" %>
     <%= javascript_include_tag 'packaged' %>
+    <% end %>
+
+    
+    
   </body>
 </html>

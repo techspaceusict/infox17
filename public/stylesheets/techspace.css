@@ -1,5 +1,5 @@
 #section2 {
-  background-image: url('/images/background.jpg');
+  background: rgb(54,67,70);
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -261,4 +261,18 @@ nav a:focus:before {
 	header, main, footer {
 	padding-left: 0;
 	}
+}
+
+
+body::-webkit-scrollbar {
+    width: 0.5em;
+}
+ 
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.8);
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: #f3622f;
+  outline: 1px solid slategrey;
 }
