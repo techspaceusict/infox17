@@ -61966,3 +61966,34 @@ Processing by HomeController#ts_index as HTML
 Completed 200 OK in 32ms (Views: 31.3ms | ActiveRecord: 0.0ms)
 
 
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /home/prabhanshu/web/infox17rails2/app/models/application_record.rb:1)
+Started GET "/" for 127.0.0.1 at 2017-09-13 23:23:29 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#ts_index as HTML
+  Rendering home/ts_index.html.erb within layouts/techspace
+  Rendered home/ts_index.html.erb within layouts/techspace (2.0ms)
+Completed 200 OK in 168ms (Views: 159.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-13 23:27:14 +0530
+Processing by HomeController#ts_index as HTML
+  Rendering home/ts_index.html.erb within layouts/techspace
+  Rendered home/ts_index.html.erb within layouts/techspace (0.5ms)
+Completed 200 OK in 50ms (Views: 49.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.42.0.71 at 2017-09-13 23:27:33 +0530
+Cannot render console from 10.42.0.71! Allowed networks: 0.0.0.0, 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#ts_index as HTML
+  Rendering home/ts_index.html.erb within layouts/techspace
+  Rendered home/ts_index.html.erb within layouts/techspace (2.2ms)
+Completed 200 OK in 37ms (Views: 35.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-13 23:27:39 +0530
+Processing by HomeController#ts_index as HTML
+  Rendering home/ts_index.html.erb within layouts/techspace
+  Rendered home/ts_index.html.erb within layouts/techspace (0.4ms)
+Completed 200 OK in 42ms (Views: 40.6ms | ActiveRecord: 0.0ms)
+
+
