@@ -62,6 +62,8 @@ Rails.application.routes.draw do
 
   get '/oteam'=>'home#team'
 
+  get '/oevents'=>'home#events'
+
   get '/osponsors'=>'home#Sponsors'
 
   get '/oContact'=>'home#Contact'
