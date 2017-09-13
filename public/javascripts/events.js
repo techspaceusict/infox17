@@ -156,3 +156,11 @@ function myFunction() {
         }
     }
 }
+
+$(document).ready(function() {
+
+    $(window).scroll(function() {
+        // $('#card-container').css({top:});
+    });
+
+});

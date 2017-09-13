@@ -1,9 +1,17 @@
 <% content_for :pgstyles do %>
-	<%= stylesheet_link_tag "style" %>
+	<%= stylesheet_link_tag "home" %>
 <% end %>
 
 <% content_for :pgcontent do %>
-
+	<div id="social_links">
+        <ul>
+            <li>
+                <a href="/users/auth/facebook">
+                    <img src="/uploads/fblogo.png" style="width: 50px;">
+                </a>
+            </li>
+        </ul>
+    </div>
     <div style="min-height:550px"></div>
 
 <% end %>

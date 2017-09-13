@@ -1,13 +1,19 @@
-<%= render 'eventjsandcss'%>
-<%= render 'backgroundimage'%>
+<% content_for :pgstyles do %>
+	<%= stylesheet_link_tag "events" %>
+<% end %>
 
-<div class="canvas" style="padding:0px">
+<% content_for :pgcontent do %>
+
+    <div style="min-height:550px">
+    	<div class="canvas">
     <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
-    <div class="row"style="margin-right:20px">
-        <h1 style="text-align: center; cursive;color:white;text-shadow: 2px 2px 2px black;">EVENTS</h1>
+    <div class="row">
+        <div class="col s12 m6">
+        <h4 class="title">EVENTS</h4>
+        <div class="borderline"></div>
         <h5>
             <center>
-                <a style="color: #ee7436;text-shadow: 1px 1px 1px black;" class="typewrite" data-period="2000" data-type='[ "Participate.", "Explore.", "Learn.", "Develop.","Nourish.",":D" ]'>
+                <a class="typewrite" data-period="2000" data-type='[ "Participate.", "Explore.", "Learn.", "Develop.","Nourish.",":D" ]'>
                     <span class="wrap"></span>
                 </a>
             </center>
@@ -18,15 +24,15 @@
             </center>
         </div>
         <div class="container" id="mycontainer">
-                  <div class="col m4 s12 hoverable" onclick="f()"style="cursor:pointer;margin-bottom:10px" ><a class="category">All Events</a></div>
-                  <div class="col m4 s12 hoverable" onclick="f1()"style="cursor:pointer;margin-bottom:10px"><a class="category">Programming</a></div>
-                  <div class="col m4 s12 hoverable" onclick="f2()"style="cursor:pointer;margin-bottom:10px"><a class="category">Electronics</a></div>
-                  <div class="col m4 s12 hoverable" onclick="f3()"style="cursor:pointer;margin-bottom:10px"><a class="category">Enterpreneurial</a></div>
-                  <div class="col m4 s12 hoverable" onclick="f4()"style="cursor:pointer;margin-bottom:10px"><a class="category">Workshops</a></div>
-                  <div class="col m4 s12 hoverable" onclick="f5()"style="cursor:pointer;margin-bottom:10px"><a class="category">Non-Tech</a></div>
+                  <div class="col m4 s12 hoverable" onclick="f()" style="cursor:pointer;margin-bottom:10px" ><a class="category">All Events</a></div>
+                  <div class="col m4 s12 hoverable" onclick="f1()" style="cursor:pointer;margin-bottom:10px"><a class="category">Programming</a></div>
+                  <div class="col m4 s12 hoverable" onclick="f2()" style="cursor:pointer;margin-bottom:10px"><a class="category">Electronics</a></div>
+                  <div class="col m4 s12 hoverable" onclick="f3()" style="cursor:pointer;margin-bottom:10px"><a class="category">Enterpreneurial</a></div>
+                  <div class="col m4 s12 hoverable" onclick="f4()" style="cursor:pointer;margin-bottom:10px"><a class="category">Workshops</a></div>
+                  <div class="col m4 s12 hoverable" onclick="f5()" style="cursor:pointer;margin-bottom:10px"><a class="category">Non-Tech</a></div>
          </div>
-    </div>
-    <div class="col s12 m6">
+         </div>
+      <div class="col s12 m6">
         <div class="card-container" id="card-container">
             <%@event.each do |event|%>
                 <div class="card" id = "<%= event.Event_id%>">
@@ -35,13 +41,29 @@
                         <div class="card-title"><%=raw event.Name%></div>
                         <div class="card-detail"><%=raw event.about%></div>
                     </div>
-                    <div class="card-social">
-                        <ul>
-                            <li><a href="/event?id=<%= event.Event_id%>" style="color:white">Register </a></li>
-                        </ul>
+                    <div class="card-social center">
+                        <a href="/event?id=<%= event.Event_id%>" class="registerbtn">Register </a>
+                    </div>
+                </div>
+                <div class="card" id = "<%= event.Event_id%>">
+                    <div class="card-image"><img src="/uploads/<%= event.image%>" style="size: "></div>
+                    <div class="card-info">
+                        <div class="card-title"><%=raw event.Name%></div>
+                        <div class="card-detail"><%=raw event.about%></div>
+                    </div>
+                    <div class="card-social center">
+                        <a href="/event?id=<%= event.Event_id%>" class="registerbtn">Register </a>
                     </div>
                 </div>
             <%end%>
         </div>
     </div>
 </div>
+
+</div>
+
+<% end %>
+
+<% content_for :pgscripts do %>
+	<%= javascript_include_tag 'events' %>
+<% end %>

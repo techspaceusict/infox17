@@ -42,7 +42,7 @@ Rails.application.routes.draw do
 
   get '/schedule'=>'home#ts_schedule'
 
-  get '/events'=>'home#ts_events'
+  get '/events'=>'home#events'
 
   get '/sponsors'=>'home#ts_sponsors'
 
@@ -62,7 +62,7 @@ Rails.application.routes.draw do
 
   get '/oteam'=>'home#team'
 
-  get '/oevents'=>'home#events'
+  get '/oevents'=>'home#oevents'
 
   get '/osponsors'=>'home#Sponsors'
 
