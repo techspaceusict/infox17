@@ -461,7 +461,7 @@ function loaderInit() {
     for (var a = i.attributes.position.array, t = 0, o = 0, n = a.length; n > t; t++, o += 3) a[o + 1] = 3 * dataLoader[t];
     i.computeFaceNormals();
     loaderWireMeteria = new THREE.MeshBasicMaterial({
-        color: new THREE.Color("rgb(255,176,151)"),
+        color: new THREE.Color("rgb(200,89,53)"),
         wireframe: !0,
         fog: !0,
         flatShading: !0,
@@ -477,7 +477,7 @@ function loaderInit() {
     for (var a = i.attributes.position.array, t = 0, o = 0, n = a.length; n > t; t++, o += 3) a[o + 1] = 3 * dataLoader[t];
     i.computeFaceNormals();
     loaderWireMeteria = new THREE.MeshBasicMaterial({
-        color: new THREE.Color("rgb(255,176,151)"),
+        color: new THREE.Color("rgb(222,86,9)"),
         wireframe: !0,
         fog: !0,
         flatShading: !0,
@@ -572,7 +572,7 @@ function loaderUpdate() {
 		bird.position.z -= 10;
 
 		var color = bird.material.color;
-		color.r = color.g = color.b = ( 500 - bird.position.z ) / 1000;
+		// color.r = color.g = color.b = ( 500 - bird.position.z ) / 1000;
 
 		bird.rotation.y = Math.atan2( - boid.velocity.z, boid.velocity.x );
 		bird.rotation.z = Math.asin( boid.velocity.y / boid.velocity.length() );
@@ -611,8 +611,8 @@ function generateTexture() {
 	context.rect( 0, 0, size, size );
 	var gradient = context.createLinearGradient( 0, 0, size, size );
 
-	gradient.addColorStop(0, '#ef5d2a'); // light yellow 
-	gradient.addColorStop(0.2, 'pink'); // dark yellow
+	gradient.addColorStop(0, '#ccc'); // light yellow 
+	gradient.addColorStop(1, 'pink'); // dark yellow
 	gradient.addColorStop(0.5, '#ef5d2a'); // dark yellow
 	gradient.addColorStop(1, '#ef5d2a'); // dark blue
 
@@ -631,7 +631,7 @@ function loaderAnimate() {
     loaderAnimateInt = window.requestAnimationFrame(loaderAnimate);
     loaderUpdate();
     // if (loaderCamera.position.z > -1e3) {
-        loaderCamera.position.z -= .3;
+        loaderCamera.position.z -= .4;
         pointLight.position.x = mousePosition.x0 * mousePosition.y0;
         pointLight.position.z = loaderCamera.position.z - pointLightOffset + 2 * mousePosition.z0;
     // } else { loaderCamera.position.y += .1; }

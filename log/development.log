@@ -61656,3 +61656,313 @@ Processing by HomeController#ts_index as HTML
 Completed 200 OK in 74ms (Views: 72.7ms | ActiveRecord: 0.0ms)
 
 
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /home/prabhanshu/web/infox17rails2/app/models/application_record.rb:1)
+Started GET "/" for 10.42.0.71 at 2017-09-13 22:44:55 +0530
+Cannot render console from 10.42.0.71! Allowed networks: 0.0.0.0, 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#ts_index as HTML
+  Rendering home/ts_index.html.erb within layouts/techspace
+  Rendered home/ts_index.html.erb within layouts/techspace (1.1ms)
+Completed 200 OK in 146ms (Views: 138.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-13 22:45:13 +0530
+Processing by HomeController#ts_index as HTML
+  Rendering home/ts_index.html.erb within layouts/techspace
+  Rendered home/ts_index.html.erb within layouts/techspace (0.4ms)
+Completed 200 OK in 32ms (Views: 31.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-13 22:45:51 +0530
+Processing by HomeController#ts_index as HTML
+  Rendering home/ts_index.html.erb within layouts/techspace
+  Rendered home/ts_index.html.erb within layouts/techspace (0.9ms)
+Completed 200 OK in 36ms (Views: 32.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-13 22:45:57 +0530
+Processing by HomeController#ts_index as HTML
+  Rendering home/ts_index.html.erb within layouts/techspace
+  Rendered home/ts_index.html.erb within layouts/techspace (0.7ms)
+Completed 200 OK in 37ms (Views: 35.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.42.0.192 at 2017-09-13 22:46:04 +0530
+Cannot render console from 10.42.0.192! Allowed networks: 0.0.0.0, 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#ts_index as HTML
+  Rendering home/ts_index.html.erb within layouts/techspace
+  Rendered home/ts_index.html.erb within layouts/techspace (2.6ms)
+Completed 200 OK in 42ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.42.0.96 at 2017-09-13 22:46:34 +0530
+Cannot render console from 10.42.0.96! Allowed networks: 0.0.0.0, 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#ts_index as HTML
+  Rendering home/ts_index.html.erb within layouts/techspace
+  Rendered home/ts_index.html.erb within layouts/techspace (2.9ms)
+Completed 200 OK in 30ms (Views: 29.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.42.0.47 at 2017-09-13 22:46:55 +0530
+Cannot render console from 10.42.0.47! Allowed networks: 0.0.0.0, 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#ts_index as HTML
+  Rendering home/ts_index.html.erb within layouts/techspace
+  Rendered home/ts_index.html.erb within layouts/techspace (0.9ms)
+Completed 200 OK in 37ms (Views: 35.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.42.0.71 at 2017-09-13 22:47:37 +0530
+Cannot render console from 10.42.0.71! Allowed networks: 0.0.0.0, 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#ts_index as HTML
+  Rendering home/ts_index.html.erb within layouts/techspace
+  Rendered home/ts_index.html.erb within layouts/techspace (0.7ms)
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-13 22:50:24 +0530
+Processing by HomeController#ts_index as HTML
+  Rendering home/ts_index.html.erb within layouts/techspace
+  Rendered home/ts_index.html.erb within layouts/techspace (0.6ms)
+Completed 200 OK in 19ms (Views: 18.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-13 22:50:54 +0530
+Processing by HomeController#ts_index as HTML
+  Rendering home/ts_index.html.erb within layouts/techspace
+  Rendered home/ts_index.html.erb within layouts/techspace (1.5ms)
+Completed 200 OK in 24ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-13 22:51:03 +0530
+Processing by HomeController#ts_index as HTML
+  Rendering home/ts_index.html.erb within layouts/techspace
+  Rendered home/ts_index.html.erb within layouts/techspace (0.4ms)
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.42.0.192 at 2017-09-13 22:51:26 +0530
+Cannot render console from 10.42.0.192! Allowed networks: 0.0.0.0, 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#ts_index as HTML
+  Rendering home/ts_index.html.erb within layouts/techspace
+  Rendered home/ts_index.html.erb within layouts/techspace (2.2ms)
+Completed 200 OK in 37ms (Views: 36.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.42.0.96 at 2017-09-13 22:51:50 +0530
+Cannot render console from 10.42.0.96! Allowed networks: 0.0.0.0, 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#ts_index as HTML
+  Rendering home/ts_index.html.erb within layouts/techspace
+  Rendered home/ts_index.html.erb within layouts/techspace (2.5ms)
+Completed 200 OK in 43ms (Views: 42.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-13 22:52:37 +0530
+Processing by HomeController#ts_index as HTML
+  Rendering home/ts_index.html.erb within layouts/techspace
+  Rendered home/ts_index.html.erb within layouts/techspace (0.7ms)
+Completed 200 OK in 36ms (Views: 33.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-13 22:52:43 +0530
+Processing by HomeController#ts_index as HTML
+  Rendering home/ts_index.html.erb within layouts/techspace
+  Rendered home/ts_index.html.erb within layouts/techspace (0.4ms)
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.42.0.192 at 2017-09-13 22:52:56 +0530
+Cannot render console from 10.42.0.192! Allowed networks: 0.0.0.0, 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#ts_index as HTML
+  Rendering home/ts_index.html.erb within layouts/techspace
+  Rendered home/ts_index.html.erb within layouts/techspace (0.4ms)
+Completed 200 OK in 16ms (Views: 15.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.42.0.71 at 2017-09-13 22:56:40 +0530
+Cannot render console from 10.42.0.71! Allowed networks: 0.0.0.0, 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#ts_index as HTML
+  Rendering home/ts_index.html.erb within layouts/techspace
+  Rendered home/ts_index.html.erb within layouts/techspace (0.5ms)
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-13 22:58:39 +0530
+Processing by HomeController#ts_index as HTML
+  Rendering home/ts_index.html.erb within layouts/techspace
+  Rendered home/ts_index.html.erb within layouts/techspace (0.4ms)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.42.0.47 at 2017-09-13 23:00:26 +0530
+Cannot render console from 10.42.0.47! Allowed networks: 0.0.0.0, 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#ts_index as HTML
+  Rendering home/ts_index.html.erb within layouts/techspace
+  Rendered home/ts_index.html.erb within layouts/techspace (0.4ms)
+Completed 200 OK in 15ms (Views: 12.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-13 23:03:04 +0530
+Processing by HomeController#ts_index as HTML
+  Rendering home/ts_index.html.erb within layouts/techspace
+  Rendered home/ts_index.html.erb within layouts/techspace (0.4ms)
+Completed 200 OK in 18ms (Views: 15.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-13 23:05:14 +0530
+Processing by HomeController#ts_index as HTML
+  Rendering home/ts_index.html.erb within layouts/techspace
+  Rendered home/ts_index.html.erb within layouts/techspace (0.4ms)
+Completed 200 OK in 18ms (Views: 15.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-13 23:05:36 +0530
+Processing by HomeController#ts_index as HTML
+  Rendering home/ts_index.html.erb within layouts/techspace
+  Rendered home/ts_index.html.erb within layouts/techspace (0.4ms)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-13 23:05:46 +0530
+Processing by HomeController#ts_index as HTML
+  Rendering home/ts_index.html.erb within layouts/techspace
+  Rendered home/ts_index.html.erb within layouts/techspace (1.2ms)
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-13 23:05:59 +0530
+Processing by HomeController#ts_index as HTML
+  Rendering home/ts_index.html.erb within layouts/techspace
+  Rendered home/ts_index.html.erb within layouts/techspace (0.4ms)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-13 23:06:03 +0530
+Processing by HomeController#ts_index as HTML
+  Rendering home/ts_index.html.erb within layouts/techspace
+  Rendered home/ts_index.html.erb within layouts/techspace (0.4ms)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-13 23:06:18 +0530
+Processing by HomeController#ts_index as HTML
+  Rendering home/ts_index.html.erb within layouts/techspace
+  Rendered home/ts_index.html.erb within layouts/techspace (0.4ms)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-13 23:06:27 +0530
+Processing by HomeController#ts_index as HTML
+  Rendering home/ts_index.html.erb within layouts/techspace
+  Rendered home/ts_index.html.erb within layouts/techspace (0.7ms)
+Completed 200 OK in 20ms (Views: 19.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-13 23:06:34 +0530
+Processing by HomeController#ts_index as HTML
+  Rendering home/ts_index.html.erb within layouts/techspace
+  Rendered home/ts_index.html.erb within layouts/techspace (0.6ms)
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-13 23:07:11 +0530
+Processing by HomeController#ts_index as HTML
+  Rendering home/ts_index.html.erb within layouts/techspace
+  Rendered home/ts_index.html.erb within layouts/techspace (0.7ms)
+Completed 200 OK in 23ms (Views: 22.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-13 23:07:16 +0530
+Processing by HomeController#ts_index as HTML
+  Rendering home/ts_index.html.erb within layouts/techspace
+  Rendered home/ts_index.html.erb within layouts/techspace (0.5ms)
+Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-13 23:07:42 +0530
+Processing by HomeController#ts_index as HTML
+  Rendering home/ts_index.html.erb within layouts/techspace
+  Rendered home/ts_index.html.erb within layouts/techspace (0.4ms)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.42.0.192 at 2017-09-13 23:08:07 +0530
+Cannot render console from 10.42.0.192! Allowed networks: 0.0.0.0, 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#ts_index as HTML
+  Rendering home/ts_index.html.erb within layouts/techspace
+  Rendered home/ts_index.html.erb within layouts/techspace (0.7ms)
+Completed 200 OK in 19ms (Views: 17.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.42.0.192 at 2017-09-13 23:08:13 +0530
+Cannot render console from 10.42.0.192! Allowed networks: 0.0.0.0, 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#ts_index as HTML
+  Rendering home/ts_index.html.erb within layouts/techspace
+  Rendered home/ts_index.html.erb within layouts/techspace (1.3ms)
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.42.0.71 at 2017-09-13 23:13:10 +0530
+Cannot render console from 10.42.0.71! Allowed networks: 0.0.0.0, 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#ts_index as HTML
+  Rendering home/ts_index.html.erb within layouts/techspace
+  Rendered home/ts_index.html.erb within layouts/techspace (0.9ms)
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-13 23:13:37 +0530
+Processing by HomeController#ts_index as HTML
+  Rendering home/ts_index.html.erb within layouts/techspace
+  Rendered home/ts_index.html.erb within layouts/techspace (0.5ms)
+Completed 200 OK in 19ms (Views: 16.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-13 23:14:04 +0530
+Processing by HomeController#ts_index as HTML
+  Rendering home/ts_index.html.erb within layouts/techspace
+  Rendered home/ts_index.html.erb within layouts/techspace (0.4ms)
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-13 23:14:16 +0530
+Processing by HomeController#ts_index as HTML
+  Rendering home/ts_index.html.erb within layouts/techspace
+  Rendered home/ts_index.html.erb within layouts/techspace (0.9ms)
+Completed 200 OK in 21ms (Views: 18.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-13 23:14:24 +0530
+Processing by HomeController#ts_index as HTML
+  Rendering home/ts_index.html.erb within layouts/techspace
+  Rendered home/ts_index.html.erb within layouts/techspace (0.6ms)
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-13 23:14:34 +0530
+Processing by HomeController#ts_index as HTML
+  Rendering home/ts_index.html.erb within layouts/techspace
+  Rendered home/ts_index.html.erb within layouts/techspace (1.7ms)
+Completed 200 OK in 18ms (Views: 17.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-13 23:15:11 +0530
+Processing by HomeController#ts_index as HTML
+  Rendering home/ts_index.html.erb within layouts/techspace
+  Rendered home/ts_index.html.erb within layouts/techspace (1.2ms)
+Completed 200 OK in 29ms (Views: 27.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.42.0.35 at 2017-09-13 23:15:45 +0530
+Cannot render console from 10.42.0.35! Allowed networks: 0.0.0.0, 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#ts_index as HTML
+  Rendering home/ts_index.html.erb within layouts/techspace
+  Rendered home/ts_index.html.erb within layouts/techspace (0.6ms)
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-13 23:16:14 +0530
+Processing by HomeController#ts_index as HTML
+  Rendering home/ts_index.html.erb within layouts/techspace
+  Rendered home/ts_index.html.erb within layouts/techspace (1.5ms)
+Completed 200 OK in 32ms (Views: 31.3ms | ActiveRecord: 0.0ms)
+
+
