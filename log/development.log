@@ -61656,3 +61656,138 @@ Processing by HomeController#ts_index as HTML
 Completed 200 OK in 74ms (Views: 72.7ms | ActiveRecord: 0.0ms)
 
 
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /home/ubuntu/Projects/infox17/app/models/application_record.rb:1)
+Started GET "/" for 127.0.0.1 at 2017-09-14 09:45:03 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#ts_index as HTML
+  Rendering home/ts_index.html.erb within layouts/techspace
+  Rendered home/ts_index.html.erb within layouts/techspace (1.3ms)
+Completed 200 OK in 136ms (Views: 128.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-14 09:53:53 +0530
+Processing by HomeController#ts_index as HTML
+  Rendering home/ts_index.html.erb within layouts/techspace
+  Rendered home/ts_index.html.erb within layouts/techspace (0.6ms)
+Completed 200 OK in 55ms (Views: 53.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-14 09:54:00 +0530
+Processing by HomeController#ts_index as HTML
+  Rendering home/ts_index.html.erb within layouts/techspace
+  Rendered home/ts_index.html.erb within layouts/techspace (2.2ms)
+Completed 200 OK in 37ms (Views: 35.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-14 09:54:31 +0530
+Processing by HomeController#ts_index as HTML
+  Rendering home/ts_index.html.erb within layouts/techspace
+  Rendered home/ts_index.html.erb within layouts/techspace (0.7ms)
+Completed 200 OK in 45ms (Views: 39.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-14 09:54:47 +0530
+Processing by HomeController#ts_index as HTML
+  Rendering home/ts_index.html.erb within layouts/techspace
+  Rendered home/ts_index.html.erb within layouts/techspace (1.5ms)
+Completed 200 OK in 47ms (Views: 45.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-14 10:03:43 +0530
+Processing by HomeController#ts_index as HTML
+  Rendering home/ts_index.html.erb within layouts/techspace
+  Rendered home/ts_index.html.erb within layouts/techspace (2.8ms)
+Completed 200 OK in 57ms (Views: 53.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-09-14 10:03:54 +0530
+Processing by HomeController#ts_about as HTML
+  Rendering home/ts_about.html.erb within layouts/techspace
+  Rendered home/ts_about.html.erb within layouts/techspace (17.8ms)
+Completed 200 OK in 58ms (Views: 56.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-09-14 10:03:56 +0530
+Processing by HomeController#ts_about as HTML
+  Rendering home/ts_about.html.erb within layouts/techspace
+  Rendered home/ts_about.html.erb within layouts/techspace (8.3ms)
+Completed 200 OK in 29ms (Views: 28.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-09-14 10:09:55 +0530
+Processing by HomeController#ts_about as HTML
+  Rendering home/ts_about.html.erb within layouts/techspace
+  Rendered home/ts_about.html.erb within layouts/techspace (2.8ms)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-09-14 10:10:08 +0530
+Processing by HomeController#ts_about as HTML
+  Rendering home/ts_about.html.erb within layouts/techspace
+  Rendered home/ts_about.html.erb within layouts/techspace (2.9ms)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-09-14 10:10:17 +0530
+Processing by HomeController#ts_about as HTML
+  Rendering home/ts_about.html.erb within layouts/techspace
+  Rendered home/ts_about.html.erb within layouts/techspace (3.1ms)
+Completed 200 OK in 29ms (Views: 28.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-09-14 10:10:33 +0530
+Processing by HomeController#ts_about as HTML
+  Rendering home/ts_about.html.erb within layouts/techspace
+  Rendered home/ts_about.html.erb within layouts/techspace (5.0ms)
+Completed 200 OK in 23ms (Views: 22.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-09-14 10:10:40 +0530
+Processing by HomeController#ts_about as HTML
+  Rendering home/ts_about.html.erb within layouts/techspace
+  Rendered home/ts_about.html.erb within layouts/techspace (7.4ms)
+Completed 200 OK in 29ms (Views: 28.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-09-14 10:11:24 +0530
+Processing by HomeController#ts_about as HTML
+  Rendering home/ts_about.html.erb within layouts/techspace
+  Rendered home/ts_about.html.erb within layouts/techspace (9.0ms)
+Completed 200 OK in 22ms (Views: 21.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-09-14 10:11:42 +0530
+Processing by HomeController#ts_about as HTML
+  Rendering home/ts_about.html.erb within layouts/techspace
+  Rendered home/ts_about.html.erb within layouts/techspace (2.4ms)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-09-14 10:11:58 +0530
+Processing by HomeController#ts_about as HTML
+  Rendering home/ts_about.html.erb within layouts/techspace
+  Rendered home/ts_about.html.erb within layouts/techspace (2.5ms)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-09-14 10:12:13 +0530
+Processing by HomeController#ts_about as HTML
+  Rendering home/ts_about.html.erb within layouts/techspace
+  Rendered home/ts_about.html.erb within layouts/techspace (2.4ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-09-14 10:12:28 +0530
+Processing by HomeController#ts_about as HTML
+  Rendering home/ts_about.html.erb within layouts/techspace
+  Rendered home/ts_about.html.erb within layouts/techspace (2.3ms)
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-14 10:13:00 +0530
+Processing by HomeController#ts_index as HTML
+  Rendering home/ts_index.html.erb within layouts/techspace
+  Rendered home/ts_index.html.erb within layouts/techspace (0.3ms)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.0ms)
+
+

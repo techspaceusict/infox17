@@ -31,10 +31,10 @@ outline: none;
 
 .center{
 	background: #555555;
-	border: 2px solid #ee7436;
+	border: 1px solid #ee7436;
 	margin-top: 3px;
-	width: 80px;
-	padding: 0px 20px;
+	width: 350px;
+	padding: 0px 5px;
 	border-radius: 5px;
 	transition: none;
 }
@@ -48,8 +48,8 @@ outline: none;
 }
 
 .brand-logo img{
-	padding-top: 17px;
-	height: 70px;
+	padding-top: 5px;
+	height: 100px;
 }
 
 /* navigation */
@@ -267,11 +267,11 @@ nav a:focus:before {
 body::-webkit-scrollbar {
     width: 0.5em;
 }
- 
+
 body::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.8);
 }
- 
+
 body::-webkit-scrollbar-thumb {
   background-color: #f3622f;
   outline: 1px solid slategrey;
