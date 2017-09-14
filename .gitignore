@@ -1,4 +1,4 @@
-!log/
-!log/*
-!tmp/cache/
-!tmp/cache/*
+log/
+log/*
+tmp/cache/
+tmp/cache/*
