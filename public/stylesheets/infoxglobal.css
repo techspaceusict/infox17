@@ -43,17 +43,22 @@ outline: none;
 .center {
 	text-align: center;
 }
+
 .registerbtn {
-    width: 100%;
-    border-radius: 11px;
-    color: #fd5732;
-    background: white;
-    padding: 7px 20px 7px 20px;
-    border: solid #fd5732 1px;
-    transition: background-color 0.5s ease;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    cursor: pointer;
+  border-radius: 11px;
+  color: #fd5732;
+  background: white;
+  padding: 7px 20px 7px 20px;
+  border: solid #fd5732 2px;
+  transition: background-color 0.5s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+
+  position: absolute;
+  right : 0px;
+  top: 0px;
+  margin: 20px;
 }
 
 .registerbtn:hover {

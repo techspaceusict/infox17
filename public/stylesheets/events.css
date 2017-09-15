@@ -199,7 +199,31 @@ transition: 0.3s all linear;
   transform: scaleY(1);
 }
 
-.registerbtn-block {
+.registerevtbtn {
+  width: 100%;
+  border-radius: 11px;
+  color: #fd5732;
+  background: white;
+  padding: 7px 20px 7px 20px;
+  border: solid #fd5732 1px;
+  transition: background-color 0.5s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.registerevtbtn:hover {
+  color: white;
+  background: #fd5e3a;
+}
+
+.registerevtbtn:focus {
+  outline: 0px;
+  color: white;
+  background: #fd5732;
+}
+
+.registerevtbtn-block {
   margin-top: 40px;
 }
 
