@@ -17,12 +17,22 @@
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Julius+Sans+One|Material+Icons" rel="stylesheet">
 
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <%= stylesheet_link_tag "infoxglobal" %>
     <%= yield :pgstyles %>
   </head>
 
   <body style="background-image: url('/images/1.jpg'); ">
+
+     <div id="modal1" class="modal" style="z-index:9999999">
+            <div class="modal-content center">
+               <p style=""><a class="waves-effect waves-light btn social facebook" style="background-color:#3B5998" href="/users/auth/facebook"><i class="fa fa-facebook"></i>&nbsp;Sign in with facebook</a></p>
+          <p style=""><a class="waves-effect waves-light btn social google" style="background-color:#DD4B39" href="#"><i class="fa fa-google"></i> &nbsp;Sign in with google&nbsp;</a></p>
+            </div>
+            <!-- <div class="modal-footer">
+                <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+            </div>
+ -->    </div>
+
 
     <% if action_name == "ts_index" %>
     <canvas class="mainCanvas"></canvas>
@@ -30,7 +40,7 @@
     <div class="main">
       <section class="full-section" id="canvasContent">
       <!--Insert Canvas content here -->
-        <button class="registerbtn">Register</button>
+        <button class="registerbtn" onclick="$('#modal1').modal('open');">Register</button>
 
         <a href="#section2" id="scrollDownButton">
             <img src="/images/downarrow-or.png" class="downarrow">
@@ -51,7 +61,7 @@
           <a class="footerlinks" href="https://facebook.com/infoxpression">
             <span class="fb">&nbsp;fb.com</span>/infoxpression</a>
           <a class="footerlinks" href="http://ipu.ac.in" style="float: left;">
-            USICT | GGSIPU
+            Techspace USICT | GGSIPU
           </a>
         </div>
 
@@ -65,18 +75,10 @@
     <div id="section2">
       <section class="full-section">
         <!--Insert content below canvas here -->
-        <div id="modal1" class="modal" style="z-index:9999999">
-            <div class="modal-content">
-                <p>Helllo</p>
-            </div>
-            <div class="modal-footer">
-                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
-            </div>
-        </div>
         <div class="navbar">
           <nav>
             <div class="nav-wrapper">
-              <!-- <a href="/" class="brand-logo center"><img src="/images/logo-large-darkbg.png"></a> -->
+              <a href="/" class="brand-logo center"><img src="/images/logo-large-darkbg.png"></a>
               <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
               <ul class="left hide-on-med-and-down">
                 <li><a class="<% if action_name == "ts_about" %> active <% end %> ts-lmenu" href="/about/">About</a></li>
@@ -85,8 +87,8 @@
               </ul>
               <ul class="right hide-on-med-and-down">
                 <li><a class="<% if action_name == "events" %> active <% end %> ts-lmenu" href="/events/">Events</a></li>
-                <li><a class="<% if action_name == "ts_schedule" %> active <% end %> ts-lmenu" href="/schedule/">Schedule</a></li>
-                <li><a class="<% if action_name == "ts_login" %> active <% end %> ts-lmenu" href="/login/">Login</a></li>
+                <!-- <li><a class="<% if action_name == "ts_schedule" %> active <% end %> ts-lmenu" href="/schedule/">Schedule</a></li> -->
+                <li><a class="<% if action_name == "ts_login" %> active <% end %> ts-lmenu" onclick="$('#modal1').modal('open');">Login/Signup</a></li>
               </ul>
             </div>
           </nav>
@@ -99,18 +101,18 @@
 
           <%if user_signed_in? %>
             <li>
-              <div class="user-view">
-                <div class="background">
-                  <img src="images/office.jpg">
+              <div class="user-view background">
+                <div>
+                  <!-- <img src="images/logo-good.png" class="center" height="150px"> -->
                 </div>
-                <a href="#!user"><img class="circle" src="images/yuna.jpg"></a>
-                <a href="#!name"><span class="white-text name">John Doe</span></a>
-                <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+                <a href="#!user"><img class="circle" src="<%= current_user.profile%>"></a>
+                <a href="#!name"><span class="white-text name"><%= current_user.name%></span></a>
+                <a href="#!email"><span class="white-text email"><%= current_user.email%></span></a>
               </div>
             </li>
           <%else%>
           <!-- <p style="color:#FFFFFF; text-align:center;">User Not Logged!!!</p> -->
-          <p style=""><a class="waves-effect waves-light btn social facebook" style="background-color:#3B5998"><i class="fa fa-facebook"></i>&nbsp;Sign in with facebook</a></p>
+          <p style=""><a class="waves-effect waves-light btn social facebook" style="background-color:#3B5998" href="/users/auth/facebook"><i class="fa fa-facebook"></i>&nbsp;Sign in with facebook</a></p>
           <p style=""><a class="waves-effect waves-light btn social google" style="background-color:#DD4B39"><i class="fa fa-google"></i> &nbsp;Sign in with google&nbsp;</a></p>
             <li>
 
@@ -179,7 +181,7 @@
     </svg> -->
 
     <!--Import jQuery before materialize.js-->
-
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <%= javascript_include_tag 'infoxglobal' %>
     <%= yield :pgscripts %>

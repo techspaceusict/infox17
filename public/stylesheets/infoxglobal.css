@@ -74,7 +74,7 @@ outline: none;
 /*=================== NAVIGATION =======================*/
 /* logo */
 .brand-logo {
-	border: 2px solid #ee7436;
+	/*border: 2px solid #ee7436;*/
 }
 
 /*.center{
@@ -88,18 +88,22 @@ outline: none;
 }*/
 
 .brand-logo:visited {
-	border: 2px solid #ee7436;
+	/*border: 2px solid #ee7436;*/
 }
 
-.brand-logo:hover {
-	background: #ee7436;
-}
 
 .brand-logo img{
-	padding-top: 5px;
-	height: 100px;
+	margin-top: -15px;
+	height: 88px;
 }
 
+@media(max-width: 700px){
+ 	.brand-logo img{
+	margin-top: -15px;
+	height: 85px;
+	margin-left: 20px;
+}
+}
 header, main, footer {
   padding-left: 300px;
 }
@@ -108,6 +112,7 @@ nav {
 	background-color: rgba(70,70,70,0.5);
 	z-index: 20000;
 	font-family: 'Berkshire Swash', cursive;
+	height: 75px;
 }
 
 nav .nav-wrapper {
@@ -117,6 +122,7 @@ nav .nav-wrapper {
 
 nav ul li a {
 	font-size: 23px;
+	height: 75px;
 }
 
 nav a {
@@ -197,6 +203,13 @@ nav a:focus:before {
   margin-bottom: 10px;
   background-color: rgba(219,87,38, 0.9);
   text-align: center;
+}
+
+.background {
+	background: #E44D26;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #ff8400, #E44D26);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #ff8400, #E44D26); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 /*=============== END NAV =================*/
@@ -311,6 +324,7 @@ nav a:focus:before {
 	padding-left: 0;
 	}
 }
+
 
 
 

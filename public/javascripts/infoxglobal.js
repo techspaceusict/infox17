@@ -6,4 +6,6 @@ $('.button-collapse').sideNav({
 });
 
 
-$(document).ready(function() {  $('#modal1').modal('open');})
+$(document).ready(function() {  
+	$('.modal').modal();
+})
