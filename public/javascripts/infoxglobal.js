@@ -9,3 +9,7 @@ $('.button-collapse').sideNav({
 $(document).ready(function() {  
 	$('.modal').modal();
 })
+
+function openModal() {
+	$('#modal1').modal('open');
+}

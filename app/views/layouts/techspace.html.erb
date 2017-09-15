@@ -23,7 +23,7 @@
 
   <body style="background-image: url('/images/1.jpg'); ">
 
-     <div id="modal1" class="modal" style="z-index:9999999">
+     <div id="modal1" class="modal">
             <div class="modal-content center">
                <p style=""><a class="waves-effect waves-light btn social facebook" style="background-color:#3B5998" href="/users/auth/facebook"><i class="fa fa-facebook"></i>&nbsp;Sign in with facebook</a></p>
           <p style=""><a class="waves-effect waves-light btn social google" style="background-color:#DD4B39" href="#"><i class="fa fa-google"></i> &nbsp;Sign in with google&nbsp;</a></p>
@@ -40,7 +40,7 @@
     <div class="main">
       <section class="full-section" id="canvasContent">
       <!--Insert Canvas content here -->
-        <button class="registerbtn" onclick="$('#modal1').modal('open');">Register</button>
+        <button class="registerbtn" onclick="openModal()">Register</button>
 
         <a href="#section2" id="scrollDownButton">
             <img src="/images/downarrow-or.png" class="downarrow">
@@ -88,7 +88,7 @@
               <ul class="right hide-on-med-and-down">
                 <li><a class="<% if action_name == "events" %> active <% end %> ts-lmenu" href="/events/">Events</a></li>
                 <!-- <li><a class="<% if action_name == "ts_schedule" %> active <% end %> ts-lmenu" href="/schedule/">Schedule</a></li> -->
-                <li><a class="<% if action_name == "ts_login" %> active <% end %> ts-lmenu" onclick="$('#modal1').modal('open');">Login/Signup</a></li>
+                <li><a class="<% if action_name == "ts_login" %> active <% end %> ts-lmenu" onclick="openModal()">Login/Signup</a></li>
               </ul>
             </div>
           </nav>
