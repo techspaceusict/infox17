@@ -61,7 +61,7 @@ window.onload = function() {
 };
 
 function showDisplay() {
-    document.getElementById('myInput').style.borderColor = "cyan";
+    document.getElementById('myInput').style.borderColor = "#EE7436";
 }
 
 function f() {

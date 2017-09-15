@@ -4,32 +4,48 @@
 {
     margin-top:5vh;
 }
-.typewrite{ 
-    color:white; 
+
+.event-item {
+  cursor:pointer;
+  margin-bottom:10px;
+}
+
+.typewrite {
+    color:white;
     text-decoration: none;
     font-family: 'Julius Sans One', sans-serif;
     font-size: 20px;
 }
-.canvas{
+.canvas {
   background-color: rgba(0,0,0,0.2);
-  margin-top: 20px;
+  margin-top: 0px;
   padding: 20px;
 }
-
 
 #myInput {
     color: black;
     background-color: #f1f1f1;
     width: 100%;
     font-size: 16px;
-    margin-top: 15vh;
+    margin-top: 5vh;
     border: 2px solid black;
     border-radius:5px;
     padding-left: 5px;
 }
 
 
-.category{
+.filter-segment {
+  position: static;
+}
+
+
+gap[type="radio"]:checked + label::before, .with-gap[type="radio"]:checked + label::after {
+    border: 2px solid #EE7436;
+    background: #EE7436;
+    color:  #EE7436;
+}
+
+.category {
   box-shadow: 0 0 0.2em black;
   text-align: center;
   font-size: 15px;
@@ -42,7 +58,7 @@
   background-color: rgba(0,0,0,0.2);
 }
 
-.category:hover{
+.category:hover {
   display: flex;
   text-align: center;
   padding: 20px;
@@ -50,125 +66,144 @@
   background-color: rgba(0,0,0,0.7);
   -webkit-transition: 0.5s;
 }
-.row li a{
+
+.row li a {
   text-decoration: none;
   font-size: 16px;
   list-style: none;
 }
+
 .card-container {
-position: relative;
-flex-wrap: wrap;
-overflow: hidden;
-padding-top: 15px;
-padding-bottom: 15px;
-display: flex;
-justify-content: space-around;
-align-items: auto;
+  position: relative;
+  flex-wrap: wrap;
+  overflow: hidden;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  display: flex;
+  justify-content: space-around;
+  align-items: auto;
 }
+
 .card {
-min-width: 275px;
-width: 275px;
-position: relative;
-margin: 15px 15px;
-height: 375px;
-border-radius: 7px;
-background-size: cover;
-background: rgba(0, 0, 0, 0.2);
-transition: 0.2s all linear;
-border: 1px solid rgba(128, 128, 128, 0.15);
-box-sizing: border-box;
+  min-width: 275px;
+  width: 275px;
+  position: relative;
+  margin: 15px 15px;
+  height: 375px;
+  border-radius: 7px;
+  background-size: cover;
+  background: rgba(0, 0, 0, 0.2);
+  transition: 0.2s all linear;
+  border: 1px solid rgba(128, 128, 128, 0.15);
+  box-sizing: border-box;
 }
+
 .card .card-social {
-position: absolute;
-height: 100px;
-width: 100%;
-background: red;
-border-bottom-right-radius: 5px;
-border-bottom-left-radius: 5px;
-background: rgba(0, 0, 0, 0.6);
-box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.5);
-top: 275px;
+  position: absolute;
+  height: 100px;
+  width: 100%;
+  background: red;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background: rgba(0, 0, 0, 0);
+  box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.5);
+  top: 275px;
 }
+
 .card .card-social ul {
-padding: 0;
-margin: 0;
-list-style: none;
-width: 100%;
-height: 100%;
-display: flex;
-justify-content: space-around;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
 }
+
 .card .card-social ul li {
-height: 100%;
-text-align: center;
-line-height: 75px;
-font-size: 1.5em;
-color: rgba(255, 255, 255, 0.85);
-text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  height: 100%;
+  text-align: center;
+  line-height: 75px;
+  font-size: 1.5em;
+  color: rgba(255, 255, 255, 0.85);
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
+
 .card .card-social ul li:hover {
-text-shadow: 7px 7px 5px rgba(0, 0, 0, 0.7);
-transition: all 0.1s linear;
+  text-shadow: 7px 7px 5px rgba(0, 0, 0, 0.7);
+  transition: all 0.1s linear;
 }
+
 .card .card-image {
-width: 100%;
-height: 275px;
-position: relative;
-background-image: url("http://images.all-free-download.com/images/graphicthumb/chinese_traditional_culture_bamboo_background_template_layered_177185.jpg");
-border-top-right-radius: 5px;
-border-top-left-radius: 5px;
+  width: 100%;
+  height: 275px;
+  position: relative;
+  background-color: #FFFFFF;
 }
+
+.card-title {
+      margin-top: -10px;
+}
+
 .card .card-info {
-position: relative;
-width: 100%;
-height: 35px;
-line-height: 35px;
-top: -265px;
-border-top-right-radius: 5px;
-border-top-left-radius: 5px;
-color: rgba(255, 255, 255, 0.85);
+  position: relative;
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  top: -265px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  color: rgba(255, 255, 255, 0.85);
 }
 .card .card-info .card-title {
-line-height: 35px;
-height: 50px;
-position: relative;
-top: 0px;
-font-size: 25px;
-text-align: center;
-background: rgba(0, 0, 0, 0.6);
-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.3);
+  line-height: 35px;
+  height: 50px;
+  position: relative;
+  top: 0px;
+  font-size: 25px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.3);
 }
+
 .card .card-info .card-detail {
-line-height: 1.5em;
-font-size: 1em;
-height: 220px;
-background-color: rgba(0, 0, 0, 0.6);
-position: relative;
-top: 5px;
-padding: 5px 20px 0px 20px;
-opacity: 0;
-transform: scaleY(0);
-transform-origin: center top;
-box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.3);
+  line-height: 1.5em;
+  font-size: 1em;
+  height: 225px;
+  background-color: rgba(10, 10, 10, 0.6);
+  border-top: 2px solid #EE7436;
+  position: relative;
+  top: 0px;
+  padding: 5px 0px 0px 20px;
+  opacity: 0;
+  transform: scaleY(0);
+  transform-origin: center bottom;
+  box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.3);
 
 }
+
 .card:hover {
 box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
 }
+
 .card:hover .card-info .card-title {
 box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
 transition: 0.3s all linear;
 }
+
 .card:hover .card-info .card-detail {
-opacity: 1;
-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
-transition: 0.35s all linear;
-transition-delay: 0.1s;
-transform: scaleY(1);
+  opacity: 1;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+  transition: 0.35s all linear;
+  transition-delay: 0.1s;
+  transform: scaleY(1);
+}
+
+.registerbtn-block {
+  margin-top: 40px;
 }
 
 .title {
-
     font-family: 'Julius Sans One', sans-serif;
     color: white;
     text-align: center;
