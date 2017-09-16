@@ -1,9 +1,9 @@
 <% content_for :pgstyles do %>
   <%= stylesheet_link_tag "about" %>
   <style media="screen">
-  .carousel .carousel-item {
-  width:600px !important;
-  height: 200px !important;}
+  .carousel .carousel-item{
+  width: 30em!important;
+  height: 20em !important;}
   </style>
 <% end %>
 
@@ -11,7 +11,7 @@
 
   <div class="container">
     <br>
-    <div class="row hide-on-small-onl about-events-detail" id="content" >
+    <div class="row hide-on-small-onl about-events-detail" id="content" style="margin-bottom: 100px;">
 
       <div class="col s4 m4 l4 xl4">
         <div class="about-events-detail-days">
@@ -34,21 +34,22 @@
 
     </div>
     <div class="row about-header">
-      <h3><span style="color: #db5726;">About</span> Us</h3>
-    </div>
-    <div class="carousel">
-      <a class="carousel-item responsive-img" href="#one!"><img src="http://www.ipu.ac.in/data0/images/1.jpg"></a>
-      <a class="carousel-item responsive-img" href="#two!"><img src="http://www.ipu.ac.in/data0/images/4.jpg"></a>
-      <a class="carousel-item responsive-img" href="#three!"><img src="http://www.ipu.ac.in/data0/images/2.jpg"></a>
-      <a class="carousel-item responsive-img" href="#four!"><img src="http://www.ipu.ac.in/data0/images/3.jpg"></a>
-      <a class="carousel-item responsive-img" href="#five!"><img src="http://www.ipu.ac.in/data0/images/1.jpg"></a>
-      <a class="carousel-item responsive-img" href="#five!"><img src="http://www.ipu.ac.in/data0/images/5.jpg"></a>
+      <h3><span style="color: #db5726; font-weight: 700;">About</span> Us</h3>
     </div>
     <div class="row about-content">
       <p style="font-size:20px">
           <span style="color: #db5726; font-weight: 700">InfoXpression</span> is the annual technical fest of Guru Gobind Singh Indraprastha University organized by University School of Information and Communication Technology. It is the biggest technical extravaganza held at Guru Gobind Singh Indraprastha University, and involves an active participation of students from over 250 colleges of north India. An exhilarating voyage of technical know-how, InfoXpression focuses on the promotion of technology and innovation. It gives you a chance to stop, culminate new ideas and showcase your technical expertise. The fest is a three day grandeur which is result of a month long affair of prelims and stage levels. It involves a series of competitions, workshops and guest lectures by some eminent personalities. InfoXpression is an amalgamation of creativity and imagination. It will be a perfect blend of entertainment and technology with the aim of transformation and empowerment of the society.
       </p>
     </div>
+    <div class="pics" style="margin-bottom: 50px; width: 100%;">
+      <div class="carousel" style="width: 100%">
+        <a class="carousel-item" href="#one!"><img src="http://www.ipu.ac.in/data0/images/1.jpg"></a>
+        <a class="carousel-item" href="#two!"><img src="http://www.ipu.ac.in/data0/images/2.jpg"></a>
+        <a class="carousel-item" href="#three!"><img src="http://www.ipu.ac.in/data0/images/3.jpg"></a>
+        <a class="carousel-item" href="#four!"><img src="http://www.ipu.ac.in/data0/images/4.jpg"></a>
+        <a class="carousel-item" href="#five!"><img src="http://www.ipu.ac.in/data0/images/5.jpg"></a>
+      </div>
+    </div> 
 </div>
 
 <% end %>
@@ -58,85 +59,17 @@
 
 
 <script type="text/javascript">
-$(document).ready(function(){
-      $('.slider').slider();
+  $(document).ready(function(){
+      $('.carousel').carousel({
+      });
+      autoplay()   
+      function autoplay() {
+          $('.carousel').carousel('next');
+          setTimeout(autoplay, 3000);
+      }
     });
-    $(document).ready(function(){
-         $('.carousel').carousel();
-       });
-       $('.carousel').carousel({
-    padding: 200
-});
-autoplay()
-function autoplay() {
-    $('.carousel').carousel('next');
-    setTimeout(autoplay, 2500);
-}
 </script>
 
 <script type="text/javascript">
-positioning={reached:false};
-        var initialScrollPosition= $(window).scrollTop(),
-        elementOffset = $('#content').offset().top+$('#content').height()/3,
-        distance = (elementOffset - initialScrollPosition)-$(window).height();
-        if(distance<=0)
-        {
-            if(positioning.reached==false)
-            {
-                positioning.reached=true;
-                doAnimation();
-            }
-            console.log("We have reached");
-        }
-        $(window).scroll(function ()
-        {
-            var scrollExtent=$(window).scrollTop();
-            distance = (elementOffset - scrollExtent)-$(window).height();
-            if(distance<=0)
-            {
-                if(positioning.reached==false)
-                {
-                    positioning.reached=true;
-                    doAnimation();
-                    console.log("We've reached");
-                }
-            }
-        });
-        function doAnimation()
-        {
-                $('#count1').each(function () {
-                    $(this).prop('Counter',0).animate({
-                    Counter: $(this).text()
-                    }, {
-                    duration: 4000,
-                    easing: 'swing',
-                    step: function (now) {
-                        $(this).text(Math.ceil(now));
-                    }
-                    });
-                });
-                $('#count2').each(function () {
-                $(this).prop('Counter',0).animate({
-                Counter: $(this).text()
-                }, {
-                duration: 4000,
-                easing: 'swing',
-                step: function (now) {
-                    $(this).text(Math.ceil(now));
-                }
-                });
-                });
-                $('#count3').each(function () {
-                $(this).prop('Counter',0).animate({
-                Counter: $(this).text()
-                }, {
-                duration: 4000,
-                easing: 'swing',
-                step: function (now) {
-                    $(this).text(Math.ceil(now));
-                }
-                });
-            });
-        }
 </script>
 <% end %>

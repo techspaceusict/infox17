@@ -17,6 +17,9 @@
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Julius+Sans+One|Material+Icons" rel="stylesheet">
 
+    <!-- for animations -->
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+
     <%= stylesheet_link_tag "infoxglobal" %>
     <%= yield :pgstyles %>
   </head>
@@ -209,4 +212,17 @@
 
 
   </body>
+
+<script type="text/javascript">
+//scroll animations
+  window.sr = ScrollReveal();
+  sr.reveal('#sponsors img',{
+    duration: 1000,
+    origin: 'bottom',
+  })
+//for navbar collapsing
+$( document ).ready(function(){
+$(".button-collapse").sideNav();
+})
+</script>
 </html>

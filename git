@@ -1,0 +1,112 @@
+		GIT knowledge...
+
+
+1. git status ise ptachl jata h abhi kis branch pr hai aur kya changes hai
+2.ye clonned vali hi h na jo maine terminal me khol rkhi hai?
+. abhi dubara clone nhi kri hai.. latest wali krni hai abhi
+haan main vhibta rha hu kaise latest code dal jaega isme bine clone kiyeac
+hha
+. ye to mujhe main vla lg rha hai yani sayad apne main vali hi clone kri thi 
+nhi ye pehle bhi aise ho hua tha pta nhi kyu... main for
+k krke apni wali kholke usse hi kra hai clone... dubara kru??
+nhi dekhta hu main
+bhai ye pkka main vali hi hai 
+kymuekri pull main se le rha hai 
+K:OI na dekhta hu main
+. ya fir aise kr le jo changes kiye hai unn files ko alag copy kr le ek jgah 
+abhi koi khaas na hai... dubara kr lunga main
+aapko delete krni hai toh kr do ye
+nhi delete nhi krni merge kr rha hu to change hat bhi skt hai dekhta hu chl
+
+
+1. git status
+2. git add .
+3. git commit -m ""
+4. git push origin shubhamg931
+naki master okay okay..
+ye master se linked hai na?
+ab isme kya higa ki tu shubham branch pr krega fir baad me hum kya kr skte haiki jo bhi changes hnge master me use leke tere branch me update kr denge to hmehsa tere branch mster ke sath sath rhegi
+abhi recent fork ki h to sath hi hai ,
+jab piche ho jaegitb commands h use ho jaega.
+okay:)
+chlo krlo 
+GN
+
+
+
+ab dekh upstream main hai jo sabse upar hia maktlb ki original project
+origin tere forked vali hai 
+to origin upstream se piche thi 2 commit 
+maine kya kiya pehle remote add ki upstream (bs ek baar hi krna padta hai clone kr baad)
+fir fetch ki upstream ko(fetch mtlb changes local computer pr aa gye)
+fir hme pta hai ki hum locally folder me master branch pr hai
+
+to maine kya kiya ki upstream ke master ko origin ke master me merge kr diya
+-git merge upstream/master
+command se 
+fir inn changes ko tere forkedvali me dalne ke liye normally PUSH KR DIYA (isme commit krke nhi likhna padta )
+
+aagya smjh ?>
+...
+haa got it C:OO)L :D
+bs dikkt tb ho jati hai jab upstream  master me change usi fle me ho jisme tune kra hai to CONFLICT de deta hia
+ye upar jo smjhaya maine bdi muskil se smjh aat ahia kailogo ko to dhyan se sikhio . BAaki terminal vale code ko copy kre iss text file me rkh le further future refernec e ke liye.
+achha...
+kaafi hadd tk smjh gya
+kr leta  
+ye yadd rkhio isse branch pr kaam krna hai tujhe
+kk
+okay chl krle GN
+GN
+
+
+
+
+shubhamg931@shubhamubuntu:~$ cd infox17/
+shubhamg931@shubhamubuntu:~/infox17$ git status
+On branch shubhamg931
+Your branch is up-to-date with 'origin/shubhamg931'.
+nothing to commit, working directory clean
+shubhamg931@shubhamubuntu:~/infox17$ git checkout master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+shubhamg931@shubhamubuntu:~/infox17$ git remote -v
+origin	https://github.com/shubhamg931/infox17.git (fetch)
+origin	https://github.com/shubhamg931/infox17.git (push)
+shubhamg931@shubhamubuntu:~/infox17$ git remote add upstream https://github.com/techspaceusict/infox17.git
+shubhamg931@shubhamubuntu:~/infox17$ git remote -v
+origin	https://github.com/shubhamg931/infox17.git (fetch)
+origin	https://github.com/shubhamg931/infox17.git (push)
+upstream	https://github.com/techspaceusict/infox17.git (fetch)
+upstream	https://github.com/techspaceusict/infox17.git (push)
+shubhamg931@shubhamubuntu:~/infox17$ git fetch upstream
+remote: Counting objects: 1, done.
+remote: Total 1 (delta 0), reused 1 (delta 0), pack-reused 0
+Unpacking objects: 100% (1/1), done.
+From https://github.com/techspaceusict/infox17
+ * [new branch]      master     -> upstream/master
+ * [new branch]      naveen-branch -> upstream/naveen-branch
+ * [new branch]      shubhamg931 -> upstream/shubhamg931
+shubhamg931@shubhamubuntu:~/infox17$ git merge upstream/master
+Updating 584efbd..9fc4f4f
+Fast-forward
+ app/controllers/event_controller.rb | 2 +-
+ app/views/home/Contact.html.erb     | 8 +++++---
+ 2 files changed, 6 insertions(+), 4 deletions(-)
+shubhamg931@shubhamubuntu:~/infox17$ git push origin master
+Username for 'https://github.com': shubhamg931
+Password for 'https://shubhamg931@github.com': 
+Counting objects: 1, done.
+Writing objects: 100% (1/1), 279 bytes | 0 bytes/s, done.
+Total 1 (delta 0), reused 0 (delta 0)
+To https://github.com/shubhamg931/infox17.git
+   584efbd..9fc4f4f  master -> master
+shubhamg931@shubhamubuntu:~/infox17$ smjh gya na kya kiya ki btau ek baar... bta do ^C
+shubhamg931@shubhamubuntu:~/infox17$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working directory clean
+shubhamg931@shubhamubuntu:~/infox17$ git checkout shubhamg931 
+Switched to branch 'shubhamg931'
+Your branch is up-to-date with 'origin/shubhamg931'.
+
