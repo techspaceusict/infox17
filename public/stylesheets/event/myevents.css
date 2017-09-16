@@ -1,0 +1,64 @@
+.mycard {
+    width: 30%;
+    height: 450px;
+    float: left;
+    margin: 1.66%;
+    background: white;
+    color: black;
+}
+
+.mycard:hover {
+    color: white;
+    background: #483D8B;
+}
+
+@media screen and (max-width:1036px) {
+    .mycard {
+        width: 48%;
+        margin: 1%;
+    }
+}
+
+@media screen and (max-width:626px) {
+    .mycard {
+        height: 670px;
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-bottom: 25px;
+    }
+}
+
+@media screen and (max-width:487px) {
+    .mycard {
+        height: 500px;
+    }
+}
+
+@media screen and (max-width:371px) {
+    .mycard {
+        height: 430px;
+    }
+}
+
+body {
+    color: #61443e;
+    font-size: 13px;
+    background-color: #ffffff;
+    margin: 0px;
+    overflow-x: hidden;
+}
+
+#webglcontainer {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -9999;
+}
+
+#section2 {
+    background-color: rgba(54,67,70,0.8);
+}
