@@ -1,14 +1,46 @@
-<div class="container"style="margin-top:15vh;margin-bottom:15vh;background:white;">
+<% content_for :pgstyles do %>
+
+  <style>
+  .fontcolor
+  {
+          color:white;
+  }
+  .registerevtbtn {
+    width: 100%;
+    border-radius: 11px;
+    color: #fd5732;
+    background: white;
+    padding: 7px 20px 7px 20px;
+    border: solid #fd5732 1px;
+    transition: background-color 0.5s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+  }
+
+  .registerevtbtn:hover {
+    color: white;
+    background: #fd5e3a;
+  }
+  </style>
+
+<% end %>
+
+<% content_for :pgcontent do %>
+<div class="container" style="margin-top:15vh;margin-bottom:15vh;background:white;">
+
     <div class="row" style="font-size: 20px; background:black;color:white;padding-top:7px;padding-bottom:7px;margin:0px">
         <center>
             Event Details
         </center>
     </div>
-    <div class="row"style="margin:0px">
-        <div class="col s12 m4"style="padding:0px;">
-            <img src="/uploads/<%= @event.image%>"style="width:100%">
+    <div class="row" style="margin:0px">
+      
+        <div class="col s12 m4" style="padding:0px;">
+
+            <img src="/uploads/<%= @event.image%>" style="width:100%">
         </div>
-        <div class="col s12 m8"style="padding:10px;">
+        <div class="col s12 m8" style="padding:10px;">
             <u>
                 <h5>
                     <center>
@@ -21,7 +53,7 @@
             <u>Venue:</u>&nbsp;&nbsp;&nbsp;<%=raw @event.venue%>
             <hr>
             Like and follow us on facebook to updates:<br>
-            <a href="<%= @event.facebook_link%>"style="color:black"><i class="fa fa-facebook-square fa-3x"aria-hidden="true"></i></a>
+            <a href="<%= @event.facebook_link%>"style="color:black"><i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i></a>
             <hr>
             Contributors:<br>
             <table class="striped">
@@ -30,7 +62,7 @@
                        <td><%=raw @event.organizer1_name%></td>
                        <td><%= @event.organizer1_phone%></td>
                    </tr>
-                   <tr>
+                   <tr>  
                       <td><%=raw @event.organizer2_name%></td>
                       <td><%= @event.organizer2_phone%></td>
                   </tr>
@@ -43,24 +75,14 @@
                         <div class="col s12"style="padding-top:5px;padding-bottom:5px;background:#F44336;color:white;font-size:16px;margin-top:20px"><center>You have already registered!</center></div>
                     </a>
                 <%else%>
-                    <div class="col s12"style="padding-top:5px;padding-bottom:5px;background:#000000;color:white;font-size:16px;margin-top:20px"><center><%= link_to "Register for Event ", url_for(controller: :event, action: :eventregister,:Event_id=>@event.Event_id), method: :post,class:"fontcolor"%></center></div>
+                    <div class="col s12" style="padding-top:5px;padding-bottom:5px;background:#000000;color:white;font-size:16px;margin-top:20px"><center><%= link_to "Register for Event ", url_for(controller: :event, action: :eventregister,:Event_id=>@event.Event_id), method: :post,class:"fontcolor", :onclick => 'return confirm("Do you really want to submit the form?")';%></center></div>
               	<%end%>
             <%else%>
                <a href="/users/auth/facebook">
-                   <div class="col s12"style="padding-top:5px;padding-bottom:5px;background:#F44336;color:white;font-size:16px;margin-top:20px"><center>Sign in to register</center></div></a>
+                   <div class="col s12" style="padding-top:5px;padding-bottom:5px;background:#F44336;color:white;font-size:16px;margin-top:20px"><center>Sign in to register</center></div></a>
             <%end%>
        </div>
     </div>
 </div>
-<style>
-body
-{
-    background: url('/uploads/contactbg.jpg');
-    background-size: cover;
-    overflow-x: hidden;
-}
-.fontcolor
-{
-        color:white;
-}
-</style>
+<% end %>
+

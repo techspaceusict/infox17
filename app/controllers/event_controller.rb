@@ -1,5 +1,7 @@
 class EventController < ApplicationController
   
+  layout 'techspace'
+  
   def event
   	id=params[:id]
     @event=Event.find_by_Event_id(id);
@@ -68,7 +70,7 @@ class EventController < ApplicationController
 
 
 Query.create(:name=>name,:email=>email,:message=>query);
-return redirect_to '/Contact';
+return redirect_to '/';
 
 
  end

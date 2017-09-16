@@ -74,9 +74,9 @@ Rails.application.routes.draw do
 
   get '/myevents'=>'event#myevents'
 
-  get '/addevents'=>'event#addevents'
+  post '/addevents'=>'event#addevents'
 
-  post '/eventregister'=>'event#eventregister'
+  get '/eventregister'=>'event#eventregister'
 
   post '/eventquery'=>'event#eventquery'
 
