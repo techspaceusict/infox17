@@ -11,7 +11,7 @@
         <div class="container">
           <div class="col s12" style="background:white;">
             <div class="row" style="margin:10px;padding: 10px;">
-                <form action="/eventquery" method="post"class="col s12 m4"id="my_custom_form">
+                <form action="/eventquery" method="post" class=" col s12 m4" id="my_custom_form" onsubmit="alert('Your Query has been submitted.')">
                     <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
                     <div class="row">
                         <div class="input-field col s12">
