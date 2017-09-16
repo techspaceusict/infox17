@@ -6,56 +6,49 @@
 
     <div style="min-height:550px">
     	<div class="container-fluid" style="background-image:url(/images/map.png);">
-        <div class="col s12" style="border-bottom:0.5px solid #DCDCDC;padding-top:10px;padding-bottom:10px;background:black">
-            <center>
-                <h5 class="contact-us-heading" color="white">Contact Us
-                </h5>
-            </center>
-        </div>
+      <br>
+      <br>
         <div class="container">
-          <div class="col s12" style="color:white; opacity:1; text-align:centre;">
-            <h1>Keep in Touch.</h1>
-          </div>
           <div class="col s12" style="background:white;">
-            <div class="row"style="margin:10px">
+            <div class="row" style="margin:10px;padding: 10px;">
                 <form action="/eventquery" method="post"class="col s12 m4"id="my_custom_form">
                     <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
                     <div class="row">
                         <div class="input-field col s12">
-                            <i class="material-icons prefix cyan-text text-darken-4">account_circle</i>
+                            <i class="material-icons prefix orange-text text-darken-4">account_circle</i>
                             <input id="first_name icon_prefix icon-black" type="text" class="validate" required>
                             <label for="first_name icon_prefix">Full Name</label>
                         </div>
                     </div>
                     <div class="row">
                       <div class="input-field col s12">
-                          <i class="material-icons prefix cyan-text text-darken-4">mail</i>
+                          <i class="material-icons prefix orange-text text-darken-4">mail</i>
                           <input id="email icon_prefix" type="email" class="validate"required>
                           <label for="email">Email</label>
                       </div>
                     </div>
                     <div class="row">
                       <div class="input-field col s12">
-                          <i class="material-icons prefix cyan-text text-darken-4">message</i>
+                          <i class="material-icons prefix orange-text text-darken-4">message</i>
                           <textarea id="textarea1 icon_prefix" class="materialize-textarea validate"required></textarea>
                             <label for="textarea1">Query/Feedback</label>
                       </div>
                     </div>
                     <div class="row">
                       <div class="col s12 center-align">
-                        <button class="btn waves-effect waves-light" type="submit" name="action">Submit</button>
+                        <button class="btn waves-effect waves-light btnsubmit" type="submit" name="action">Submit</button>
                       </div>
                     </div>
                     <div class="row">
                       <div class="col s12">
-                        <i class="material-icons cyan-text text-darken-4"style="padding-right:5px">call</i><font size="4px">+91-9871381106</font>
+                        <i class="fa fa-phone" style="color: #ef6c00;" aria-hidden="true"></i> <font class="contact-us-heading" size="4px">Prabhanshu Gupta <br>+91-9968465876</font>
                       </div>
                       <div class="col s12">
-                        <i class="material-icons cyan-text text-darken-4"style="padding-right:5px">email</i><font size="4px">infox@ipu.ac.in</font>
+                        <i class="fa fa-envelope" style="color: #ef6c00;" aria-hidden="true"></i><font size="4px" class="contact-us-heading">&nbsp;infox@ipu.ac.in</font>
                       </div>
                     </div>
                 </form>
-                <iframe class="col s12 m8"id="custom_id_form" frameborder="0" style="border:0;height:440px;margin-top:20px;" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ5fdrrq8aDTkRe3wa7eZKNBM&key=AIzaSyBLeCcBeDawX4JDrDve3r_r3zEBR3i9uxo" allowfullscreen></iframe>
+                <iframe class="col s12 m8" id="custom_id_form" frameborder="0" style="border:0;height:440px;margin-top:20px;" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ5fdrrq8aDTkRe3wa7eZKNBM&key=AIzaSyBLeCcBeDawX4JDrDve3r_r3zEBR3i9uxo" allowfullscreen></iframe>
             </div>
           </div>
         </div>

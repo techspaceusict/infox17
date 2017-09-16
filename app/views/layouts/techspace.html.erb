@@ -74,21 +74,38 @@
 
     <div id="section2">
       <section class="full-section">
-        <!--Insert content below canvas here -->
+              <!--Insert content below canvas here -->
         <div class="navbar">
           <nav>
             <div class="nav-wrapper">
               <a href="/" class="brand-logo center"><img src="/images/logo-large-darkbg.png"></a>
               <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
               <ul class="left hide-on-med-and-down">
-                <li><a class="<% if action_name == "ts_about" %> active <% end %> ts-lmenu" href="/about/">About</a></li>
-                <li><a class="<% if action_name == "ts_contact" %> active <% end %> ts-lmenu" href="/contact/">Contact Us</a></li>
-                  <li><a class="<% if action_name == "ts_sponsors" %> active <% end %> ts-lmenu" href="/sponsors/">Sponsors</a></li>
+                <li><a class="<% if action_name == "ts_about" %> activelink <% end %> ts-lmenu" href="/about/">About</a></li>
+                <li><a class="<% if action_name == "ts_contact" %> activelink <% end %> ts-lmenu" href="/contact/">Contact Us</a></li>
+                  <li><a class="<% if action_name == "ts_sponsors" %> activelink <% end %> ts-lmenu" href="/sponsors/">Sponsors</a></li>
               </ul>
               <ul class="right hide-on-med-and-down">
-                <li><a class="<% if action_name == "events" %> active <% end %> ts-lmenu" href="/events/">Events</a></li>
-                <!-- <li><a class="<% if action_name == "ts_schedule" %> active <% end %> ts-lmenu" href="/schedule/">Schedule</a></li> -->
-                <li><a class="<% if action_name == "ts_login" %> active <% end %> ts-lmenu" onclick="openModal()">Login/Signup</a></li>
+                <li><a class="<% if action_name == "events" %> activelink <% end %> ts-lmenu" href="/events/">Events</a></li>
+                <!-- <li><a class="<% if action_name == "ts_schedule" %> activelink <% end %> ts-lmenu" href="/schedule/">Schedule</a></li> -->
+                <%if user_signed_in? %>
+                <li>
+                
+                <ul id="dropdown1" class="dropdown-content">
+                  <div class="user-view">
+                    <img class="circle" src="<%= current_user.profile%>">
+                    <span class="white-text name"><%= current_user.name%></span>
+                    <span class="white-text email"><%= current_user.email%></span>
+                    <a href="/user/logout">Log Out</a>
+                  </div>
+                </ul>
+
+                <a href="#!user" class="dropdown-button ts-lmenu" data-activates="dropdown1"><img class="circle" src="<%= current_user.profile%>">
+                </a>
+                </li>
+                <% else %>
+                <li><a class="<% if action_name == "ts_login" %> activelink <% end %> ts-lmenu" onclick="openModal()">Login/Signup</a></li>
+                <% end %>
               </ul>
             </div>
           </nav>

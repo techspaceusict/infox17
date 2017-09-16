@@ -159,7 +159,7 @@ nav a:focus:before {
   color: #FFFFFF;
 }
 
-.active {
+.activelink {
 	color:#ee7436;
 	background: rgba(3,3,3, 0.2);
 }

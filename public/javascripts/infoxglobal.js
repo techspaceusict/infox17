@@ -8,6 +8,7 @@ $('.button-collapse').sideNav({
 
 $(document).ready(function() {  
 	$('.modal').modal();
+	$(".dropdown-button").dropdown();
 })
 
 function openModal() {

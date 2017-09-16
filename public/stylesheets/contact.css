@@ -4,5 +4,16 @@
 
 .contact-us-heading {
   font-family: 'Julius Sans One', sans-serif;
-  color: white;
+  color: black;
+
+}
+
+.contact-text {
+  font-family: 'Julius Sans One', sans-serif;
+  color: black;
+  float: right;
+}
+
+.btnsubmit {
+	background-color: #ff5722!important;
 }
