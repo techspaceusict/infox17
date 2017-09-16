@@ -19,7 +19,11 @@ gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 gem 'data-confirm-modal'
+
+gem 'omniauth' 
 gem 'omniauth-facebook'
+gem 'omniauth-google-oauth2'
+gem 'omniauth-twitter'
 
 
 gem "figaro"

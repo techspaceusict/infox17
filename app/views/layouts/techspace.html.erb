@@ -26,7 +26,7 @@
      <div id="modal1" class="modal">
             <div class="modal-content center">
                <p style=""><a class="waves-effect waves-light btn social facebook" style="background-color:#3B5998" href="/users/auth/facebook"><i class="fa fa-facebook"></i>&nbsp;Sign in with facebook</a></p>
-          <p style=""><a class="waves-effect waves-light btn social google" style="background-color:#DD4B39" href="#"><i class="fa fa-google"></i> &nbsp;Sign in with google&nbsp;</a></p>
+          <p style=""><a class="waves-effect waves-light btn social google" style="background-color:#DD4B39" href="users/auth/google_oauth2"><i class="fa fa-google"></i> &nbsp;Sign in with google&nbsp;</a></p>
             </div>
             <!-- <div class="modal-footer">
                 <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
@@ -93,10 +93,10 @@
                 
                 <ul id="dropdown1" class="dropdown-content">
                   <div class="user-view">
-                    <img class="circle" src="<%= current_user.profile%>">
+                    <img class="circle" src="<%= current_user.profile%>" style="height: 10px,width: 10px">
                     <span class="white-text name"><%= current_user.name%></span>
                     <span class="white-text email"><%= current_user.email%></span>
-                    <a href="/user/logout">Log Out</a>
+                    <a href="/users/sign_out">Log Out</a>
                   </div>
                 </ul>
 
