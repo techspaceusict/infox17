@@ -70,11 +70,11 @@ Rails.application.routes.draw do
 
   # POST Requests
 
-  post '/event/event'=>'event#event'
+  get '/event/event'=>'event#event'
 
-  post '/myevents'=>'event#myevents'
+  get '/myevents'=>'event#myevents'
 
-  post '/addevents'=>'event#addevents'
+  get '/addevents'=>'event#addevents'
 
   post '/eventregister'=>'event#eventregister'
 

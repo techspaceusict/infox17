@@ -1,3 +1,6 @@
+body {
+	overflow: auto !important;
+}
 /*=========== SCROLL BAR ===============*/
 body::-webkit-scrollbar {
     width: 0.5em;
@@ -74,23 +77,14 @@ outline: none;
 /*=================== NAVIGATION =======================*/
 /* logo */
 .brand-logo {
-	/*border: 2px solid #ee7436;*/
+	bottom : 0px;
+	top : 0px;
+	padding: 0 20px 0 20px !important;
 }
 
-/*.center{
-	background: #555555;
-	border: 1px solid #ee7436;
-	margin-top: 3px;
-	width: 350px;
-	padding: 0px 5px;
-	border-radius: 5px;
-	transition: none;
-}*/
-
-.brand-logo:visited {
-	/*border: 2px solid #ee7436;*/
+.brand-logo:hover {
+	background-color: rgba(0,0,0,0.1);
 }
-
 
 .brand-logo img{
 	margin-top: -15px;
@@ -111,18 +105,17 @@ header, main, footer {
 nav {
 	background-color: rgba(70,70,70,0.5);
 	z-index: 20000;
-	font-family: 'Berkshire Swash', cursive;
 	height: 75px;
 }
 
 nav .nav-wrapper {
 	background-color: rgba(70,70,70,0.5);
-	z-index: 20000;
 }
 
 nav ul li a {
 	font-size: 23px;
 	height: 75px;
+	font-family: 'Berkshire Swash', cursive;
 }
 
 nav a {
@@ -154,6 +147,7 @@ nav a:focus:before {
   visibility: visible;
   transform: scaleX(1);
 }
+
 
 .material-icons{
   color: #FFFFFF;

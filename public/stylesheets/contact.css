@@ -17,3 +17,12 @@
 .btnsubmit {
 	background-color: #ff5722!important;
 }
+
+.background-image {
+	background-image:url(http://www.ipu.ac.in/data0/images/1.jpg);
+	background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 100vh;
+}

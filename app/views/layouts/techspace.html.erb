@@ -21,12 +21,12 @@
     <%= yield :pgstyles %>
   </head>
 
-  <body style="background-image: url('/images/1.jpg'); ">
+  <body>
 
      <div id="modal1" class="modal">
             <div class="modal-content center">
                <p style=""><a class="waves-effect waves-light btn social facebook" style="background-color:#3B5998" href="/users/auth/facebook"><i class="fa fa-facebook"></i>&nbsp;Sign in with facebook</a></p>
-          <p style=""><a class="waves-effect waves-light btn social google" style="background-color:#DD4B39" href="users/auth/google_oauth2"><i class="fa fa-google"></i> &nbsp;Sign in with google&nbsp;</a></p>
+          <p style=""><a class="waves-effect waves-light btn social google" style="background-color:#DD4B39" href="/users/auth/google_oauth2"><i class="fa fa-google"></i> &nbsp;Sign in with google&nbsp;</a></p>
             </div>
             <!-- <div class="modal-footer">
                 <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
@@ -40,7 +40,11 @@
     <div class="main">
       <section class="full-section" id="canvasContent">
       <!--Insert Canvas content here -->
-        <button class="registerbtn" onclick="openModal()">Register</button>
+        <%if user_signed_in? %>
+          <a class="registerbtn" href="/myevents">Dashboard</a>
+        <% else %>
+          <button class="registerbtn" onclick="openModal()">Register</button>
+        <% end %>  
 
         <a href="#section2" id="scrollDownButton">
             <img src="/images/downarrow-or.png" class="downarrow">
@@ -100,7 +104,7 @@
                   </div>
                 </ul>
 
-                <a href="#!user" class="dropdown-button ts-lmenu" data-activates="dropdown1"><img class="circle" src="<%= current_user.profile%>">
+                <a href="#!user" class="dropdown-button ts-lmenu" data-activates="dropdown1" data-constrainwidth="false" data-beloworigin="true" data-hover="true"><img class="circle" src="<%= current_user.profile%>">
                 </a>
                 </li>
                 <% else %>

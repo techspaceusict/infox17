@@ -8,6 +8,7 @@ html {
 body {
     overflow-x: hidden;
     background-color: white;
+    background-image: url('/images/1.jpg');
 }
 
 

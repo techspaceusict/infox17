@@ -19,7 +19,10 @@
 	        </h5>
 				</div>
 				<div class="col s12 m8">
-	            <center>
+	            <center>	
+				<%if user_signed_in? %>
+	            	<a class="registerevtbtn" href="/myevents">My events</a>
+	            <% end %>	
 								<form>
 	                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Events..."onmousedown="showDisplay()">
 									<div class="col-s-12 filter-segment">
