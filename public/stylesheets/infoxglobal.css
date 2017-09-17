@@ -218,6 +218,14 @@ background: linear-gradient(to bottom, #ff8400, #E44D26); /* W3C, IE 10+/ Edge, 
 }
 /*=============== END NAV =================*/
 
+/*=============== MODAL ====================*/
+/*modal width override*/
+.modal {
+       width: 40% !important;
+}
+/*=============== END MODAL =================*/
+
+
 /*=============== FOOTER =================*/
 #footer{
 	padding-top: 20px;

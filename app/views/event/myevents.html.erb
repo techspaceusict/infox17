@@ -5,6 +5,7 @@
 
 <% content_for :pgcontent do %>
 <!--Injected javascript for getting count-->
+<div style="min-height:550px">
 <script>
     object={count:0};
 </script>
@@ -14,19 +15,26 @@
         object.count+=1;
     </script>
 <%end%>
-<div class="col s12"style="background:rgba(0,0,0,0.8);margin-top:10vh;display:none;margin-bottom:20vh;color:white"id="noevent">
-    <center><br><br><br><h4>Oops..No events to show!!</h4><br>
-    <h5>Register and try again</h5><br></center>
-</div>
-<div class="container" id="eventhead" style="margin-bottom:50px;color:white;padding-top:15vh;">
-    <div class="row"style="background:rgba(0,0,0,0.8);">
+<br>
+<br>
+<div class="container" style="margin-bottom:50px;color:white;">
+<div class="row">
+    <div class="col s12 m8">
+    <div class="row">
         <center>
-            <h5>
+            <h4 style="margin-top: 0px;font-family: 'Julius Sans One', sans-serif;">
                 My Events
-            </h5>
+            </h4>
+            <div class="borderline"></div>
         </center>
     </div>
-    <div class="row" style="padding-bottom:20vh;overflow-x:hidden;padding-left:0px">
+    <div class="row">
+    <div class="col s12" style="background:rgba(0,0,0,0.8);margin-top:10vh;display:none;margin-bottom:20vh;color:white"id="noevent">
+        <center><br><br><br><h4>Oops..No events to show!!</h4><br>
+        <h5>Register and try again</h5><br></center>
+    </div>
+    </div>
+    <div class="row" id="eventhead" style="overflow-x:hidden;padding-left:0px">
         <%@event.each do |v|%>
             <% event=Event.find_by_id(v.id)%>
             <a class="modal-trigger" href="#<%= event.Event_id%>mainmodal" style="color:white">
@@ -43,7 +51,7 @@
             <div id="<%= event.Event_id%>mainmodal" class="modal modal-fixed-footer">
                 <div class="modal-content">
                     <div class="row">
-                        <div class="col s12 m5">
+                        <div class="col s12 m6">
                             <img src="/uploads/<%= event.image%>"width="100%">
                         </div>
                         <div class="col s12 m7">
@@ -104,6 +112,13 @@
              </script>
         <%end%>
     </div>
+    </div>
+    <div class="col s12 m4">
+        <div  class="fb-page" data-href="https://www.facebook.com/infoxpression/" data-tabs="events" data-small-header="false" data-adapt-container-width="true" data-width="500" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/infoxpression/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/infoxpression/">InfoXpression</a></blockquote>
+        </div>
+    </div>
+    </div>
+ </div>
  </div>
 
  <% end %>
@@ -114,6 +129,13 @@
 <script src="/uploads/threedata/three.js"></script>
 <script src="/uploads/threedata/Detector.js"></script>
 <script src="/uploads/threedata/GPUComputationRenderer.js"></script>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.8";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <!-- shader for bird's position -->
 
 <script id="fragmentShaderPosition" type="x-shader/x-fragment">
