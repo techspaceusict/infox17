@@ -56,7 +56,7 @@ class HomeController < ApplicationController
   def oContact
 	end
 
-    def team
+    def ts_team
     end
 
     def dummy
