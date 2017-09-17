@@ -206,6 +206,16 @@ background: linear-gradient(to bottom, #ff8400, #E44D26); /* W3C, IE 10+/ Edge, 
 
 }
 
+.dashboard-drop {
+	background-color: #424646;
+	z-index: 2000000;
+}
+
+.dashboard-drop > div > a {
+	color: white;
+	font-family: 'Julius Sans One', sans-serif;
+
+}
 /*=============== END NAV =================*/
 
 /*=============== FOOTER =================*/
@@ -320,7 +330,10 @@ background: linear-gradient(to bottom, #ff8400, #E44D26); /* W3C, IE 10+/ Edge, 
 }
 
 
-
+.white-text {
+	margin: 0;
+	padding: 0;
+}
 
 /*=============== END FOOTER ================*/
 

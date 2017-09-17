@@ -96,18 +96,14 @@
                 <li><a class="<% if action_name == "events" %> activelink <% end %> ts-lmenu" href="/events/">Events</a></li>
                 <!-- <li><a class="<% if action_name == "ts_schedule" %> activelink <% end %> ts-lmenu" href="/schedule/">Schedule</a></li> -->
                 <%if user_signed_in? %>
-                <li>
-                
-                <ul id="dropdown1" class="dropdown-content">
-                  <div class="user-view">
-                    <img class="circle" src="<%= current_user.profile%>" style="height: 10px,width: 10px">
-                    <span class="white-text name"><%= current_user.name%></span>
-                    <span class="white-text email"><%= current_user.email%></span>
-                    <a href="/users/sign_out">Log Out</a>
+                <ul id="dropdown1" class="dropdown-content dashboard-drop">
+                  <div class="user-view center">
+                    <a href="/myevents" class="center">Dashboard</a>
+                    <a href="/users/sign_out" class="center">Log Out</a>
                   </div>
                 </ul>
-
-                <a href="#!user" class="dropdown-button ts-lmenu" data-activates="dropdown1" data-constrainwidth="false" data-beloworigin="true" data-hover="true"><img class="circle" src="<%= current_user.profile%>">
+                <li>
+                <a href="#!user" class="dropdown-button ts-lmenu" data-activates="dropdown1" data-constrainwidth="false" data-beloworigin="true" data-hover="true"><img class="circle" style="margin-top : 10px;" src="<%= current_user.profile%>">
                 </a>
                 </li>
                 <% else %>
@@ -146,10 +142,10 @@
             <div class="side-nav-menus">
             <li><a class="waves-effect" href="/">Home</a></li>
             <li><a class="waves-effect" href="/about">About</a></li>
-            <li><a class="waves-effect" href="/schedule">Schedule</a></li>
+            <!-- <li><a class="waves-effect" href="/schedule">Schedule</a></li> -->
             <li><a class="waves-effect" href="/events">Events</a></li>
-            <li><a class="waves-effect" href="/Sponsors">Sponsors</a></li>
-            <li><a class="waves-effect" href="/Contact">Contact Us</a></li>
+            <li><a class="waves-effect" href="/sponsors">Sponsors</a></li>
+            <li><a class="waves-effect" href="/contact">Contact Us</a></li>
           </ul>
 
           <div class="container-fluid">
