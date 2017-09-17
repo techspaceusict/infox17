@@ -29,12 +29,22 @@
         </center>
     </div>
     <div class="row">
-    <div class="col s12" style="background:rgba(0,0,0,0.8);margin-top:10vh;display:none;margin-bottom:20vh;color:white"id="noevent">
-        <center><br><br><br><h4>Oops..No events to show!!</h4><br>
-        <h5>Register and try again</h5><br></center>
+    <div class="col s12" style="background:rgba(0,0,0,0.8);border-radius: 5px;display:none;font-family : 'Julius Sans One', sans-serif; color:white" id="noevent">
+        <center><br>
+        <h5>Register and try again</h5>
+         <p>You haven't registered for any events yet</p>
+        <a class="registerevtbtn" href="/events">Register for events</a>
+       <br>
+       <br>
+       <div class="row">
+       <a href="#"><div class="col s6"><div class="flagship">Flagship event 1</div></div></a>
+       <a href="#"><div class="col s6"><div class="flagship">Flagship event 2</div></div></a>
+       </div>
+       </center>
     </div>
     </div>
     <div class="row" id="eventhead" style="overflow-x:hidden;padding-left:0px">
+    <a class="registerevtbtn" href="/events">Register for events</a>
         <%@event.each do |v|%>
             <% event=Event.find_by_id(v.id)%>
             <a class="modal-trigger" href="#<%= event.Event_id%>mainmodal" style="color:white">
@@ -113,8 +123,8 @@
         <%end%>
     </div>
     </div>
-    <div class="col s12 m4">
-        <div  class="fb-page" data-href="https://www.facebook.com/infoxpression/" data-tabs="events" data-small-header="false" data-adapt-container-width="true" data-width="500" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/infoxpression/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/infoxpression/">InfoXpression</a></blockquote>
+    <div class="col s12 m4 center">
+        <div  class="fb-page" data-href="https://www.facebook.com/infoxpression/" data-tabs="events" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/infoxpression/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/infoxpression/">InfoXpression</a></blockquote>
         </div>
     </div>
     </div>
