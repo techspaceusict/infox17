@@ -77,9 +77,11 @@ outline: none;
 /*=================== NAVIGATION =======================*/
 /* logo */
 .brand-logo {
+	margin-top: 7px;
 	bottom : 0px;
 	top : 0px;
 	padding: 0 20px 0 20px !important;
+	
 }
 
 .brand-logo:hover {
@@ -87,8 +89,7 @@ outline: none;
 }
 
 .brand-logo img{
-	margin-top: -15px;
-	height: 88px;
+	height: 50px;
 }
 
 @media(max-width: 700px){
@@ -103,18 +104,18 @@ header, main, footer {
 }
 
 nav {
-	background-color: rgba(70,70,70,0.5);
+	background-color: rgba(70,70,70,0.9);
 	z-index: 20000;
-	height: 75px;
+	/*height: 75px;*/
 }
 
 nav .nav-wrapper {
-	background-color: rgba(70,70,70,0.5);
+	background-color: rgba(70,70,70,0.9);
 }
 
 nav ul li a {
 	font-size: 23px;
-	height: 75px;
+	/*height: 75px;*/
 	font-family: 'Berkshire Swash', cursive;
 }
 

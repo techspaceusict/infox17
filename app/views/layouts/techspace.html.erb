@@ -22,6 +22,11 @@
 
     <%= stylesheet_link_tag "infoxglobal" %>
     <%= yield :pgstyles %>
+    <style type="text/css">
+      #wrap {
+        height: 64px;
+      }
+    </style>
   </head>
 
   <body>
@@ -83,9 +88,10 @@
       <section class="full-section">
               <!--Insert content below canvas here -->
         <div class="navbar">
+          <div id="wrap">
           <nav>
             <div class="nav-wrapper">
-              <a href="/" class="brand-logo center"><img src="/images/logo-large-darkbg.png"></a>
+              <a href="/" class="brand-logo center"><img src="/images/logo-large-darkbg.png"><div class="box2"></div></a>
               <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
               <ul class="left hide-on-med-and-down">
                 <li><a class="<% if action_name == "ts_about" %> activelink <% end %> ts-lmenu" href="/about/">About</a></li>
@@ -94,7 +100,7 @@
               </ul>
               <ul class="right hide-on-med-and-down">
                 <li><a class="<% if action_name == "events" %> activelink <% end %> ts-lmenu" href="/events/">Events</a></li>
-                <!-- <li><a class="<% if action_name == "ts_schedule" %> activelink <% end %> ts-lmenu" href="/schedule/">Schedule</a></li> -->
+                <li><a class="<% if action_name == "ts_schedule" %> activelink <% end %> ts-lmenu" href="/schedule/">Schedule</a></li>
                 <%if user_signed_in? %>
                 <ul id="dropdown1" class="dropdown-content dashboard-drop">
                   <div class="user-view center">
@@ -112,6 +118,7 @@
               </ul>
             </div>
           </nav>
+          </div>
         </div>
 
         <!-- side navigaion -->
@@ -220,5 +227,12 @@
 $( document ).ready(function(){
 $(".button-collapse").sideNav();
 })
+  $(document).ready(function(){
+    $('nav').pushpin({
+      top: $('nav').offset().top,
+      offset: 0
+    });
+  });
+
 </script>
 </html>

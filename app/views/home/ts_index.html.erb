@@ -3,25 +3,36 @@
 <% end %>
 
 <% content_for :pgcontent do %>
-	<div id="social_links">
-        <ul>
-            <li>
-                <a target="_blank" href="https://fb.com/infoxpression">
-                    <img src="/uploads/fblogo.png" style="width: 50px;">
-                </a>
-            </li>
-        </ul>
-    </div>
-    <div style="min-height:550px">
-    <br>
+    <div style="min-height:550px;margin-top: 20px">
+        
+
         <div class="row">
-        <div class="col s12 m8">
+        <div class="col s12 m8 center">
         <iframe src="/uploads/carousel/slide.html" class="carousel-iframe"></iframe>
         </div>
         <div class="col s12 m4">    
          <!-- Add counter here -->
-        <iframe scrolling="no" src="/uploads/counter.html" class="counter-iframe"></iframe>
+       
+        <div class="row">
+            <div class="col s12">
+              <div class="card card-1 blue-grey darken-1" style="background-image: url('/images/uhack.jpg');background-size: cover;background-repeat: no-repeat;">
+                <div class="card-content white-text">
+                  <span class="card-title">Card Title</span>
+                  <p>I am a very simple card. I am good at containing small bits of information.
+                  I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                  <a href="#">Register</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+        </div>
+        <div class="row hide-on-med-and-down">
+            <div class="container">
+             <iframe scrolling="no" src="/uploads/counter.html" class="counter-iframe"></iframe>
+             </div>
         </div>
     </div>
 
