@@ -99,8 +99,22 @@ body {
     bottom: 0px;
     text-align: center;
     width: 100%;
+    
+}
+
+.loaderfooterlinks {
     background-color: rgba(100,100,100,0.3);
     padding: 10px;
+}
+
+.loaderfooterlogos {
+    opacity: 0.7;
+}
+
+.loaderfooterlogos:hover {
+    opacity: 1;
+    transition: all 0.3s ease;
+
 }
 
 .fb {

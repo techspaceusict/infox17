@@ -1,8 +1,3 @@
-window.addEventListener('resize', function() {
-    "use strict";
-    window.location.reload();
-});
-
 var TxtType = function(el, toRotate, period) {
     this.toRotate = toRotate;
     this.el = el;

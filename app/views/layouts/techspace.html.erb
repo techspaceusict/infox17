@@ -68,6 +68,11 @@
         </div>
 
         <div class="loaderfooter">
+        <div class="row">
+          <div class="col m6"><a href="#" class="loaderfooterlogos" target="_blank"><img src="https://ultrahack.org/images/uh-red.png" height="30px" style="margin-top: 10px;"></a></div>
+          <div class="col m6"><a href="#" class="loaderfooterlogos" target="_blank"><img src="https://www.codingninjas.in/assets/images/CNLOGO.svg" height="50px"></a></div>
+        </div>
+          <div class="loaderfooterlinks" style="margin-bottom: 0">
           <a class="footerlinks" href="http://infoxpression.in/2016/" style="float: right;">
             InfoXpression '16</a>
           <a class="footerlinks" href="https://facebook.com/infoxpression">
@@ -75,6 +80,7 @@
           <a class="footerlinks" href="http://ipu.ac.in" style="float: left;">
             Techspace USICT | GGSIPU
           </a>
+          </div>
         </div>
 
       <!--End Canvas Content-->
@@ -94,7 +100,7 @@
               <a href="/" class="brand-logo center"><img src="/images/logo-large-darkbg.png"><div class="box2"></div></a>
               <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
               <ul class="left hide-on-med-and-down">
-                <li><a class="<% if action_name == "ts_about" %> activelink <% end %> ts-lmenu" href="/about/">About</a></li>
+                <li><a class="<% if action_name == "ts_about" %> activelink <% end %> ts-lmenu" href="/about/">About us</a></li>
                 <li><a class="<% if action_name == "ts_contact" %> activelink <% end %> ts-lmenu" href="/contact/">Contact Us</a></li>
                   <li><a class="<% if action_name == "ts_sponsors" %> activelink <% end %> ts-lmenu" href="/sponsors/">Sponsors</a></li>
               </ul>
@@ -124,7 +130,7 @@
         <!-- side navigaion -->
         <ul id="slide-out" class="side-nav">
 
-          <a href="#" data-activates="mobile-demo" class="button-collapse-inview"><i class="material-icons">arrow_back</i></a>
+          <a data-activates="mobile-demo" class="button-collapse-inview"><i class="material-icons" style="right: 0px;">arrow_back</i></a>
 
           <%if user_signed_in? %>
             <li>
