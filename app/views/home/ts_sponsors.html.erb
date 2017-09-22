@@ -4,16 +4,18 @@
 
 <% content_for :pgcontent do %>
     <link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto+Slab" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
     <div style="min-height:550px">
-        <div id="sponsors" class="container" style="background-color: white; padding-top: 20px; box-shadow: 2px 2px 2px 2px black; width: 85%;margin-top: 20px;">
-            <h2 style="text-shadow: 2px 2px 2px #f1f1f1; font-weight: 700; text-align: center; border:0 none; color: black;">OUR <span style="color:#db5726; font-family: 'Pacifico', cursive; font-size: 35px;">SPONSORS</span></h2>
+        <div id="sponsors" class="container" style="background-color: white; padding-top: 20px; box-shadow: 1px 1px 1px black; width: 85%;margin-top: 20px;">
+            <h2 style="text-shadow: 1px 1px 1px black; font-weight: 700; text-align: center; border:0 none; color: black; font-size: 9vh;">OUR <span style="color:#db5726;">SPONSORS</span></h2>
+            <div class="borderline1"></div>
 
         <br><br><br>
             <div class="row">
                 <h4>Title Sponsor</h4>
                 <br><br>
                 <div class="col m12 s12 center si1">
-                    <img src="https://www.codingninjas.in/assets/images/CNLOGO.svg">
+                    <img src="/uploads/sponsors/CNLOGO.svg">
                 <br><br><br><br>
                 </div>
             </div>
@@ -30,7 +32,7 @@
             </div>
             <div class="row">
                 <div class="col m6 s12 center si2">
-                    <img src="/uploads/sponsors/mithilatech.png">
+                    <img style="width: 200px;" src="/uploads/sponsors/mithilatech.png">
                 </div>
                 <div class="col m6 s12 center si2">
                     <img src="/uploads/sponsors/geeksforgeeks.png">
@@ -51,7 +53,7 @@
                 </div>
             </div>
             <div class="row">
-                <h4>Technical Partners</h4><br><br>
+                <h4>Technical Partners</h4><br><br><br>
                 <div class="col m4 s12 center si5">
                     <img src="/uploads/sponsors/spokentutorial.png">
                 </div>
@@ -64,14 +66,14 @@
                 </div>
             </div>
             <div class="row">
-                <h4>Media Partners</h4><br><br>
+                <h4>Media Partners</h4><br><br><br>
                 <div class="col m12 s12 center si6">
                     <img src="/uploads/sponsors/newshq.png">
                 <br><br><br><br>
                 </div>
             </div>
             <div class="row">
-                <h4>Social Impact partners</h4><br><br>
+                <h4>Social Impact partners</h4><br><br><br>
                 <div class="col m6 s12 center si7">
                     <img src="/uploads/sponsors/mash.png">
                 </div>
@@ -81,7 +83,7 @@
                 </div>
             </div>
             <div class="row">
-                <h4>Startup Partners</h4><br><br>
+                <h4>Startup Partners</h4><br><br><br>
                 <div class="col m4 s12 center si5">
                     <img src="/uploads/sponsors/xampaperz.png">
                 </div>
@@ -90,12 +92,12 @@
                 <br><br><br><br>
                 </div>
                 <div class="col m4 s12 center si5">
-                    <img src="https://avatars2.githubusercontent.com/u/19647763?v=4&s=460.png">
+                    <img style="width: 200px;" src="https://avatars2.githubusercontent.com/u/19647763?v=4&s=460.png">
                 <br><br><br><br>
                 </div>
             </div>
             <div class="row">
-                <h4>Insurance and Banking Partners</h4><br><br>
+                <h4>Insurance and Banking Partners</h4><br><br><br>
                 <div class="col m6 s12 center si9">
                     <img src="/uploads/sponsors/LIC.png">
                 </div>
@@ -105,7 +107,7 @@
                 </div>
             </div>
             <div class="row">
-                <h4>Education Partners</h4><br><br>
+                <h4>Education Partners</h4><br><br><br>
                 <div class="col m6 s12 center si10">
                     <img src="/uploads/sponsors/IMS.png">
                 </div>
@@ -120,41 +122,63 @@
 
 <style>
     .row > h4{
-        width: 60%;
-        padding: 5px 0;
-        background-color: black;
-        color: #ee7436;
+        width: 80%;
+        font-size: 25px;
+        color: black;
         text-align: center;
         text-decoration: none;
-        font-family: 'Roboto Slab', serif;
+        font-family: 'Bree Serif', serif;
+        /*box-shadow: 1px 1px 1px orange;*/
+        margin:auto;
 
     }
     .center{
         text-align: center;
     }
     .si1 img{
-        width: 100px;
+        width: 40vh;
     }
     .si2 img{
-        width: 200px;
+        width: 250px;
     }
     .si4 img{
-        width: 200px;
+        width: 250px;
     }
     .si5 img{
-        width: 200px;
+        width: 250px;
     }
     .si7 img{
-        width: 200px;
+        width: 250px;
     }
     .si8 img{
-        width: 200px;
+        width: 250px;
     }
     .si9 img{
-        width: 200px;
+        width: 250px;
     }
-    .si10    img{
-        width: 200px;
+    .si10 img{
+        width: 250px;
     }
+    .borderline1 {
+    width: 70%;
+    border-top: 2px solid black;
+    height: 2px;
+    margin: 15px auto 0;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.borderline1:before {
+    background-color: #fb6514;
+    border: 1px ridge #fff;
+    content: "";
+    height: 10px;
+    left: 50%;
+    margin-left: -100px;
+    position: absolute;
+    top: -5px;
+    width: 200px;
+}
+
 </style>
 <% end %>
