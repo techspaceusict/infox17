@@ -4,15 +4,18 @@
 
 <% content_for :pgcontent do %>
     <link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto+Slab" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
     <div style="min-height:550px">
         <div id="sponsors" class="container" style="background-color: white; padding-top: 20px; box-shadow: 1px 1px 1px black; width: 85%;margin-top: 20px;">
-            <h2 style="text-shadow: 1px 1px 1px black; font-weight: 700; text-align: center; border:0 none; color: black; font-size: 9vh;">OUR <span style="color:#db5726;">SPONSORS</span></h2>
+            <h2 style="text-shadow: 1px 1px 1px black; font-weight: 700; text-align: center; border:0 none; color: black; font-size: 12vh;">OUR <span style="color:#db5726;">SPONSORS</span></h2>
             <div class="borderline1"></div>
 
         <br><br><br>
             <div class="row">
-                <h4>Title Sponsor</h4>
+
+                <div class="gradient7">
+                    <h4><span></span>Title Sponsor</h4>
+                </div>
                 <br><br>
                 <div class="col m12 s12 center si1">
                     <img src="/uploads/sponsors/CNLOGO.svg">
@@ -20,7 +23,9 @@
                 </div>
             </div>
             <div class="row">
-                <h4>Event Sponsors</h4><br><br>
+                <div class="gradient7">
+                    <h4><span></span>Event Sponsors</h4>
+                </div><br><br>
                 <div class="col m6 s12 center si2">
                     <img src="/uploads/sponsors/codechef.png">
                 </div>
@@ -40,7 +45,9 @@
                 </div>
             </div>
             <div class="row">
-                <h4>Gaming Sponsors</h4><br><br>
+                <div class="gradient7">
+                    <h4><span></span>Gaming Sponsors</h4>
+                </div><br><br>
                 <div class="col m4 s12 center si4">
                     <img src="/uploads/sponsors/amd.png">
                 </div>
@@ -53,7 +60,9 @@
                 </div>
             </div>
             <div class="row">
-                <h4>Technical Partners</h4><br><br><br>
+                <div class="gradient7">
+                    <h4><span></span>Technical Partners</h4>
+                </div><br><br><br>
                 <div class="col m4 s12 center si5">
                     <img src="/uploads/sponsors/spokentutorial.png">
                 </div>
@@ -66,14 +75,18 @@
                 </div>
             </div>
             <div class="row">
-                <h4>Media Partners</h4><br><br><br>
+                <div class="gradient7">
+                    <h4><span></span>Media Partners</h4>
+                </div><br><br><br>
                 <div class="col m12 s12 center si6">
                     <img src="/uploads/sponsors/newshq.png">
                 <br><br><br><br>
                 </div>
             </div>
             <div class="row">
-                <h4>Social Impact partners</h4><br><br><br>
+                <div class="gradient7">
+                    <h4><span></span>Social Impact partners</h4>
+                </div><br><br><br>
                 <div class="col m6 s12 center si7">
                     <img src="/uploads/sponsors/mash.png">
                 </div>
@@ -83,7 +96,9 @@
                 </div>
             </div>
             <div class="row">
-                <h4>Startup Partners</h4><br><br><br>
+                <div class="gradient7">
+                    <h4><span></span>Startup Partners</h4>
+                </div><br><br><br>
                 <div class="col m4 s12 center si5">
                     <img src="/uploads/sponsors/xampaperz.png">
                 </div>
@@ -97,7 +112,9 @@
                 </div>
             </div>
             <div class="row">
-                <h4>Insurance and Banking Partners</h4><br><br><br>
+                <div class="gradient7">
+                    <h4><span></span>Insurance and Banking Partners</h4>
+                </div><br><br><br>
                 <div class="col m6 s12 center si9">
                     <img src="/uploads/sponsors/LIC.png">
                 </div>
@@ -107,7 +124,9 @@
                 </div>
             </div>
             <div class="row">
-                <h4>Education Partners</h4><br><br><br>
+                <div class="gradient7">
+                    <h4><span></span>Education Partners</h4>
+                </div><br><br><br>
                 <div class="col m6 s12 center si10">
                     <img src="/uploads/sponsors/IMS.png">
                 </div>
@@ -123,11 +142,11 @@
 <style>
     .row > h4{
         width: 80%;
-        font-size: 25px;
+        font-size: 35px;
         color: black;
         text-align: center;
         text-decoration: none;
-        font-family: 'Bree Serif', serif;
+        font-family: 'Righteous', cursive;
         /*box-shadow: 1px 1px 1px orange;*/
         margin:auto;
 
@@ -179,6 +198,27 @@
     top: -5px;
     width: 200px;
 }
-
+.gradient7 {
+    text-align: center;
+    background: #474747;
+    width: 70%;
+    margin: auto;
+}
+.gradient7 h4 {
+    font-family: 'Righteous', cursive;
+    position: relative;
+    margin: 0;
+    font-size: 40px;
+    color: white;
+    letter-spacing: -2px;
+}
+.gradient7 h4 span {
+    background: url("/uploads/stripe.png") repeat-x;
+    position: absolute;
+    bottom: -0.1em;
+    display: block;
+    width: 100%;
+    height: 35px;
+}
 </style>
 <% end %>
