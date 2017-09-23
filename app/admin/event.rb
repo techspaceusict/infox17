@@ -18,6 +18,7 @@ end
 
 
 index do
+	column  :id
 	column  :Eventidm
     column   :Name
     column   :image

@@ -16,5 +16,12 @@ ActiveAdmin.register Query do
   permit_params :name, :email, :message
 end
 
+index do
+    column   :id
+	column   :name
+    column   :email
+    column   :message
+
+end
 
 end

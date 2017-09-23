@@ -12,4 +12,15 @@ ActiveAdmin.register User do
 #   permitted
 # end
 
+index do
+	column    :id
+	column    :email 
+    column    :provider 
+    column    :uid 
+    column    :name 
+    column    :profile 
+
+end
+
+
 end
