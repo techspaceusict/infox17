@@ -60,7 +60,9 @@ class EventController < ApplicationController
     id=params[:Eventidm]
     event=Event.find_by_Eventidm(id);
    # byebug;
-    if event
+
+
+    if Registration.where(:user_id=>current_user.id,:event_id=>event.id).first
       return redirect_to '/myevents'
     else
       Registration.create(:user_id=>current_user.id,:event_id=>event.id);
