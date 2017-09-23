@@ -12,4 +12,6 @@ ActiveAdmin.register Registration do
 #   permitted
 # end
 
+
+
 end
