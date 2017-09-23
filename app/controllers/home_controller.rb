@@ -42,8 +42,8 @@ class HomeController < ApplicationController
 	end
 
 
-  def ts_team
-  end
+    def ts_team
+    end
 
 
 end
