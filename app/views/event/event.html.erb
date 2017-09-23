@@ -75,7 +75,7 @@
                         <div class="col s12"style="padding-top:5px;padding-bottom:5px;background:#F44336;color:white;font-size:16px;margin-top:20px"><center>You have already registered!</center></div>
                     </a>
                 <%else%>
-                    <div class="col s12" style="padding-top:5px;padding-bottom:5px;background:#000000;color:white;font-size:16px;margin-top:20px"><center><%= link_to "Register for Event ", url_for(controller: :event, action: :eventregister,:Event_id=>@event.Event_id), method: :post,class:"fontcolor", :onclick => 'return confirm("Do you really want to submit the form?")';%></center></div>
+                    <div class="col s12" style="padding-top:5px;padding-bottom:5px;background:#000000;color:white;font-size:16px;margin-top:20px"><center><%= link_to "Register for Event ", url_for(controller: :event, action: :eventregister,:Eventidm=>@event.Eventidm), method: :post,class:"fontcolor", :onclick => 'return confirm("Do you really want to submit the form?")';%></center></div>
               	<%end%>
             <%else%>
                <a href="/users/auth/facebook">

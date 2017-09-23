@@ -13,7 +13,7 @@ ActiveAdmin.register Event do
 # end
 
 ActiveAdmin.register Event do
-  permit_params :Event_id, :Name, :image, :about, :facebook_link,:organizer2_phone,:organizer2_name,:organizer1_phone,:organizer2_name,:date,:time
+  permit_params :Name, :image, :about, :facebook_link,:organizer2_phone,:organizer2_name,:organizer1_phone,:organizer1_name,:date,:time,:venue,:Eventidm
 end
 
 end

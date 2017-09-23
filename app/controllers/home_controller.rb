@@ -19,47 +19,31 @@ class HomeController < ApplicationController
 	def index
 	end
 
-  def oindex
-  end
 
 	def about
 	end
 
-  def oabout
-  end
 
 	def schedule
 	end
 
-  def oschedule
-	end
 
 	def events
 		@event=Event.all();
 		#byebug;
 	end
 
-  def oevents
-		@event=Event.all();
-		#byebug;
-	end
 
 	def sponsors
 	end
 
-  def oSponsors
-	end
 
 	def contact
 	end
 
-  def oContact
-	end
 
-    def ts_team
-    end
+  def ts_team
+  end
 
-    def dummy
-    end
 
 end

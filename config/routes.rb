@@ -34,7 +34,7 @@ Rails.application.routes.draw do
 
   get '/'=> 'home#ts_index'
 
-  get '/home' => 'home#ts_index'
+  #get '/home' => 'home#ts_index'
 
   get '/ts_team'=>'home#ts_team'
 
@@ -52,23 +52,7 @@ Rails.application.routes.draw do
 
   get '/event'=>'event#event'
 
-  # Temporary GET Requests
 
-  get '/dummy' => 'home#dummy'
-
-  get '/ohome' => 'home#index'
-
-  get '/oabout' => 'home#about'
-
-  get '/oteam'=>'home#team'
-
-  get '/oevents'=>'home#oevents'
-
-  get '/osponsors'=>'home#Sponsors'
-
-  get '/oContact'=>'home#Contact'
-
-  # POST Requests
 
   get '/event/event'=>'event#event'
 

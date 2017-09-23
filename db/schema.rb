@@ -47,7 +47,7 @@ ActiveRecord::Schema.define(version: 20170817161148) do
   end
 
   create_table "events", force: :cascade do |t|
-    t.string   "Event_id"
+    t.string   "Eventidm"
     t.string   "Name"
     t.string   "image"
     t.string   "about"
@@ -101,7 +101,7 @@ ActiveRecord::Schema.define(version: 20170817161148) do
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
-
+a
   add_foreign_key "registrations", "events"
   add_foreign_key "registrations", "users"
 end

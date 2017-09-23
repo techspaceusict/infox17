@@ -241,6 +241,10 @@ background: linear-gradient(to bottom, #ff8400, #E44D26); /* W3C, IE 10+/ Edge, 
 	font-family: 'Julius Sans One', sans-serif;
 
 }
+
+.circle {
+  height: 50px;
+}
 /*=============== END NAV =================*/
 
 /*=============== MODAL ====================*/

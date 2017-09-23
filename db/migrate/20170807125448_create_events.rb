@@ -1,7 +1,7 @@
 class CreateEvents < ActiveRecord::Migration[5.0]
   def change
     create_table :events do |t|
-      t.string :Event_id
+      t.string :Eventidm
       t.string :Name
       t.string :image
       t.string :about

@@ -4,8 +4,12 @@ class EventController < ApplicationController
   
   def event
   	id=params[:id]
-    @event=Event.find_by_Event_id(id);
+    @event=Event.find_by_Eventidm(id);
     
+
+    if @event==nil
+      return redirect_to '/events';
+    end
 
     if current_user
       @user=Registration.where(:user_id=>current_user.id,:event_id=>@event.id).first;
@@ -25,7 +29,7 @@ class EventController < ApplicationController
 
   def addevents
 
-  id = params[:Event_id]
+  id = params[:Eventidm]
   name = params[:Event_name]
   detail = params[:Event_detail]
   user=params[:user]
@@ -44,7 +48,7 @@ class EventController < ApplicationController
   file.write(image.read)
   end
 
-    Event.create(:Event_id=>id,:Name=>name,:about=>detail,:image=>new_filename,:facebook_link =>facebooklink,:organizer1_name=>organizer1name,:organizer1_phone=>organizer1phone,:organizer2_name=>organizer2name,:organizer2_phone=>organizer2phone,:venue=>ven,:date=>date,:time=>time);
+    Event.create(:Eventidm=>id,:Name=>name,:about=>detail,:image=>new_filename,:facebook_link =>facebooklink,:organizer1_name=>organizer1name,:organizer1_phone=>organizer1phone,:organizer2_name=>organizer2name,:organizer2_phone=>organizer2phone,:venue=>ven,:date=>date,:time=>time);
 
     return redirect_to '/events'
 
@@ -53,8 +57,8 @@ class EventController < ApplicationController
 
   def eventregister
 
-    id=params[:Event_id]
-    event=Event.find_by_Event_id(id);
+    id=params[:Eventidm]
+    event=Event.find_by_Eventidm(id);
    # byebug;
     Registration.create(:user_id=>current_user.id,:event_id=>event.id);
     return redirect_to '/events'
