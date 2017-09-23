@@ -135,14 +135,14 @@
           <%if user_signed_in? %>
             <li>
               <div class="user-view background">
-                <div>
-                  <!-- <img src="images/logo-good.png" class="center" height="150px"> -->
-                </div>
                 <a href="#!user"><img class="circle" src="<%= current_user.profile%>"></a>
                 <a href="#!name"><span class="white-text name"><%= current_user.name%></span></a>
                 <a href="#!email"><span class="white-text email"><%= current_user.email%></span></a>
+                <a href="/users/sign_out" class="center">Log Out</a>
+
               </div>
             </li>
+
           <%else%>
           <!-- <p style="color:#FFFFFF; text-align:center;">User Not Logged!!!</p> -->
           <p style=""><a class="waves-effect waves-light btn social facebook" style="background-color:#3B5998" href="/users/auth/facebook"><i class="fa fa-facebook"></i>&nbsp;Sign in with facebook</a></p>
