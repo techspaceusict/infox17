@@ -39,7 +39,4 @@ index do
 end
 
 
-end
-
-
-  
+end  
