@@ -60,17 +60,21 @@ class EventController < ApplicationController
     id=params[:Eventidm]
     event=Event.find_by_Eventidm(id);
    # byebug;
-    Registration.create(:user_id=>current_user.id,:event_id=>event.id);
-    return redirect_to '/events'
-
+    if event
+      return redirect_to '/myevents'
+    else
+      Registration.create(:user_id=>current_user.id,:event_id=>event.id);
+      return redirect_to '/events'
+    end
     #byebug;
   end
 
  def eventquery
 
+user=params["user"]
+email=user["address"]
  name=params["name"]
- email=params["email"]
- query=params["query"]
+ query=params["address"]
 
 
 Query.create(:name=>name,:email=>email,:message=>query);
