@@ -184,13 +184,13 @@ nav a:focus:before {
 }
 
 .ts-lmenu {
-	padding-right: 1.8em;
-	padding-left: 1.8em;
+	padding-right: 1.5em;
+	padding-left: 1.5em;
 }
 
 .ts-rmenu {
-	padding-left: 1.8em;
-	padding-right: 1.8em;
+	padding-left: 1.5em;
+	padding-right: 1.5em;
 }
 
 @media (max-width: 1200px) {
@@ -262,9 +262,19 @@ background: linear-gradient(to bottom, #ff8400, #E44D26); /* W3C, IE 10+/ Edge, 
 
 /*=============== MODAL ====================*/
 /*modal width override*/
-@media(min-width: 700px){
+@media(min-width: 1000px){
 .modal {
        width: 40% !important;
+}
+}
+
+.modal {
+    background-color: #364346;
+}
+
+@media only screen and (max-width: 992px){
+.modal {
+    width: 100%;
 }
 }
 
