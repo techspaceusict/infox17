@@ -25,7 +25,7 @@ gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-twitter'
 
-#gem "administrate"
+gem "administrate"
 
 
 gem "figaro"
