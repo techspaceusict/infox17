@@ -18,19 +18,41 @@
 
        <div class="row">
         <div class="col s12">
-          <div class="card large">
-            <div class="card-image">
-              <img src="images/uhack.jpg">
-              <span class="card-title">UHack Hackathon</span>
-              <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
-            </div>
-            <div class="card-content">
-              <p>InfoXpression shouts out to all the designers and developers out there, who can't wait to bring their next idea to life. We at InfoX welcome you to the overnight hackathon to work over 24 sleepless hours with one great idea and a team of tireless creative minds.</p>
-            </div>
-            <div class="card-action">
-              <a href="https://www.facebook.com/events/1625273884158569/">FB page</a>
-            </div>
-          </div>
+        <div class="carousel carousel-slider" data-indicators="true">
+            <div class="carousel-fixed-item center">
+          <a class="btn waves-effect white grey-text darken-text-2">button</a>
+        </div>
+        <div class="carousel-item">
+          <div class="card large" id="card-hackathon">
+                <div class="card-image" >
+                  <img src="images/uhack.jpg">
+                  <span class="card-title" style="text-align: center;width: 100%;font-family: 'Julius Sans One', sans-serif; font-size:30px">UHack Hackathon</span>
+                </div>
+                <div class="card-content">
+                  <p>InfoXpression shouts out to all the designers and developers out there, who can't wait to bring their next idea to life. We at InfoX welcome you to the overnight hackathon to work over 24 sleepless hours with one great idea and a team of tireless creative minds.</p>
+                </div>
+                <div class="card-action">
+                  <a href="https://www.facebook.com/events/1625273884158569/"><i class="fa fa-facebook"></i></a>
+                  <a href="/events/" id="register-float-card">Register</a>
+                </div>
+              </div>
+        </div>
+        <div class="carousel-item">
+          <div class="card large" id="card-hackathon">
+                <div class="card-image" >
+                  <img src="images/uhack.jpg">
+                  <span class="card-title" style="text-align: center;width: 100%;font-family: 'Julius Sans One', sans-serif; font-size:30px">UHack Hackathon</span>
+                </div>
+                <div class="card-content">
+                  <p>InfoXpression shouts out to all the designers and developers out there, who can't wait to bring their next idea to life. We at InfoX welcome you to the overnight hackathon to work over 24 sleepless hours with one great idea and a team of tireless creative minds.</p>
+                </div>
+                <div class="card-action">
+                  <a href="https://www.facebook.com/events/1625273884158569/">FB page</a>
+                  <a href="/events/" id="register-float-card">Register</a>
+                </div>
+              </div>
+        </div>
+              
         </div>
       </div>
         </div>
@@ -45,5 +67,9 @@
 <% end %>
 
 <% content_for :pgscripts do %>
+<script type="text/javascript">
+   $('.carousel.carousel-slider').carousel({fullWidth: true});
+   // setInterval(function() { $('.carousel').carousel('next'); }, 5000)
+</script>
 	<%= javascript_include_tag 'packaged' %>
 <% end %>

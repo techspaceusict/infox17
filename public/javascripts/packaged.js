@@ -738,6 +738,8 @@ function onDocumentTouchMove(event) {
 
 $(document).ready(function() {
     // Add smooth scrolling to all links
+    setTimeout(function(){ $('.preloader').fadeOut(600, function(){ $(this).remove();});}, 1000);
+
     $("#scrollDownButton").on('click', function(event) {
 
         // Make sure this.hash has a value before overriding default behavior

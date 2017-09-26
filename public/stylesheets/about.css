@@ -1,51 +1,66 @@
 .about-header {
-  color:#FFFFFF;
-  background-color: rgba(0,0,0,0.5);
-  text-align: center;
+    color: #FFFFFF;
+    background-color: rgba(0, 0, 0, 0.2);
+    text-align: center;
 }
 
+
 .about-content {
-  background: rgba(255,255,255,0.6);
-  padding: 50px 50px;
-  margin: 30px 0px;
-  border-top-right-radius: 50px;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 50px 50px;
+    margin: 30px 0px;
+    border-top-right-radius: 50px;
 }
 
 .about-content p {
-  text-align: justify;
+    text-align: justify;
 }
 
-.about-events-detail-days, .about-events-detail-events, .about-events-detail-brains {
-  height: 200px;
-  width: 200px;
-  margin: auto;
-  color: #db5726;
-  text-align: center;
-  padding-top: 0px;
-  border-radius: 50%;
+.about-events-detail-days,
+.about-events-detail-events,
+.about-events-detail-brains {
+    height: 200px;
+    width: 200px;
+    margin: auto;
+    color: #db5726;
+    text-align: center;
+    padding-top: 0px;
+    border-radius: 50%;
 }
 
 .about-events-detail-days {
-  background-color: #AAAAAA;
-  border: solid 1px #EEEEEE;
+    background-color: #AAAAAA;
+    border: solid 1px #EEEEEE;
 }
 
 .about-events-detail-events {
-  background-color: #CCCCCC;
-  border: solid 1px #CCCCCC;
+    background-color: #CCCCCC;
+    border: solid 1px #CCCCCC;
 }
 
 .about-events-detail-brains {
-  background-color: #EEEEEE;
-  border: solid 1px #AAAAAA;
+    background-color: #EEEEEE;
+    border: solid 1px #AAAAAA;
 }
 
-.about-events-detail-days h1, .about-events-detail-events h1, .about-events-detail-brains h1{
-  font-size: 70px;
-  margin-top: 50px;
+.about-events-detail-days h1,
+.about-events-detail-events h1,
+.about-events-detail-brains h1 {
+    font-size: 70px;
+    margin-top: 50px;
 }
 
-.about-events-detail-days p, .about-events-detail-events p, .about-events-detail-brains p {
-  font-size: 20px;
-  margin-top: -30px;
+.about-events-detail-days p,
+.about-events-detail-events p,
+.about-events-detail-brains p {
+    font-size: 20px;
+    margin-top: -30px;
+}
+
+.ipu-logo {
+    transition: all 1s ease;
+}
+
+.ipu-logo:hover {
+    transform: scale(1.1);
 }

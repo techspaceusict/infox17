@@ -139,7 +139,7 @@ nav .nav-wrapper {
 
 nav ul li a {
 	font-size: 23px;
-	/*height: 75px;*/
+	height: 64px;
 	font-family: 'Berkshire Swash', cursive;
 }
 
@@ -193,6 +193,19 @@ nav a:focus:before {
 	padding-right: 1.8em;
 }
 
+@media (max-width: 1200px) {
+    .ts-lmenu {
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+
+    .ts-rmenu {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    
+}
 .button-collapse-inview {
   height: 100px;
 }
@@ -253,6 +266,10 @@ background: linear-gradient(to bottom, #ff8400, #E44D26); /* W3C, IE 10+/ Edge, 
 .modal {
        width: 40% !important;
 }
+}
+
+.modal-content {
+  padding: 0px !important;  
 }
 /*=============== END MODAL =================*/
 

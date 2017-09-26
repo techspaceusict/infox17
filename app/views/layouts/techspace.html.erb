@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <%= csrf_meta_tags %>
     <title>InfoX 2017 | USICT GGSIPU</title>
-    <link rel="icon" href="/uploads/logo.jpg" type="image/ico">
+    <link rel="icon" href="/images/logo-good.png" type="image/x-icon">
 
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -43,6 +43,7 @@
 
 
     <% if action_name == "ts_index" %>
+    <div class="preloader"><img src="/images/logo-good.png" class="logoCanvas" width="150px"></div>
     <canvas class="mainCanvas"></canvas>
 
     <div class="main">
@@ -60,7 +61,7 @@
         <div class="headercard">
             <img src="/images/logo-good.png" class="logoCanvas" width="150px"><br><br>
             <img src="/images/logo-text.png" width="320px"><br>
-            <h5 class="contact-info" style="font-size: 20px">OCT 13th-15th 2017</h5>
+            <h5 class="contact-info" style="font-size: 23px">OCT 13th-15th 2017</h5>
             <h5 class="contact-info">TECHFEST USICT | GGSIPU</h5>
             <h5 class="contact-info">Celebrating the sense of Belonging</h5>
 
@@ -119,7 +120,7 @@
                 </a>
                 </li>
                 <% else %>
-                <li><a class="<% if action_name == "ts_login" %> activelink <% end %> ts-lmenu" onclick="openModal()">Login/Signup</a></li>
+                <li><a class="<% if action_name == "ts_login" %> activelink <% end %> ts-lmenu" onclick="openModal()">Login/Register</a></li>
                 <% end %>
               </ul>
             </div>
