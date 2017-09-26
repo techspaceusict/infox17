@@ -12,11 +12,11 @@
 
 class HomeController < ApplicationController
 
-  #before_action :authenticate_user!
 
   layout 'techspace'
 
 	def index
+		
 	end
 
 
@@ -44,6 +44,8 @@ class HomeController < ApplicationController
 
     def ts_team
     end
+ 
 
+    
 
 end
