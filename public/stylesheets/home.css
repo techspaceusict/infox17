@@ -8,9 +8,16 @@ html {
 body {
     overflow-x: hidden;
     background-color: white;
-    background-image: url('/images/1.jpg');
+    /*background-image: url('/images/1.jpg');*/
 }
 
+.background-canvas {
+    background-image: url('/images/1.jpg');   
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -100;  
+}
 .preloader {
     width: 100%;
     height: 100%;
@@ -187,6 +194,30 @@ body {
 
 #card-hackathon {
     margin-top : 0px;
+}
+
+.campus-image {
+    position: relative;
+    height: 500px;
+    margin: 0 auto;
+    text-align: center;
+    animation: campus 3s infinite alternate linear;
+    margin-top: 100px;
+}
+
+.campus-div {
+    width: 100%;
+    text-align: center;
+}
+
+
+@keyframes campus {
+    0% {
+    transform: scale(1);
+}
+100% {
+    transform: scale(1.02);
+}
 }
 
 

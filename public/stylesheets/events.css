@@ -27,7 +27,7 @@
     width: 100%;
     font-size: 16px;
     margin-top: 5vh;
-    border: 2px solid black;
+    border: 2px solid grey;
     border-radius:5px;
     padding-left: 5px;
 }
@@ -42,6 +42,10 @@ gap[type="radio"]:checked + label::before, .with-gap[type="radio"]:checked + lab
     border: 2px solid #EE7436;
     background: #EE7436;
     color:  #EE7436;
+}
+
+label, input {
+  font-family: 'Julius Sans One', sans-serif;
 }
 
 .category {
@@ -231,5 +235,6 @@ transition: 0.3s all linear;
     color: white;
     text-align: center;
 }
+
 
 /*EVENT PAGE CSS ENDS*/

@@ -1,5 +1,8 @@
 body {
 	overflow: auto !important;
+  scroll-snap-points-y: repeat(100vh);
+  scroll-snap-type: mandatory;
+  scroll-snap-destination: 100vh 0vh;
 }
 /*=========== SCROLL BAR ===============*/
 body::-webkit-scrollbar {
@@ -13,16 +16,14 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background-color: #f3622f;
   outline: 1px solid slategrey;
+
 }
 
 /*=========== END SCROLL BAR ===============*/
 
 #section2 {
-  background: rgb(54,67,70);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover;
+  background-color: white;
+
 }
 
 a{
@@ -113,7 +114,7 @@ outline: none;
 }
 
 .brand-logo img{
-	height: 50px;
+	height: 40px;
 }
 
 @media(max-width: 700px){
@@ -288,7 +289,7 @@ background: linear-gradient(to bottom, #ff8400, #E44D26); /* W3C, IE 10+/ Edge, 
 #footer{
 	padding-top: 20px;
 	padding-bottom: 20px;
-	background-color:rgba(70,70,70,0.5);
+	background-color:rgb(70,70,70);
 	bottom: 20px;
 	border-top: 5px solid #ee7436;
 	overflow-x:hidden;
@@ -429,4 +430,8 @@ background: linear-gradient(to bottom, #ff8400, #E44D26); /* W3C, IE 10+/ Edge, 
     position: absolute;
     top: -5px;
     width: 40px;
+}
+
+.julius {
+  font-family: 'Julius Sans One', sans-serif;
 }

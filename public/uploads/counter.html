@@ -180,8 +180,25 @@ for(var u=0,w=a.length;w>u;++u){var x=a[u],y=this._getTextWidth(x);if(i&&y>l)for
         $('.countdown').final_countdown({
             'start': 1505433600,
             'end': 1507852800,
-            'now': new Date().getTime() / 1000        
-        });
+            'now': new Date().getTime() / 1000,
+            'seconds': {
+                  borderColor: '#ee7436',
+                  borderWidth: '6'
+              },
+            'minutes': {
+                borderColor: '#ee7436',
+                borderWidth: '6'
+            },
+            'hours': {
+                borderColor: '#ee7436',
+                borderWidth: '6'
+            },
+            'days': {
+                borderColor: '#ee7436',
+                borderWidth: '6'
+            }        
+    });
+
     });
 </script>
 

@@ -26,3 +26,15 @@
     background-size: cover;
     min-height: 100vh;
 }
+
+label, input {
+  font-family: 'Julius Sans One', sans-serif;
+}
+
+.about-content {
+    background: #fff;
+    padding: 25px 25px;
+    border-top-left-radius:  50px;
+    border-top-right-radius:  50px;
+    border: 2px solid #526266;
+}
