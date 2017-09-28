@@ -12,18 +12,23 @@ body {
 }
 
 .background-canvas {
-    background-image: url('/images/1.jpg');   
+    background-image: url('/images/1.jpg');
     width: 100%;
     height: 100%;
     position: fixed;
-    z-index: -100;  
+    z-index: -100;
+}
+
+#section2 {
+  background: white !important;
+
 }
 .preloader {
     width: 100%;
     height: 100%;
     position: absolute;
     background-color: white;
-    z-index: 2000000000; 
+    z-index: 2000000000;
     padding-top: 25vh;
     text-align: center;
 }
@@ -102,7 +107,19 @@ body {
     animation: logo 3s infinite alternate;
 }
 
+.event-snapshot {
+  display: block;
+  margin-top: 20px; 
 
+}
+
+.event-snapshot img {
+  margin-top: 80px;
+}
+
+.campus-image {
+    transform: rotateY(1deg);
+}
 @keyframes logo {
     0% {
     transform: scale(1);
@@ -119,7 +136,6 @@ body {
     bottom: 0px;
     text-align: center;
     width: 100%;
-    
 }
 
 .loaderfooterlinks {
@@ -160,7 +176,7 @@ body {
     #scrollDownButton {
         bottom: 30px;
     }
-    
+
 }
 
 .carousel-iframe {
@@ -189,13 +205,14 @@ body {
 
 #register-float-card {
     float: right;
-    margin-right: 0px; 
-} 
+    margin-right: 0px;
+}
 
 #card-hackathon {
     margin-top : 0px;
 }
 
+/*
 .campus-image {
     position: relative;
     height: 500px;
@@ -208,7 +225,7 @@ body {
 .campus-div {
     width: 100%;
     text-align: center;
-}
+}*/
 
 
 @keyframes campus {
@@ -225,12 +242,11 @@ body {
 
 
 
-/*=========== SVG Animation css ==============
-
-.path {
+path,rect {
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
-  animation: dash 5s linear alternate infinite;
+  animation: dash 10s linear alternate infinite;
+  animation-delay: 3s;
 }
 
 @keyframes dash {
@@ -242,4 +258,93 @@ body {
   }
 }
 
-==============================================*/
+.stripped {
+  padding: 2.25em 1.6875em;
+  background-image: -webkit-repeating-linear-gradient(135deg, rgba(0,0,0,.3), rgba(0,0,0,.3) 1px, transparent 2px, transparent 2px, rgba(0,0,0,.3) 3px);
+  background-image: -moz-repeating-linear-gradient(135deg, rgba(0,0,0,.3), rgba(0,0,0,.3) 1px, transparent 2px, transparent 2px, rgba(0,0,0,.3) 3px);
+  background-image: -o-repeating-linear-gradient(135deg, rgba(0,0,0,.3), rgba(0,0,0,.3) 1px, transparent 2px, transparent 2px, rgba(0,0,0,.3) 3px);
+  background-image: repeating-linear-gradient(135deg, rgba(0,0,0,.3), rgba(0,0,0,.3) 1px, transparent 2px, transparent 2px, rgba(0,0,0,.3) 3px);
+  -webkit-background-size: 4px 4px;
+  -moz-background-size: 4px 4px;
+  background-size: 4px 4px;
+  background-color: rgba(0,0,0,0.4);
+  
+  font-family: 'Cousine', monospace;
+  border: 2px solid #f3622f;
+  border-top: none;
+  display: none;    
+  left : 25%;
+  position: absolute;
+  top: 0px;
+  width: 50%;
+  -webkit-box-shadow: inset 0px 2px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: inset 0px 2px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: inset 0px 2px 5px 0px rgba(0,0,0,0.75);
+}
+
+
+  .dotted {
+  padding: 2.25em 1.6875em;
+  background-image: -webkit-repeating-radial-gradient(center center, rgba(0,0,0,.5), rgba(0,0,0,.5) 1px, transparent 1px, transparent 100%);
+  background-image: -moz-repeating-radial-gradient(center center, rgba(0,0,0,.5), rgba(0,0,0,.5) 1px, transparent 1px, transparent 100%);
+  background-image: -ms-repeating-radial-gradient(center center, rgba(0,0,0,.5), rgba(0,0,0,.5) 1px, transparent 1px, transparent 100%);
+  background-image: repeating-radial-gradient(center center, rgba(0,0,0,.5), rgba(0,0,0,.5) 1px, transparent 1px, transparent 100%);
+  -webkit-background-size: 3px 3px;
+  -moz-background-size: 3px 3px;
+  background-size: 3px 3px;
+ 
+  font-family: 'Cousine', monospace;
+  border: 2px solid #f3622f;
+  display: none;    
+  left : 25%;
+  position: absolute;
+  top: 0px;
+  width: 50%;
+  -webkit-box-shadow: inset 0px 2px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: inset 0px 2px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: inset 0px 2px 5px 0px rgba(0,0,0,0.75); 
+  }
+
+ .stripped-title {
+    color: #f3622f;
+    margin-bottom: 0px;
+ }
+
+.stripped-text {
+    font-weight: 500;
+    font-size: 16px;
+
+}
+
+.stripped hr {
+    height: 1px;
+    border: 0;
+    background-color: hsla(0,0%,100%,.25);
+    margin: 0;
+    display: block;
+    border-right: 1px solid #fff;
+    border-left: 24px solid #e8f2ff;
+    border-left: 26px solid #e8f2ff;
+}
+
+
+.closestripped {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-color: transparent;
+    outline: none;
+    border: 2px solid #fd5e3a;
+    color: white;
+    margin-top: -2px;
+    margin-right: -2px;
+
+    -webkit-transition: all .5s ease-in 0s;
+    -transition: all .5s ease-in 0s;
+    -o-transition: all .5s ease-in 0s;
+    transition: all .5s; 
+}
+
+.closestripped:hover {
+    background-color: #fd5e3a;
+}
