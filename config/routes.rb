@@ -10,6 +10,10 @@
 
 Rails.application.routes.draw do
 
+  get 'update_profile/profile'
+
+  get 'update_profile/show'
+
   get 'event/event'
 
   devise_for :admin_users, ActiveAdmin::Devise.config
@@ -52,6 +56,9 @@ Rails.application.routes.draw do
 
   get '/event'=>'event#event'
 
+  get '/profile'=>'update_profile#profile'
+  post '/update'=>'update_profile#update'
+  get '/show'=>'update_profile#show'
 
 
   get '/event/event'=>'event#event'
