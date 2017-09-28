@@ -21,8 +21,7 @@ body {
 
 #section2 {
   background: white !important;
-  border-right: 2px solid rgb(70,70,70);
-
+  
 }
 .preloader {
     width: 100%;
@@ -110,11 +109,12 @@ body {
 
 .event-snapshot {
   display: block;
+   height: 600px;
 
 }
 
-.event-snapshot img {
-  margin-top: 80px;
+#campus {
+  height: 1000px;
 }
 
 .campus-image {
@@ -366,6 +366,9 @@ body {
     background-size: 100px 40px;
     background-position: 0 0;
     background-repeat: no-repeat;
+    border: 2px solid #ccc;
+    border-right: none;
+    border-radius: 2px;
 }
 
 .terminal {
@@ -398,4 +401,72 @@ body {
   outline: 1px solid slategrey;
 
 }
+
+
+.logo-event-svg {
+  animation: logo-event 3s infinite alternate linear;
+}    
+
+#anim1 {
+    animation-delay: 1.5s;
+}
+
+#anim2 {
+    animation-delay: 1s;
+}
+
+#anim3 {
+    animation-delay: 2s;
+}
+
+#anim4 {
+    animation-delay: 3s;
+}
+
+@keyframes logo-event {
+
+     0% {
+        transform: translate(0px, 0px);
+    }
+
+    100% {
+        transform: translate(0px, 15px);
+    }
+
+}
 /*================ END TERMINAL ================*/
+
+paths {
+  -webkit-animation: pulsate 5s ease-out;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation: pulsate 5s ease-out;
+  -moz-animation-iteration-count: infinite;
+  -ms-animation: pulsate 5s ease-out;
+  -ms-animation-iteration-count: infinite;
+  animation: pulsate 5s ease-out;
+  animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes pulsate {
+  0%    { opacity:0.4; stroke-width: 3; }
+  50%   { opacity:1.0; stroke-width: 5; }
+  100%  { opacity:0.4; stroke-width: 3; }
+}
+
+@-moz-keyframes pulsate {
+  0%    { opacity:0.4; stroke-width: 3; }
+  50%   { opacity:1.0; stroke-width: 5; }
+  100%  { opacity:0.4; stroke-width: 3; }
+}
+
+@-ms-keyframes pulsate {
+  0%    { opacity:0.4; stroke-width: 3; }
+  50%   { opacity:1.0; stroke-width: 5; }
+  100%  { opacity:0.4; stroke-width: 3; }
+}
+
+@keyframes pulsate {
+  0%    { opacity:0.4; stroke-width: 3; }
+  50%   { opacity:1.0; stroke-width: 5; }
+  100%  { opacity:0.4; stroke-width: 3; }
+}

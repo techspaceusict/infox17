@@ -1058,10 +1058,10 @@ var commands = {
 	 if (commands.hasOwnProperty(key))
 	 	terminal.response("|__ " + key);
 	},
-	'clear' : function(terminal){ 
+	'clear()' : function(terminal){ 
 	terminal.clear();
 	},
-	'beep' : function(terminal){ 
+	'beep()' : function(terminal){ 
 	terminal.beep();
 	},
 	'game' : function(terminal){ 
@@ -1069,9 +1069,12 @@ var commands = {
 	terminal.response("|__############Initializing game###########__|");
 	
 	},
-	'terminal.exit' : function(terminal){ 
-	terminal.response("|__############Exiting Terminal###########__|");
-	setTimeout(function(){window.location = "http://infoxpression.in"},3000);
+	'exit()' : function(terminal){ 
+	terminal.response("|__########Exiting Terminal#######__|", function() {terminal.clear();});
+	setTimeout(function() { $('.Terminal').css("display", "none");  
+        if($( window ).width() < 700)
+        $('.terminal').css("width", "0px"); }, 5000);
+
 
 	},
 	'sitemap' : function(terminal){ 
@@ -1088,7 +1091,13 @@ var commands = {
             },
         	});
     
-	}
+	},
+	// 'register_fb' : function(terminal) {
+	// 	window.location = "/users/auth/facebook"
+	// }
+	// 'register_google' : function(terminal) {
+	// 	window.location = "/users/auth/google"
+	// }
 }
 
 

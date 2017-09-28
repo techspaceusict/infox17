@@ -261,6 +261,7 @@ background: linear-gradient(to bottom, #ff8400, #E44D26); /* W3C, IE 10+/ Edge, 
 .modal {
        width: 40% !important;
 }
+
 }
 
 .modal {
@@ -271,6 +272,7 @@ background: linear-gradient(to bottom, #ff8400, #E44D26); /* W3C, IE 10+/ Edge, 
 .modal {
     width: 100%;
 }
+
 }
 
 .modal-content {
@@ -480,3 +482,5 @@ background: linear-gradient(to bottom, #ff8400, #E44D26); /* W3C, IE 10+/ Edge, 
     background-color: #fd5e3a;
     border: 2px solid white;
 }
+
+
