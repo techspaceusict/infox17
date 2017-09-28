@@ -21,6 +21,7 @@ body {
 
 #section2 {
   background: white !important;
+  border-right: 2px solid rgb(70,70,70);
 
 }
 .preloader {
@@ -109,7 +110,6 @@ body {
 
 .event-snapshot {
   display: block;
-  margin-top: 20px; 
 
 }
 
@@ -242,7 +242,7 @@ body {
 
 
 
-path,rect {
+/*path,rect {
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
   animation: dash 10s linear alternate infinite;
@@ -256,7 +256,7 @@ path,rect {
   to {
     stroke-dashoffset: 0;
   }
-}
+}*/
 
 .stripped {
   padding: 2.25em 1.6875em;
@@ -335,6 +335,7 @@ path,rect {
     background-color: transparent;
     outline: none;
     border: 2px solid #fd5e3a;
+    border-top: none;
     color: white;
     margin-top: -2px;
     margin-right: -2px;
@@ -348,3 +349,53 @@ path,rect {
 .closestripped:hover {
     background-color: #fd5e3a;
 }
+
+
+/*================ TERMINAL ================*/
+
+.terminallink {
+    background-color: rgb(70,70,70);
+    position: fixed;
+    right: 0px;
+    top: 100px;
+    width: 50px;
+    height: 40px;
+    font-size: 25px;
+    z-index: 100000000;
+    background-image: url('https://www.jsconfar.com/static/styles/images/backterminalhandle2.png');
+    background-size: 100px 40px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+
+.terminal {
+    position: fixed;
+    top:0px;
+    left: 0px;
+    height: 100%;
+    z-index: 100000000;
+}
+
+.Terminal {
+    display: none; 
+    overflow-x: hidden;
+    color: white;
+    background: rgba(0,0,0,0.8);
+    border-right: 2px solid #f3622f;
+   
+
+}
+
+.Terminal::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+.Terminal::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.8);
+}
+
+.Terminal::-webkit-scrollbar-thumb {
+  outline: 1px solid slategrey;
+
+}
+/*================ END TERMINAL ================*/

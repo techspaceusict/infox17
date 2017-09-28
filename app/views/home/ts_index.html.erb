@@ -39,6 +39,7 @@
       <a href="#" class="stripped-button">register</a>
     </div>
     
+    <div class="terminal"></div>
 <% end %>
 
 <% content_for :pgscripts do %>
@@ -81,6 +82,24 @@ $('.linkstripped').click(function() {
   event.preventDefault();
   $($(this).attr('href') ).slideToggle(); 
 }); 
+
+
+$('#terminallink').click(function() {
+  event.preventDefault();
+  slideinterminal();
+});
+
+function slideinterminal() {
+  if ($('.terminal').is(':visible'))
+    $('.terminal').css("display", "none");
+  if ($('.terminal').is(':hidden'))
+    {$('.terminal').css("display", "block");
+    getName();}
+
+
+}
+  
+
 
   </script>
 <% end %>
