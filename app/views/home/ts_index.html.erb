@@ -4,7 +4,7 @@
 
 <% content_for :pgcontent do %>
     <div style="min-height:550px;position: relative;">
-    <div class="event-snapshot">
+    <div class="event-snapshot hide-on-small-only">
     <br>
     <br>
       <svg height="500" width="100%" style="position:absolute" viewBox="0 0 1920 1080">
@@ -23,29 +23,58 @@
           <!-- <animate attributeType="CSS" attributeName="opacity" from="1" to="0" dur="5s" repeatCount="indefinite" /> -->
            <image xlink:href="images/hackathon logo.png" class="logo-event-svg" id="anim1" height="150px"/>
       </g>
-      <g transform="translate(1800,690),scale(0.90)">
+      <g transform="translate(1800,690),scale(2.5)">
       <a href="#stripped2" class="linkstripped">
           <!-- <animate attributeType="CSS" attributeName="opacity" from="1" to="0" dur="5s" repeatCount="indefinite" /> -->
-           <image xlink:href="images/hackathon logo.png" class="logo-event-svg" id="anim1" height="150px"/>
+           <image xlink:href="images/clan-logo.png" class="logo-event-svg" id="anim2" height="150px"/>
       </g>
       <g transform="translate(1600,180),scale(1.25)">
       <a href="#stripped3" class="linkstripped">
           <!-- <animate attributeType="CSS" attributeName="opacity" from="1" to="0" dur="5s" repeatCount="indefinite" /> -->
-           <image xlink:href="images/hackathon logo.png" class="logo-event-svg" id="anim1" height="150px"/>
+           <image xlink:href="images/codester-logo.png" class="logo-event-svg" id="anim3" height="150px"/>
       </g>
       <g transform="translate(-300,290),scale(0.8)">
       <a href="#stripped3" class="linkstripped">
           <!-- <animate attributeType="CSS" attributeName="opacity" from="1" to="0" dur="5s" repeatCount="indefinite" /> -->
-           <image xlink:href="images/hackathon logo.png" class="logo-event-svg" id="anim1" height="150px"/>
+           <image xlink:href="images/hh-logo.png" class="logo-event-svg" id="anim4" height="150px"/>
       </g>
       <g transform="translate(-300,690)">
       <a href="#stripped3" class="linkstripped">
           <!-- <animate attributeType="CSS" attributeName="opacity" from="1" to="0" dur="5s" repeatCount="indefinite" /> -->
-           <image xlink:href="images/hackathon logo.png" class="logo-event-svg" id="anim1" height="150px"/>
+           <image xlink:href="images/circuitrix-logo.png" class="logo-event-svg" id="anim1" height="150px"/>
       </g>
       </svg>
     </div>
     <!--<div class="campus-div" style="position:relative;"></div>-->    
+    <div class="hide-on-med-and-up center">
+    <br>
+      <a href="#stripped1" class="linkstripped"><img src="images/hackathon logo.png" height="" width="80%" class="card-1"></a>
+      <br>
+      <br>
+       <a href="/events" target="_blank">
+      <img src="images/codester-logo.png" height="" width="80%" class="card-1">
+      </a>
+      <br>
+      <br>
+       <a href="#events" target="_blank">
+      <img src="images/hh-logo.png" height="" width="80%" class="card-1">
+      </a>
+      <br>
+      <br>
+       <a href="#events" target="_blank">
+      <img src="images/circuitrix-logo.png" height="" width="80%" class="card-1">
+      </a>
+      <br>
+      <br>
+       <a href="#events" target="_blank">
+      <img src="images/clan-logo.png" height="" width="80%" class="card-1">
+      </a>
+      <br>
+      <br>
+      <br>
+      <br>
+
+    </div>
     <div class="stripped" id="stripped1">
       <h2 class="stripped-title">Ultrahack</h2>
       <hr>
@@ -55,10 +84,9 @@
       <hr>
       <p class="white-text stripped-text">Hello world 1234 Hello world 1234 Hello world 1234 Hello world 1234 Hello world 1234 Hello world 1234 Hello world 1234 Hello world 1234 Hello world 1234 Hello world 1234 Hello world 1234 Hello world 1234 Hello world 1234 Hello world 1234 Hello world 1234</p>
       <button class="closestripped linkstripped" href="#stripped1"><span style="font-size: 20px;">X</span></button>
-      <a href="#" class="stripped-button">fb page</a>
-      <a href="#" class="stripped-button">register</a>
+      <a href="#" class="stripped-button" target="_blank">register</a>
     </div>
-    <div class="hide-on-small-only"><iframe src="uploads/counter.html" class="counter-iframe"></iframe>
+    <div class="hide-on-small-only"><iframe src="uploads/counter.html" class="counter-iframe"></iframe></div>
     <div class="terminal"></div>
 <% end %>
 

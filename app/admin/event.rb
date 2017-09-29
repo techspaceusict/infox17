@@ -17,26 +17,26 @@ ActiveAdmin.register Event do
 end
 
 
-index do
-	column  :id
-	column  :Eventidm
-    column   :Name
-    column   :image
-    column   :about do |v|
-     div :class=>"adjust" do
-     	v.about
-     end
-    end
-    column   :facebook_link
-    column   :organizer1_name
-    column   :organizer1_phone
-    column   :organizer2_name
-    column   :organizer2_phone
-    column   :date
-    column   :time
-    column   :venue
+# index do
+# 	column  :id
+# 	column  :Eventidm
+#     column   :Name
+#     column   :image
+#     column   :about do |v|
+#      div :class=>"adjust" do
+#      	v.about
+#      end
+#     end
+#     column   :facebook_link
+#     column   :organizer1_name
+#     column   :organizer1_phone
+#     column   :organizer2_name
+#     column   :organizer2_phone
+#     column   :date
+#     column   :time
+#     column   :venue
 
-end
+# end
 
 
 end  

@@ -20,7 +20,7 @@ body {
 }
 
 #section2 {
-  background: white !important;
+  background: white ;
   
 }
 .preloader {
@@ -193,6 +193,8 @@ body {
 .card-1 {
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  border: 2px solid white;
+  padding: 10px;
 }
 
 .card-1:hover {
@@ -267,7 +269,7 @@ body {
   -webkit-background-size: 4px 4px;
   -moz-background-size: 4px 4px;
   background-size: 4px 4px;
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0,0,0,0.8);
   
   font-family: 'Cousine', monospace;
   border: 2px solid #f3622f;
@@ -281,6 +283,20 @@ body {
   -moz-box-shadow: inset 0px 2px 5px 0px rgba(0,0,0,0.75);
   box-shadow: inset 0px 2px 5px 0px rgba(0,0,0,0.75);
 }
+
+@media(max-width: 700px){
+  .stripped{ 
+  width: 100%;
+  left: 0;
+}
+  #section2 {
+     background: #833ab4;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #fcb045, #fd1d1d, #833ab4);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #fcb045, #fd1d1d, #833ab4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  }
+}
+
 
 
   .dotted {
@@ -420,7 +436,7 @@ body {
 }
 
 #anim4 {
-    animation-delay: 3s;
+    animation-delay: 2.5s;
 }
 
 @keyframes logo-event {

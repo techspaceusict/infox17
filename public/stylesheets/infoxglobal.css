@@ -16,7 +16,9 @@ body::-webkit-scrollbar-thumb {
 /*=========== END SCROLL BAR ===============*/
 
 #section2 {
-  background: url('../images/1.jpg');
+ background: #833ab4;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #fcb045, #fd1d1d, #833ab4);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #fcb045, #fd1d1d, #833ab4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
 
@@ -265,8 +267,8 @@ background: linear-gradient(to bottom, #ff8400, #E44D26); /* W3C, IE 10+/ Edge, 
 }
 
 .modal {
-    background-color: #364346;
-}
+    background-color: rgb(70,70,70);
+    }
 
 @media only screen and (max-width: 992px){
 .modal {

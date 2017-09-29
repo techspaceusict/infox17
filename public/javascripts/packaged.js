@@ -1092,12 +1092,12 @@ var commands = {
         	});
     
 	},
-	// 'register_fb' : function(terminal) {
-	// 	window.location = "/users/auth/facebook"
-	// }
-	// 'register_google' : function(terminal) {
-	// 	window.location = "/users/auth/google"
-	// }
+	'signin_fb' : function(terminal) {
+		window.location = "/users/auth/facebook";
+	},
+	'signin_google' : function(terminal) {
+		window.location = "/users/auth/google_oauth2";
+	}
 }
 
 
@@ -1116,8 +1116,8 @@ var getInput = function(){
 
 myTerminal.input("", function (userInput1) {
 
-if(commands.hasOwnProperty(userInput1))
-	window["commands"][userInput1](myTerminal);
+if(commands.hasOwnProperty(userInput1.toLowerCase()))
+	window["commands"][userInput1.toLowerCase()](myTerminal);
 	
 else if(userInput1)
   myTerminal.error(userInput1 + " is an unknown command");

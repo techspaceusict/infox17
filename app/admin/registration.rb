@@ -12,11 +12,11 @@ ActiveAdmin.register Registration do
 #   permitted
 # end
 
-index do
-	column  :id
-	column  :user_id
-    column  :event_id
+# index do
+# 	column  :id
+# 	column  :user_id
+#     column  :event_id
 
-end
+# end
 
 end
