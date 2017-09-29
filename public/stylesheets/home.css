@@ -135,7 +135,7 @@ body {
     z-index: 1;
     bottom: 0px;
     text-align: center;
-    width: 100%;
+    width: 100vw;
 }
 
 .loaderfooterlinks {
@@ -160,7 +160,6 @@ body {
 }
 
 .footerlinks {
-    display: inline-block;
     color: #777;
     font-size: 15px;
     margin-left: 30px;
@@ -175,6 +174,9 @@ body {
     }
     #scrollDownButton {
         bottom: 30px;
+    }
+    .Terminal {
+      border-right: none;
     }
 
 }
@@ -401,7 +403,6 @@ background: linear-gradient(to bottom, #fcb045, #fd1d1d, #833ab4); /* W3C, IE 10
     color: white;
     background: rgba(0,0,0,0.8);
     border-right: 2px solid #f3622f;
-   
 
 }
 
@@ -450,7 +451,30 @@ background: linear-gradient(to bottom, #fcb045, #fd1d1d, #833ab4); /* W3C, IE 10
     }
 
 }
+
+
+.close-terminal {
+    position: absolute;
+    top: 0px;
+    right: 3px;
+    background-color: #fd5e3a;
+    outline: none;
+    border-top: none;
+    padding: 7px;
+    color: black;
+    margin-top: -2px;
+    margin-right: -2px;
+    cursor: pointer;
+    -webkit-transition: all .5s ease-in 0s;
+    -transition: all .5s ease-in 0s;
+    -o-transition: all .5s ease-in 0s;
+    transition: all .5s; 
+}
+
 /*================ END TERMINAL ================*/
+
+
+/*================ SVG ANIMATION================*/
 
 paths {
   -webkit-animation: pulsate 5s ease-out;
@@ -501,3 +525,5 @@ path, rect {
   }
 }
 
+
+/*================ SVG END ================*/
