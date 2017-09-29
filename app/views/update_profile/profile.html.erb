@@ -19,7 +19,6 @@ select { display : block!important; }
   Name<%= current_user.name%><br>
 
   Phone No<input type="text" name="phone" value="<%= current_user.phone%>">
-
   <br>
   Branch
   <select name="branch" form="update_profile" >
@@ -27,7 +26,7 @@ select { display : block!important; }
       <option value="<%= current_user.branch%>"><%= current_user.branch%></option>
       <%end%>
       <option value="Aeronautical Engineering">Aeronautical Engineering</option>
-      <option value="Aerospace Engineering">Aerospace Engineering</option> 
+      <option value="Aerospace Engineering">Aerospace Engineering</option>
       <option value="Applied Chemistry">  Applied Chemistry</option>
       <option value="Animation & VFX">  Animation & VFX</option>
 
@@ -51,7 +50,7 @@ select { display : block!important; }
       <option value="Management and Information">Management and Information</option>
       <option value="Mathematics">Mathematics</option>
       <option value="Multimedia">Multimedia</option>
-      <option value="MCA">MCA</option> 
+      <option value="MCA">MCA</option>
       <option value="M.tech CSE">M.tech CSE</option>
 
       <option value="Physics">Physics</option>
@@ -207,6 +206,3 @@ Degree
 </form>
 <br><br>
 <%end%>
-
-
-
