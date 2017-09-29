@@ -19,6 +19,13 @@ index do
     column    :uid 
     column    :name 
     column    :profile 
+    column    :college 
+    column    :branch 
+    column    :year 
+    column    :degree 
+    column    :phone 
+
+
 
 end
 
