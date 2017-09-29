@@ -20,7 +20,11 @@ class EventController < ApplicationController
 
 
   def myevents
+   if current_user
    @event=Registration.where(:user_id=>current_user.id);
+   else
+   return redirect_to '/'
+  end
   end
 
   def addinfoxevent

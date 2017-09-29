@@ -40,7 +40,7 @@ Rails.application.routes.draw do
 
   #get '/home' => 'home#ts_index'
 
-  get '/ts_team'=>'home#ts_team'
+  get '/team'=>'home#ts_team'
 
   get '/about'=>'home#ts_about'
 
