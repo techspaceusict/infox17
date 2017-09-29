@@ -486,3 +486,18 @@ paths {
   50%   { opacity:1.0; stroke-width: 5; }
   100%  { opacity:0.4; stroke-width: 3; }
 }
+
+path, rect {
+  animation: link-anim 20s infinite linear;
+  stroke-dasharray: 2 1 2 1 1 4;
+}
+
+@keyframes link-anim {
+  0% {
+    stroke-dashoffset: 368;
+  }
+  100% {
+    stroke-dashoffset: 32;
+  }
+}
+

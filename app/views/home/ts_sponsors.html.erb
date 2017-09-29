@@ -217,3 +217,18 @@
 }
 </style>
 <% end %>
+
+<% content_for :pgscripts do %>
+<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+
+<script>
+
+//scroll animations
+  window.sr = ScrollReveal();
+  sr.reveal('#sponsors img',{
+    duration: 1000,
+    origin: 'bottom',
+  })
+</script>
+<% end %>
+
