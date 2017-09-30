@@ -12,31 +12,34 @@ ActiveAdmin.register Event do
 #   permitted
 # end
 
-ActiveAdmin.register Event do
+ActiveAdmin.register Event do 
   permit_params :Name, :image, :about, :facebook_link,:organizer2_phone,:organizer2_name,:organizer1_phone,:organizer1_name,:date,:time,:venue,:Eventidm
 end
 
 
-# index do
-# 	column  :id
-# 	column  :Eventidm
-#     column   :Name
-#     column   :image
-#     column   :about do |v|
-#      div :class=>"adjust" do
-#      	v.about
-#      end
-#     end
-#     column   :facebook_link
-#     column   :organizer1_name
-#     column   :organizer1_phone
-#     column   :organizer2_name
-#     column   :organizer2_phone
-#     column   :date
-#     column   :time
-#     column   :venue
+ index do
+ 	
+ 	selectable_column
+ 	column  :id
+ 	column  :Eventidm
+     column   :Name
+     column   :image
+     column   :about do |v|
+      div :class=>"adjust" do
+      	v.about
+      end
+     end
+     column   :facebook_link
+     column   :organizer1_name
+     column   :organizer1_phone
+     column   :organizer2_name
+     column   :organizer2_phone
+     column   :date
+     column   :time
+     column   :venue
+     actions
 
-# end
+ end
 
 
 end  
