@@ -201,6 +201,7 @@ transition: 0.3s all linear;
   transition: 0.35s all linear;
   transition-delay: 0.1s;
   transform: scaleY(1);
+  overflow: hidden;
 }
 
 .registerevtbtn {
@@ -236,6 +237,8 @@ transition: 0.3s all linear;
     color: black;
     text-align: center;
 }
-
+.card-image img{
+  height: 277px;
+}
 
 /*EVENT PAGE CSS ENDS*/

@@ -11,6 +11,9 @@ select { display : block!important; }
 <% content_for :pgcontent do %>
 
 <br><br>
+<div class="container">
+
+
 <form action="/update" id="update_profile" method="post" accept-charset="UTF-8" onsubmit="alert('Your Info Has Been Updated Successfully.')" >
 <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
 
@@ -205,4 +208,5 @@ Degree
 <input type="submit"  value="Update Info">
 </form>
 <br><br>
+</div>
 <%end%>
