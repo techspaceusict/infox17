@@ -8,9 +8,6 @@ select { display : block!important; }
 <%end%>
 
 
-
-
-
 <% content_for :pgcontent do %>
 
 <br><br>
@@ -20,15 +17,16 @@ select { display : block!important; }
 <form action="/update" id="update_profile" method="post" accept-charset="UTF-8" onsubmit="alert('Your Info Has Been Updated Successfully.')" >
 <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
 
-<div class="col s12">
-  Hello<h4><%= current_user.name%><br></h4>
+<div class="col s12" style="text-align: center;">
+  <h4><%= current_user.name%></h4>
 </div>
-  <div class="col s12">
-      Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <%= current_user.email%><br>
-     </div>
+  <div class="col s12" style="text-align: center;">
+    <h5><%= current_user.email%></h5>
 
+     </div>
+<br>
      <div class="col s12">
-       Phone No:<input type="text" name="phone" value="<%= current_user.phone%>">
+       Phone No<input type="text" name="phone" value="<%= current_user.phone%>">
      </div>
      <div class="col s12">
        Branch
@@ -71,6 +69,7 @@ select { display : block!important; }
      </select>
 
      </div>
+     <br>
      <div class="col s12">
 
        College
@@ -182,7 +181,6 @@ select { display : block!important; }
      </div>
 
 
-  <br>
 
 <br>
 <div class="col s12">
@@ -200,6 +198,7 @@ select { display : block!important; }
 
 
 </div>
+<br>
 <div class="col s12">
   Degree
     <select name="degree" form="update_profile" >
@@ -215,8 +214,6 @@ select { display : block!important; }
 
   </select>
 </div>
-<br>
-<br>
 <br>
 <input type="submit"  value="Update Info">
 </form>

@@ -23,7 +23,4 @@ ActiveAdmin.register Registration do
   permit_params :user_id, :event_id,:Event_name,:Eventidm
 end
 
-
-
-
 end
