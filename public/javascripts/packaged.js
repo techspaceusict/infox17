@@ -1065,8 +1065,9 @@ var commands = {
 	terminal.beep();
 	},
 	'game' : function(terminal){ 
-	setTimeout(function(){window.location = "http://infoxpression.in/sliding.php"},5000);
-	terminal.response("|__############Initializing game###########__|");
+	// setTimeout(function(){window.location = "http://infoxpression.in/sliding.php"},5000);
+	// terminal.response("|__############Initializing game###########__|");
+	terminal.response("Lazy dev's still working on it :P");
 	
 	},
 	'exit()' : function(terminal){ 
