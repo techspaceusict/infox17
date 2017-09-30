@@ -14,9 +14,9 @@ Devise.setup do |config|
 	
  config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
 
-   config.omniauth :facebook,"134527823814200","4c5ee4e4c68aabce7fc4663d5479909c", scope: 'email,public_profile', info_fields: 'email,name'
+   config.omniauth :facebook,"134527823814200","6afb938453172526b1c7e9939ee42c9d", scope: 'email,public_profile', info_fields: 'email,name'
 
-   config.omniauth :google_oauth2, "807782693786-epj98atpb8v8n2pp7der33ase0eeqi5j.apps.googleusercontent.com", "y0B63oMLWSkFBWXFlxX1-iEm",{}
+   config.omniauth :google_oauth2, "807782693786-epj98atpb8v8n2pp7der33ase0eeqi5j.apps.googleusercontent.com", "0TLcUud1NdzXY6DKiIOQ0P6U-iEm",{}
 
 
 config.omniauth :twitter ,"APP_ID", "APP_SECRET"
