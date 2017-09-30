@@ -19,4 +19,11 @@ ActiveAdmin.register Registration do
 
 # end
 
+ActiveAdmin.register Registration do
+  permit_params :user_id, :event_id,:Event_name
+end
+
+
+
+
 end
