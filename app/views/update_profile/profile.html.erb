@@ -1,3 +1,6 @@
+
+
+
 <% content_for :pgcontent do  %>
 <style>
 select { display : block!important; }
@@ -17,193 +20,203 @@ select { display : block!important; }
 <form action="/update" id="update_profile" method="post" accept-charset="UTF-8" onsubmit="alert('Your Info Has Been Updated Successfully.')" >
 <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
 
+<div class="col s12">
+  Hello<h4><%= current_user.name%><br></h4>
+</div>
+  <div class="col s12">
+      Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <%= current_user.email%><br>
+     </div>
 
-  Email: <%= current_user.email%><br>
-  Name<%= current_user.name%><br>
+     <div class="col s12">
+       Phone No:<input type="text" name="phone" value="<%= current_user.phone%>">
+     </div>
+     <div class="col s12">
+       Branch
+       <select name="branch" form="update_profile" >
+           <%if current_user.branch%>
+           <option value="<%= current_user.branch%>"><%= current_user.branch%></option>
+           <%end%>
+           <option value="Aeronautical Engineering">Aeronautical Engineering</option>
+           <option value="Aerospace Engineering">Aerospace Engineering</option>
+           <option value="Applied Chemistry">  Applied Chemistry</option>
+           <option value="Animation & VFX">  Animation & VFX</option>
 
-  Phone No<input type="text" name="phone" value="<%= current_user.phone%>">
+           <option value="Business Information Syst">Business Information Syst</option>
+           <option value="B.com">B.com</option>
+           <option value="BALLB">BALLB</option>
+           <option value="BBALLB">BBALLB</option>
+
+           <option value="Computer Science Engineering">Computer Science Engineering</option>
+           <option value="Chemical Engineering">Chemical Engineering</option>
+
+           <option value="Electronics & Communication Engineering">Electronics & Communication Engineering</option>
+           <option value="Electronics">Electronics</option>
+           <option value="Electrical">Electrical</option>
+
+           <option value="Information Technology">  Information Technology</option>
+
+           <option value="Material Science">    Material Science</option>
+           <option value="Mechanical & Industrial Engineer">  Mechanical & Industrial Engineer</option>
+           <option value="Mechanical Engineering">  Mechanical Engineering</option>
+           <option value="Management and Information">Management and Information</option>
+           <option value="Mathematics">Mathematics</option>
+           <option value="Multimedia">Multimedia</option>
+           <option value="MCA">MCA</option>
+           <option value="M.tech CSE">M.tech CSE</option>
+
+           <option value="Physics">Physics</option>
+
+           <option value="others">Others</option>
+
+     </select>
+
+     </div>
+     <div class="col s12">
+
+       College
+         <select name="college" form="update_profile"  >
+                 <%if current_user.college%>
+                   <option value="<%= current_user.branch%>"><%= current_user.college%></option>
+                <%end%>
+
+               <option value="Amity School of Engineering and Technology">Amity School of Engineering and Technology</option >
+               <option value="AIACTR">Ambedkar Institute of Advanced Communication Technologies and Research</option >
+               <option value="Atma Ram Sanatan Dharam College">Atma Ram Sanatan Dharam College</option >
+
+
+
+               <option value="Bharati Vidyapeeth's College of Engineering">Bharati Vidyapeeth's College of Engineering</option >
+               <option value="Bhaskaracharya College of Applied Sciences">Bhaskaracharya College of Applied Sciences</option >
+               <option value="Bhagwaan mahavir institute of science and technology">Bhagwaan mahavir institute of science and technology</option >
+               <option value="BPIT">Bhagwan Parshuram Institute of Technology</option >
+               <option value="BIT, Noida">BIT, Noida</option >
+
+
+
+
+               <option value="Deenbandhu Chhotu Ram University of Science and Technology">Deenbandhu Chhotu Ram University of Science and Technology</option >
+               <option value="Deen Dayal Upadhyaya College">Deen Dayal Upadhyaya College</option >
+               <option value="Deshbandhu College">Deshbandhu College</option >
+               <option value="Dronacharya College of Engineering">Dronacharya College of Engineering</option >
+               <option value="DTU">Delhi Technological University</option >
+
+
+               <option value="GURU TEGH BAHADUR INSTITUTE OF TECHNOLOGY">GURU TEGH BAHADUR INSTITUTE OF TECHNOLOGY</option >
+               <option value="GBPANT">GB Pant Government Engineering College</option >
+               <option value="GGSIPU USS">Guru Gobind Singh Indraprastha University [USS]</option >
+               <option value="Galgotias College of Engineering and Technology">Galgotias College of Engineering and Technology</option >
+               <option value="Greater Noida Institute of Technology">Greater Noida Institute of Technology</option >
+
+
+
+               <option value="HMR Institute of Technology & Management">HMR Institute of Technology & Management</option >
+               <option value="Hans Raj College">Hans Raj College</option >
+               <option value="Hindu College">Hindu College</option >
+
+
+
+               <option value="Indian Institute of Technology Delhi">Indian Institute of Technology Delhi</option >
+               <option value="IITD">IIITD</option >
+               <option value="Indian Institute of Technology Guwhati">Indian Institute of Technology Guwhati</option >
+               <option value="IGDTUW">Indira Gandhi Delhi Technical University for Women</option >
+
+
+
+
+
+
+               <option value="Jawaharlal Nehru Technological University College of Engineering">Jawaharlal Nehru Technological University College of Engineering</option >
+               <option value="Jamia Millia Islamia">Jamia Millia Islamia</option >
+               <option value="JIMS">JIMS Engineering Management Technical Campus</option >
+               <option value="Jaypee University of Engineering and Technology">Jaypee University of Engineering and Technology</option >
+
+
+               <option value="Kirori Mal College">Kirori Mal College</option >
+
+
+
+               <option value="Manav Rachna College of Engineering">Manav Rachna College of Engineering</option >
+               <option value="Maharaja Agrasen Institute of Technology">Maharaja Agrasen Institute of Technology </option >
+               <option value="Maharaja Surajmal Institute of Technology">Maharaja Surajmal Institute of Technology</option >
+
+
+
+
+               <option value="National Institute of Technology">National Institute of Technology</option >
+               <option value="Noida Institute of Engineering and Technology">Noida Institute of Engineering and Technology</option >
+               <option value="Northern india Engineering college ">Northern india Engineering college </option >
+               <option value="NSIT">Netaji Subhas Institute of Technology</option >
+
+
+               <option value="PEC UNIVERSITY OF TECHNOLOGY">PEC UNIVERSITY OF TECHNOLOGY </option >
+
+
+               <option value="Rajdhani College">Rajdhani College</option >
+               <option value="Ramanujan College">Ramanujan College</option >
+               <option value="Ramjas College">Ramjas College</option >
+
+               <option value="Shivaji College">Shivaji College</option >
+               <option value="Sri Guru Nanak Dev Khalsa College">Sri Guru Nanak Dev Khalsa College</option >
+               <option value="Sri Guru Teg Bahadur Khalsa College">Sri Guru Teg Bahadur Khalsa College</option >
+               <option value="Sri Venkateswara College">Sri Venkateswara College</option >
+               <option value="Stephen's College">St Stephen's College</option >
+
+
+               <option value="The Northcap University">The Northcap University</option >
+
+
+
+               <option value="University Institute of Engineering and Technology, Kurukshetra University">University Institute of Engineering and Technology, Kurukshetra University</option >
+               <option value="University Institute of Engineering and Technology, Maharshi Dayanand University">University Institute of Engineering and Technology, Maharshi Dayanand University</option >
+               <option value="USICT">University School of Information and Communication Technology</option >
+
+
+
+
+
+               <option value="YMCA University of Science and Technology, Faridabad">YMCA University of Science and Technology, Faridabad</option >
+               <option value="Other">OTHER</option>
+       </select>
+
+
+     </div>
+
+
   <br>
-  Branch
-  <select name="branch" form="update_profile" >
-      <%if current_user.branch%>
-      <option value="<%= current_user.branch%>"><%= current_user.branch%></option>
-      <%end%>
-      <option value="Aeronautical Engineering">Aeronautical Engineering</option>
-      <option value="Aerospace Engineering">Aerospace Engineering</option>
-      <option value="Applied Chemistry">  Applied Chemistry</option>
-      <option value="Animation & VFX">  Animation & VFX</option>
-
-      <option value="Business Information Syst">Business Information Syst</option>
-      <option value="B.com">B.com</option>
-      <option value="BALLB">BALLB</option>
-      <option value="BBALLB">BBALLB</option>
-
-      <option value="Computer Science Engineering">Computer Science Engineering</option>
-      <option value="Chemical Engineering">Chemical Engineering</option>
-
-      <option value="Electronics & Communication Engineering">Electronics & Communication Engineering</option>
-      <option value="Electronics">Electronics</option>
-      <option value="Electrical">Electrical</option>
-
-      <option value="Information Technology">  Information Technology</option>
-
-      <option value="Material Science">    Material Science</option>
-      <option value="Mechanical & Industrial Engineer">  Mechanical & Industrial Engineer</option>
-      <option value="Mechanical Engineering">  Mechanical Engineering</option>
-      <option value="Management and Information">Management and Information</option>
-      <option value="Mathematics">Mathematics</option>
-      <option value="Multimedia">Multimedia</option>
-      <option value="MCA">MCA</option>
-      <option value="M.tech CSE">M.tech CSE</option>
-
-      <option value="Physics">Physics</option>
-
-      <option value="others">Others</option>
-
-</select>
 
 <br>
+<div class="col s12">
+  Year
+    <select name="year" form="update_profile" >
+            <%if current_user.year%>
+              <option value="<%= current_user.branch%>"><%= current_user.branch%></option>
+            <%end%>
 
-College
-  <select name="college" form="update_profile"  >
-          <%if current_user.college%>
-            <option value="<%= current_user.branch%>"><%= current_user.college%></option>
-         <%end%>
-
-        <option value="Amity School of Engineering and Technology">Amity School of Engineering and Technology</option >
-        <option value="AIACTR">Ambedkar Institute of Advanced Communication Technologies and Research</option >
-        <option value="Atma Ram Sanatan Dharam College">Atma Ram Sanatan Dharam College</option >
-
-
-
-        <option value="Bharati Vidyapeeth's College of Engineering">Bharati Vidyapeeth's College of Engineering</option >
-        <option value="Bhaskaracharya College of Applied Sciences">Bhaskaracharya College of Applied Sciences</option >
-        <option value="Bhagwaan mahavir institute of science and technology">Bhagwaan mahavir institute of science and technology</option >
-        <option value="BPIT">Bhagwan Parshuram Institute of Technology</option >
-        <option value="BIT, Noida">BIT, Noida</option >
+          <option value="1st">1st</option>
+          <option value="2nd">2nd</option>
+          <option value="3rd">3rd</option>
+          <option value="4th">4th</option>
+  </select>
 
 
+</div>
+<div class="col s12">
+  Degree
+    <select name="degree" form="update_profile" >
+        <%if current_user.degree%>
+          <option value="<%= current_user.degree%>"><%= current_user.degree%></option>
+        <%end%>
 
+          <option value="Bachelor of Technology / Bachelor of Engineering">Bachelor of Technology / Bachelor of Engineering</option>
+          <option value="Bachelor of Arts">Bachelor of Arts</option>
+          <option value="Bachelor of Commerce">Bachelor of Commerce</option>
+          <option value="M.S/M.Sc/M.Tech/M.E /MCA">M.S/M.Sc/M.Tech/M.E /MCA</option>
+          <option value="Others">Other</option>
 
-        <option value="Deenbandhu Chhotu Ram University of Science and Technology">Deenbandhu Chhotu Ram University of Science and Technology</option >
-        <option value="Deen Dayal Upadhyaya College">Deen Dayal Upadhyaya College</option >
-        <option value="Deshbandhu College">Deshbandhu College</option >
-        <option value="Dronacharya College of Engineering">Dronacharya College of Engineering</option >
-        <option value="DTU">Delhi Technological University</option >
-
-
-        <option value="GURU TEGH BAHADUR INSTITUTE OF TECHNOLOGY">GURU TEGH BAHADUR INSTITUTE OF TECHNOLOGY</option >
-        <option value="GBPANT">GB Pant Government Engineering College</option >
-        <option value="GGSIPU USS">Guru Gobind Singh Indraprastha University [USS]</option >
-        <option value="Galgotias College of Engineering and Technology">Galgotias College of Engineering and Technology</option >
-        <option value="Greater Noida Institute of Technology">Greater Noida Institute of Technology</option >
-
-
-
-        <option value="HMR Institute of Technology & Management">HMR Institute of Technology & Management</option >
-        <option value="Hans Raj College">Hans Raj College</option >
-        <option value="Hindu College">Hindu College</option >
-
-
-
-        <option value="Indian Institute of Technology Delhi">Indian Institute of Technology Delhi</option >
-        <option value="IITD">IIITD</option >
-        <option value="Indian Institute of Technology Guwhati">Indian Institute of Technology Guwhati</option >
-        <option value="IGDTUW">Indira Gandhi Delhi Technical University for Women</option >
-
-
-
-
-
-
-        <option value="Jawaharlal Nehru Technological University College of Engineering">Jawaharlal Nehru Technological University College of Engineering</option >
-        <option value="Jamia Millia Islamia">Jamia Millia Islamia</option >
-        <option value="JIMS">JIMS Engineering Management Technical Campus</option >
-        <option value="Jaypee University of Engineering and Technology">Jaypee University of Engineering and Technology</option >
-
-
-        <option value="Kirori Mal College">Kirori Mal College</option >
-
-
-
-        <option value="Manav Rachna College of Engineering">Manav Rachna College of Engineering</option >
-        <option value="Maharaja Agrasen Institute of Technology">Maharaja Agrasen Institute of Technology </option >
-        <option value="Maharaja Surajmal Institute of Technology">Maharaja Surajmal Institute of Technology</option >
-
-
-
-
-        <option value="National Institute of Technology">National Institute of Technology</option >
-        <option value="Noida Institute of Engineering and Technology">Noida Institute of Engineering and Technology</option >
-        <option value="Northern india Engineering college ">Northern india Engineering college </option >
-        <option value="NSIT">Netaji Subhas Institute of Technology</option >
-
-
-        <option value="PEC UNIVERSITY OF TECHNOLOGY">PEC UNIVERSITY OF TECHNOLOGY </option >
-
-
-        <option value="Rajdhani College">Rajdhani College</option >
-        <option value="Ramanujan College">Ramanujan College</option >
-        <option value="Ramjas College">Ramjas College</option >
-
-        <option value="Shivaji College">Shivaji College</option >
-        <option value="Sri Guru Nanak Dev Khalsa College">Sri Guru Nanak Dev Khalsa College</option >
-        <option value="Sri Guru Teg Bahadur Khalsa College">Sri Guru Teg Bahadur Khalsa College</option >
-        <option value="Sri Venkateswara College">Sri Venkateswara College</option >
-        <option value="Stephen's College">St Stephen's College</option >
-
-
-        <option value="The Northcap University">The Northcap University</option >
-
-
-
-        <option value="University Institute of Engineering and Technology, Kurukshetra University">University Institute of Engineering and Technology, Kurukshetra University</option >
-        <option value="University Institute of Engineering and Technology, Maharshi Dayanand University">University Institute of Engineering and Technology, Maharshi Dayanand University</option >
-        <option value="USICT">University School of Information and Communication Technology</option >
-
-
-
-
-
-        <option value="YMCA University of Science and Technology, Faridabad">YMCA University of Science and Technology, Faridabad</option >
-        <option value="Other">OTHER</option>
-</select>
-
-
-
-
+  </select>
+</div>
 <br>
-Year
-  <select name="year" form="update_profile" >
-          <%if current_user.year%>
-            <option value="<%= current_user.branch%>"><%= current_user.branch%></option>
-          <%end%>
-
-        <option value="1st">1st</option>
-        <option value="2nd">2nd</option>
-        <option value="3rd">3rd</option>
-        <option value="4th">4th</option>
-</select>
-
-
-
 <br>
-Degree
-  <select name="degree" form="update_profile" >
-      <%if current_user.degree%>
-        <option value="<%= current_user.degree%>"><%= current_user.degree%></option>
-      <%end%>
-
-        <option value="Bachelor of Technology / Bachelor of Engineering">Bachelor of Technology / Bachelor of Engineering</option>
-        <option value="Bachelor of Arts">Bachelor of Arts</option>
-        <option value="Bachelor of Commerce">Bachelor of Commerce</option>
-        <option value="M.S/M.Sc/M.Tech/M.E /MCA">M.S/M.Sc/M.Tech/M.E /MCA</option>
-        <option value="Others">Other</option>
-
-</select>
-
-
-
 <br>
 <input type="submit"  value="Update Info">
 </form>
