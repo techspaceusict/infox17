@@ -140,7 +140,7 @@ label, input {
 
 .card .card-image {
   width: 100%;
-  height: 371px;
+  height: 271px;
   position: relative;
   background-color: #FFFFFF;
 }
@@ -238,7 +238,7 @@ transition: 0.3s all linear;
     text-align: center;
 }
 .card-image img{
-  height: 277px;
+  height: 371px;
 }
 
 /*EVENT PAGE CSS ENDS*/
