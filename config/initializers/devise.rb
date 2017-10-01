@@ -16,7 +16,7 @@ Devise.setup do |config|
 
    config.omniauth :facebook,"134527823814200","6afb938453172526b1c7e9939ee42c9d", scope: 'email,public_profile', info_fields: 'email,name'
 
-   config.omniauth :google_oauth2, "807782693786-epj98atpb8v8n2pp7der33ase0eeqi5j.apps.googleusercontent.com", "0TLcUud1NdzXY6DKiIOQ0P6U-iEm",{}
+   config.omniauth :google_oauth2, "807782693786-ebnv7q6mdvf8n115cpkr7s840k5kc5ni.apps.googleusercontent.com", "6CI7yf00KUhq8ZPSqMZG0r0O",{}
 
 
 config.omniauth :twitter ,"APP_ID", "APP_SECRET"
