@@ -138,7 +138,9 @@
         <ul id="slide-out" class="side-nav">
 
           <a data-activates="mobile-demo" class="button-collapse-inview"><i class="material-icons" style="right: 0px;">arrow_back</i></a>
-
+          <br>
+          <br>
+          <br>
           <%if user_signed_in? %>
             <li>
               <div class="user-view background">
@@ -150,19 +152,20 @@
               </div>
             </li>
 
-          <%else%>
+          <% else %>
           <!-- <p style="color:#FFFFFF; text-align:center;">User Not Logged!!!</p> -->
-          <p style=""><a class="waves-effect waves-light btn social facebook" style="background-color:#3B5998" href="/users/auth/facebook"><i class="fa fa-facebook"></i>&nbsp;Sign in with facebook</a></p>
-          <p style=""><a class="waves-effect waves-light btn social google" style="background-color:#DD4B39"><i class="fa fa-google"></i> &nbsp;Sign in with google&nbsp;</a></p>
+          <p class="center"><a class="waves-effect waves-light btn social facebook" style="background-color:#3B5998" href="/users/auth/facebook"><i class="fa fa-facebook"></i>&nbsp;Sign in with facebook</a></p>
+          <p class="center"><a class="waves-effect waves-light btn social google" style="background-color:#DD4B39"><i class="fa fa-google"></i> &nbsp;Sign in with google&nbsp;</a></p>
             <li>
 
             </li>
           <%end%>
             <li><div class="divider"></div></li>
             <div class="side-nav-menus">
+            <%if user_signed_in? %> <li><a class="waves-effect" href="/myevents">Dashboard</a></li> <% end %>
             <li><a class="waves-effect" href="/">Home</a></li>
             <li><a class="waves-effect" href="/about">About</a></li>
-            <!-- <li><a class="waves-effect" href="/schedule">Schedule</a></li> -->
+            <li><a class="waves-effect" href="/schedule">Schedule</a></li>
             <li><a class="waves-effect" href="/events">Events</a></li>
             <li><a class="waves-effect" href="/sponsors">Sponsors</a></li>
             <li><a class="waves-effect" href="/contact">Contact Us</a></li>

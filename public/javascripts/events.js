@@ -68,69 +68,15 @@ function f() {
 }
 
 function f1() {
-    var i, li, table;
-    table = document.getElementById("card-container");
-    li = table.getElementsByClassName("card");
-    for (i = 0; i < li.length; ++i) {
-        if (li[i].id == '1' || li[i].id == '2' || li[i].id == '3' || li[i].id == '4') {
-            li[i].style.display = "";
+    $('.card').each(function(i, obj) {
+        if ($(this).hasClass($('input[name=category]:checked').val())) {
+            $(this).css("display","");
         } else {
-            li[i].style.display = "none";
+            $(this).css("display","none");
         }
-    }
+    });
 }
 
-function f2() {
-    var i, li, table;
-    table = document.getElementById("card-container");
-    li = table.getElementsByClassName("card");
-    for (i = 0; i < li.length; ++i) {
-        if (li[i].id == '5' || li[i].id == '6' || li[i].id == '7' || li[i].id == '8') {
-            li[i].style.display = "";
-        } else {
-            li[i].style.display = "none";
-        }
-    }
-}
-
-function f3() {
-    var i, li, table;
-    table = document.getElementById("card-container");
-    li = table.getElementsByClassName("card");
-    for (i = 0; i < li.length; ++i) {
-        if (li[i].id == '9' || li[i].id == '10' || li[i].id == '11' || li[i].id == '12') {
-            li[i].style.display = "";
-        } else {
-            li[i].style.display = "none";
-        }
-    }
-}
-
-function f4() {
-    var i, li, table;
-    table = document.getElementById("card-container");
-    li = table.getElementsByClassName("card");
-    for (i = 0; i < li.length; ++i) {
-        if (li[i].id == '13' || li[i].id == '14' || li[i].id == '15' || li[i].id == '16') {
-            li[i].style.display = "";
-        } else {
-            li[i].style.display = "none";
-        }
-    }
-}
-
-function f5() {
-    var i, li, table;
-    table = document.getElementById("card-container");
-    li = table.getElementsByClassName("card");
-    for (i = 0; i < li.length; ++i) {
-        if (li[i].id == 1 || li[i].id == 2 || li[i].id == 3 || li[i].id == 4) {
-            li[i].style.display = "";
-        } else {
-            li[i].style.display = "none";
-        }
-    }
-}
 
 function myFunction() {
     // Declare variables
