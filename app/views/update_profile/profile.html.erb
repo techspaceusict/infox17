@@ -75,7 +75,7 @@ select { display : block!important; }
        College
          <select name="college" form="update_profile"  >
                  <%if current_user.college%>
-                   <option value="<%= current_user.branch%>"><%= current_user.college%></option>
+                   <option value="<%= current_user.college%>"><%= current_user.college%></option>
                 <%end%>
 
                <option value="Amity School of Engineering and Technology">Amity School of Engineering and Technology</option >
@@ -187,7 +187,7 @@ select { display : block!important; }
   Year
     <select name="year" form="update_profile" >
             <%if current_user.year%>
-              <option value="<%= current_user.branch%>"><%= current_user.branch%></option>
+              <option value="<%= current_user.year%>"><%= current_user.year%></option>
             <%end%>
 
           <option value="1st">1st</option>

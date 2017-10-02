@@ -45,6 +45,7 @@ class EventController < ApplicationController
   organizer2name = params[:organizer2_name]
   organizer2phone = params[:organizer2_phone]
   facebooklink = params[:facebook_link]
+  category=params[:category]
   ven=params[:venue]
   new_filename = name + "." + image.original_filename.split(".")[1]
  
@@ -52,7 +53,7 @@ class EventController < ApplicationController
   file.write(image.read)
   end
 
-    Event.create(:Eventidm=>id,:Name=>name,:about=>detail,:image=>new_filename,:facebook_link =>facebooklink,:organizer1_name=>organizer1name,:organizer1_phone=>organizer1phone,:organizer2_name=>organizer2name,:organizer2_phone=>organizer2phone,:venue=>ven,:date=>date,:time=>time);
+    Event.create(:Eventidm=>id,:Name=>name,:about=>detail,:image=>new_filename,:facebook_link =>facebooklink,:organizer1_name=>organizer1name,:organizer1_phone=>organizer1phone,:organizer2_name=>organizer2name,:organizer2_phone=>organizer2phone,:venue=>ven,:date=>date,:time=>time,:category=>category);
 
     return redirect_to '/events'
 
@@ -66,10 +67,10 @@ class EventController < ApplicationController
    # byebug;
 
 
-    if Registration.where(:user_id=>current_user.id,:event_id=>event.id,:Event_name=>event.Name,:Eventidm=>event.Eventidm).first
+    if Registration.where(:user_id=>current_user.id,:event_id=>event.id,:Event_name=>event.Name,:Eventidm=>event.Eventidm,:category=>category).first
       return redirect_to '/myevents'
     else
-      Registration.create(:user_id=>current_user.id,:event_id=>event.id,:Event_name=>event.Name,:Eventidm=>event.Eventidm);
+      Registration.create(:user_id=>current_user.id,:event_id=>event.id,:Event_name=>event.Name,:Eventidm=>event.Eventidm,:category=>category);
       return redirect_to '/events'
     end
     #byebug;

@@ -39,9 +39,13 @@
 
 
 gap[type="radio"]:checked + label::before, .with-gap[type="radio"]:checked + label::after {
-    border: 2px solid #EE7436;
-    background: #EE7436;
-    color:  #EE7436;
+    border: 2px solid black;
+    background: black;
+    color:  black;
+}
+[type="radio"]:checked+label:after, [type="radio"].with-gap:checked+label:before, [type="radio"].with-gap:checked+label:after {
+    border: 2px solid black;
+
 }
 
 label, input {
