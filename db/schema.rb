@@ -47,7 +47,7 @@ ActiveRecord::Schema.define(version: 20170930094431) do
   end
 
   create_table "events", force: :cascade do |t|
-    t.string   "Eventidm"
+    t.string   "Event_id"
     t.string   "Name"
     t.string   "image"
     t.string   "about"
