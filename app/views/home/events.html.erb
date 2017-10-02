@@ -49,9 +49,9 @@
 		<div class="row">
 
     	<div class="col s12 m12">
-        <div class="container-fluid card-container" id="card-container">
+        <div class="container-fluid card-container " id="card-container">
             <%@event.each do |event|%>
-                <div class="card" id = "<%= event.Eventidm%>">
+                <div class="card <%= event.category%>" id = "<%= event.Eventidm%>">
                     <div class="card-image"><img src="/uploads/<%= event.image%>" style="size: "></div>
                     <div class="card-info">
                         <div class="card-title"><%=raw event.Name%></div>

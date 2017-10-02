@@ -37,9 +37,15 @@ end
      column   :date
      column   :time
      column   :venue
+     column   :category
      actions
 
  end
+
+# ActiveAdmin.register Event do
+# filter :category, as: :check_boxes
+# end
+
 
 
 end  
