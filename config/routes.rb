@@ -9,6 +9,9 @@
   # NOTE: Any progarmmer/coder who needs to make changes in this file should contact Developers
 
 Rails.application.routes.draw do
+  
+  get '/users/sign_in' =>'home#index'
+  get '/users/sign_up' =>'home#index'
 
   get 'update_profile/profile'
 
