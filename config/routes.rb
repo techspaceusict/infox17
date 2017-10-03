@@ -10,8 +10,8 @@
 
 Rails.application.routes.draw do
   
-  get '/users/sign_in' =>'home#ts_index'
-  get '/users/sign_up' =>'home#ts_index'
+  
+
 
   get 'update_profile/profile'
 
