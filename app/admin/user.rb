@@ -24,7 +24,7 @@ index do
     column    :year 
     column    :degree 
     column    :phone 
-
+actions
 
 
 end
