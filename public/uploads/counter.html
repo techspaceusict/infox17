@@ -60,11 +60,11 @@
         .countdown-container {
               position: absolute;
                 top: 0;
-                left: 25%;
+                left: 20%;
         }
 
         .clock-item {
-            width: 150px;
+            width: 200px;
         }
 
         .clock-item .inner {
@@ -78,6 +78,7 @@
             border-radius: 50%;
             height: 0px;
             padding-bottom: 100%;
+            margin: auto;
         }
 
         .text {
@@ -110,7 +111,7 @@
 
 <div class="countdown countdown-container container-fluid">
     <div class="clock row">
-        <div class="clock-item clock-days countdown-time-value col-xs-6 col-md-4">
+        <div style="margin-bottom: 50px;" class="clock-item clock-days countdown-time-value col-xs-6 col-md-4">
             <div class="wrap">
                 <div class="inner">
                     <div id="canvas-days" class="clock-canvas"></div>
@@ -123,7 +124,7 @@
             </div><!-- /.wrap -->
         </div><!-- /.clock-item -->
 
-        <div class="clock-item clock-hours countdown-time-value col-xs-6 col-md-4">
+        <div style="margin-bottom: 50px;" class="clock-item clock-hours countdown-time-value col-xs-6 col-md-4">
             <div class="wrap">
                 <div class="inner">
                     <div id="canvas-hours" class="clock-canvas"></div>
@@ -135,6 +136,7 @@
                 </div><!-- /.inner -->
             </div><!-- /.wrap -->
         </div><!-- /.clock-item -->
+
 
         <div class="clock-item clock-minutes countdown-time-value col-xs-6 col-md-4">
             <div class="wrap">
