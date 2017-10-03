@@ -51,7 +51,7 @@ Rails.application.routes.draw do
 
   get '/events'=>'home#events'
 
-  get '/sponsors'=>'home#ts_sponsors'
+  get '/sponsors'=>'home#temp_sponsors'
 
   get '/contact'=>'home#ts_contact'
 
