@@ -1,6 +1,5 @@
 class EventController < ApplicationController
   
-  layout 'techspace'
   
   def event
   	id=params[:id]

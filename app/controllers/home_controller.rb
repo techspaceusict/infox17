@@ -13,7 +13,6 @@
 class HomeController < ApplicationController
 
 
-  layout 'techspace'
 
 	def index
 		

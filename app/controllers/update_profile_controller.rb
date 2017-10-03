@@ -1,6 +1,5 @@
 class UpdateProfileController < ApplicationController
 
-  layout "techspace"
   
   def profile
   	    if current_user==nil

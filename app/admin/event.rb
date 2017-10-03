@@ -42,10 +42,6 @@ end
 
  end
 
-# ActiveAdmin.register Event do
-# filter :category, as: :check_boxes
-# end
-
 
 
 end  
