@@ -3,19 +3,22 @@
 
     <div class="row" style="margin-bottom: 0; display: table;">
       
-        <div class="col s12 m4 poster-back hide-on-small-only">
+        <a href="/uploads/<%=raw @event.image %>" target="_blank">
+        <div class="col s12 m4 poster-back hide-on-small-only" >
         <div class="dotted">
         </div>
         </div>
+        </a>
         <div class="col s12 m8 right-cell">
           <h3>
           <center class="hide-on-med-and-up">
-              <img src="/uploads/<%=raw @event.image %>"  width="80%"%>
+              <img src="/uploads/<%=raw @event.image %>"  class="materialboxed" width="80%"%>
           </center>
           <center>
               <%=raw @event.Name%>
           </center>  
       </h3>
+      <br>
       <% if  @event.Eventidm.to_i != 1%>
       <a href="/event?id=<%=raw @event.Eventidm.to_i - 1%>" style="float: left;margin-right: 20px; text-decoration: underline;">< Previous event </a>
       <% end %>
@@ -77,12 +80,6 @@
        </div>
     </div>
 </div>
-<div id="modal2" class="modal">
-    <div class="modal-content">
-      <img src="/uploads/<%= @event.image%>" height="100%" >
-    </div>
-
-  </div>
 <% end %>
 
 <% content_for :pgstyles do %>
@@ -150,12 +147,12 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  border-right: 3px solid #fd5e3a;
+
   margin: 0;
   cursor: pointer;
   float: none;
   display: table-cell;
-  height: 120vh;
+  height: 110vh;
 }
 
  .dotted {
@@ -180,16 +177,19 @@
   .right-cell {
     float: none;
     display: table-cell;
+    border-left: 3px solid #fd5e3a;
   }
+
+  hr {
+    height: 1px;
+    border: 0;
+    background-color: hsla(0,0%,100%,.25);
+    margin: 0;
+    display: block;
+    border-right: 1px solid #fff;
+    border-left: 24px solid #e8f2ff;
+    border-left: 26px solid #e8f2ff;
+}
   </style>
 
 <% end %>
-
-
-<% content_for :pgscripts do %>
-<script>
-$('.poster-back').click(function() {
-$('#modal2').modal('open');
-});
-</script>
-<%end%>
