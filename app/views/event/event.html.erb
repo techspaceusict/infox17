@@ -14,10 +14,16 @@
           </center>
           <center>
               <%=raw @event.Name%>
-          </center>
+          </center>  
       </h3>
-            <div class="col s12">
-            <p><%=raw @event.about%></p>
+      <% if  @event.Eventidm.to_i != 1%>
+      <a href="/event?id=<%=raw @event.Eventidm.to_i - 1%>" style="float: left;margin-right: 20px; text-decoration: underline;">< Previous event </a>
+      <% end %>
+      <% if  @event.Eventidm != 20%>
+      <a href="/event?id=<%=raw @event.Eventidm.to_i + 1%>" style="float: right;margin-right: 20px; text-decoration: underline;">Next event ></a>
+      <% end %>     
+            <div class="col s12" id="content-about">
+            <%=raw @event.about%>
             </div>
 
             <div class="col s12">
@@ -61,7 +67,7 @@
                          <div class="col s12 cta cta-container transition"><center>already registered!</center></div>
                      </a>
                  <%else%>
-                     <div class="col s12 cta cta-container transition"><center><%= link_to "Register for Event ", url_for(controller: :event, action: :eventregister,:Eventidm=>@event.Eventidm), method: :post, :onclick => 'return confirm("Do you really want to submit the form?")';%></center></div>
+                     <div class="col s12 cta cta-container transition"><center><%= link_to "Register for Event ", url_for(controller: :event, action: :eventregister,:Eventidm=>@event.Eventidm), method: :post, :onclick => 'return confirm("Click yes to proceed.")';%></center></div>
                	<%end%>
              <%else%>
                 <button onclick="openModal()" class="col s12 cta cta-container transition">
@@ -71,13 +77,25 @@
        </div>
     </div>
 </div>
+<div id="modal2" class="modal">
+    <div class="modal-content">
+      <img src="/uploads/<%= @event.image%>" height="100%" >
+    </div>
+
+  </div>
 <% end %>
 
 <% content_for :pgstyles do %>
 
   <style>
 
+#content-about > ul {
+	list-style-type: circle;
+}	
 
+#content-about > ul > li{
+	list-style-type: circle;
+}	
 
   .tile
 {
@@ -166,3 +184,12 @@
   </style>
 
 <% end %>
+
+
+<% content_for :pgscripts do %>
+<script>
+$('.poster-back').click(function() {
+$('#modal2').modal('open');
+});
+</script>
+<%end%>
