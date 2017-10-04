@@ -64,15 +64,20 @@
              </table>
            </div>
            <div class="col s12">
+ 
              <% if current_user%>
-                
+                 <% if  @event.Eventidm.to_i == 1%>
+                  <div class="col s12 cta cta-container transition"><center><a href="https://uhack.hackerearth.com/">Register for Event </a></center></div>
+                <%else%>
                  <%if @user%>
                      <a href="#">
                          <div class="col s12 cta cta-container transition"><center>already registered!</center></div>
                      </a>
-                 <%else%>            
+                 <%else%> 
+
                      <div class="col s12 cta cta-container transition"><center><%= link_to "Register for Event ", url_for(controller: :event, action: :eventregister,:Eventidm=>@event.Eventidm), method: :post, :onclick => 'return confirm("Click yes to proceed.")';%></center></div>
                	<%end%>
+                <%end%>
              <%else%>
                 <button onclick="openModal()" class="col s12 cta cta-container transition">
                     Sign In To Register</button>

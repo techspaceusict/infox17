@@ -10,11 +10,6 @@ class EventController < ApplicationController
       return redirect_to '/events';
     end
 
-    if id=="1"
-      return redirect_to '/events'
-
-    end
-
 
 
     if current_user
