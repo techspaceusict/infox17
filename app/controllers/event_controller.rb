@@ -46,13 +46,15 @@ class EventController < ApplicationController
   facebooklink = params[:facebook_link]
   category=params[:category]
   ven=params[:venue]
+  sd=params[:sd]
+
   new_filename = name + "." + image.original_filename.split(".")[1]
  
   File.open(Rails.root.join('public', 'uploads', new_filename), 'wb') do |file|
   file.write(image.read)
   end
 
-    Event.create(:Eventidm=>id,:Name=>name,:about=>detail,:image=>new_filename,:facebook_link =>facebooklink,:organizer1_name=>organizer1name,:organizer1_phone=>organizer1phone,:organizer2_name=>organizer2name,:organizer2_phone=>organizer2phone,:venue=>ven,:date=>date,:time=>time,:category=>category);
+    Event.create(:Eventidm=>id,:Name=>name,:about=>detail,:image=>new_filename,:facebook_link =>facebooklink,:organizer1_name=>organizer1name,:organizer1_phone=>organizer1phone,:organizer2_name=>organizer2name,:organizer2_phone=>organizer2phone,:venue=>ven,:date=>date,:time=>time,:category=>category,:sd=>sd);
 
     return redirect_to '/events'
 
