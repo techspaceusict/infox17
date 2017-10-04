@@ -13,7 +13,8 @@ ActiveAdmin.register Event do
 # end
 
 ActiveAdmin.register Event do 
-  permit_params :Name, :image, :about, :facebook_link,:organizer2_phone,:organizer2_name,:organizer1_phone,:organizer1_name,:date,:time,:venue,:Eventidm,:category
+  permit_params :Name, :image, :about, :facebook_link,:organizer2_phone,:organizer2_name,:organizer1_phone,:organizer1_name,:date,:time,:venue,:Eventidm,:category,:sd
+
 end
 
 
@@ -24,6 +25,7 @@ end
  	column  :Eventidm
      column   :Name
      column   :image
+     column   :sd
      column   :about do |v|
       div :class=>"adjust" do
       	v.about
