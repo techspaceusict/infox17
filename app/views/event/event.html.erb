@@ -65,11 +65,12 @@
            </div>
            <div class="col s12">
              <% if current_user%>
+                
                  <%if @user%>
                      <a href="#">
                          <div class="col s12 cta cta-container transition"><center>already registered!</center></div>
                      </a>
-                 <%else%>
+                 <%else%>            
                      <div class="col s12 cta cta-container transition"><center><%= link_to "Register for Event ", url_for(controller: :event, action: :eventregister,:Eventidm=>@event.Eventidm), method: :post, :onclick => 'return confirm("Click yes to proceed.")';%></center></div>
                	<%end%>
              <%else%>

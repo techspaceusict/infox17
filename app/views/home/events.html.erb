@@ -59,7 +59,12 @@
                     </div>
                     <div class="card-social center">
 											<div class="registerevtbtn-block">
+					<% if event.Eventidm=="1"%>
+                        <a href="https://uhack.hackerearth.com" class="registerevtbtn">Register </a>
+
+                       <%else%>
                         <a href="/event?id=<%= event.Eventidm%>" class="registerevtbtn">Register </a>
+                        <%end%>
 											</div>
                     </div>
                 </div>

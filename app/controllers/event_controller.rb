@@ -10,6 +10,13 @@ class EventController < ApplicationController
       return redirect_to '/events';
     end
 
+    if id=="1"
+      return redirect_to '/events'
+
+    end
+
+
+
     if current_user
       @user=Registration.where(:user_id=>current_user.id,:event_id=>@event.id).first;
     end
