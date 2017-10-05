@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MineSweeper - Mobile</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/addons/p5.dom.min.js"></script>
+    <script src="sketch.js"></script>
+  </head>
+  <body>
+    <div class="main-holder w3-container">
+       <div id="sketch-holder" class="inner-holder w3-container">
+        </div>
+      <div class="element-holder w3-container w3-padding">
+        <h5>MINE SWEEPER</h5>
+        <button onClick="switchModes()">
+          SWITCH MODES: <span id="modeText">REVEAL</span>
+        </button>
+        <p>MINES REMAINING: <span class="stats" id="stats"></span></p>
+      </div>
+    </div>
+    <script>
+      document.addEventListener('contextmenu', event => event.preventDefault());
+      function switchModes()
+      {
+        if (mode == 0) { 
+          mode = 1;
+          document.getElementById("modeText").innerHTML = "FLAG";
+        }
+        else if (mode == 1)
+        {
+          document.getElementById("modeText").innerHTML = "REVEAL";
+          mode = 0;
+        }
+        console.log(mode);
+        //alert("HELLO!");
+      }
+      console.log(mode);
+    </script>
+  </body>
+</html>
