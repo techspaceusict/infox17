@@ -34,9 +34,20 @@ select { display : block!important; }
            <%if current_user.branch%>
            <option value="<%= current_user.branch%>"><%= current_user.branch%></option>
            <%end%>
+
+           <%if current_user.branch!="Aeronautical Engineering"%>
            <option value="Aeronautical Engineering">Aeronautical Engineering</option>
+           <%end%>
+
+           <%if current_user.branch!="Aerospace Engineering"%>           
            <option value="Aerospace Engineering">Aerospace Engineering</option>
+           <%end%>
+
+          <%if current_user.branch!="Applied Chemistry"%>
            <option value="Applied Chemistry">  Applied Chemistry</option>
+           <%end%>
+
+           
            <option value="Animation & VFX">  Animation & VFX</option>
 
            <option value="Business Information Syst">Business Information Syst</option>
@@ -189,11 +200,22 @@ select { display : block!important; }
             <%if current_user.year%>
               <option value="<%= current_user.year%>"><%= current_user.year%></option>
             <%end%>
-
+          <% if current_user.year!="1st"%>
           <option value="1st">1st</option>
+          <%end%>
+
+          <% if current_user.year!="2nd"%>          
           <option value="2nd">2nd</option>
+          <%end%>
+
+          <% if current_user.year!="3rd"%>
           <option value="3rd">3rd</option>
+          <%end%>
+
+          <% if current_user.year!="4th"%>
           <option value="4th">4th</option>
+          <%end%>
+
   </select>
 
 
@@ -206,11 +228,28 @@ select { display : block!important; }
           <option value="<%= current_user.degree%>"><%= current_user.degree%></option>
         <%end%>
 
+        <%if current_user.degree!="Bachelor of Technology / Bachelor of Engineering"%>
           <option value="Bachelor of Technology / Bachelor of Engineering">Bachelor of Technology / Bachelor of Engineering</option>
+        <%end%>
+
+        <%if current_user.degree!="Bachelor of Arts"%>
           <option value="Bachelor of Arts">Bachelor of Arts</option>
+        <%end%>
+
+
+        <%if current_user.degree!="Bachelor of Commerce"%>
           <option value="Bachelor of Commerce">Bachelor of Commerce</option>
+          <%end%>
+
+
+        <%if current_user.degree!="M.S/M.Sc/M.Tech/M.E /MCA"%>
           <option value="M.S/M.Sc/M.Tech/M.E /MCA">M.S/M.Sc/M.Tech/M.E /MCA</option>
+        <%end%>
+
+        <%if current_user.degree!="Others"%>
           <option value="Others">Other</option>
+        <%end%>
+
 
   </select>
 </div>
