@@ -20,7 +20,7 @@ ActiveAdmin.register Registration do
 # end
 
 ActiveAdmin.register Registration do
-  permit_params :user_id, :event_id,:Event_name,:Eventidm,:category,:email
+  permit_params :user_id, :event_id,:Event_name,:Eventidm,:category,:email,:phone
 end
 
 end

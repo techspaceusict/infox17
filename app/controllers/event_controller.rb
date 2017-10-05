@@ -70,10 +70,10 @@ class EventController < ApplicationController
    # byebug;
 
 
-    if Registration.where(:user_id=>current_user.id,:event_id=>event.id,:Event_name=>event.Name,:Eventidm=>event.Eventidm,:category=>event.category,:email=>current_user.email).first
+    if Registration.where(:user_id=>current_user.id,:event_id=>event.id,:Event_name=>event.Name,:Eventidm=>event.Eventidm,:category=>event.category,:email=>current_user.email,:phone=>current_user.phone).first
       return redirect_to '/myevents'
     else
-      Registration.create(:user_id=>current_user.id,:event_id=>event.id,:Event_name=>event.Name,:Eventidm=>event.Eventidm,:category=>event.category,:email=>current_user.email);
+      Registration.create(:user_id=>current_user.id,:event_id=>event.id,:Event_name=>event.Name,:Eventidm=>event.Eventidm,:category=>event.category,:email=>current_user.email,:phone=>current_user.phone);
       return redirect_to '/events'
     end
     #byebug;
