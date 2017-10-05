@@ -3,3 +3,4 @@ log/*
 tmp/cache/
 tmp/cache/*
 tmp/*
+config/initializers/devise.rb/*
