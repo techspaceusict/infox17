@@ -68,6 +68,10 @@
              <% if current_user%>
                  <% if  @event.Eventidm.to_i == 1%>
                   <div class="col s12 cta cta-container transition"><center><a href="https://uhack.hackerearth.com/">Register for Event </a></center></div>
+
+                  <% elsif  @event.Eventidm.to_i == 23%>
+                  <div class="col s12 cta cta-container transition"><center><a href="https://goo.gl/forms/ADm1NjmrnKUZuDf73">Register for Event </a></center></div>
+
                 <%else%>
                  <%if @user%>
                      <a href="#">
