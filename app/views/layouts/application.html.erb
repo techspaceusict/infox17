@@ -147,7 +147,7 @@
                 <a href="#!user"><img class="circle" src="<%= current_user.profile%>"></a>
                 <a href="#!name"><span class="white-text name"><%= current_user.name%></span></a>
                 <a href="#!email"><span class="white-text email"><%= current_user.email%></span></a>
-                <a href="/users/sign_out" class="center">Log Out</a>
+                <a href="/users/sign_out" ><span class="white-text email">Log Out</span></a>
 
               </div>
             </li>
@@ -155,7 +155,7 @@
           <% else %>
           <!-- <p style="color:#FFFFFF; text-align:center;">User Not Logged!!!</p> -->
           <p class="center"><a class="waves-effect waves-light btn social facebook" style="background-color:#3B5998" href="/users/auth/facebook"><i class="fa fa-facebook"></i>&nbsp;Sign in with facebook</a></p>
-          <p class="center"><a class="waves-effect waves-light btn social google" style="background-color:#DD4B39"><i class="fa fa-google"></i> &nbsp;Sign in with google&nbsp;</a></p>
+          <p class="center"><a class="waves-effect waves-light btn social google" style="background-color:#DD4B39" href="users/auth/google_oauth2"><i class="fa fa-google"></i> &nbsp;Sign in with google&nbsp;</a></p>
             <li>
 
             </li>

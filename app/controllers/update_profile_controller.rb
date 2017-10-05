@@ -38,10 +38,10 @@ class UpdateProfileController < ApplicationController
   end
 
 
-  def show
-  	if !current_user
-  		return redirect_to '/';
-    end
-  end
+  # def show
+  # 	if !current_user
+  # 		return redirect_to '/';
+  #   end
+  # end
 
 end
