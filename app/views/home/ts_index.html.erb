@@ -134,13 +134,13 @@
 // })(document, window);
 
 
-$('.linkstripped').click(function() {
+$('.linkstripped').click(function(event) {
   event.preventDefault();
   $($(this).attr('href') ).slideToggle(); 
 }); 
 
 
-$('#terminallink').click(function() {
+$('#terminallink').click(function(event) {
   event.preventDefault();
   slideinterminal();
 });
