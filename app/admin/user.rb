@@ -14,20 +14,28 @@ ActiveAdmin.register User do
 
 index do
 	column    :id
-	column    :email 
-    column    :provider 
-    column    :uid 
-    column    :name 
-    column    :profile 
-    column    :college 
-    column    :branch 
-    column    :year 
-    column    :degree 
+	column    :email
+    column    :provider
+    column    :uid
+    column    :name
+    column    :profile
+    column    :college
+    column    :branch
+    column    :year
+    column    :degree
     column    :phone 
 actions
 
 
 end
 
+ActiveAdmin.register User do
+
+	filter :email
+	filter :name
+	filter :id
+	filter :provider
+	filter :profile
+end
 
 end
